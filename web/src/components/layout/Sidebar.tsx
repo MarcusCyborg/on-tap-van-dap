@@ -10,11 +10,14 @@ import {
   ChevronRight,
   Code2,
   Sparkles,
-  Home
+  Home,
+  BrainCircuit,
+  Layers
 } from 'lucide-react';
 import { SUBJECT_INFO, SIMULATIONS_META } from '../../content/metadata';
 import type { SubjectId } from '../../content/types';
 import { loadUserData } from '../../lib/storage';
+import { dplChapters, dplConcepts } from '../../content/generated';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -29,6 +32,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     dl: 0,
     gt: 0
   });
+  const [dplReadCount, setDplReadCount] = useState<number>(0);
 
   useEffect(() => {
     const updateStats = () => {
@@ -44,6 +48,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         }
       }
       setReadCounts(counts);
+
+      let dplCount = 0;
+      for (const c of dplConcepts) {
+        if (data.conceptProgress[c.id]?.readAt) {
+          dplCount++;
+        }
+      }
+      setDplReadCount(dplCount);
     };
 
     updateStats();
@@ -130,10 +142,65 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </Link>
           </div>
 
-          {/* 4 Subjects List */}
+          {/* PRIORITIZED DPL302M COURSE ENTRY */}
+          <div className="space-y-1.5 p-2 rounded-xl bg-purple-50/70 border border-purple-200">
+            <div className="text-[11px] font-bold text-purple-900 uppercase tracking-wider px-1 flex items-center justify-between">
+              <span className="flex items-center gap-1">
+                <BrainCircuit className="w-3.5 h-3.5 text-purple-700" />
+                Môn học chính DPL302m
+              </span>
+              <span className="text-[10px] font-mono bg-purple-200/80 text-purple-900 px-1.5 py-0.2 rounded font-bold">
+                {dplReadCount}/72
+              </span>
+            </div>
+
+            <Link
+              to="/dpl302m"
+              onClick={onClose}
+              className={`flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                location.pathname === '/dpl302m'
+                  ? 'bg-purple-700 text-white shadow-2xs'
+                  : 'text-purple-950 hover:bg-purple-100/70'
+              }`}
+            >
+              <div className="flex flex-col">
+                <span className="font-bold">Deep Learning — DPL302m</span>
+                <span className="text-[10px] opacity-80 font-normal">
+                  72 câu theo 5 chương
+                </span>
+              </div>
+              <ChevronRight className="w-3.5 h-3.5 shrink-0 opacity-70" />
+            </Link>
+
+            {/* 5 Chapters sublinks */}
+            <div className="space-y-0.5 pt-1 border-t border-purple-200/60 pl-1.5">
+              {dplChapters.map(ch => {
+                const isActive = location.pathname === `/dpl302m/${ch.chapterId}`;
+                return (
+                  <Link
+                    key={ch.chapterId}
+                    to={`/dpl302m/${ch.chapterId}`}
+                    onClick={onClose}
+                    className={`flex items-center justify-between px-2 py-1 rounded text-[11px] font-medium transition-colors ${
+                      isActive
+                        ? 'bg-purple-200 text-purple-900 font-bold'
+                        : 'text-purple-900/80 hover:text-purple-950 hover:bg-purple-100/60'
+                    }`}
+                  >
+                    <span className="truncate">{ch.chapterId.toUpperCase()} — {ch.title.split('—')[1]?.trim() || ch.title}</span>
+                    <span className="text-[10px] font-mono text-purple-700 shrink-0 ml-1">
+                      {ch.totalCount}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* 4 Foundation Subjects List */}
           <div className="space-y-1.5">
             <div className="text-[11px] font-bold text-muted uppercase tracking-wider px-2">
-              Bốn chuyên đề (140 câu)
+              Nền tảng chung (140 câu)
             </div>
             {subjectKeys.map(sId => {
               const s = SUBJECT_INFO[sId];

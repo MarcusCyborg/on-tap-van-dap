@@ -1,6 +1,15 @@
 export type SubjectId = 'xs' | 'ml' | 'dl' | 'gt';
 export type Priority = 'A' | 'B' | 'C';
 export type Understanding = 'unknown' | 'partial' | 'confident';
+export type CollectionId = 'foundations' | 'dpl302m';
+export type StudyLevel = 'core' | 'further';
+
+export interface SourceReference {
+  lessonId: string;       // e.g. "1.2"
+  file: string;           // e.g. "1.2 Basic Neural Network.txt"
+  slideMarkers?: string;  // e.g. "slide 4–10"
+  infoType?: 'confirmed' | 'rewritten-formula' | 'supplemented';
+}
 
 export interface ContentBlock {
   type: 'concept' | 'example' | 'answer' | 'followup' | 'trap' | 'prose';
@@ -9,12 +18,12 @@ export interface ContentBlock {
 }
 
 export interface Concept {
-  id: string; // e.g. 'XS01'
+  id: string; // e.g. 'XS01' or 'DPL1-01'
   subjectId: SubjectId;
   priority: Priority;
   title: string;
   groupTitle: string;
-  order: number; // 1 to 35
+  order: number; // 1 to 35 for foundations; chapter-relative for dpl302m
   bodyMarkdown: string;
   blocks: ContentBlock[];
   relatedIds: string[];
@@ -27,11 +36,20 @@ export interface Concept {
     endLine: number;
     hash: string;
   };
+  // DPL302m-specific optional fields
+  collectionId?: CollectionId;
+  chapterId?: string;        // e.g. 'dpl1'
+  chapterTitle?: string;     // e.g. 'Chương 1 — Từ logistic regression đến mạng nhiều tầng'
+  lessonIds?: string[];      // e.g. ['1.1', '1.2']
+  studyLevel?: StudyLevel;   // 'core' or 'further'
+  sourceReferences?: SourceReference[];
 }
 
 export interface Exercise {
-  id: string; // e.g. 'xs-ex-1'
-  subjectId: SubjectId;
+  id: string; // e.g. 'xs-ex-1' or 'dpl1-ex-1'
+  subjectId?: SubjectId;
+  collectionId?: CollectionId;
+  chapterId?: string;
   number: number;
   title: string;
   questionMarkdown: string;
@@ -79,6 +97,23 @@ export interface Subject {
   introMarkdown: string;
 }
 
+// DPL302m chapter data structure
+export interface DplChapter {
+  chapterId: string;       // e.g. 'dpl1'
+  title: string;
+  file: string;
+  idPrefix: string;        // e.g. 'DPL1-'
+  coreCount: number;
+  furtherCount: number;
+  totalCount: number;
+  conceptIds: string[];
+  sourceLessons: string[];
+  introMarkdown: string;
+  exercises: Exercise[];
+  referenceSections: ReferenceSection[];
+  glossary: GlossaryItem[];
+}
+
 export interface ExamQuestion {
   id: string; // e.g. 'exam-1-q1'
   number: number;
@@ -120,8 +155,13 @@ export interface GuideData {
 export interface ContentInventory {
   generatedAt: string;
   totalConcepts: number;
+  foundationsConcepts: number;
+  dpl302mConcepts: number;
   conceptsBySubject: Record<SubjectId, { total: number; A: number; B: number; C: number }>;
+  dpl302mByChapter: Record<string, { total: number; core: number; further: number }>;
   totalExercises: number;
+  foundationsExercises: number;
+  dpl302mExercises: number;
   totalExams: number;
   totalExamQuestions: number;
   totalGlossaryItems: number;
@@ -152,6 +192,8 @@ export interface ExamAttempt {
     questionText: string;
     hintText: string;
     subjectId?: SubjectId;
+    collectionId?: CollectionId;
+    chapterId?: string;
     relatedConceptIds?: string[];
   }[];
   currentIndex: number;

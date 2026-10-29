@@ -11,12 +11,13 @@ import {
   FileEdit
 } from 'lucide-react';
 import { loadUserData } from '../../lib/storage';
-import { concepts, conceptMap } from '../../content/generated';
-import type { Concept, SubjectId, Priority } from '../../content/types';
+import { concepts } from '../../content/generated';
+import type { Concept, SubjectId, Priority, CollectionId } from '../../content/types';
 import { SUBJECT_INFO } from '../../content/metadata';
 
 export const ReviewView: React.FC = () => {
   const [userData, setUserData] = useState(loadUserData());
+  const [filterCollection, setFilterCollection] = useState<'ALL' | CollectionId>('ALL');
   const [filterSubject, setFilterSubject] = useState<SubjectId | 'ALL'>('ALL');
 
   useEffect(() => {
@@ -31,6 +32,7 @@ export const ReviewView: React.FC = () => {
 
   // Collect all concepts needing review: unknown, partial, or bookmarked
   // Priority ordering: unknown -> partial -> bookmarked
+  // Each ID appears only once
   const unknownList: Concept[] = [];
   const partialList: Concept[] = [];
   const bookmarkedOnlyList: Concept[] = [];
@@ -65,8 +67,14 @@ export const ReviewView: React.FC = () => {
   }
 
   const filterFn = (c: Concept) => {
-    if (filterSubject === 'ALL') return true;
-    return c.subjectId === filterSubject;
+    if (filterCollection !== 'ALL') {
+      const cCol = c.collectionId || 'foundations';
+      if (cCol !== filterCollection) return false;
+    }
+    if (filterSubject !== 'ALL') {
+      if (c.subjectId !== filterSubject) return false;
+    }
+    return true;
   };
 
   const filteredUnknown = unknownList.filter(filterFn);
@@ -78,7 +86,7 @@ export const ReviewView: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 space-y-6">
       {/* Header */}
-      <div className="space-y-2 border-b border-border pb-4">
+      <div className="space-y-3 border-b border-border pb-4">
         <div className="flex items-center gap-2">
           <BookmarkCheck className="w-5 h-5 text-warning-ink" />
           <h1 className="text-xl sm:text-2xl font-extrabold text-ink">
@@ -90,35 +98,69 @@ export const ReviewView: React.FC = () => {
           Mỗi câu chỉ xuất hiện một lần duy nhất, không đếm trùng lặp.
         </p>
 
-        {/* Filter by subject */}
-        <div className="flex flex-wrap gap-1.5 pt-2 text-xs font-semibold">
-          <button
-            onClick={() => setFilterSubject('ALL')}
-            className={`px-3 py-1.5 rounded-lg border transition-all ${
-              filterSubject === 'ALL'
-                ? 'bg-ink text-white border-ink'
-                : 'bg-surface border-border text-muted hover:text-ink'
-            }`}
-          >
-            Tất cả mảng ({seenIds.size})
-          </button>
-          {(['xs', 'ml', 'dl', 'gt'] as SubjectId[]).map(sId => {
-            const s = SUBJECT_INFO[sId];
-            return (
-              <button
-                key={sId}
-                onClick={() => setFilterSubject(sId)}
-                className={`px-3 py-1.5 rounded-lg border transition-all ${
-                  filterSubject === sId
-                    ? 'bg-ink text-white border-ink'
-                    : 'bg-surface border-border text-muted hover:text-ink'
-                }`}
-              >
-                {s.name}
-              </button>
-            );
-          })}
+        {/* Collection Filter Tabs */}
+        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-border/60">
+          <span className="text-xs text-muted font-bold">Bộ nội dung:</span>
+          <div className="inline-flex rounded-lg border border-border p-0.5 bg-surface-muted text-xs">
+            <button
+              onClick={() => { setFilterCollection('ALL'); setFilterSubject('ALL'); }}
+              className={`py-1 px-3 rounded-md font-semibold transition-all ${
+                filterCollection === 'ALL' ? 'bg-surface text-ink shadow-xs' : 'text-muted hover:text-ink'
+              }`}
+            >
+              Toàn bộ ({seenIds.size})
+            </button>
+            <button
+              onClick={() => { setFilterCollection('dpl302m'); setFilterSubject('ALL'); }}
+              className={`py-1 px-3 rounded-md font-semibold transition-all ${
+                filterCollection === 'dpl302m' ? 'bg-surface text-purple-700 shadow-xs' : 'text-muted hover:text-ink'
+              }`}
+            >
+              DPL302m môn học
+            </button>
+            <button
+              onClick={() => setFilterCollection('foundations')}
+              className={`py-1 px-3 rounded-md font-semibold transition-all ${
+                filterCollection === 'foundations' ? 'bg-surface text-ink shadow-xs' : 'text-muted hover:text-ink'
+              }`}
+            >
+              Nền tảng chung
+            </button>
+          </div>
         </div>
+
+        {/* Filter by subject (when foundations or ALL selected) */}
+        {filterCollection !== 'dpl302m' && (
+          <div className="flex flex-wrap items-center gap-1.5 pt-1 text-xs font-semibold">
+            <span className="text-xs text-muted font-bold mr-1">Chuyên đề:</span>
+            <button
+              onClick={() => setFilterSubject('ALL')}
+              className={`px-2.5 py-1 rounded-lg border transition-all ${
+                filterSubject === 'ALL'
+                  ? 'bg-ink text-white border-ink'
+                  : 'bg-surface border-border text-muted hover:text-ink'
+              }`}
+            >
+              Tất cả
+            </button>
+            {(['xs', 'ml', 'dl', 'gt'] as SubjectId[]).map(sId => {
+              const s = SUBJECT_INFO[sId];
+              return (
+                <button
+                  key={sId}
+                  onClick={() => setFilterSubject(sId)}
+                  className={`px-2.5 py-1 rounded-lg border transition-all ${
+                    filterSubject === sId
+                      ? 'bg-ink text-white border-ink'
+                      : 'bg-surface border-border text-muted hover:text-ink'
+                  }`}
+                >
+                  {s.name}
+                </button>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       {totalReviewCount === 0 ? (
@@ -128,12 +170,20 @@ export const ReviewView: React.FC = () => {
           <p className="text-xs text-muted max-w-md mx-auto">
             Khi đọc tài liệu hoặc luyện đề, bạn hãy đánh dấu các câu chưa tự giải thích được để quay lại ôn tập tập trung tại đây.
           </p>
-          <Link
-            to="/learn/XS01"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-white text-xs font-bold hover:bg-accent-dark"
-          >
-            Bắt đầu đọc chuyên đề
-          </Link>
+          <div className="flex justify-center gap-3 pt-2">
+            <Link
+              to="/dpl302m"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-white text-xs font-bold hover:bg-accent-dark"
+            >
+              Vào học DPL302m
+            </Link>
+            <Link
+              to="/learn/XS01"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface border border-border text-ink text-xs font-bold hover:bg-surface-muted"
+            >
+              Học Nền tảng chung (XS01)
+            </Link>
+          </div>
         </div>
       ) : (
         <div className="space-y-6">
@@ -184,6 +234,7 @@ export const ReviewView: React.FC = () => {
 function renderReviewItem(c: Concept, userData: any) {
   const p = userData.conceptProgress[c.id];
   const sInfo = SUBJECT_INFO[c.subjectId];
+  const isDpl = c.collectionId === 'dpl302m';
 
   return (
     <Link
@@ -196,16 +247,36 @@ function renderReviewItem(c: Concept, userData: any) {
           <span className="font-mono text-xs font-bold px-1.5 py-0.5 rounded bg-surface-muted text-ink border border-border shrink-0">
             {c.id}
           </span>
-          <span className={`px-1.5 py-0.2 rounded text-[10px] font-bold shrink-0 ${
-            c.priority === 'A' ? 'bg-green-100 text-[#27624a]' :
-            c.priority === 'B' ? 'bg-blue-100 text-[#2b5c8f]' :
-            'bg-amber-100 text-[#8a4b16]'
-          }`}>
-            Mức {c.priority}
-          </span>
-          <span className="text-[11px] text-muted font-medium">
-            {sInfo.name}
-          </span>
+          {isDpl ? (
+            <>
+              <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-100 text-purple-800 border border-purple-200 shrink-0">
+                DPL302m
+              </span>
+              <span className={`px-1.5 py-0.2 rounded text-[10px] font-bold shrink-0 ${
+                c.studyLevel === 'core'
+                  ? 'bg-green-100 text-[#27624a] border border-green-200'
+                  : 'bg-blue-100 text-[#2b5c8f] border border-blue-200'
+              }`}>
+                {c.studyLevel === 'core' ? 'Cốt lõi' : 'Đọc tiếp'}
+              </span>
+              <span className="text-[11px] text-muted font-medium">
+                {c.chapterTitle ? c.chapterTitle.split('—')[0].trim() : ''}
+              </span>
+            </>
+          ) : (
+            <>
+              <span className={`px-1.5 py-0.2 rounded text-[10px] font-bold shrink-0 ${
+                c.priority === 'A' ? 'bg-green-100 text-[#27624a]' :
+                c.priority === 'B' ? 'bg-blue-100 text-[#2b5c8f]' :
+                'bg-amber-100 text-[#8a4b16]'
+              }`}>
+                Mức {c.priority}
+              </span>
+              <span className="text-[11px] text-muted font-medium">
+                {sInfo.name}
+              </span>
+            </>
+          )}
         </div>
 
         <h4 className="text-sm font-semibold text-ink group-hover:text-accent leading-snug">

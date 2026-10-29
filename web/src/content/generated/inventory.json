@@ -1,6 +1,8 @@
 {
-  "generatedAt": "2026-10-29T11:48:39.302Z",
-  "totalConcepts": 140,
+  "generatedAt": "2026-10-29T13:19:14.278Z",
+  "totalConcepts": 212,
+  "foundationsConcepts": 140,
+  "dpl302mConcepts": 72,
   "conceptsBySubject": {
     "xs": {
       "total": 35,
@@ -27,10 +29,39 @@
       "C": 5
     }
   },
-  "totalExercises": 20,
+  "dpl302mByChapter": {
+    "dpl1": {
+      "total": 12,
+      "core": 11,
+      "further": 1
+    },
+    "dpl2": {
+      "total": 14,
+      "core": 11,
+      "further": 3
+    },
+    "dpl3": {
+      "total": 10,
+      "core": 8,
+      "further": 2
+    },
+    "dpl4": {
+      "total": 18,
+      "core": 14,
+      "further": 4
+    },
+    "dpl5": {
+      "total": 18,
+      "core": 13,
+      "further": 5
+    }
+  },
+  "totalExercises": 39,
+  "foundationsExercises": 20,
+  "dpl302mExercises": 19,
   "totalExams": 4,
   "totalExamQuestions": 28,
-  "totalGlossaryItems": 72,
+  "totalGlossaryItems": 120,
   "simulationCount": 8,
   "validationStatus": "pass",
   "validationErrors": []

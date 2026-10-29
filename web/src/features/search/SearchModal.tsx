@@ -163,8 +163,23 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
                         {r.type === 'concept' ? 'Concept' : r.type === 'glossary' ? 'Thuật ngữ' : r.type === 'exercise' ? 'Bài tập' : 'Đề thi'}
                       </span>
 
-                      {/* Priority badge */}
-                      {r.priority && (
+                      {/* Collection / Chapter badge */}
+                      {r.collectionId === 'dpl302m' ? (
+                        <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-800 border border-purple-200">
+                          DPL302m{r.chapterId ? ` • ${r.chapterId.toUpperCase()}` : ''}
+                        </span>
+                      ) : null}
+
+                      {/* Priority or Study Level badge */}
+                      {r.collectionId === 'dpl302m' && r.studyLevel ? (
+                        <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${
+                          r.studyLevel === 'core'
+                            ? 'bg-green-100 text-[#27624a] border border-green-200'
+                            : 'bg-blue-100 text-[#2b5c8f] border border-blue-200'
+                        }`}>
+                          {r.studyLevel === 'core' ? 'Cốt lõi' : 'Đọc tiếp'}
+                        </span>
+                      ) : r.priority ? (
                         <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${
                           r.priority === 'A' ? 'bg-green-100 text-[#27624a]' :
                           r.priority === 'B' ? 'bg-blue-100 text-[#2b5c8f]' :
@@ -172,10 +187,10 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
                         }`}>
                           Mức {r.priority}
                         </span>
-                      )}
+                      ) : null}
 
-                      {/* Subject Name */}
-                      {sInfo && (
+                      {/* Subject Name for Foundations */}
+                      {r.collectionId !== 'dpl302m' && sInfo && (
                         <span className="text-[11px] text-muted font-medium">
                           {sInfo.shortName}
                         </span>

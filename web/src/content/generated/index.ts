@@ -4,14 +4,22 @@ import subjectsData from './subjects.json';
 import conceptsData from './concepts.json';
 import examsData from './exams.json';
 import inventoryData from './inventory.json';
-import type { GuideData, Subject, Concept, Exam, ContentInventory } from '../types';
+import dplChaptersData from './dpl-chapters.json';
+import type { GuideData, Subject, Concept, Exam, ContentInventory, DplChapter } from '../types';
 
 export const guide: GuideData = guideData as unknown as GuideData;
 export const subjects: Subject[] = subjectsData as unknown as Subject[];
 export const concepts: Concept[] = conceptsData as unknown as Concept[];
 export const exams: Exam[] = examsData as unknown as Exam[];
 export const inventory: ContentInventory = inventoryData as unknown as ContentInventory;
+export const dplChapters: DplChapter[] = dplChaptersData as unknown as DplChapter[];
 
 export const conceptMap = new Map<string, Concept>(concepts.map(c => [c.id, c]));
 export const subjectMap = new Map<string, Subject>(subjects.map(s => [s.id, s]));
 export const examMap = new Map<string, Exam>(exams.map(e => [e.id, e]));
+export const dplChapterMap = new Map<string, DplChapter>(dplChapters.map(ch => [ch.chapterId, ch]));
+
+// Helper: all DPL302m concepts
+export const dplConcepts: Concept[] = concepts.filter(c => c.collectionId === 'dpl302m');
+// Helper: all foundation concepts
+export const foundationConcepts: Concept[] = concepts.filter(c => c.collectionId === 'foundations');

@@ -120,6 +120,7 @@
       {
         "id": "xs-ex-1",
         "subjectId": "xs",
+        "collectionId": "foundations",
         "number": 1,
         "title": "Bài 1 — Trung tâm và phân tán",
         "questionMarkdown": "Dữ liệu [1, 2, 3, 4, 10]. Tính mean, median, phương sai nếu coi đây là tổng thể, và phương sai mẫu hiệu chỉnh.",
@@ -128,6 +129,7 @@
       {
         "id": "xs-ex-2",
         "subjectId": "xs",
+        "collectionId": "foundations",
         "number": 2,
         "title": "Bài 2 — Bayes bằng bảng đếm",
         "questionMarkdown": "Trong 1.000 email, 200 email là spam. Bộ lọc đánh dấu 160 spam và đánh dấu nhầm 80 email thường. Biết email bị đánh dấu, xác suất nó là spam bao nhiêu? Khả năng đánh dấu khi email là spam bao nhiêu?",
@@ -136,6 +138,7 @@
       {
         "id": "xs-ex-3",
         "subjectId": "xs",
+        "collectionId": "foundations",
         "number": 3,
         "title": "Bài 3 — Nhị thức",
         "questionMarkdown": "Ba lần thử độc lập, mỗi lần thành công với xác suất 0,2. X là số thành công. Tính P(X = 1), E[X], Var(X).",
@@ -144,6 +147,7 @@
       {
         "id": "xs-ex-4",
         "subjectId": "xs",
+        "collectionId": "foundations",
         "number": 4,
         "title": "Bài 4 — SE và khoảng tin cậy",
         "questionMarkdown": "Mẫu độc lập cỡ 100 có mean 50 và SD mẫu 10. Dùng xấp xỉ chuẩn được giả định phù hợp, tính SE và khoảng 95%. Nếu tăng n lên 400 với SD tương tự, SE ra sao?",
@@ -152,6 +156,7 @@
       {
         "id": "xs-ex-5",
         "subjectId": "xs",
+        "collectionId": "foundations",
         "number": 5,
         "title": "Bài 5 — Diễn giải kiểm định",
         "questionMarkdown": "Đặt α = 0,05 trước khi phân tích; một kiểm định hợp lệ cho p = 0,08. Có được nói “H0 đúng với xác suất 92%” hoặc “không có tác động” không?",
@@ -345,6 +350,7 @@
       {
         "id": "ml-ex-1",
         "subjectId": "ml",
+        "collectionId": "foundations",
         "number": 1,
         "title": "Tình huống 1 — Điểm đẹp bất thường",
         "questionMarkdown": "Bạn có dữ liệu 500 bệnh nhân, mỗi người 10 ảnh. Chia ngẫu nhiên 5.000 ảnh, được accuracy 99%. Điều gì cần kiểm tra?",
@@ -353,6 +359,7 @@
       {
         "id": "ml-ex-2",
         "subjectId": "ml",
+        "collectionId": "foundations",
         "number": 2,
         "title": "Tình huống 2 — Tính chỉ số",
         "questionMarkdown": "100 email: 20 spam. Mô hình báo 10 spam, đúng 8. Hãy tính TP, FP, FN, TN, accuracy, precision và recall.",
@@ -361,6 +368,7 @@
       {
         "id": "ml-ex-3",
         "subjectId": "ml",
+        "collectionId": "foundations",
         "number": 3,
         "title": "Tình huống 3 — Scaling sai quy trình",
         "questionMarkdown": "Bạn tính trung bình và độ lệch chuẩn trên tất cả dữ liệu, chuẩn hóa rồi chạy 5-fold cross-validation. Có vấn đề gì?",
@@ -369,6 +377,7 @@
       {
         "id": "ml-ex-4",
         "subjectId": "ml",
+        "collectionId": "foundations",
         "number": 4,
         "title": "Tình huống 4 — Chọn metric giá nhà",
         "questionMarkdown": "Hai mô hình có lỗi tuyệt đối trên 3 nhà: A = [1, 1, 10], B = [4, 4, 4], đơn vị trăm triệu. Mô hình nào tốt hơn?",
@@ -377,6 +386,7 @@
       {
         "id": "ml-ex-5",
         "subjectId": "ml",
+        "collectionId": "foundations",
         "number": 5,
         "title": "Tình huống 5 — Học thuộc hay học chưa đủ?",
         "questionMarkdown": "Một cây rất sâu đạt accuracy train 100%, validation 70%. Cây nông hơn đạt train 84%, validation 80%. Bạn chọn gì tiếp theo?",
@@ -576,6 +586,7 @@
       {
         "id": "dl-ex-1",
         "subjectId": "dl",
+        "collectionId": "foundations",
         "number": 1,
         "title": "Bài 1 — Tự đi một bước học",
         "questionMarkdown": "Mô hình hồi quy `ŷ=wx+b`, không activation. Cho `x=2`, `y=5`, `w=1`, `b=0`, loss `L=(ŷ−y)²`, learning rate 0,1. Tính dự đoán, loss, gradient và tham số mới.",
@@ -584,6 +595,7 @@
       {
         "id": "dl-ex-2",
         "subjectId": "dl",
+        "collectionId": "foundations",
         "number": 2,
         "title": "Bài 2 — Chọn tầng đầu ra và loss",
         "questionMarkdown": "Chọn cấu hình thông thường cho: (a) spam/không spam; (b) một chữ số 0–9; (c) ảnh có thể đồng thời có người, xe, chó; (d) dự đoán nhiệt độ.",
@@ -592,6 +604,7 @@
       {
         "id": "dl-ex-3",
         "subjectId": "dl",
+        "collectionId": "foundations",
         "number": 3,
         "title": "Bài 3 — Đếm step",
         "questionMarkdown": "Có 1.030 mẫu, batch size 128, train 3 epoch. Không gradient accumulation. Bao nhiêu step nếu giữ hoặc bỏ batch cuối?",
@@ -600,6 +613,7 @@
       {
         "id": "dl-ex-4",
         "subjectId": "dl",
+        "collectionId": "foundations",
         "number": 4,
         "title": "Bài 4 — Đọc đường học",
         "questionMarkdown": "Qua 5 epoch, train loss là `[0,8; 0,5; 0,3; 0,2; 0,1]`, validation loss là `[0,9; 0,6; 0,45; 0,55; 0,7]`. Bạn nhận xét gì và chọn checkpoint nào nếu tiêu chí là validation loss thấp nhất?",
@@ -608,6 +622,7 @@
       {
         "id": "dl-ex-5",
         "subjectId": "dl",
+        "collectionId": "foundations",
         "number": 5,
         "title": "Bài 5 — Chọn cách bắt đầu bài toán",
         "questionMarkdown": "Bạn có (a) 800 ảnh hoa có nhãn; (b) dữ liệu bảng 1.000 dòng; (c) văn bản cần phân loại. Có nên xây mạng rất sâu từ đầu cho cả ba?",
@@ -835,6 +850,7 @@
       {
         "id": "gt-ex-1",
         "subjectId": "gt",
+        "collectionId": "foundations",
         "number": 1,
         "title": "Bài 1 — Trường hợp biên và chi phí",
         "questionMarkdown": "Bạn cần tìm lớn nhất trong một list không rỗng gồm n số nguyên. Hãy mô tả cách làm, kiểm tra với [−8,−3,−6], nêu thời gian và bộ nhớ phụ.",
@@ -843,6 +859,7 @@
       {
         "id": "gt-ex-2",
         "subjectId": "gt",
+        "collectionId": "foundations",
         "number": 2,
         "title": "Bài 2 — Chạy tay binary search",
         "questionMarkdown": "Tìm 8 trong [1,3,5,7,9] bằng mã trên. Ghi left, right và mid ở mỗi vòng.",
@@ -851,6 +868,7 @@
       {
         "id": "gt-ex-3",
         "subjectId": "gt",
+        "collectionId": "foundations",
         "number": 3,
         "title": "Bài 3 — Chọn cấu trúc dữ liệu",
         "questionMarkdown": "Bạn cần (a) xử lý yêu cầu đúng thứ tự đến; (b) kiểm tra mã sinh viên đã xuất hiện; (c) luôn xử lý công việc có độ ưu tiên nhỏ nhất trước. Chọn gì?",
@@ -859,6 +877,7 @@
       {
         "id": "gt-ex-4",
         "subjectId": "gt",
+        "collectionId": "foundations",
         "number": 4,
         "title": "Bài 4 — BFS hay Dijkstra?",
         "questionMarkdown": "Đồ thị có cạnh A→B giá 10, A→C giá 1, C→B giá 2. Đường ít cạnh nhất từ A tới B là gì? Đường rẻ nhất là gì? Nếu bỏ trọng số thì chọn thuật toán nào?",
@@ -867,6 +886,7 @@
       {
         "id": "gt-ex-5",
         "subjectId": "gt",
+        "collectionId": "foundations",
         "number": 5,
         "title": "Bài 5 — Thiết lập DP cho đổi tiền",
         "questionMarkdown": "Có các đồng {1,3,4}, đủ số lượng mỗi loại. Tìm số đồng ít nhất để đổi 6. Gọi dp[x] là số đồng ít nhất để đổi x; đặt trạng thái gốc và phép chuyển.",

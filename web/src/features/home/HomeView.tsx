@@ -13,11 +13,13 @@ import {
   FileText,
   HelpCircle,
   TrendingUp,
-  BrainCircuit
+  BrainCircuit,
+  Layers,
+  ChevronRight
 } from 'lucide-react';
 import { loadUserData, computeUserStats } from '../../lib/storage';
 import type { UserStats } from '../../lib/storage';
-import { subjects, conceptMap, exams } from '../../content/generated';
+import { subjects, conceptMap, exams, dplChapters } from '../../content/generated';
 import { SUBJECT_INFO, SIMULATIONS_META } from '../../content/metadata';
 import type { SubjectId } from '../../content/types';
 
@@ -54,11 +56,11 @@ export const HomeView: React.FC = () => {
           </div>
 
           <h1 className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight leading-tight">
-            Ôn Vấn Đáp — 140 Câu & 8 Mô Phỏng Trực Quan
+            Ôn Vấn Đáp — 212 Câu Hỏi & 8 Mô Phỏng Trực Quan
           </h1>
 
           <p className="text-sm sm:text-base text-muted leading-relaxed">
-            Chuẩn bị vấn đáp 5–7 câu về <strong>Xác suất thống kê</strong>, <strong>Machine Learning</strong>, <strong>Deep Learning</strong> và <strong>Giải thuật</strong>.
+            Ưu tiên chuẩn bị cho môn <strong>Deep Learning (DPL302m)</strong> với 72 câu theo 5 chương, cùng 140 câu <strong>Nền tảng chung</strong> (Xác suất, ML, DL, Giải thuật).
             Học theo chu trình: <em>Chọn concept → đọc hiểu → thử mô phỏng → đóng đáp án và tự trả lời → đối chiếu → đánh dấu phần cần ôn.</em>
           </p>
 
@@ -73,13 +75,22 @@ export const HomeView: React.FC = () => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             ) : (
-              <Link
-                to="/learn/XS01"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent text-white text-sm font-bold hover:bg-accent-dark shadow-sm transition-all"
-              >
-                <span>Bắt đầu từ nền tảng (XS01)</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <>
+                <Link
+                  to="/learn/DPL1-01"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-700 text-white text-sm font-bold hover:bg-purple-800 shadow-sm transition-all"
+                >
+                  <BrainCircuit className="w-4 h-4" />
+                  <span>Vào học DPL302m (DPL1-01)</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/learn/XS01"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface border border-border text-sm font-semibold text-ink hover:bg-surface-muted transition-colors"
+                >
+                  <span>Bắt đầu từ nền tảng (XS01)</span>
+                </Link>
+              </>
             )}
 
             <Link
@@ -87,7 +98,7 @@ export const HomeView: React.FC = () => {
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-muted border border-border text-xs sm:text-sm font-semibold text-ink hover:bg-border/60 transition-colors"
             >
               <Compass className="w-4 h-4 text-muted" />
-              <span>Bản đồ kiến thức & Lộ trình 4h</span>
+              <span>Bản đồ kiến thức & Lộ trình</span>
             </Link>
 
             <Link
@@ -101,18 +112,89 @@ export const HomeView: React.FC = () => {
         </div>
       </div>
 
+      {/* PRIORITIZED DPL302M FEATURE CARD */}
+      <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-200 rounded-2xl p-6 sm:p-7 shadow-xs space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="space-y-1">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800 text-[11px] font-bold">
+              <BrainCircuit className="w-3.5 h-3.5" />
+              <span>Khóa học trọng tâm</span>
+            </div>
+            <h2 className="text-xl font-extrabold text-ink">
+              Deep Learning — DPL302m
+            </h2>
+            <p className="text-xs sm:text-sm text-muted">
+              72 câu theo 5 chương (57 Cốt lõi • 15 Đọc tiếp) • 19 bài tự kiểm tra có lời giải bám sát 17 slide bài giảng.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-2 shrink-0">
+            <Link
+              to="/dpl302m"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-purple-700 text-white text-xs sm:text-sm font-bold hover:bg-purple-800 shadow-sm transition-all"
+            >
+              <span>Vào khóa học DPL302m</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* 5 Chapters quick pills */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5 pt-1">
+          {dplChapters.map((ch, idx) => {
+            const chapRead = ch.conceptIds.filter(id => loadUserData().conceptProgress[id]?.readAt).length;
+            return (
+              <Link
+                key={ch.chapterId}
+                to={`/dpl302m/${ch.chapterId}`}
+                className="p-3 bg-surface border border-purple-200/80 rounded-xl hover:border-purple-400 hover:shadow-2xs transition-all space-y-1.5 block group"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold text-purple-800 font-mono">
+                    CHƯƠNG {idx + 1}
+                  </span>
+                  <span className="text-[10px] font-mono text-muted">
+                    {chapRead}/{ch.totalCount}
+                  </span>
+                </div>
+                <h4 className="text-xs font-bold text-ink group-hover:text-purple-700 line-clamp-1 leading-snug">
+                  {ch.title.split('—')[1]?.trim() || ch.title}
+                </h4>
+                <div className="text-[10px] text-muted">
+                  {ch.coreCount} cốt lõi • {ch.furtherCount} đọc tiếp
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
       {/* Real Progress Dashboard */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div className="p-4 bg-surface border border-border rounded-xl">
-          <span className="text-xs text-muted font-medium block">Tiến độ đã đọc</span>
+          <span className="text-xs text-muted font-medium block">DPL302m đã đọc</span>
           <div className="flex items-baseline gap-1 mt-1">
-            <span className="text-2xl font-extrabold font-mono text-ink">{stats.totalRead}</span>
+            <span className="text-2xl font-extrabold font-mono text-purple-700">{stats.dpl302mRead}</span>
+            <span className="text-xs text-muted font-mono">/ 72 câu</span>
+          </div>
+          <div className="w-full bg-surface-muted rounded-full h-1.5 mt-2 overflow-hidden">
+            <div
+              className="bg-purple-600 h-full rounded-full transition-all"
+              style={{ width: `${(stats.dpl302mRead / 72) * 100}%` }}
+            />
+          </div>
+        </div>
+
+        <div className="p-4 bg-surface border border-border rounded-xl">
+          <span className="text-xs text-muted font-medium block">Nền tảng chung</span>
+          <div className="flex items-baseline gap-1 mt-1">
+            <span className="text-2xl font-extrabold font-mono text-ink">{stats.foundationsRead}</span>
             <span className="text-xs text-muted font-mono">/ 140 câu</span>
           </div>
           <div className="w-full bg-surface-muted rounded-full h-1.5 mt-2 overflow-hidden">
             <div
               className="bg-accent h-full rounded-full transition-all"
-              style={{ width: `${(stats.totalRead / 140) * 100}%` }}
+              style={{ width: `${(stats.foundationsRead / 140) * 100}%` }}
             />
           </div>
         </div>
@@ -126,17 +208,6 @@ export const HomeView: React.FC = () => {
             <span className="text-xs text-muted">câu</span>
           </div>
           <span className="text-[11px] text-muted block mt-2">Đã tự giải thích được</span>
-        </div>
-
-        <div className="p-4 bg-surface border border-border rounded-xl">
-          <span className="text-xs text-muted font-medium block">Hiểu một phần</span>
-          <div className="flex items-baseline gap-1 mt-1">
-            <span className="text-2xl font-extrabold font-mono text-warning-ink">
-              {stats.understandingCounts.partial}
-            </span>
-            <span className="text-xs text-muted">câu</span>
-          </div>
-          <span className="text-[11px] text-muted block mt-2">Cần ôn lại ví dụ/bẫy</span>
         </div>
 
         <Link
@@ -157,11 +228,13 @@ export const HomeView: React.FC = () => {
         </Link>
       </div>
 
-      {/* 4 Subjects Grid */}
+      {/* 4 Foundation Subjects Grid */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-bold text-ink">Bốn Chuyên Đề Cốt Lõi</h2>
-          <span className="text-xs text-muted">Mỗi chuyên đề đúng 35 câu (18A • 12B • 5C)</span>
+          <div>
+            <h2 className="text-lg font-bold text-ink">Nền Tảng Chung — Bốn Chuyên Đề Cốt Lõi</h2>
+            <p className="text-xs text-muted">Mỗi chuyên đề đúng 35 câu (18A • 12B • 5C) • 20 bài tự kiểm tra và 4 đề tổng hợp.</p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -224,7 +297,7 @@ export const HomeView: React.FC = () => {
           <div className="space-y-0.5">
             <h2 className="text-lg font-bold text-ink flex items-center gap-1.5">
               <Sparkles className="w-4 h-4 text-accent" />
-              Tám Mô Phỏng Trực Quan Bắt Buộc
+              Tám Mô Phỏng Trực Quan Tương Tác
             </h2>
             <p className="text-xs text-muted">
               Mỗi mảng hai mô phỏng có tính toán thật, điều khiển tương tác và kết luận có điều kiện.

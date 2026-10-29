@@ -1,5 +1,5 @@
-import { concepts, subjects, exams } from '../content/generated';
-import type { SubjectId, Priority } from '../content/types';
+import { concepts, subjects, exams, dplChapters } from '../content/generated';
+import type { SubjectId, Priority, CollectionId, StudyLevel } from '../content/types';
 
 export function normalizeVietnamese(str: string): string {
   if (!str) return '';
@@ -17,7 +17,11 @@ export interface SearchResult {
   type: 'concept' | 'glossary' | 'exercise' | 'exam-question';
   title: string;
   subjectId?: SubjectId;
+  collectionId?: CollectionId;
+  chapterId?: string;
+  chapterTitle?: string;
   priority?: Priority;
+  studyLevel?: StudyLevel;
   snippet: string;
   url: string;
   score: number;
@@ -29,22 +33,24 @@ export function searchKnowledgeBase(rawQuery: string): SearchResult[] {
 
   const normQuery = normalizeVietnamese(query);
   const terms = normQuery.split(/\s+/).filter(Boolean);
-  const isExactIdSearch = /^(xs|ml|dl|gt)\d{1,2}$/i.test(query);
+  // Match exact ID patterns: XS01, ML35, DL07, GT20, DPL1-01, DPL4-13, or dpl413
+  const cleanQueryId = query.replace(/[\s\-_]/g, '').toLowerCase();
 
   const results: SearchResult[] = [];
 
-  // 1. Search Concepts (140 questions)
+  // 1. Search Concepts (All 212 questions: 140 Foundations + 72 DPL302m)
   for (const c of concepts) {
     const normId = normalizeVietnamese(c.id);
+    const cleanId = c.id.replace(/[\s\-_]/g, '').toLowerCase();
     const normTitle = normalizeVietnamese(c.title);
     const normBody = normalizeVietnamese(c.bodyMarkdown);
 
     let score = 0;
 
-    // Exact ID match
-    if (normId === normQuery || c.id.toLowerCase() === query.toLowerCase()) {
+    // Exact ID match or clean ID match (e.g. DPL4-13, dpl413)
+    if (normId === normQuery || c.id.toLowerCase() === query.toLowerCase() || cleanId === cleanQueryId) {
       score += 1000;
-    } else if (normId.includes(normQuery)) {
+    } else if (normId.includes(normQuery) || cleanId.includes(cleanQueryId)) {
       score += 500;
     }
 
@@ -95,12 +101,20 @@ export function searchKnowledgeBase(rawQuery: string): SearchResult[] {
         snippet = c.bodyMarkdown.slice(0, 100).replace(/\n+/g, ' ') + '...';
       }
 
+      const displayTitle = c.collectionId === 'dpl302m'
+        ? `${c.id} [${c.studyLevel === 'core' ? 'Cốt lõi' : 'Đọc tiếp'}] ${c.title}`
+        : `${c.id} [${c.priority}] ${c.title}`;
+
       results.push({
         id: c.id,
         type: 'concept',
-        title: `${c.id} [${c.priority}] ${c.title}`,
+        title: displayTitle,
         subjectId: c.subjectId,
+        collectionId: c.collectionId,
+        chapterId: c.chapterId,
+        chapterTitle: c.chapterTitle,
         priority: c.priority,
+        studyLevel: c.studyLevel,
         snippet,
         url: `#/learn/${c.id}`,
         score
@@ -108,7 +122,7 @@ export function searchKnowledgeBase(rawQuery: string): SearchResult[] {
     }
   }
 
-  // 2. Search Glossary Items
+  // 2. Search Foundations Glossary Items
   for (const s of subjects) {
     for (const g of s.glossary) {
       const normTerm = normalizeVietnamese(g.term);
@@ -124,6 +138,7 @@ export function searchKnowledgeBase(rawQuery: string): SearchResult[] {
           type: 'glossary',
           title: `Thuật ngữ: ${g.term} (${s.shortName})`,
           subjectId: s.id,
+          collectionId: 'foundations',
           snippet: g.meaning,
           url: `#/reference/${s.id}`,
           score
@@ -132,7 +147,33 @@ export function searchKnowledgeBase(rawQuery: string): SearchResult[] {
     }
   }
 
-  // 3. Search Self-test Exercises
+  // 3. Search DPL302m Chapter Glossaries
+  for (const ch of dplChapters) {
+    for (const g of ch.glossary) {
+      const normTerm = normalizeVietnamese(g.term);
+      const normMeaning = normalizeVietnamese(g.meaning);
+
+      let score = 0;
+      if (normTerm.includes(normQuery)) score += 120;
+      else if (normMeaning.includes(normQuery)) score += 60;
+
+      if (score > 0) {
+        results.push({
+          id: `glossary-${ch.chapterId}-${g.term}`,
+          type: 'glossary',
+          title: `Thuật ngữ: ${g.term} (${ch.title.split('—')[0].trim()})`,
+          collectionId: 'dpl302m',
+          chapterId: ch.chapterId,
+          chapterTitle: ch.title,
+          snippet: g.meaning,
+          url: `#/dpl302m/${ch.chapterId}`,
+          score
+        });
+      }
+    }
+  }
+
+  // 4. Search Foundations Exercises
   for (const s of subjects) {
     for (const ex of s.exercises) {
       const normTitle = normalizeVietnamese(ex.title);
@@ -148,6 +189,7 @@ export function searchKnowledgeBase(rawQuery: string): SearchResult[] {
           type: 'exercise',
           title: `Bài tập: ${ex.title} (${s.shortName})`,
           subjectId: s.id,
+          collectionId: 'foundations',
           snippet: ex.questionMarkdown.slice(0, 100).replace(/\n+/g, ' ') + '...',
           url: `#/reference/${s.id}`,
           score
@@ -156,7 +198,33 @@ export function searchKnowledgeBase(rawQuery: string): SearchResult[] {
     }
   }
 
-  // 4. Search Exam Questions
+  // 5. Search DPL302m Exercises
+  for (const ch of dplChapters) {
+    for (const ex of ch.exercises) {
+      const normTitle = normalizeVietnamese(ex.title);
+      const normQ = normalizeVietnamese(ex.questionMarkdown);
+
+      let score = 0;
+      if (normTitle.includes(normQuery)) score += 110;
+      else if (normQ.includes(normQuery)) score += 40;
+
+      if (score > 0) {
+        results.push({
+          id: ex.id,
+          type: 'exercise',
+          title: `Bài tập: ${ex.title} (${ch.title.split('—')[0].trim()})`,
+          collectionId: 'dpl302m',
+          chapterId: ch.chapterId,
+          chapterTitle: ch.title,
+          snippet: ex.questionMarkdown.slice(0, 100).replace(/\n+/g, ' ') + '...',
+          url: `#/dpl302m/${ch.chapterId}`,
+          score
+        });
+      }
+    }
+  }
+
+  // 6. Search Exam Questions
   for (const exam of exams) {
     for (const q of exam.questions) {
       const normQ = normalizeVietnamese(q.question);
@@ -171,6 +239,7 @@ export function searchKnowledgeBase(rawQuery: string): SearchResult[] {
           id: q.id,
           type: 'exam-question',
           title: `Đề ${exam.number} - Câu ${q.number}`,
+          collectionId: 'foundations',
           snippet: q.question,
           url: `#/practice`,
           score

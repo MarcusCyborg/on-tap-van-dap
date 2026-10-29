@@ -85,6 +85,47 @@ describe('Vietnamese Accent Normalization & Search', () => {
     const results = searchKnowledgeBase('variance');
     expect(results.some(r => r.type === 'glossary')).toBe(true);
   });
+
+  it('searches for prompt-specified DPL and foundations keywords', () => {
+    // DPL4-13
+    const rDpl = searchKnowledgeBase('DPL4-13');
+    expect(rDpl.length).toBeGreaterThan(0);
+    expect(rDpl[0].id).toBe('DPL4-13');
+
+    // DL07
+    const rDl = searchKnowledgeBase('DL07');
+    expect(rDl.length).toBeGreaterThan(0);
+    expect(rDl[0].id).toBe('DL07');
+
+    // IoU
+    const rIou = searchKnowledgeBase('IoU');
+    expect(rIou.length).toBeGreaterThan(0);
+    expect(rIou.some(r => r.id === 'DPL4-13')).toBe(true);
+
+    // NMS
+    const rNms = searchKnowledgeBase('NMS');
+    expect(rNms.length).toBeGreaterThan(0);
+    expect(rNms.some(r => r.id === 'DPL4-13')).toBe(true);
+
+    // gradient checking
+    const rGrad = searchKnowledgeBase('gradient checking');
+    expect(rGrad.length).toBeGreaterThan(0);
+    expect(rGrad.some(r => r.id === 'DPL2-08')).toBe(true);
+
+    // LSTM
+    const rLstm = searchKnowledgeBase('LSTM');
+    expect(rLstm.length).toBeGreaterThan(0);
+    expect(rLstm.some(r => r.id.startsWith('DPL5-') || r.id === 'DL31')).toBe(true);
+
+    // broadcasting
+    const rBroad = searchKnowledgeBase('broadcasting');
+    expect(rBroad.length).toBeGreaterThan(0);
+    expect(rBroad.some(r => r.id === 'DPL1-06')).toBe(true);
+
+    // xac suat
+    const rXs = searchKnowledgeBase('xac suat');
+    expect(rXs.length).toBeGreaterThan(0);
+  });
 });
 
 describe('Storage, Progress & Backup/Restore', () => {
@@ -153,6 +194,34 @@ describe('Storage, Progress & Backup/Restore', () => {
     expect(data.conceptProgress['ML01']?.note).toBe('Existing ML note');
     expect(data.conceptProgress['XS02']?.note).toBe('Imported XS note');
   });
+
+  it('tracks progress and computes stats correctly across both foundations and DPL302m', () => {
+    // Record progress for both collections
+    updateConceptProgress('DL01', { readAt: new Date().toISOString() });
+    setConceptUnderstanding('DL01', 'confident');
+
+    updateConceptProgress('DPL1-01', { readAt: new Date().toISOString() });
+    setConceptUnderstanding('DPL1-01', 'partial');
+    toggleConceptBookmark('DPL1-01');
+
+    const data = loadUserData();
+    const allStats = computeUserStats(data);
+    expect(allStats.totalRead).toBe(2);
+    expect(allStats.foundationsRead).toBe(1);
+    expect(allStats.dpl302mRead).toBe(1);
+    expect(allStats.foundationsTotal).toBe(140);
+    expect(allStats.dpl302mTotal).toBe(72);
+    expect(allStats.totalConcepts).toBe(212);
+    expect(allStats.needsReviewCount).toBe(1); // DPL1-01 is partial and bookmarked
+
+    const dplStats = computeUserStats(data, 'dpl302m');
+    expect(dplStats.totalRead).toBe(1);
+    expect(dplStats.totalConcepts).toBe(72);
+
+    const fStats = computeUserStats(data, 'foundations');
+    expect(fStats.totalRead).toBe(1);
+    expect(fStats.totalConcepts).toBe(140);
+  });
 });
 
 describe('Practice Session Sampling', () => {
@@ -188,5 +257,55 @@ describe('Practice Session Sampling', () => {
     });
     expect(res7.success).toBe(true);
     expect(res7.session?.questionIds.length).toBe(7);
+  });
+
+  it('samples DPL302m rounds and evenly distributes across 5 chapters', () => {
+    // 5 question round for DPL across all 5 chapters
+    const res5 = createCustomPracticeSession({
+      collection: 'dpl302m',
+      chapters: ['dpl1', 'dpl2', 'dpl3', 'dpl4', 'dpl5'],
+      studyLevels: ['core', 'further'],
+      onlyNeedsReview: false,
+      questionCount: 5
+    });
+
+    expect(res5.success).toBe(true);
+    expect(res5.session?.questionIds.length).toBe(5);
+
+    // Verify all 5 chapters are represented
+    const chaptersInSession = new Set(res5.session?.questionData.map(q => q.chapterId));
+    expect(chaptersInSession.size).toBe(5);
+
+    // 7 question round for DPL
+    const res7 = createCustomPracticeSession({
+      collection: 'dpl302m',
+      chapters: ['dpl1', 'dpl2', 'dpl3', 'dpl4', 'dpl5'],
+      studyLevels: ['core'],
+      onlyNeedsReview: false,
+      questionCount: 7
+    });
+
+    expect(res7.success).toBe(true);
+    expect(res7.session?.questionIds.length).toBe(7);
+    // All 7 IDs must be distinct
+    const uniqueIds = new Set(res7.session?.questionIds);
+    expect(uniqueIds.size).toBe(7);
+  });
+
+  it('handles filtered DPL pool smaller than requested question count without duplicates', () => {
+    // If only dpl3 further is selected (dpl3 only has 2 further questions: DPL3-09, DPL3-10)
+    const res = createCustomPracticeSession({
+      collection: 'dpl302m',
+      chapters: ['dpl3'],
+      studyLevels: ['further'],
+      onlyNeedsReview: false,
+      questionCount: 5
+    });
+
+    expect(res.success).toBe(true);
+    expect(res.availableCount).toBe(2);
+    expect(res.session?.questionIds.length).toBe(2);
+    expect(res.message).toBeDefined();
+    expect(res.message).toContain('Chỉ có 2 câu');
   });
 });

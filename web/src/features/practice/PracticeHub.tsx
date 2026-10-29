@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Award, Sparkles, Filter, Clock, ArrowRight, Play, BookOpen, AlertCircle } from 'lucide-react';
-import { exams } from '../../content/generated';
-import type { SubjectId, Priority } from '../../content/types';
+import { Award, Sparkles, Filter, Clock, ArrowRight, Play, BookOpen, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { exams, dplChapters } from '../../content/generated';
+import type { SubjectId, Priority, StudyLevel, CollectionId } from '../../content/types';
 import { createPresetExamSession, createCustomPracticeSession } from '../../lib/sampling';
 import { saveExamSession, loadUserData } from '../../lib/storage';
 import { SUBJECT_INFO } from '../../content/metadata';
@@ -10,17 +10,39 @@ import { SUBJECT_INFO } from '../../content/metadata';
 export const PracticeHub: React.FC = () => {
   const navigate = useNavigate();
 
-  // Custom generator state
+  // Mode: 'dpl302m' (prioritized) vs 'foundations'
+  const [practiceMode, setPracticeMode] = useState<CollectionId>('dpl302m');
+
+  // DPL302m generator state
+  const [selectedChapters, setSelectedChapters] = useState<string[]>(['dpl1', 'dpl2', 'dpl3', 'dpl4', 'dpl5']);
+  const [selectedStudyLevels, setSelectedStudyLevels] = useState<StudyLevel[]>(['core']);
+  const [dplNeedsReview, setDplNeedsReview] = useState<boolean>(false);
+  const [dplQuestionCount, setDplQuestionCount] = useState<5 | 7>(5);
+
+  // Foundations custom generator state
   const [selectedSubjects, setSelectedSubjects] = useState<SubjectId[]>(['xs', 'ml', 'dl', 'gt']);
   const [selectedPriorities, setSelectedPriorities] = useState<Priority[]>(['A']);
-  const [onlyNeedsReview, setOnlyNeedsReview] = useState<boolean>(false);
-  const [questionCount, setQuestionCount] = useState<5 | 7>(7);
+  const [foundationsNeedsReview, setFoundationsNeedsReview] = useState<boolean>(false);
+  const [foundationsQuestionCount, setFoundationsQuestionCount] = useState<5 | 7>(7);
+
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const startPresetExam = (examNumber: number) => {
     const session = createPresetExamSession(examNumber);
     saveExamSession(session);
     navigate(`/practice/${session.id}`);
+  };
+
+  const handleToggleChapter = (chId: string) => {
+    setSelectedChapters(prev =>
+      prev.includes(chId) ? prev.filter(id => id !== chId) : [...prev, chId]
+    );
+  };
+
+  const handleToggleStudyLevel = (lvl: StudyLevel) => {
+    setSelectedStudyLevels(prev =>
+      prev.includes(lvl) ? prev.filter(x => x !== lvl) : [...prev, lvl]
+    );
   };
 
   const handleToggleSubject = (sId: SubjectId) => {
@@ -35,10 +57,38 @@ export const PracticeHub: React.FC = () => {
     );
   };
 
-  const startCustomExam = () => {
+  const startDplExam = () => {
+    setErrorMessage(null);
+    if (selectedChapters.length === 0) {
+      setErrorMessage('Vui lòng chọn ít nhất một chương DPL302m.');
+      return;
+    }
+    if (selectedStudyLevels.length === 0) {
+      setErrorMessage('Vui lòng chọn ít nhất một mức học (Cốt lõi hoặc Đọc tiếp).');
+      return;
+    }
+
+    const res = createCustomPracticeSession({
+      collection: 'dpl302m',
+      chapters: selectedChapters,
+      studyLevels: selectedStudyLevels,
+      onlyNeedsReview: dplNeedsReview,
+      questionCount: dplQuestionCount
+    });
+
+    if (!res.success || !res.session) {
+      setErrorMessage(res.message || 'Không thể tạo lượt luyện DPL302m với bộ lọc hiện tại.');
+      return;
+    }
+
+    saveExamSession(res.session);
+    navigate(`/practice/${res.session.id}`);
+  };
+
+  const startFoundationsExam = () => {
     setErrorMessage(null);
     if (selectedSubjects.length === 0) {
-      setErrorMessage('Vui lòng chọn ít nhất một chuyên đề.');
+      setErrorMessage('Vui lòng chọn ít nhất một chuyên đề nền tảng.');
       return;
     }
     if (selectedPriorities.length === 0) {
@@ -47,10 +97,11 @@ export const PracticeHub: React.FC = () => {
     }
 
     const res = createCustomPracticeSession({
+      collection: 'foundations',
       subjects: selectedSubjects,
       priorities: selectedPriorities,
-      onlyNeedsReview,
-      questionCount
+      onlyNeedsReview: foundationsNeedsReview,
+      questionCount: foundationsQuestionCount
     });
 
     if (!res.success || !res.session) {
@@ -77,12 +128,146 @@ export const PracticeHub: React.FC = () => {
         </p>
       </div>
 
-      {/* Part 1: Four Preset Exams */}
+      {/* Part 1: Prioritized DPL302m Custom Round */}
+      <div className="bg-surface border-2 border-purple-300/80 rounded-2xl p-5 sm:p-6 shadow-xs space-y-5">
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border pb-3">
+          <div className="space-y-0.5">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800 text-[11px] font-bold">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Ưu tiên môn đang học</span>
+            </div>
+            <h2 className="text-base sm:text-lg font-bold text-ink">
+              Luyện Vấn Đáp DPL302m (5 hoặc 7 Câu Theo 5 Chương)
+            </h2>
+            <p className="text-xs text-muted">
+              Chọn chương và mức học. Lượt tổng hợp 5–7 câu sẽ ưu tiên lấy tối thiểu 1 câu mỗi chương nếu đủ điều kiện trong pool.
+            </p>
+          </div>
+        </div>
+
+        {errorMessage && practiceMode === 'dpl302m' && (
+          <div className="p-3 bg-red-50 border border-danger-ink/30 rounded-lg text-xs text-danger-ink flex items-center gap-2">
+            <AlertCircle className="w-4 h-4 shrink-0" />
+            <span>{errorMessage}</span>
+          </div>
+        )}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+          {/* Select DPL Chapters */}
+          <div className="space-y-2">
+            <span className="font-bold text-ink block">1. Chọn Chương DPL:</span>
+            <div className="space-y-1.5">
+              {dplChapters.map(ch => {
+                const checked = selectedChapters.includes(ch.chapterId);
+                return (
+                  <label
+                    key={ch.chapterId}
+                    className="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-surface-muted transition-colors"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={checked}
+                      onChange={() => handleToggleChapter(ch.chapterId)}
+                      className="rounded accent-purple-600"
+                    />
+                    <span className="text-ink font-medium truncate" title={ch.title}>
+                      {ch.chapterId.toUpperCase()} ({ch.totalCount} câu)
+                    </span>
+                  </label>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Select Study Level */}
+          <div className="space-y-2">
+            <span className="font-bold text-ink block">2. Mức học DPL:</span>
+            <div className="space-y-1.5">
+              <label className="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-surface-muted transition-colors">
+                <input
+                  type="checkbox"
+                  checked={selectedStudyLevels.includes('core')}
+                  onChange={() => handleToggleStudyLevel('core')}
+                  className="rounded accent-purple-600"
+                />
+                <span className="text-ink font-medium">Cốt lõi (57 câu)</span>
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer p-1 rounded hover:bg-surface-muted transition-colors">
+                <input
+                  type="checkbox"
+                  checked={selectedStudyLevels.includes('further')}
+                  onChange={() => handleToggleStudyLevel('further')}
+                  className="rounded accent-purple-600"
+                />
+                <span className="text-ink font-medium">Đọc tiếp (15 câu)</span>
+              </label>
+            </div>
+          </div>
+
+          {/* Question Count */}
+          <div className="space-y-2">
+            <span className="font-bold text-ink block">3. Số lượng câu:</span>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={() => setDplQuestionCount(5)}
+                className={`flex-1 py-2 rounded-lg border font-bold text-xs transition-all ${
+                  dplQuestionCount === 5
+                    ? 'bg-purple-700 text-white border-purple-700 shadow-2xs'
+                    : 'bg-surface border-border text-muted hover:text-ink'
+                }`}
+              >
+                5 câu (1 câu/chương)
+              </button>
+              <button
+                type="button"
+                onClick={() => setDplQuestionCount(7)}
+                className={`flex-1 py-2 rounded-lg border font-bold text-xs transition-all ${
+                  dplQuestionCount === 7
+                    ? 'bg-purple-700 text-white border-purple-700 shadow-2xs'
+                    : 'bg-surface border-border text-muted hover:text-ink'
+                }`}
+              >
+                7 câu
+              </button>
+            </div>
+          </div>
+
+          {/* Only Needs Review */}
+          <div className="space-y-2">
+            <span className="font-bold text-ink block">4. Phạm vi câu hỏi:</span>
+            <label className="flex items-start gap-2 cursor-pointer p-2 rounded-lg bg-surface-muted/60 border border-border">
+              <input
+                type="checkbox"
+                checked={dplNeedsReview}
+                onChange={e => setDplNeedsReview(e.target.checked)}
+                className="mt-0.5 rounded accent-purple-600"
+              />
+              <span className="text-ink leading-tight">
+                Chỉ lấy trong các câu DPL <strong>Cần ôn lại</strong> (Đã đánh dấu Chưa hiểu, Hiểu 1 phần, hoặc Bookmark).
+              </span>
+            </label>
+          </div>
+        </div>
+
+        {/* Generate button */}
+        <div className="pt-3 border-t border-border flex justify-end">
+          <button
+            onClick={() => { setPracticeMode('dpl302m'); startDplExam(); }}
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-purple-700 text-white text-sm font-bold hover:bg-purple-800 transition-all shadow-sm"
+          >
+            <Play className="w-4 h-4 fill-current" />
+            Bắt đầu luyện DPL302m ngay
+          </button>
+        </div>
+      </div>
+
+      {/* Part 2: Four Preset Exams */}
       <div className="space-y-4">
         <div className="space-y-0.5">
           <h2 className="text-base sm:text-lg font-bold text-ink flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent inline-block"></span>
-            1. Bốn Đề Tổng Hợp Có Sẵn (Mỗi Đề 7 Câu)
+            Bốn Đề Tổng Hợp Có Sẵn — Nền Tảng Chung (Mỗi Đề 7 Câu)
           </h2>
           <p className="text-xs text-muted">
             Đề bài được biên soạn chuẩn theo cấu trúc phỏng vấn, liên kết bốn mảng và có tiêu chí chấm chi tiết.
@@ -129,19 +314,19 @@ export const PracticeHub: React.FC = () => {
         </div>
       </div>
 
-      {/* Part 2: Custom Random Round Generator */}
+      {/* Part 3: Custom Random Round Generator (Foundations) */}
       <div className="bg-surface border border-border rounded-2xl p-5 sm:p-6 shadow-xs space-y-5">
         <div className="space-y-1 border-b border-border pb-3">
           <h2 className="text-base sm:text-lg font-bold text-ink flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-accent" />
-            2. Tạo Lượt Luyện Tùy Biến (5 hoặc 7 Câu)
+            Luyện Tùy Biến — Nền Tảng Chung (4 Mảng)
           </h2>
           <p className="text-xs text-muted">
-            Chọn mảng, mức ưu tiên hoặc chỉ lấy các câu cần ôn lại. Lượt tổng hợp sẽ chọn ít nhất 1 câu cho mỗi mảng được chọn.
+            Chọn mảng và mức ưu tiên trong 140 câu nền tảng (Xác suất, ML, DL, Giải thuật).
           </p>
         </div>
 
-        {errorMessage && (
+        {errorMessage && practiceMode === 'foundations' && (
           <div className="p-3 bg-red-50 border border-danger-ink/30 rounded-lg text-xs text-danger-ink flex items-center gap-2">
             <AlertCircle className="w-4 h-4 shrink-0" />
             <span>{errorMessage}</span>
@@ -208,18 +393,18 @@ export const PracticeHub: React.FC = () => {
             <div className="flex gap-2">
               <button
                 type="button"
-                onClick={() => setQuestionCount(5)}
+                onClick={() => setFoundationsQuestionCount(5)}
                 className={`flex-1 py-2 rounded-lg border font-bold text-xs transition-all ${
-                  questionCount === 5 ? 'bg-accent text-white border-accent' : 'bg-surface border-border text-muted hover:text-ink'
+                  foundationsQuestionCount === 5 ? 'bg-accent text-white border-accent' : 'bg-surface border-border text-muted hover:text-ink'
                 }`}
               >
                 5 câu
               </button>
               <button
                 type="button"
-                onClick={() => setQuestionCount(7)}
+                onClick={() => setFoundationsQuestionCount(7)}
                 className={`flex-1 py-2 rounded-lg border font-bold text-xs transition-all ${
-                  questionCount === 7 ? 'bg-accent text-white border-accent' : 'bg-surface border-border text-muted hover:text-ink'
+                  foundationsQuestionCount === 7 ? 'bg-accent text-white border-accent' : 'bg-surface border-border text-muted hover:text-ink'
                 }`}
               >
                 7 câu
@@ -233,12 +418,12 @@ export const PracticeHub: React.FC = () => {
             <label className="flex items-start gap-2 cursor-pointer p-2 rounded-lg bg-surface-muted/60 border border-border">
               <input
                 type="checkbox"
-                checked={onlyNeedsReview}
-                onChange={e => setOnlyNeedsReview(e.target.checked)}
+                checked={foundationsNeedsReview}
+                onChange={e => setFoundationsNeedsReview(e.target.checked)}
                 className="mt-0.5 rounded accent-accent"
               />
               <span className="text-ink leading-tight">
-                Chỉ lấy trong các câu <strong>Cần ôn lại</strong> (Đã đánh dấu Chưa hiểu, Hiểu 1 phần, hoặc Bookmark).
+                Chỉ lấy trong các câu <strong>Cần ôn lại</strong>.
               </span>
             </label>
           </div>
@@ -247,11 +432,11 @@ export const PracticeHub: React.FC = () => {
         {/* Generate button */}
         <div className="pt-3 border-t border-border flex justify-end">
           <button
-            onClick={startCustomExam}
+            onClick={() => { setPracticeMode('foundations'); startFoundationsExam(); }}
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-accent text-white text-sm font-bold hover:bg-accent-dark transition-all shadow-sm"
           >
             <Play className="w-4 h-4 fill-current" />
-            Tạo và bắt đầu làm bài ngay
+            Bắt đầu lượt nền tảng
           </button>
         </div>
       </div>

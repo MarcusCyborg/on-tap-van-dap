@@ -1,14 +1,38 @@
 # Ôn Vấn Đáp — Ứng Dụng Học Tập & Luyện Vấn Đáp Thực Chiến
 
-Website tiếng Việt hỗ trợ học từ gần như số 0, chuẩn bị vấn đáp 5–7 câu cho bốn chuyên đề: **Xác suất thống kê**, **Machine Learning**, **Deep Learning**, và **Giải thuật & Cấu trúc dữ liệu**.
+Website tiếng Việt hỗ trợ học từ gần như số 0, chuẩn bị vấn đáp 5–7 câu cho môn **Deep Learning (DPL302m)** và bốn mảng **Nền tảng chung** (Xác suất thống kê, Machine Learning, Deep Learning cơ bản, và Giải thuật).
 
 Ứng dụng chạy hoàn toàn phía client (Static Web App), không đòi hỏi backend server, cơ sở dữ liệu ngoài, tài khoản hay API key. Toàn bộ tiến độ và ghi chú được lưu an toàn trong trình duyệt của bạn.
 
 ---
 
-## 1. Cài đặt và Khởi chạy
+## 1. Hai Bộ Nội Dung Học Tập
 
-Yêu cầu môi trường: **Node.js 18+** (đã kiểm thử hoàn hảo trên Node v22.17.0 và npm 10.9.2).
+Website tổ chức nội dung thành 2 collection rõ ràng, độc lập nhưng liên kết chặt chẽ:
+
+1. **Deep Learning — DPL302m (Môn học chính — 72 câu hỏi bám sát 17 slide):**
+   - **Chương 1:** Từ logistic regression đến mạng nhiều tầng (12 câu, 4 bài tập)
+   - **Chương 2:** Huấn luyện và tối ưu hóa (14 câu, 4 bài tập)
+   - **Chương 3:** ML strategy và phân tích lỗi (10 câu, 3 bài tập)
+   - **Chương 4:** CNN và thị giác máy tính từ nền tảng (18 câu, 4 bài tập)
+   - **Chương 5:** RNN, NLP, Attention và Transformer (18 câu, 4 bài tập)
+   - Phân tầng học tập: **57 câu Cốt lõi** và **15 câu Đọc tiếp**, kèm **19 bài tự kiểm tra có lời giải**.
+   - Bảng tra cứu trực tiếp từ 17 bài giảng slide (1.1 → 5.4) sang câu hỏi tương ứng.
+
+2. **Nền tảng chung (140 câu — 4 chuyên đề cốt lõi):**
+   - **Xác suất thống kê:** 35 câu (18A • 12B • 5C)
+   - **Machine Learning:** 35 câu (18A • 12B • 5C)
+   - **Deep Learning (Cơ sở):** 35 câu (18A • 12B • 5C, mã `DL01–DL35`)
+   - **Giải thuật & Cấu trúc dữ liệu:** 35 câu (18A • 12B • 5C)
+   - Kèm 20 bài tự kiểm tra có lời giải và 4 đề tổng hợp thực chiến (mỗi đề 7 câu).
+
+Tổng toàn thư viện: **212 câu hỏi duy nhất**, **39 bài tự kiểm tra có lời giải**, **4 đề thi tổng hợp**, và **8 mô phỏng trực quan tương tác**.
+
+---
+
+## 2. Cài đặt và Khởi chạy
+
+Yêu cầu môi trường: **Node.js 18+** (đã kiểm thử trên Node v22.17.0 và npm 10.9.2).
 
 ### Cài đặt dependencies
 Mở terminal tại thư mục `F:\dpl13.10\On-tap-van-dap\web`:
@@ -22,11 +46,17 @@ npm run dev
 ```
 Trình duyệt sẽ mở tại `http://localhost:5173`. Lệnh này sẽ tự động chạy `predev` để đồng bộ dữ liệu generated từ các file chuyên đề Markdown.
 
+### Đồng bộ & kiểm thực nội dung từ Markdown (Import)
+```bash
+npm run import
+```
+Script sẽ đọc toàn bộ Markdown từ `Chuyen-de/` và `DPL302m/`, kiểm tra tính toàn vẹn (đủ 212 câu, đúng tỷ lệ, liên kết hợp lệ) và cập nhật `src/content/generated/`.
+
 ### Đóng gói sản phẩm tĩnh (Build)
 ```bash
 npm run build
 ```
-Lệnh sẽ chạy parser kiểm tra toàn vẹn nội dung (`npm run import`), typecheck TypeScript (`tsc`), và đóng gói ra thư mục `dist/`.
+Lệnh sẽ chạy parser kiểm tra toàn vẹn nội dung (`prebuild`), typecheck TypeScript (`tsc`), và đóng gói ra thư mục `dist/`.
 
 ### Xem trước bản build sản phẩm (Preview)
 ```bash
@@ -38,92 +68,66 @@ Khởi chạy web server tĩnh phục vụ thư mục `dist/` tại `http://loca
 ```bash
 npm run test
 ```
-Chạy toàn bộ 28 bài kiểm tra tự động về Parser, Lưu trữ, Tìm kiếm và 8 Mô phỏng toán học.
+Chạy toàn bộ 38 bài kiểm tra tự động về Parser, 212 Concept Integrity, 39 Exercises, Lưu trữ, Tìm kiếm từ khóa mới (`DPL4-13`, `IoU`, `NMS`, `gradient checking`, `LSTM`), và 8 Mô phỏng toán học.
 
 ### Chạy kiểm thử trình duyệt thực tế & chụp ảnh màn hình
 ```bash
 npx tsx scripts/verify-ui.ts
 ```
+Tự động khởi động Microsoft Edge headless, duyệt qua 13 kịch bản trên Desktop (1440px), Mobile (390px) và Compact Mobile (360px), chụp ảnh màn hình và lưu vào thư mục `screenshots/` và artifact.
 
 ---
 
-## 2. Cấu trúc Dự án
+## 3. Cấu trúc Dự án
 
 ```text
 web/
   scripts/
-    import-content.ts     # Script AST parser trích xuất dữ liệu từ Chuyen-de/*.md
-    verify-ui.ts          # Script Playwright kiểm thử giao diện & chụp màn hình
+    import-content.ts     # Script AST parser trích xuất dữ liệu từ Chuyen-de/*.md và DPL302m/*.md
+    verify-ui.ts          # Script Playwright kiểm thử giao diện thực tế & chụp 13 ảnh màn hình
   src/
     app/                  # App.tsx cấu hình HashRouter và Layout chính
     components/
-      layout/             # Header, Sidebar, Footer
+      layout/             # Header, Sidebar (ưu tiên DPL302m), Footer
     content/
-      types.ts            # Schema TypeScript cho Concept, Subject, Exam, UserProgress
+      types.ts            # Schema TypeScript cho Concept, DplChapter, Subject, Exam, UserProgress
       metadata.ts         # Metadata liên kết mô phỏng, concept liên quan, mã màu
-      generated/          # Dữ liệu JSON tự động sinh ra từ nguồn (concepts.json, subjects.json, ...)
+      generated/          # Dữ liệu JSON tự động sinh ra từ nguồn (concepts.json, dpl-chapters.json, ...)
     features/
-      home/               # Trang chủ Dashboard, tiếp tục học, tiến độ thật
+      home/               # Trang chủ Dashboard, tiếp tục học câu dở, tiến độ tách biệt
+      dpl/                # Khóa học DPL302m (DplCourseView, DplChapterView, 17 bài học, 19 bài tập)
       guide/              # Chuyên đề 00: Bản đồ kiến thức, lộ trình 4h, mẫu prompt
-      subjects/           # Mục lục chuyên đề, lọc theo mức A/B/C và cần ôn
-      reader/             # Concept Reader: Đọc hiểu vs Tự trả lời, tự đánh giá, ghi chú
-      search/             # Modal tìm kiếm tiếng Việt không dấu (Ctrl+K)
-      practice/           # 4 đề thi tổng hợp & Trình tạo lượt 5/7 câu ngẫu nhiên
-      review/             # Danh sách ưu tiên các câu cần ôn lại
-      reference/          # Bảng công thức, sơ đồ, 20 bài tự kiểm tra, code Python, glossary
-      settings/           # Tùy chỉnh cỡ chữ (17px/19px/21px), sao lưu & khôi phục dữ liệu
+      subjects/           # Mục lục 4 chuyên đề nền tảng, lọc theo mức A/B/C và cần ôn
+      reader/             # Concept Reader: Đọc hiểu vs Tự trả lời (ẩn Mẫu đáp), ghi chú, bookmark
+      search/             # Modal tìm kiếm tiếng Việt không dấu (Ctrl+K), tra cứu ID cũ & DPL mới
+      practice/           # 4 đề thi tổng hợp & Trình tạo lượt 5/7 câu DPL (trải đều 5 chương) / Nền tảng
+      review/             # Danh sách ưu tiên các câu cần ôn lại với bộ lọc theo Collection
+      reference/          # Bảng công thức, sơ đồ, 20 bài tự kiểm tra nền tảng, code Python, glossary
+      settings/           # Tùy chỉnh cỡ chữ, sao lưu & khôi phục dữ liệu
       simulations/        # 8 Mô phỏng tương tác toán học & giải thuật
     lib/
-      storage.ts          # Xử lý localStorage, export/import JSON, tính toán thống kê
+      storage.ts          # Xử lý localStorage, export/import JSON, tính toán thống kê động theo collection
       search.ts           # Chuẩn hóa tiếng Việt, tách dấu đ -> d, thuật toán tính điểm tìm kiếm
-      sampling.ts         # Thuật toán lấy mẫu đề thi 5/7 câu cân đối 4 mảng
+      sampling.ts         # Thuật toán lấy mẫu đề thi 5/7 câu (phân bổ đều 5 chương DPL hoặc 4 mảng)
     styles/
       index.css           # Tokens CSS variables, typography, font size switches
   tests/
-    parser.test.ts        # Test kiểm tra tính toàn vẹn 140 câu, 20 bài tập, 4 đề
-    lib.test.ts           # Test tìm kiếm tiếng Việt, storage, export/import
+    parser.test.ts        # Test kiểm tra tính toàn vẹn 212 câu, 39 bài tập, 4 đề, spot-checks DPL
+    lib.test.ts           # Test tìm kiếm tiếng Việt, keyword DPL, storage 2 bộ, sampling phân bổ 5 chương
     simulations.test.ts   # Test logic toán học và trường hợp biên của 8 mô phỏng
-  screenshots/            # 11 ảnh chụp màn hình kiểm thử thực tế
-  CONTENT-REPORT.md       # Báo cáo kiểm kê chi tiết nội dung nguồn
+  screenshots/            # 13 ảnh chụp màn hình kiểm thử thực tế
+  CONTENT-REPORT.md       # Báo cáo kiểm kê chi tiết nội dung nguồn (140 / 72 / 212)
   DESIGN.md               # Đặc tả Design System, tokens, typography và components
   VERIFICATION.md         # Biên bản nghiệm thu kiểm thử trình duyệt và trường hợp biên
 ```
 
 ---
 
-## 3. Quy trình Cập nhật Nội dung Nguồn
-
-Nếu bạn chỉnh sửa hoặc bổ sung nội dung trong các file Markdown tại `F:\dpl13.10\On-tap-van-dap\Chuyen-de/`, chỉ cần chạy lại lệnh:
-```bash
-npm run import
-```
-Script sẽ đọc lại toàn bộ tài liệu nguồn, kiểm tra tính toàn vẹn (đủ 140 câu, đúng tỷ lệ 18A / 12B / 5C, các liên kết không bị gãy), và cập nhật các file JSON trong `src/content/generated/`. Lệnh build sẽ tự động dừng nếu dữ liệu nguồn vi phạm cấu trúc chuẩn.
-
----
-
 ## 4. Quản lý Tiến độ Học & Sao lưu Dữ liệu
 
-- **Lưu trữ cục bộ:** Mọi thao tác đánh dấu đã đọc, tự đánh giá ("Chưa hiểu" / "Hiểu một phần" / "Tự giải thích được"), bookmark, ghi chú cá nhân và điểm số thi thử được lưu trong `localStorage` dưới khóa `on_van_dap_user_data_v1`.
-- **Xuất sao lưu (Export):** Vào mục **Cài đặt** (`#/settings`), bấm **Tải file sao lưu (.json)** để lưu một bản sao tiến độ về máy tính.
-- **Khôi phục (Import):** Chọn file JSON sao lưu. Ứng dụng sẽ hiển thị bảng xem trước (preview) số lượng concept hợp lệ, số ghi chú, số bookmark và cho phép bạn chọn **Hợp nhất (Merge)** hoặc **Ghi đè (Overwrite)**.
-- **Đặt lại (Reset):** Cung cấp nút xóa sạch tiến độ có hộp thoại xác nhận 2 bước an toàn.
-
----
-
-## 5. Tám Mô Phỏng Tương Tác Cốt Lõi
-
-1. **Mean, Median và Ngoại lệ (XS05, XS06):** Thay đổi giá trị điểm ngoại lệ từ 4 đến 100 trên trục số để chứng minh Median có tính bền vững (robust) còn Mean bị kéo lệch mạnh.
-2. **Bayes và Tỷ lệ nền (XS11, XS12, XS13):** Khám phá nghịch lý tỷ lệ nền khi xét nghiệm có độ nhạy 90% nhưng xác suất mắc bệnh khi dương tính chỉ đạt ~8.33%.
-3. **Confusion Matrix và Ngưỡng phân loại (ML29, ML30, ML31):** Điều chỉnh ngưỡng phân loại (threshold) trên 24 mẫu dữ liệu thực tế để quan sát sự đánh đổi giữa Precision và Recall.
-4. **Độ phức tạp & Overfitting (ML16, ML17, ML18):** Thử nghiệm bậc đa thức từ 1 đến 7 để so sánh MSE trên tập Train và tập Validation (nhận biết Underfitting và Overfitting).
-5. **Một Nơ-ron Nhân tạo Tính gì (DL03, DL05, DL06):** Điều chỉnh đầu vào, trọng số, bias và hàm kích hoạt (ReLU, Sigmoid, Linear) để hiểu rõ sự khác biệt giữa tổ hợp affine `z` và đầu ra kích hoạt `a`.
-6. **Gradient Descent (DL09, DL10, DL11, DL13):** Tối ưu hóa hàm mất mát $L(w) = (w - 3)^2$ với các mức Learning Rate (hội tụ mượt mà, học chậm, dao động nhảy cóc, và dừng an toàn khi phân kỳ).
-7. **Binary Search Từng bước (GT02, GT12, GT13):** Quan sát trực quan quá trình chia đôi không gian tìm kiếm, các chỉ số left, right, mid và tự động phát hiện mảng chưa sắp xếp.
-8. **Duyệt Đồ thị BFS và DFS (GT08, GT09, GT24, GT26, GT27):** So sánh Hàng đợi (Queue) tìm đường ngắn nhất theo số cạnh của BFS với Ngăn xếp (Stack) đi sâu của DFS trên đồ thị có chu trình và đỉnh cô lập.
-
----
-
-## 6. Phạm vi và Giới hạn Hiện tại
-
-- **Luyện nói:** Được thiết kế để người học tự trả lời thành tiếng rồi bấm mở đáp án đối chiếu và tự chấm 0/1/2 điểm theo rubric. Phiên bản này **không sử dụng microphone, không ghi âm hay chấm bài bằng AI giả mạo**.
-- **Không có backend server:** Dữ liệu hoàn toàn nằm trong trình duyệt cá nhân; nếu bạn xóa bộ nhớ trình duyệt hoặc dùng chế độ ẩn danh (Incognito), dữ liệu sẽ mất trừ khi bạn đã tải file sao lưu `.json`.
+- **Bảo toàn dữ liệu cũ:** Ứng dụng giữ nguyên storage key `on_van_dap_user_data_v1`. Toàn bộ dữ liệu ID cũ (`XS01–XS35`, `ML01–ML35`, `DL01–DL35`, `GT01–GT35`), ghi chú, bookmark, mức hiểu và lượt thi cũ vẫn hoạt động 100% nguyên vẹn.
+- **Dữ liệu DPL mới:** Các ID `DPL1-01` đến `DPL5-18` được nạp vào dưới trạng thái chưa đọc / chưa đánh giá, không tự điền tiến độ giả.
+- **Tiếp tục học dở:** Nếu người học đang đọc dở một câu (dù là câu cũ như `ML15` hay câu DPL mới như `DPL4-13`), nút **Tiếp tục học** trên trang chủ sẽ trỏ chính xác vào câu đó.
+- **Xuất/Nhập sao lưu tương thích ngược:**
+  - File sao lưu cũ từ bản 140 câu vẫn nhập được mượt mà trên bản cập nhật này.
+  - Các ID lạ không nhận diện được vẫn được bảo lưu nguyên vẹn trong bản sao lưu để phục hồi, không bị xóa âm thầm và không làm sai lệch mẫu số thống kê.

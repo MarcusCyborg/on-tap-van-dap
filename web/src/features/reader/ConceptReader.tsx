@@ -84,11 +84,17 @@ export const ConceptReader: React.FC = () => {
   }
 
   const sInfo = SUBJECT_INFO[concept.subjectId];
+  const isDpl = concept.collectionId === 'dpl302m';
 
-  // Find previous and next concepts within all 140 concepts
-  const currentIndex = concepts.findIndex(c => c.id === concept.id);
-  const prevConcept = currentIndex > 0 ? concepts[currentIndex - 1] : undefined;
-  const nextConcept = currentIndex < concepts.length - 1 ? concepts[currentIndex + 1] : undefined;
+  // Find previous and next concepts within the current collection (DPL302m or Foundations)
+  // Prevents jumping between DPL sequence and DL01-DL35 due to global array ordering
+  const collectionConcepts = isDpl
+    ? concepts.filter(c => c.collectionId === 'dpl302m')
+    : concepts.filter(c => c.collectionId !== 'dpl302m');
+
+  const currentIndex = collectionConcepts.findIndex(c => c.id === concept.id);
+  const prevConcept = currentIndex > 0 ? collectionConcepts[currentIndex - 1] : undefined;
+  const nextConcept = currentIndex < collectionConcepts.length - 1 ? collectionConcepts[currentIndex + 1] : undefined;
 
   const handleToggleBookmark = () => {
     const updated = toggleConceptBookmark(concept.id);
@@ -123,11 +129,25 @@ export const ConceptReader: React.FC = () => {
           <div className="flex items-center gap-1.5 flex-wrap">
             <Link to="/" className="hover:text-ink">Trang chủ</Link>
             <span>/</span>
-            <Link to={`/subjects/${concept.subjectId}`} className="hover:text-ink font-semibold" style={{ color: sInfo.color }}>
-              {sInfo.name}
-            </Link>
-            <span>/</span>
-            <span className="text-ink font-mono">{concept.groupTitle}</span>
+            {isDpl ? (
+              <>
+                <Link to="/dpl302m" className="hover:text-ink font-semibold text-purple-700">
+                  DPL302m
+                </Link>
+                <span>/</span>
+                <Link to={`/dpl302m/${concept.chapterId}`} className="hover:text-ink font-mono font-medium text-ink">
+                  {concept.chapterTitle ? concept.chapterTitle.split('—')[0].trim() : concept.groupTitle}
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to={`/subjects/${concept.subjectId}`} className="hover:text-ink font-semibold" style={{ color: sInfo.color }}>
+                  {sInfo.name}
+                </Link>
+                <span>/</span>
+                <span className="text-ink font-mono">{concept.groupTitle}</span>
+              </>
+            )}
           </div>
 
           {/* Bookmark Button */}
@@ -152,25 +172,54 @@ export const ConceptReader: React.FC = () => {
               {concept.id}
             </span>
 
-            {/* Priority Badge */}
-            <span className={`px-2 py-0.5 rounded text-xs font-bold ${
-              concept.priority === 'A'
-                ? 'bg-green-100 text-[#27624a] border border-green-200'
-                : concept.priority === 'B'
-                ? 'bg-blue-100 text-[#2b5c8f] border border-blue-200'
-                : 'bg-amber-100 text-[#8a4b16] border border-amber-200'
-            }`}>
-              {concept.priority === 'A' ? 'Mức A: Nền tảng' : concept.priority === 'B' ? 'Mức B: Mở rộng' : 'Mức C: Nhận diện'}
-            </span>
-
-            <span className="text-xs text-muted">
-              Câu {concept.order}/35 chuyên đề {sInfo.shortName}
-            </span>
+            {/* Collection & Priority / StudyLevel Badge */}
+            {isDpl ? (
+              <>
+                <span className="px-2 py-0.5 rounded text-xs font-bold bg-purple-100 text-purple-800 border border-purple-200">
+                  DPL302m
+                </span>
+                <span className={`px-2 py-0.5 rounded text-xs font-bold ${
+                  concept.studyLevel === 'core'
+                    ? 'bg-green-100 text-[#27624a] border border-green-200'
+                    : 'bg-blue-100 text-[#2b5c8f] border border-blue-200'
+                }`}>
+                  {concept.studyLevel === 'core' ? 'Cốt lõi' : 'Đọc tiếp'}
+                </span>
+                <span className="text-xs text-muted">
+                  Câu {concept.order} • {concept.chapterTitle || concept.groupTitle}
+                </span>
+              </>
+            ) : (
+              <>
+                <span className={`px-2 py-0.5 rounded text-xs font-bold ${
+                  concept.priority === 'A'
+                    ? 'bg-green-100 text-[#27624a] border border-green-200'
+                    : concept.priority === 'B'
+                    ? 'bg-blue-100 text-[#2b5c8f] border border-blue-200'
+                    : 'bg-amber-100 text-[#8a4b16] border border-amber-200'
+                }`}>
+                  {concept.priority === 'A' ? 'Mức A: Nền tảng' : concept.priority === 'B' ? 'Mức B: Mở rộng' : 'Mức C: Nhận diện'}
+                </span>
+                <span className="text-xs text-muted">
+                  Câu {concept.order}/35 chuyên đề {sInfo.shortName}
+                </span>
+              </>
+            )}
           </div>
 
           <h1 className="text-xl sm:text-2xl font-extrabold text-ink leading-tight">
             {concept.title}
           </h1>
+
+          {/* DPL Source references display */}
+          {isDpl && concept.sourceReferences && concept.sourceReferences.length > 0 && (
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-muted border border-border text-[11px] text-muted">
+              <span className="font-semibold text-ink">Nguồn tham chiếu slide:</span>
+              <span>
+                {concept.sourceReferences.map(r => `${r.file}${r.slideMarkers ? ` (${r.slideMarkers})` : ''}`).join('; ')}
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Mode Switcher Tabs */}

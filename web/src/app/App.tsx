@@ -12,6 +12,8 @@ import { PracticeHub } from '../features/practice/PracticeHub';
 import { PracticeSessionView } from '../features/practice/PracticeSessionView';
 import { ReferenceView } from '../features/reference/ReferenceView';
 import { SettingsView } from '../features/settings/SettingsView';
+import { DplCourseView } from '../features/dpl/DplCourseView';
+import { DplChapterView } from '../features/dpl/DplChapterView';
 import { loadUserData } from '../lib/storage';
 
 export const App: React.FC = () => {
@@ -50,6 +52,8 @@ export const App: React.FC = () => {
           <main className="flex-1 min-w-0 pb-16">
             <Routes>
               <Route path="/" element={<HomeView />} />
+              <Route path="/dpl302m" element={<DplCourseView />} />
+              <Route path="/dpl302m/:chapterId" element={<DplChapterView />} />
               <Route path="/guide" element={<GuideView />} />
               <Route path="/subjects/:subjectId" element={<SubjectTocView />} />
               <Route path="/learn/:conceptId" element={<ConceptReader />} />

@@ -1,18 +1,22 @@
-import type { UserStorageData, ConceptProgress, ExamAttempt, Understanding } from '../content/types';
-import { conceptMap } from '../content/generated';
+import type { UserStorageData, ConceptProgress, ExamAttempt, Understanding, CollectionId } from '../content/types';
+import { conceptMap, dplChapterMap } from '../content/generated';
 
 const STORAGE_KEY = 'on_van_dap_user_data_v1';
 const CURRENT_SCHEMA_VERSION = 1;
-const CONTENT_VERSION = '1.0.0';
+const CONTENT_VERSION = '2.0.0'; // Updated for DPL302m addition
 
-export const DEFAULT_USER_DATA: UserStorageData = {
-  schemaVersion: CURRENT_SCHEMA_VERSION,
-  contentVersion: CONTENT_VERSION,
-  updatedAt: new Date().toISOString(),
-  conceptProgress: {},
-  examSessions: {},
-  fontSize: 'normal'
-};
+export function createDefaultUserData(): UserStorageData {
+  return {
+    schemaVersion: CURRENT_SCHEMA_VERSION,
+    contentVersion: CONTENT_VERSION,
+    updatedAt: new Date().toISOString(),
+    conceptProgress: {},
+    examSessions: {},
+    fontSize: 'normal'
+  };
+}
+
+export const DEFAULT_USER_DATA: UserStorageData = createDefaultUserData();
 
 /**
  * Safely load user data from localStorage with schema migration and corruption handling.
@@ -21,11 +25,11 @@ export function loadUserData(): UserStorageData {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) {
-      return { ...DEFAULT_USER_DATA, updatedAt: new Date().toISOString() };
+      return createDefaultUserData();
     }
     const parsed = JSON.parse(raw);
     if (!parsed || typeof parsed !== 'object') {
-      return { ...DEFAULT_USER_DATA, updatedAt: new Date().toISOString() };
+      return createDefaultUserData();
     }
 
     // Schema version check and migration placeholder
@@ -45,7 +49,7 @@ export function loadUserData(): UserStorageData {
     };
   } catch (err) {
     console.error('Lỗi khi đọc dữ liệu từ localStorage:', err);
-    return { ...DEFAULT_USER_DATA, updatedAt: new Date().toISOString() };
+    return createDefaultUserData();
   }
 }
 
@@ -161,6 +165,8 @@ export function getExamSession(sessionId: string): ExamAttempt | undefined {
 
 /**
  * Calculate user study statistics.
+ * Uses conceptMap dynamically to support both foundations (140) and DPL302m (72).
+ * CollectionId filter: 'foundations' | 'dpl302m' | undefined (all)
  */
 export interface UserStats {
   totalRead: number;
@@ -175,10 +181,14 @@ export interface UserStats {
   totalNotes: number;
   needsReviewCount: number;
   completedExamsCount: number;
+  // Per-collection stats
+  foundationsRead: number;
+  dpl302mRead: number;
+  foundationsTotal: number;
+  dpl302mTotal: number;
 }
 
-export function computeUserStats(data: UserStorageData): UserStats {
-  const totalConcepts = 140;
+export function computeUserStats(data: UserStorageData, collectionFilter?: CollectionId): UserStats {
   let totalRead = 0;
   let totalBookmarked = 0;
   let totalNotes = 0;
@@ -186,32 +196,56 @@ export function computeUserStats(data: UserStorageData): UserStats {
   let partial = 0;
   let unknown = 0;
   let unassessed = 0;
+  let foundationsRead = 0;
+  let dpl302mRead = 0;
+  let foundationsTotal = 0;
+  let dpl302mTotal = 0;
 
   const reviewIds = new Set<string>();
 
-  for (let i = 1; i <= 35; i++) {
-    for (const prefix of ['XS', 'ML', 'DL', 'GT']) {
-      const id = `${prefix}${i.toString().padStart(2, '0')}`;
-      const p = data.conceptProgress[id];
-      if (p?.readAt) totalRead++;
-      if (p?.bookmarked) {
-        totalBookmarked++;
-        reviewIds.add(id);
-      }
-      if (p?.note?.trim()) totalNotes++;
+  // Iterate over all known concepts from conceptMap
+  for (const [id, concept] of conceptMap) {
+    const collection = concept.collectionId || 'foundations';
+    
+    // Count totals per collection
+    if (collection === 'foundations') foundationsTotal++;
+    else if (collection === 'dpl302m') dpl302mTotal++;
 
-      if (p?.understanding === 'confident') confident++;
-      else if (p?.understanding === 'partial') {
-        partial++;
-        reviewIds.add(id);
-      } else if (p?.understanding === 'unknown') {
-        unknown++;
-        reviewIds.add(id);
-      } else {
-        unassessed++;
-      }
+    // Apply filter if specified
+    if (collectionFilter && collection !== collectionFilter) continue;
+
+    const p = data.conceptProgress[id];
+    if (p?.readAt) {
+      totalRead++;
+      if (collection === 'foundations') foundationsRead++;
+      else if (collection === 'dpl302m') dpl302mRead++;
+    }
+    if (p?.bookmarked) {
+      totalBookmarked++;
+      reviewIds.add(id);
+    }
+    if (p?.note?.trim()) totalNotes++;
+
+    if (p?.understanding === 'confident') confident++;
+    else if (p?.understanding === 'partial') {
+      partial++;
+      reviewIds.add(id);
+    } else if (p?.understanding === 'unknown') {
+      unknown++;
+      reviewIds.add(id);
+    } else {
+      unassessed++;
     }
   }
+
+  // When not filtered, also compute per-collection reads
+  if (!collectionFilter) {
+    // Already counted above
+  }
+
+  const totalConcepts = collectionFilter
+    ? (collectionFilter === 'foundations' ? foundationsTotal : dpl302mTotal)
+    : (foundationsTotal + dpl302mTotal);
 
   const completedExamsCount = Object.values(data.examSessions).filter(
     s => s.status === 'completed'
@@ -224,7 +258,11 @@ export function computeUserStats(data: UserStorageData): UserStats {
     totalBookmarked,
     totalNotes,
     needsReviewCount: reviewIds.size,
-    completedExamsCount
+    completedExamsCount,
+    foundationsRead,
+    dpl302mRead,
+    foundationsTotal,
+    dpl302mTotal
   };
 }
 
