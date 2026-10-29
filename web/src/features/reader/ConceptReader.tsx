@@ -136,7 +136,7 @@ export const ConceptReader: React.FC = () => {
                 </Link>
                 <span>/</span>
                 <Link to={`/dpl302m/${concept.chapterId}`} className="hover:text-ink font-mono font-medium text-ink">
-                  {concept.chapterTitle ? concept.chapterTitle.split('—')[0].trim() : concept.groupTitle}
+                  {concept.chapterTitle ? concept.chapterTitle.split(/[:\-]/)[0].trim() : concept.groupTitle}
                 </Link>
               </>
             ) : (

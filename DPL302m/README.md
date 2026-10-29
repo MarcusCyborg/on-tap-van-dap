@@ -1,4 +1,4 @@
-# DPL302m — Kiến thức cơ bản bám môn Deep Learning
+# DPL302m: Kiến thức cơ bản bám môn Deep Learning
 
 Bộ bổ sung này có **72 câu theo 5 chương: 57 Cốt lõi, 15 Đọc tiếp**, kèm **19 bài tự kiểm tra có lời giải**. Mục tiêu là hiểu khái niệm, giải thích được cơ chế và làm các phép tính nhỏ phục vụ vấn đáp.
 

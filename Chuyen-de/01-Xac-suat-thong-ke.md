@@ -1,4 +1,4 @@
-# Xác suất thống kê — hiểu concept và tập vấn đáp từ số 0
+# Xác suất thống kê: hiểu concept và tập vấn đáp từ số 0
 
 Tài liệu gồm **35 câu: 18 câu [A], 12 câu [B], 5 câu [C]**. Đây là bản đồ kiến thức nhập môn để học và tra cứu, không phải dự đoán đề của thầy.
 
@@ -16,7 +16,7 @@ Ví dụ xuyên suốt: muốn biết chiều cao trung bình sinh viên một t
 
 Mỗi câu: đọc giải thích → tự làm ví dụ → che tài liệu và nói mẫu trả lời bằng lời của mình → trả lời câu nối tiếp. Không cần thuộc nguyên văn. Ký hiệu `Σ` nghĩa là cộng tất cả các số hạng; `√` là căn bậc hai; `∩` là “và”, `∪` là “hoặc”.
 
-## Cụm 1 — Nhìn dữ liệu trước khi tính
+## Cụm 1: Nhìn dữ liệu trước khi tính
 
 ### XS01 [A] Xác suất và thống kê khác nhau thế nào?
 
@@ -100,7 +100,7 @@ Với mẫu độc lập cùng phân phối, phương sai hữu hạn, `s² = Σ
 
 **Bẫy:** Căn của phương sai mẫu không chệch không tự động là ước lượng không chệch của độ lệch chuẩn.
 
-## Cụm 2 — Xác suất và thông tin mới
+## Cụm 2: Xác suất và thông tin mới
 
 ### XS09 [A] Biến cố, phần bù, giao và hợp là gì?
 
@@ -152,7 +152,7 @@ Với mẫu độc lập cùng phân phối, phương sai hữu hạn, `s² = Σ
 
 **Nối tiếp:** Chỉ biết độ nhạy 90% có tính được xác suất bệnh khi dương tính? → Chưa đủ thông tin.
 
-## Cụm 3 — Biến ngẫu nhiên và phân phối
+## Cụm 3: Biến ngẫu nhiên và phân phối
 
 ### XS14 [A] Biến ngẫu nhiên và phân phối là gì?
 
@@ -234,7 +234,7 @@ Với mẫu độc lập cùng phân phối, phương sai hữu hạn, `s² = Σ
 
 **Nối tiếp:** n ≥ 30 luôn đủ? → Không; mức lệch, đuôi phân phối và cấu trúc phụ thuộc ảnh hưởng chất lượng xấp xỉ.
 
-## Cụm 4 — Ước lượng và độ bất định
+## Cụm 4: Ước lượng và độ bất định
 
 ### XS22 [A] Ước lượng điểm là gì? Không chệch nghĩa là gì?
 
@@ -276,7 +276,7 @@ Với mẫu độc lập cùng phân phối, phương sai hữu hạn, `s² = Σ
 
 **Nối tiếp:** Lặp lại cùng bản ghi 100 lần có thêm 100 mẫu độc lập? → Không; sao chép dữ liệu không tạo thông tin mới tương ứng.
 
-## Cụm 5 — Kiểm định, quan hệ và kết luận
+## Cụm 5: Kiểm định, quan hệ và kết luận
 
 ### XS26 [A] H0, H1 và kiểm định giả thuyết là gì?
 
@@ -382,31 +382,31 @@ Với mẫu độc lập cùng phân phối, phương sai hữu hạn, `s² = Σ
 
 Hãy che phần lời giải và nói lý do trước khi tính. Dùng dữ liệu nhỏ để kiểm tra bản chất, không thi tốc độ bấm máy.
 
-### Bài 1 — Trung tâm và phân tán
+### Bài 1: Trung tâm và phân tán
 
 Dữ liệu [1, 2, 3, 4, 10]. Tính mean, median, phương sai nếu coi đây là tổng thể, và phương sai mẫu hiệu chỉnh.
 
 **Lời giải:** mean = 20/5 = 4; median = 3. Tổng bình phương độ lệch = 9+4+1+0+36 = 50. Phương sai tổng thể = 50/5 = 10. Phương sai mẫu hiệu chỉnh = 50/4 = 12,5. Đừng chọn mẫu số mà không nói đang tính loại nào.
 
-### Bài 2 — Bayes bằng bảng đếm
+### Bài 2: Bayes bằng bảng đếm
 
 Trong 1.000 email, 200 email là spam. Bộ lọc đánh dấu 160 spam và đánh dấu nhầm 80 email thường. Biết email bị đánh dấu, xác suất nó là spam bao nhiêu? Khả năng đánh dấu khi email là spam bao nhiêu?
 
 **Lời giải:** tổng email bị đánh dấu = 160+80 = 240. `P(spam|đánh dấu)=160/240=2/3`. `P(đánh dấu|spam)=160/200=0,8`. Hai điều kiện khác nhau tạo hai mẫu số khác nhau. Đây cũng là trực giác precision và recall trong ML.
 
-### Bài 3 — Nhị thức
+### Bài 3: Nhị thức
 
 Ba lần thử độc lập, mỗi lần thành công với xác suất 0,2. X là số thành công. Tính P(X = 1), E[X], Var(X).
 
 **Lời giải:** có 3 vị trí cho lần thành công, nên `P(X=1)=3×0,2×0,8²=0,384`. `E[X]=3×0,2=0,6`; `Var(X)=3×0,2×0,8=0,48`. Kỳ vọng 0,6 không phải số thành công của một lượt ba lần thử, mà là trung bình theo phân phối.
 
-### Bài 4 — SE và khoảng tin cậy
+### Bài 4: SE và khoảng tin cậy
 
 Mẫu độc lập cỡ 100 có mean 50 và SD mẫu 10. Dùng xấp xỉ chuẩn được giả định phù hợp, tính SE và khoảng 95%. Nếu tăng n lên 400 với SD tương tự, SE ra sao?
 
 **Lời giải:** SE ước lượng = 10/√100 = 1. Khoảng xấp xỉ = `50±1,96`, tức [48,04; 51,96]. Với n = 400, SE ≈ 0,5. Khoảng này ước lượng trung bình tổng thể, không phải vùng chứa 95% các cá nhân. Nếu dùng t thay chuẩn, hệ số và hai đầu khoảng sẽ hơi khác.
 
-### Bài 5 — Diễn giải kiểm định
+### Bài 5: Diễn giải kiểm định
 
 Đặt α = 0,05 trước khi phân tích; một kiểm định hợp lệ cho p = 0,08. Có được nói “H0 đúng với xác suất 92%” hoặc “không có tác động” không?
 

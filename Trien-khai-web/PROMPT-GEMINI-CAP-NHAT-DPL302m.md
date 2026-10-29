@@ -56,14 +56,14 @@ Text extraction có marker slide thực tế; một số mốc trang trong map b
 
 ## 3. Số liệu nội dung phải đúng
 
-### Bộ cũ — foundations
+### Bộ cũ: foundations
 
 - 140 câu, gồm XS01–XS35, ML01–ML35, DL01–DL35, GT01–GT35.
 - Nhãn A/B/C, tổng 72 A, 48 B, 20 C.
 - 20 bài tự kiểm tra và 4 đề tổng hợp, mỗi đề 7 câu.
 - Mã câu, nội dung, URL đang dùng và dữ liệu tiến độ phải tiếp tục hoạt động.
 
-### Bộ bổ sung — dpl302m
+### Bộ bổ sung: dpl302m
 
 | Chương | File | ID | Tổng | Cốt lõi | Đọc tiếp |
 |---|---|---|---:|---:|---:|
@@ -167,7 +167,7 @@ Manifest có `sourceRoot` là đường dẫn dùng trên máy tác giả. Websi
 
 ### Trang đầu và sidebar
 
-- Thêm lối vào ưu tiên **“Deep Learning — DPL302m”**, mô tả “72 câu theo 5 chương”.
+- Thêm lối vào ưu tiên **“Deep Learning: DPL302m”**, mô tả “72 câu theo 5 chương”.
 - Có lối vào **“Nền tảng chung”** cho bốn mảng cũ.
 - Nếu có câu học dở, giữ nút “Tiếp tục học” trỏ đúng ID trước đó, dù thuộc bộ nào.
 - Trạng thái đầu tiên là chưa đọc/chưa đánh giá; không điền tiến độ demo.

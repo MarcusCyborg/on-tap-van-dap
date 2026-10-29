@@ -59,7 +59,7 @@ Không tự xuất bản, mua dịch vụ, thêm backend hoặc đòi API key ch
 
 ## 3. Phạm vi bắt buộc và thứ tự ưu tiên
 
-### P0 — Hoạt động học hoàn chỉnh
+### P0: Hoạt động học hoàn chỉnh
 
 - Nhập đủ 140 câu; đủ phần dẫn nhập, 20 bài tự kiểm tra và 4 đề tổng hợp.
 - Trang bắt đầu/tiếp tục học, mục lục bốn mảng, trang đọc từng câu.
@@ -70,7 +70,7 @@ Không tự xuất bản, mua dịch vụ, thêm backend hoặc đòi API key ch
 - Luyện đề có sẵn hoặc tạo lượt ngẫu nhiên 5/7 câu, tự đánh giá có giải thích rõ.
 - Responsive, thao tác bàn phím, nội dung tiếng Việt và công thức/code không vỡ.
 
-### P1 — Trực quan hóa bắt buộc để hoàn thành yêu cầu
+### P1: Trực quan hóa bắt buộc để hoàn thành yêu cầu
 
 - Tám mô phỏng trong mục 8, mỗi mảng hai mô phỏng có điều khiển thật.
 - Liên kết mô phỏng với câu hỏi liên quan, liên kết concept trước/sau.
@@ -79,7 +79,7 @@ Không tự xuất bản, mua dịch vụ, thêm backend hoặc đòi API key ch
 
 P0 phải chạy được trước để tôi có thể học ngay. Tiếp tục làm P1; đừng kết thúc toàn bộ nhiệm vụ sau khi mới có P0. Nếu bị giới hạn công cụ thật sự, nói rõ phần đã chạy, phần còn thiếu và nguyên nhân, không gọi tính năng chưa làm là hoàn tất.
 
-### P2 — Có thể làm sau, không chặn bàn giao
+### P2: Có thể làm sau, không chặn bàn giao
 
 - PWA/offline hoàn chỉnh, spaced repetition có lịch, đồng bộ nhiều thiết bị.
 - AI chấm bài, microphone, ghi âm, speech-to-text, chatbot.
@@ -137,7 +137,7 @@ Chuyển động chỉ phục vụ hiểu trạng thái: tiến từng bước t
 
 Lần đầu: nói rõ bộ tài liệu có gì và đưa nút **“Bắt đầu từ nền tảng”**. Hiện bốn chuyên đề với số câu, mô tả ngắn và đường đọc. Người mới phải biết thao tác tiếp theo trong vài giây.
 
-Quay lại: nổi bật **“Tiếp tục: [mã câu] — [tên câu]”**, tiếp theo là “Cần ôn lại” và lựa chọn mảng. Hiển thị tiến độ thật, ví dụ “Đã đọc 12/140”, “Tự đánh giá vững: 5”; mở trang không tự được tính là đã hiểu.
+Quay lại: nổi bật **“Tiếp tục: [mã câu] - [tên câu]”**, tiếp theo là “Cần ôn lại” và lựa chọn mảng. Hiển thị tiến độ thật, ví dụ “Đã đọc 12/140”, “Tự đánh giá vững: 5”; mở trang không tự được tính là đã hiểu.
 
 Có lối vào bài dẫn nhập và lộ trình 2h/4h tùy nguồn phù hợp. Đây là hướng dẫn chọn lọc, không hứa đọc hết 140 câu trong thời gian đó. Không hardcode countdown ngày mai hoặc hạn thi đã trôi qua; nếu muốn, cho người dùng tự nhập ngày thi sau.
 
@@ -333,7 +333,7 @@ Giữ một lockfile và phiên bản phụ thuộc tương thích. Viết các 
 
 Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → điều khiển → kết quả bằng số và chữ → kết luận có điều kiện**. Có Reset về ví dụ gốc. Phân biệt dữ liệu minh họa và dữ liệu thực tế; không gắn số liệu mô phỏng với kết quả thi hay hiệu quả học đã được kiểm chứng.
 
-### 8.1. Mean, median và ngoại lệ — XS05, XS06
+### 8.1. Mean, median và ngoại lệ: XS05, XS06
 
 - Bắt đầu từ [1, 2, 3, 4, 10]. Dùng dot plot hoặc trục số thể hiện từng điểm, vạch mean và median.
 - Cho thay điểm cuối bằng slider/input 4–100; đồng thời cập nhật mean, median, phương sai và SD.
@@ -341,7 +341,7 @@ Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → đi
 - Câu gợi mở: “Khi kéo một điểm ra rất xa, trung bình hay trung vị thay đổi mạnh hơn?”
 - Kiểm thử preset: mean=4, median=3, phương sai tổng thể=10, phương sai mẫu=12,5.
 
-### 8.2. Bayes và tỷ lệ nền — XS11, XS12, XS13
+### 8.2. Bayes và tỷ lệ nền: XS11, XS12, XS13
 
 - Ba điều khiển: tỷ lệ mắc, độ nhạy, tỷ lệ dương tính giả; giải thích mỗi nhãn bằng câu thường.
 - Dùng cây xác suất hoặc bảng 2×2, quần thể giả định N=10.000.
@@ -351,16 +351,16 @@ Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → đi
 - Khi không có dương tính, ghi “Không xác định vì mẫu số bằng 0”. Đây là ví dụ xác suất giả định, không phải công cụ chẩn đoán.
 - Preset p=1%, sensitivity=90%, FPR=10% cho posterior xấp xỉ 8,33%.
 
-### 8.3. Confusion matrix và ngưỡng — ML29, ML30, ML31
+### 8.3. Confusion matrix và ngưỡng: ML29, ML30, ML31
 
 - Dataset minh họa cố định, có nhãn thật và score trong [0,1], gồm ít nhất 20 mẫu và cả hai lớp.
 - Một slider threshold: dự đoán dương khi score ≥ threshold; tính lại TP/FP/FN/TN từ dữ liệu, không hardcode metric theo slider.
 - Hiện confusion matrix, precision/recall/accuracy/F1, số ca bỏ sót và báo nhầm.
 - Chọn một ô để highlight đúng các mẫu thuộc ô đó; có nội dung tương đương bằng text/bảng.
-- Giá trị không xác định hiện “—” kèm lý do. Nếu dùng quy ước gán 0 phải nêu rõ và thống nhất công thức; ưu tiên tách undefined khỏi 0 thật.
+- Giá trị không xác định hiện “-” kèm lý do. Nếu dùng quy ước gán 0 phải nêu rõ và thống nhất công thức; ưu tiên tách undefined khỏi 0 thật.
 - Giải thích giảm threshold thường tăng recall theo tập cố định, còn precision không bắt buộc thay đổi đơn điệu.
 
-### 8.4. Độ phức tạp và overfitting — ML16, ML17, ML18
+### 8.4. Độ phức tạp và overfitting: ML16, ML17, ML18
 
 - Sinh dataset hồi quy một chiều bằng seed cố định, tách train/validation cố định trước khi fit; ghi rõ synthetic data.
 - Cho chọn bậc đa thức 1–7, vẽ điểm train/validation, đường dự đoán và MSE trên hai tập.
@@ -369,7 +369,7 @@ Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → đi
 - Kết quả phải tính từ mô hình thật; không tạo đường validation luôn tăng chỉ để minh họa câu chuyện. Ghi rõ đây là một ví dụ, không phải định luật rằng mọi lần tăng bậc đều gây overfit.
 - Đặt câu hỏi “Mô hình nào khớp train tốt nhất? Mô hình nào tốt nhất trên validation? Vì sao có thể khác?”
 
-### 8.5. Một nơ-ron tính gì — DL03, DL05, DL06
+### 8.5. Một nơ-ron tính gì: DL03, DL05, DL06
 
 - Sơ đồ hai đầu vào x1,x2 → nhân w1,w2 → cộng bias → activation → đầu ra.
 - Cho đổi inputs, weights, bias và activation Linear/ReLU/Sigmoid; cập nhật công thức với số cụ thể.
@@ -377,7 +377,7 @@ Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → đi
 - Preset x1=2, x2=1, w1=3, w2=−1, b=0 cho z=5; ReLU=5, sigmoid≈0,9933.
 - Có ví dụ z<0 để thấy ReLU về 0. Nếu dùng slider phải có input số/keyboard tương đương.
 
-### 8.6. Gradient descent — DL09, DL10, DL11, DL13
+### 8.6. Gradient descent: DL09, DL10, DL11, DL13
 
 - Vẽ `L(w)=(w−3)²`; hiển thị điểm hiện tại, gradient `2(w−3)` và phép cập nhật.
 - Điều khiển w ban đầu, learning rate, “Một bước”, “Chạy”, “Dừng”, “Reset”.
@@ -386,7 +386,7 @@ Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → đi
 - Preset w=1, lr=0,1 cho bước tiếp w=1,4; lr=1 dao động quanh 3 khi bắt đầu khác 3; lr>1 có thể phân kỳ trong hàm ví dụ.
 - Nói rõ đây là tối ưu một tham số trên hàm đơn giản, không mô phỏng toàn bộ backprop của mạng lớn.
 
-### 8.7. Binary search từng bước — GT02, GT12, GT13
+### 8.7. Binary search từng bước: GT02, GT12, GT13
 
 - Mảng có thứ tự, hiển thị chỉ số và giá trị; inputs cho mảng và target, nút bước tới/reset, chạy tự động tùy chọn.
 - Highlight left/right/mid, phạm vi còn lại và đoạn bị loại; cạnh đó là lời giải thích bước hiện tại.
@@ -395,7 +395,7 @@ Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → đi
 - Preset [1,3,5,7,9], target=8 cho các mid 2→3→4 rồi không tìm thấy.
 - Có phiên bản text liệt kê từng bước; không chỉ dựa vào màu hoặc chuyển động.
 
-### 8.8. BFS và DFS — GT08, GT09, GT24, GT26, GT27
+### 8.8. BFS và DFS: GT08, GT09, GT24, GT26, GT27
 
 - Đồ thị nhỏ cố định khoảng 6–8 đỉnh; có chu trình và một đỉnh không đi tới được từ nguồn mặc định.
 - Chọn nguồn, BFS/DFS, bước tới/reset; hiển thị đồ thị, frontier (queue/stack), tập đã thăm và thứ tự duyệt.
@@ -423,7 +423,7 @@ Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → đi
 
 ## 10. Kế hoạch triển khai theo mốc kiểm chứng
 
-### Mốc 1 — Kiểm kê nội dung và nền app
+### Mốc 1: Kiểm kê nội dung và nền app
 
 1. Đọc quy tắc workspace, PRODUCT, README và toàn bộ sáu nguồn chính.
 2. Liệt kê cấu trúc heading, 140 ID, phân bố A/B/C, các phần ngoài câu hỏi và định dạng đặc biệt.
@@ -432,7 +432,7 @@ Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → đi
 
 **Qua mốc khi:** import lặp lại được, có đủ dữ liệu, một bài mỗi mảng render đúng gồm bảng/code/Unicode; build không cần truy cập đường dẫn máy tác giả.
 
-### Mốc 2 — Luồng học P0
+### Mốc 2: Luồng học P0
 
 1. Làm layout responsive, trang bắt đầu, mục lục và reader trên nội dung thật.
 2. Làm search, lọc, điều hướng và đọc/tự trả lời.
@@ -441,7 +441,7 @@ Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → đi
 
 **Qua mốc khi:** học từ trang đầu tới một lượt vấn đáp và quay lại ôn được; reload không mất tiến độ. Cung cấp cách mở bản local ngay ở mốc này rồi tiếp tục P1.
 
-### Mốc 3 — Trực quan hóa P1
+### Mốc 3: Trực quan hóa P1
 
 1. Ưu tiên một mô phỏng mỗi mảng: mean/median, confusion matrix, nơ-ron, binary search.
 2. Tiếp theo: Bayes, overfit, gradient descent, BFS/DFS.
@@ -450,7 +450,7 @@ Mỗi mô phỏng cần: **câu hỏi gợi mở → hình/trạng thái → đi
 
 **Qua mốc khi:** đủ tám mô phỏng tính toán thật; điều khiển thay đổi kết quả đúng; không còn NaN/undefined không được giải thích.
 
-### Mốc 4 — Kiểm tra và bàn giao
+### Mốc 4: Kiểm tra và bàn giao
 
 1. Chạy typecheck, tests và production build.
 2. Kiểm tra hành trình thật bằng trình duyệt trên desktop/mobile, cả reader dài và bảng/code rộng.

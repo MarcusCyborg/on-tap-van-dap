@@ -1,6 +1,6 @@
 # Biên Bản Kiểm Thử & Nghiệm Thu (VERIFICATION.md)
 
-Biên bản này tổng hợp chi tiết kết quả chạy kiểm thử tự động, kiểm tra build và kiểm thử hành trình người dùng thực tế trên trình duyệt thực tế (Microsoft Edge) đối với ứng dụng **Ôn Vấn Đáp — Cập nhật DPL302m**.
+Biên bản này tổng hợp chi tiết kết quả chạy kiểm thử tự động, kiểm tra build và kiểm thử hành trình người dùng thực tế trên trình duyệt thực tế (Microsoft Edge) đối với ứng dụng **Ôn Vấn Đáp: Cập nhật DPL302m**.
 
 ---
 

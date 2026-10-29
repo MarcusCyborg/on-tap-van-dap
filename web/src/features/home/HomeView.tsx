@@ -56,7 +56,7 @@ export const HomeView: React.FC = () => {
           </div>
 
           <h1 className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight leading-tight">
-            Ôn Vấn Đáp — 212 Câu Hỏi & 8 Mô Phỏng Trực Quan
+            Ôn Vấn Đáp: 212 Câu Hỏi & 8 Mô Phỏng Trực Quan
           </h1>
 
           <p className="text-sm sm:text-base text-muted leading-relaxed">
@@ -71,7 +71,7 @@ export const HomeView: React.FC = () => {
                 to={`/learn/${lastConcept.id}`}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent text-white text-sm font-bold hover:bg-accent-dark shadow-sm transition-all"
               >
-                <span>Tiếp tục học: {lastConcept.id} — {lastConcept.title}</span>
+                <span>Tiếp tục học: {lastConcept.id} - {lastConcept.title}</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             ) : (
@@ -121,7 +121,7 @@ export const HomeView: React.FC = () => {
               <span>Khóa học trọng tâm</span>
             </div>
             <h2 className="text-xl font-extrabold text-ink">
-              Deep Learning — DPL302m
+              Deep Learning: DPL302m
             </h2>
             <p className="text-xs sm:text-sm text-muted">
               72 câu theo 5 chương (57 Cốt lõi • 15 Đọc tiếp) • 19 bài tự kiểm tra có lời giải bám sát 17 slide bài giảng.
@@ -158,7 +158,7 @@ export const HomeView: React.FC = () => {
                   </span>
                 </div>
                 <h4 className="text-xs font-bold text-ink group-hover:text-purple-700 line-clamp-1 leading-snug">
-                  {ch.title.split('—')[1]?.trim() || ch.title}
+                  {ch.title.split(/[:\-]/)[1]?.trim() || ch.title}
                 </h4>
                 <div className="text-[10px] text-muted">
                   {ch.coreCount} cốt lõi • {ch.furtherCount} đọc tiếp
@@ -232,7 +232,7 @@ export const HomeView: React.FC = () => {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-lg font-bold text-ink">Nền Tảng Chung — Bốn Chuyên Đề Cốt Lõi</h2>
+            <h2 className="text-lg font-bold text-ink">Nền Tảng Chung: Bốn Chuyên Đề Cốt Lõi</h2>
             <p className="text-xs text-muted">Mỗi chuyên đề đúng 35 câu (18A • 12B • 5C) • 20 bài tự kiểm tra và 4 đề tổng hợp.</p>
           </div>
         </div>

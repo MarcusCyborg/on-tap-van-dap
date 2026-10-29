@@ -1,4 +1,4 @@
-# 04 — Giải thuật
+# 04: Giải thuật
 
 **Ưu tiên tối nay: GT1–GT4.** Nếu chưa quen Python, hãy đọc ý tưởng và tự chạy bằng giấy; không cần thuộc cú pháp trước khi hiểu cách làm.
 
@@ -58,8 +58,8 @@ Hàm giả định `a` đã sắp xếp tăng dần. Trả về chỉ số tìm 
 |---|---|---|
 | Array / mảng | Các vị trí truy cập bằng chỉ số | Truy cập chỉ số O(1); chèn/xóa giữa thường cần dịch chuyển O(n) |
 | Linked list / danh sách liên kết | Các nút giữ dữ liệu và liên kết | Truy cập phần tử thứ k phải lần theo liên kết; chèn có thể O(1) khi đã có đủ con trỏ cần thiết |
-| Stack / ngăn xếp | Vào sau, ra trước — LIFO | Ví dụ chồng đĩa, hoàn tác thao tác |
-| Queue / hàng đợi | Vào trước, ra trước — FIFO | Ví dụ người xếp hàng |
+| Stack / ngăn xếp | Vào sau, ra trước: LIFO | Ví dụ chồng đĩa, hoàn tác thao tác |
+| Queue / hàng đợi | Vào trước, ra trước: FIFO | Ví dụ người xếp hàng |
 | Hash table / bảng băm | Ánh xạ khóa đến vị trí lưu bằng hàm băm | Tra cứu/chèn/xóa thường O(1) trung bình với giả định phù hợp; xấu nhất có thể O(n) |
 
 **Ví dụ Python:** `list` là mảng động, không phải linked list. Có thể dùng `append()` và `pop()` cuối list để làm stack. `collections.deque` phù hợp làm queue với `append()` và `popleft()`; `list.pop(0)` tốn O(n) do phải dịch chuyển. `dict` và `set` dựa trên bảng băm.

@@ -227,7 +227,7 @@ export function createPresetExamSession(examNumber: number): ExamAttempt {
 
   const questionData = exam.questions.map(q => ({
     id: q.id,
-    title: `Câu ${q.number} — ${exam.title}`,
+    title: `Câu ${q.number}: ${exam.title}`,
     questionText: q.question,
     hintText: q.hint,
     relatedConceptIds: q.relatedConceptIds

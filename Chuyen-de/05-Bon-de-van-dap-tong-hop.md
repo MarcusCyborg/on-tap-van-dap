@@ -4,7 +4,7 @@ Mỗi đề gồm 7 câu, xen kẽ các mảng. Đây là đề tự luyện the
 
 **Tự chấm từng câu:** 0 = sai hoặc chưa nói được; 1 = đúng ý nhưng chưa giải thích được; 2 = đúng, có lý do hoặc ví dụ, đáp được câu nối tiếp. Điểm giúp tìm phần cần học lại, không dùng để suy ra điểm kiểm tra thật.
 
-## Đề 1 — Nền tảng và các điều kiện dễ quên
+## Đề 1: Nền tảng và các điều kiện dễ quên
 
 1. Giải thuật là gì? Hai chương trình cho cùng đáp án có thể khác nhau về những mặt nào?
 2. Trung bình, trung vị và độ lệch chuẩn mô tả điều gì? Vì sao cùng trung bình chưa có nghĩa là dữ liệu giống nhau?
@@ -24,7 +24,7 @@ Mỗi đề gồm 7 câu, xen kẽ các mảng. Đây là đề tự luyện the
 6. Không bảo đảm đúng trên mảng chưa sắp xếp. Chỉ tìm một lần thường có thể duyệt O(n); nếu sắp xếp trước thì phải tính thêm chi phí sắp xếp, không chỉ O(log n) của tìm kiếm.
 7. Stack LIFO, queue FIFO. Queue giữ thứ tự mở rộng theo lớp của BFS; với đồ thị không trọng số, điều này giúp tìm đường có số cạnh ít nhất.
 
-## Đề 2 — Đọc số và diễn giải đúng
+## Đề 2: Đọc số và diễn giải đúng
 
 1. Trong 100 giao dịch có một giao dịch gian lận. Mô hình luôn đoán không gian lận đạt accuracy bao nhiêu? Nó có hữu ích cho phát hiện gian lận không?
 2. Mô hình báo 10 email spam, đúng 8; thực tế có 20 email spam. Tính precision, recall và giải thích hai mẫu số.
@@ -44,7 +44,7 @@ Mỗi đề gồm 7 câu, xen kẽ các mảng. Đây là đề tự luyện the
 6. w mới = 2 − 0,1×3 = 1,7. Bước quá lớn có thể dao động, vượt vùng loss thấp hoặc phân kỳ; nhỏ quá có thể học chậm.
 7. Nối tiếp: khoảng 2n thao tác nên O(n); lồng nhau: khoảng n² nên O(n²), với giả định phần thân có chi phí O(1).
 
-## Đề 3 — Các tình huống thực tế
+## Đề 3: Các tình huống thực tế
 
 1. Dự báo doanh thu tháng sau, bạn chia ngẫu nhiên tất cả bản ghi theo thời gian có rủi ro gì?
 2. Bạn chuẩn hóa dữ liệu bằng trung bình toàn bộ tập rồi mới chia train/test. Có vấn đề gì và sửa thế nào?
@@ -64,7 +64,7 @@ Mỗi đề gồm 7 câu, xen kẽ các mảng. Đây là đề tự luyện the
 6. Có thể dùng hash set để kiểm tra tồn tại; chi phí trung bình thường O(1) theo số phần tử trong các giả định chuẩn, còn có bộ nhớ và chi phí băm khóa. Trường hợp xấu có thể O(n); cần xử lý trùng tên hoặc định danh theo yêu cầu.
 7. Thiên lệch chọn mẫu, mẫu có thể không đại diện cho thành phố. Nhiều mẫu hơn từ cùng nguồn thiên lệch không tự loại bỏ sai lệch đó.
 
-## Đề 4 — Mở rộng và khả năng giải thích
+## Đề 4: Mở rộng và khả năng giải thích
 
 1. P-value = 0,03 có nghĩa là xác suất giả thuyết không đúng bằng 3% không? Giải thích ngắn.
 2. Khoảng tin cậy 95% được hiểu thế nào theo cách tiếp cận thống kê tần suất? Vì sao mẫu lớn thường làm khoảng hẹp hơn nếu các yếu tố khác tương tự?

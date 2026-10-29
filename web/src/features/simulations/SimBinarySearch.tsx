@@ -220,7 +220,7 @@ export const SimBinarySearch: React.FC = () => {
             </span>
             <div className="flex items-center gap-3 font-mono text-[11px]">
               <span className="text-[#2b5c8f]">left = {currentStep.left}</span>
-              <span className="text-[#8a4b16]">mid = {currentStep.mid !== -1 ? currentStep.mid : '—'}</span>
+              <span className="text-[#8a4b16]">mid = {currentStep.mid !== -1 ? currentStep.mid : '-'}</span>
               <span className="text-[#27624a]">right = {currentStep.right}</span>
             </div>
           </div>

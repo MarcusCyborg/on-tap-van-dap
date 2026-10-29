@@ -19,7 +19,7 @@
   "chapters": [
     {
       "chapterId": "dpl1",
-      "title": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+      "title": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
       "file": "01-Neural-network-foundations.md",
       "idPrefix": "DPL1-",
       "expectedQuestionCount": 12,
@@ -49,7 +49,7 @@
     },
     {
       "chapterId": "dpl2",
-      "title": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+      "title": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
       "file": "02-Huan-luyen-va-toi-uu.md",
       "idPrefix": "DPL2-",
       "expectedQuestionCount": 14,
@@ -80,7 +80,7 @@
     },
     {
       "chapterId": "dpl3",
-      "title": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+      "title": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
       "file": "03-ML-strategy-va-error-analysis.md",
       "idPrefix": "DPL3-",
       "expectedQuestionCount": 10,
@@ -106,7 +106,7 @@
     },
     {
       "chapterId": "dpl4",
-      "title": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+      "title": "DPL302m: CNN và thị giác máy tính từ nền tảng",
       "file": "04-CNN-va-thi-giac-may-tinh.md",
       "idPrefix": "DPL4-",
       "expectedQuestionCount": 18,
@@ -142,7 +142,7 @@
     },
     {
       "chapterId": "dpl5",
-      "title": "DPL302m — RNN, NLP, Attention và Transformer",
+      "title": "DPL302m: RNN, NLP, Attention và Transformer",
       "file": "05-RNN-NLP-va-Transformer.md",
       "idPrefix": "DPL5-",
       "expectedQuestionCount": 18,

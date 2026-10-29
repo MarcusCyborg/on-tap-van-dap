@@ -1,4 +1,4 @@
-# Chương 1 — Từ logistic regression đến mạng nhiều tầng
+# Chương 1: Từ logistic regression đến mạng nhiều tầng
 
 Đọc nối với DL01–DL18 trong [bộ nền tảng](../Chuyen-de/03-Deep-Learning.md). Phần này bổ sung ký hiệu, shape và phép tính cơ bản theo các bài 1.1–1.4 của DPL302m.
 

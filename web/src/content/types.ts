@@ -39,7 +39,7 @@ export interface Concept {
   // DPL302m-specific optional fields
   collectionId?: CollectionId;
   chapterId?: string;        // e.g. 'dpl1'
-  chapterTitle?: string;     // e.g. 'Chương 1 — Từ logistic regression đến mạng nhiều tầng'
+  chapterTitle?: string;     // e.g. 'Chương 1: Từ logistic regression đến mạng nhiều tầng'
   lessonIds?: string[];      // e.g. ['1.1', '1.2']
   studyLevel?: StudyLevel;   // 'core' or 'further'
   sourceReferences?: SourceReference[];

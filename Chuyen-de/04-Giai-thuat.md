@@ -1,4 +1,4 @@
-# Giải thuật và cấu trúc dữ liệu — 35 câu từ nền tảng
+# Giải thuật và cấu trúc dữ liệu: 35 câu từ nền tảng
 
 Bạn không cần thuộc nhiều tên thuật toán trước khi hiểu bài toán. Với mỗi câu, hãy hỏi: **đầu vào là gì, cần trả về gì, vì sao các bước làm đúng, tốn bao nhiêu thời gian và bộ nhớ?**
 
@@ -434,31 +434,31 @@ assert bfs_distances(graph, "E") == {"E": 0}
 
 ## Năm bài tự kiểm tra và lời giải
 
-### Bài 1 — Trường hợp biên và chi phí
+### Bài 1: Trường hợp biên và chi phí
 
 Bạn cần tìm lớn nhất trong một list không rỗng gồm n số nguyên. Hãy mô tả cách làm, kiểm tra với [−8,−3,−6], nêu thời gian và bộ nhớ phụ.
 
 **Lời giải:** lấy phần tử đầu làm best, duyệt phần còn lại và cập nhật khi gặp số lớn hơn. Best lần lượt −8,−3,−3; trả −3. O(n) thời gian, O(1) số biến phụ. Nếu yêu cầu cho phép list rỗng, phải xác định trả None, báo lỗi hay quy ước khác, không tự đặt 0 làm đáp án.
 
-### Bài 2 — Chạy tay binary search
+### Bài 2: Chạy tay binary search
 
 Tìm 8 trong [1,3,5,7,9] bằng mã trên. Ghi left, right và mid ở mỗi vòng.
 
 **Lời giải:** (0,4,2): gặp 5, left=3. (3,4,3): gặp 7, left=4. (4,4,4): gặp 9, right=3. Lúc này left=4 > right=3, trả −1. Không có bước nào giữ nguyên toàn bộ phạm vi, nên vòng lặp tiến tới kết thúc.
 
-### Bài 3 — Chọn cấu trúc dữ liệu
+### Bài 3: Chọn cấu trúc dữ liệu
 
 Bạn cần (a) xử lý yêu cầu đúng thứ tự đến; (b) kiểm tra mã sinh viên đã xuất hiện; (c) luôn xử lý công việc có độ ưu tiên nhỏ nhất trước. Chọn gì?
 
 **Lời giải:** (a) queue, Python deque; (b) hash set nếu chỉ cần tồn tại, dict nếu cần thêm thông tin; (c) priority queue, thường triển khai bằng min-heap. Đừng dùng queue thường cho ưu tiên vì đến trước không đồng nghĩa ưu tiên cao.
 
-### Bài 4 — BFS hay Dijkstra?
+### Bài 4: BFS hay Dijkstra?
 
 Đồ thị có cạnh A→B giá 10, A→C giá 1, C→B giá 2. Đường ít cạnh nhất từ A tới B là gì? Đường rẻ nhất là gì? Nếu bỏ trọng số thì chọn thuật toán nào?
 
 **Lời giải:** ít cạnh nhất là A→B, một cạnh. Rẻ nhất là A→C→B, tổng 3; Dijkstra áp dụng được vì trọng số không âm. Nếu mọi cạnh coi bằng nhau, BFS cho đường ít cạnh nhất. Bài này cho thấy cần làm rõ “ngắn nhất” nghĩa là ít cạnh hay nhỏ tổng trọng số.
 
-### Bài 5 — Thiết lập DP cho đổi tiền
+### Bài 5: Thiết lập DP cho đổi tiền
 
 Có các đồng {1,3,4}, đủ số lượng mỗi loại. Tìm số đồng ít nhất để đổi 6. Gọi dp[x] là số đồng ít nhất để đổi x; đặt trạng thái gốc và phép chuyển.
 

@@ -267,7 +267,7 @@ export const PracticeHub: React.FC = () => {
         <div className="space-y-0.5">
           <h2 className="text-base sm:text-lg font-bold text-ink flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-accent inline-block"></span>
-            Bốn Đề Tổng Hợp Có Sẵn — Nền Tảng Chung (Mỗi Đề 7 Câu)
+            Bốn Đề Tổng Hợp Có Sẵn: Nền Tảng Chung (Mỗi Đề 7 Câu)
           </h2>
           <p className="text-xs text-muted">
             Đề bài được biên soạn chuẩn theo cấu trúc phỏng vấn, liên kết bốn mảng và có tiêu chí chấm chi tiết.
@@ -319,7 +319,7 @@ export const PracticeHub: React.FC = () => {
         <div className="space-y-1 border-b border-border pb-3">
           <h2 className="text-base sm:text-lg font-bold text-ink flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-accent" />
-            Luyện Tùy Biến — Nền Tảng Chung (4 Mảng)
+            Luyện Tùy Biến: Nền Tảng Chung (4 Mảng)
           </h2>
           <p className="text-xs text-muted">
             Chọn mảng và mức ưu tiên trong 140 câu nền tảng (Xác suất, ML, DL, Giải thuật).

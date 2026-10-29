@@ -1,4 +1,4 @@
-# Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng
+# Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng
 
 Chương này bám ba bài **2.1 Practical Aspects**, **2.2 Optimization Algorithms**, **2.3 Hyper parameter tuning** của DPL302m. Có **14 câu: 11 Cốt lõi, 3 Đọc tiếp**. Nhãn chỉ thứ tự học, không dự đoán câu thi.
 
@@ -10,9 +10,9 @@ Nếu chưa hiểu forward, loss, gradient và backprop, đọc DL07–DL13 tron
 
 Nguồn chính là text trích xuất có marker `--- Slide N ---` trong `F:\1. FPT Material\Sem5\DPL302m\extracted_texts`:
 
-- `2.1 Practical Aspects of Deep Learning.txt` — 74 marker slide.
-- `2.2 Optimization Algorithms.txt` — 59 marker slide.
-- `2.3 Hyper parameter tuning.txt` — 54 marker slide.
+- `2.1 Practical Aspects of Deep Learning.txt` - 74 marker slide.
+- `2.2 Optimization Algorithms.txt` - 59 marker slide.
+- `2.3 Hyper parameter tuning.txt` - 54 marker slide.
 
 Số slide dưới đây lấy từ marker thực trong text, không lấy khoảng trang của bản đồ mục lục. Một số slide mất công thức/hình khi trích text; công thức chuẩn và ví dụ số được diễn giải bổ sung để học, không coi là bản chép nguyên văn hình slide. Những đoạn “Trả lời miệng”, ví dụ và bài tập là phần biên soạn mới. File `summaries/ch2_training_and_optimization.md` là nguồn tham khảo phụ; không mặc định mọi khẳng định trong bản tóm tắt đúng cho mọi tình huống.
 
@@ -226,25 +226,25 @@ Mục tiêu slide 1 có nhắc các API này, nhưng ví dụ slide 49–52 lạ
 
 ## Bốn bài tự kiểm tra
 
-### Bài 1 — Chẩn đoán và chọn hướng xử lý
+### Bài 1: Chẩn đoán và chọn hướng xử lý
 
 Giả sử train/dev cùng phân phối, sai số tham chiếu phù hợp khoảng 1%. Mô hình A có lỗi 2%/15%; B có lỗi 18%/19%. Gợi ý vấn đề gì và thử gì trước?
 
 **Lời giải:** A có khoảng cách lớn, gợi ý variance; kiểm tra leakage/cách chia, rồi cân nhắc dữ liệu phù hợp và regularization. B train đã kém, gợi ý bias hoặc tối ưu chưa tốt; xem kiến trúc, đặc trưng, dữ liệu, learning rate và thời gian học. Không chỉ tăng L2 cho B. Đây là chẩn đoán có điều kiện, chưa chứng minh nguyên nhân.
 
-### Bài 2 — Inverted dropout
+### Bài 2: Inverted dropout
 
 Activation [2,4,6,8], keep_prob=0,5, mặt nạ [1,0,1,0]. Đầu ra train là gì? Mỗi activation có kỳ vọng ra sao nếu lấy mặt nạ ngẫu nhiên đúng q?
 
 **Lời giải:** Nhân mặt nạ rồi chia 0,5 được [4,0,12,0]. Với một activation a, xác suất 0,5 cho 2a và 0,5 cho 0, nên kỳ vọng là a. Không suy ra tổng của mọi lần chạy đều bằng tổng đầu vào.
 
-### Bài 3 — Một bước L2 và Adam
+### Bài 3: Một bước L2 và Adam
 
 (a) Dùng `J=J_data+(λ/2)w²`, w=2, g_data=0,5, λ=0,2, η=0,1. Tính w mới bằng GD. (b) Adam bước đầu có g=2, β₁=0,9, β₂=0,999, hai bộ tích lũy ban đầu bằng 0. Tính hai moment sau hiệu chỉnh.
 
 **Lời giải:** (a) g tổng=0,5+0,4=0,9; w mới=1,91. (b) v=0,2, s=0,004; v̂=0,2/0,1=2, ŝ=0,004/0,001=4. Hiệu chỉnh này bù khởi tạo moment bằng 0, không sửa bias dự đoán của mô hình.
 
-### Bài 4 — Chuẩn hóa và BatchNorm
+### Bài 4: Chuẩn hóa và BatchNorm
 
 (a) Train cho μ=10, σ=2. Mẫu dev x=14 được chuẩn hóa thế nào? (b) Một kênh BN có batch [2,4], γ=2, β=3; bỏ qua ε nhỏ, đầu ra là gì? (c) Inference có dùng lại thống kê của batch test hiện tại theo cách train thông thường không?
 

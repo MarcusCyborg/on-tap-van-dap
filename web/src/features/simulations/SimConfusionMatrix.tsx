@@ -226,7 +226,7 @@ export const SimConfusionMatrix: React.FC = () => {
         <div className="p-3 bg-surface border border-border rounded-lg">
           <div className="text-xs text-muted font-medium">Precision (Độ chính xác)</div>
           <div className="text-xl font-bold font-mono text-ink mt-0.5">
-            {precision !== null ? `${(precision * 100).toFixed(1)}%` : '—'}
+            {precision !== null ? `${(precision * 100).toFixed(1)}%` : '-'}
           </div>
           <div className="text-[10px] text-muted">
             {precision !== null ? `TP / (TP + FP) = ${tp}/${tp + fp}` : 'Chưa đoán dương ca nào'}
@@ -236,7 +236,7 @@ export const SimConfusionMatrix: React.FC = () => {
         <div className="p-3 bg-surface border border-border rounded-lg">
           <div className="text-xs text-muted font-medium">Recall (Độ nhạy / Thu hồi)</div>
           <div className="text-xl font-bold font-mono text-[#27624a] mt-0.5">
-            {recall !== null ? `${(recall * 100).toFixed(1)}%` : '—'}
+            {recall !== null ? `${(recall * 100).toFixed(1)}%` : '-'}
           </div>
           <div className="text-[10px] text-muted">
             {recall !== null ? `TP / (TP + FN) = ${tp}/${tp + fn}` : 'Không có ca dương thật'}
@@ -246,7 +246,7 @@ export const SimConfusionMatrix: React.FC = () => {
         <div className="p-3 bg-surface border border-border rounded-lg">
           <div className="text-xs text-muted font-medium">F1-Score</div>
           <div className="text-xl font-bold font-mono text-[#8a4b16] mt-0.5">
-            {f1 !== null ? `${(f1 * 100).toFixed(1)}%` : '—'}
+            {f1 !== null ? `${(f1 * 100).toFixed(1)}%` : '-'}
           </div>
           <div className="text-[10px] text-muted">Trung bình điều hòa P & R</div>
         </div>
@@ -254,7 +254,7 @@ export const SimConfusionMatrix: React.FC = () => {
         <div className="p-3 bg-surface border border-border rounded-lg">
           <div className="text-xs text-muted font-medium">Accuracy (Độ chuẩn xác)</div>
           <div className="text-xl font-bold font-mono text-ink mt-0.5">
-            {accuracy !== null ? `${(accuracy * 100).toFixed(1)}%` : '—'}
+            {accuracy !== null ? `${(accuracy * 100).toFixed(1)}%` : '-'}
           </div>
           <div className="text-[10px] text-muted">
             (TP + TN) / Tổng = {tp + tn}/{sampleClassifications.length}

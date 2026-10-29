@@ -619,9 +619,9 @@ function parseExams(): Exam[] {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
 
-    if (/^##\s+Đề\s+(\d+)\s*—\s*(.*)$/.test(line)) {
+    if (/^##\s+Đề\s+(\d+)\s*[:\-]\s*(.*)$/.test(line)) {
       flushExam();
-      const m = line.match(/^##\s+Đề\s+(\d+)\s*—\s*(.*)$/);
+      const m = line.match(/^##\s+Đề\s+(\d+)\s*[:\-]\s*(.*)$/);
       if (m) {
         currentExam = {
           number: parseInt(m[1], 10),

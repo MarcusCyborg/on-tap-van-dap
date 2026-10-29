@@ -1,4 +1,4 @@
-# DPL302m — RNN, NLP, Attention và Transformer
+# DPL302m: RNN, NLP, Attention và Transformer
 
 Tài liệu bám bốn bài 5.1–5.4 của môn DPL302m, giúp người mới hiểu cơ chế để trả lời vấn đáp. Đây là phần bổ sung cho [35 câu DL nền tảng](../Chuyen-de/03-Deep-Learning.md), đặc biệt các câu DL26, DL27, DL31 và DL32; không thay thế bài lab hoặc toàn bộ chứng minh toán học.
 
@@ -275,25 +275,25 @@ BERT điển hình là encoder-only với attention hai chiều và mục tiêu 
 
 ## Bốn bài tự kiểm tra có lời giải
 
-### Bài 1 — Shape và chia sẻ trọng số
+### Bài 1: Shape và chia sẻ trọng số
 
 Vocabulary có 10.000 từ, embedding 300 chiều. Một batch gồm 32 câu, pad đến 20 token; hidden size RNN=64. Theo batch-first, output embedding và toàn bộ hidden state có shape gì? Có 20 bộ trọng số RNN riêng không?
 
 **Lời giải:** embedding `(32,20,300)`; chuỗi hidden `(32,20,64)`; hidden một bước `(32,64)`. Một cell RNN chuẩn chia sẻ trọng số qua 20 bước, không tạo 20 bộ trọng số. Với padding, cần mask/length để tránh coi pad như nội dung thật.
 
-### Bài 2 — LSTM và clipping
+### Bài 2: LSTM và clipping
 
 Một chiều cell state cũ=2, forget=0,9, input gate=0,1, ứng viên=−1. Tính c mới. Một gradient khác có norm 12, clip-by-norm với threshold 5 thì hệ số scale bao nhiêu?
 
 **Lời giải:** c mới=1,7. Gradient nhân `5/12≈0,4167`, norm mới=5. Hai phép này khác nhau: cổng LSTM học cách giữ thông tin, còn clipping giới hạn gradient khi tối ưu.
 
-### Bài 3 — Vì sao greedy có thể bỏ lỡ câu tốt?
+### Bài 3: Vì sao greedy có thể bỏ lỡ câu tốt?
 
 Hai token đầu A/B có xác suất 0,6/0,4. Token kết thúc tốt nhất sau A có xác suất 0,5, sau B là 0,9. Bỏ qua chuẩn hóa độ dài vì hai câu dài bằng nhau. Greedy chọn gì, câu nào có xác suất cao hơn?
 
 **Lời giải:** greedy chọn A ở bước đầu, xác suất đường tốt nhất theo nhánh A=0,30. Nhánh B có 0,36 nên cao hơn. Beam width 2 giữ cả hai nhánh ở bước đầu có thể tìm ra B; ví dụ không chứng minh mọi beam width 2 đều tối ưu trên bài dài.
 
-### Bài 4 — Attention và nguồn Q/K/V
+### Bài 4: Attention và nguồn Q/K/V
 
 Một query có score sau scale [0,1], softmax xấp xỉ [0,269;0,731], value 10 và 20. Tính output. Nếu đây là decoder cross-attention, Q và K/V đến từ đâu?
 

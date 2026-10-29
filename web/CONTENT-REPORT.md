@@ -22,7 +22,7 @@ Dữ liệu được trích xuất tự động và kiểm thực toàn vẹn b�
 
 ---
 
-## 2. Thống kê Chi tiết Bộ Nền tảng chung (Foundations — 140 Câu)
+## 2. Thống kê Chi tiết Bộ Nền tảng chung (Foundations: 140 Câu)
 
 Phân bổ chính xác theo 3 mức ưu tiên học: **72 A (Nền tảng)**, **48 B (Mở rộng)**, **20 C (Nhận diện)**.
 

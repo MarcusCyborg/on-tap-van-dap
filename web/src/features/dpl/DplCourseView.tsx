@@ -86,11 +86,11 @@ export const DplCourseView: React.FC = () => {
         <div className="relative z-10 max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold backdrop-blur-xs">
             <BrainCircuit className="w-4 h-4 text-purple-300" />
-            <span>Môn học chính — DPL302m Deep Learning</span>
+            <span>Môn học chính: DPL302m Deep Learning</span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-            Khóa Học DPL302m — 72 Câu Theo 5 Chương
+            Khóa Học DPL302m: 72 Câu Theo 5 Chương
           </h1>
 
           <p className="text-sm opacity-90 leading-relaxed max-w-2xl">

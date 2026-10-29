@@ -1,4 +1,4 @@
-# DPL302m — CNN và thị giác máy tính từ nền tảng
+# DPL302m: CNN và thị giác máy tính từ nền tảng
 
 Tài liệu gồm 18 câu bổ sung cho bốn bài 4.1–4.4. Mục tiêu là hiểu khối CNN, phân biệt các nhiệm vụ thị giác máy tính và trả lời được câu hỏi cơ bản bằng ví dụ. Các nguồn nằm trong thư mục F:/1. FPT Material/Sem5/DPL302m/extracted_texts/. Số slide ghi dưới đây được đối chiếu với marker “Slide N” trong text, không lấy từ bản đồ mục lục.
 
@@ -292,25 +292,25 @@ CNN sâu có thể học biểu diễn phức tạp từ dữ liệu này, nhưn
 
 ## Bốn bài tự kiểm tra có lời giải
 
-### Bài 1 — Theo dõi shape và số tham số
+### Bài 1: Theo dõi shape và số tham số
 
 Input 32×32×3, Conv 3×3 với 16 filter, stride 1, padding 1, có bias; sau đó MaxPool 2×2 stride 2. Tính output mỗi lớp và tham số học thêm ở mỗi lớp.
 
 **Lời giải:** conv tạo 32×32×16, có (3×3×3+1)×16=448 tham số. Pool tạo 16×16×16, không thêm weight/bias. Flatten sau đó sẽ tạo vector 4.096 số. Các số này chưa tính batch.
 
-### Bài 2 — IoU và NMS
+### Bài 2: IoU và NMS
 
 A=[0,0,2,2], B=[1,0,3,2], cùng class, score 0,9 và 0,7. Tính IoU; nếu NMS loại khi IoU>0,3 thì box nào còn? Nếu threshold là 0,5 thì sao?
 
 **Lời giải:** giao=2, hợp=6, IoU=1/3. Với 0,3, chọn A trước rồi loại B. Với 0,5, cả hai còn vì IoU chưa qua ngưỡng. Box còn không tự chứng minh là dự đoán đúng; phải đánh giá với ground truth.
 
-### Bài 3 — Triplet loss
+### Bài 3: Triplet loss
 
 Khoảng cách Euclid từ A tới P là 0,6, từ A tới N là 0,8, margin α=0,3. Tính loss với công thức dùng khoảng cách bình phương.
 
 **Lời giải:** D_AP=0,36, D_AN=0,64; L=max(0,36−0,64+0,3;0)=0,02. Chú ý khác DPL4-16, đề này cho khoảng cách chưa bình phương, nên phải bình phương trước.
 
-### Bài 4 — Chọn output
+### Bài 4: Chọn output
 
 Bạn muốn (a) biết ảnh có xe không; (b) tìm box của mọi xe; (c) phân loại pixel đường/xe/người; (d) kiểm tra người trước camera có đúng mã nhân viên đã khai báo. Nêu task và dạng output.
 

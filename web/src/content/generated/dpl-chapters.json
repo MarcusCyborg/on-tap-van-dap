@@ -1,7 +1,7 @@
 [
   {
     "chapterId": "dpl1",
-    "title": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "title": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "file": "01-Neural-network-foundations.md",
     "idPrefix": "DPL1-",
     "coreCount": 11,
@@ -27,7 +27,7 @@
       "1.3",
       "1.4"
     ],
-    "introMarkdown": "# Chương 1 — Từ logistic regression đến mạng nhiều tầng\n\nĐọc nối với DL01–DL18 trong [bộ nền tảng](../Chuyen-de/03-Deep-Learning.md). Phần này bổ sung ký hiệu, shape và phép tính cơ bản theo các bài 1.1–1.4 của DPL302m.\n\nNguồn là các file text trong `F:\\1. FPT Material\\Sem5\\DPL302m\\extracted_texts`. Số slide bên dưới lấy từ marker thực trong file text. Công thức được viết lại ở dạng chuẩn, dễ đọc; text extraction không giữ đầy đủ hình ảnh và công thức của slide nên không xem đây là bản chép nguyên văn PowerPoint.",
+    "introMarkdown": "# Chương 1: Từ logistic regression đến mạng nhiều tầng\n\nĐọc nối với DL01–DL18 trong [bộ nền tảng](../Chuyen-de/03-Deep-Learning.md). Phần này bổ sung ký hiệu, shape và phép tính cơ bản theo các bài 1.1–1.4 của DPL302m.\n\nNguồn là các file text trong `F:\\1. FPT Material\\Sem5\\DPL302m\\extracted_texts`. Số slide bên dưới lấy từ marker thực trong file text. Công thức được viết lại ở dạng chuẩn, dễ đọc; text extraction không giữ đầy đủ hình ảnh và công thức của slide nên không xem đây là bản chép nguyên văn PowerPoint.",
     "exercises": [
       {
         "id": "dpl1-ex-1",
@@ -104,7 +104,7 @@
   },
   {
     "chapterId": "dpl2",
-    "title": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "title": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "file": "02-Huan-luyen-va-toi-uu.md",
     "idPrefix": "DPL2-",
     "coreCount": 11,
@@ -131,14 +131,14 @@
       "2.2",
       "2.3"
     ],
-    "introMarkdown": "# Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng\n\nChương này bám ba bài **2.1 Practical Aspects**, **2.2 Optimization Algorithms**, **2.3 Hyper parameter tuning** của DPL302m. Có **14 câu: 11 Cốt lõi, 3 Đọc tiếp**. Nhãn chỉ thứ tự học, không dự đoán câu thi.\n\nNếu chưa hiểu forward, loss, gradient và backprop, đọc DL07–DL13 trong [bộ DL nền tảng](../Chuyen-de/03-Deep-Learning.md) trước. Mạch của chương là: **chia dữ liệu đúng → chẩn đoán lỗi → kiểm soát overfitting → chuẩn bị tín hiệu/gradient → chọn cách cập nhật → chọn siêu tham số**.\n\nĐường đọc nhanh: DPL2-01 → 02 → 03 → 04 → 05 → 06 → 07 → 09 → 10 → 11 → 14. Sau đó đọc 08 để biết kiểm tra gradient, 12 về lịch learning rate và 13 về tìm cấu hình. Mỗi câu hãy tự trả lời một lần trước khi xem mẫu đáp.\n\n## Nguồn và cách sử dụng\n\nNguồn chính là text trích xuất có marker `--- Slide N ---` trong `F:\\1. FPT Material\\Sem5\\DPL302m\\extracted_texts`:\n\n- `2.1 Practical Aspects of Deep Learning.txt` — 74 marker slide.\n- `2.2 Optimization Algorithms.txt` — 59 marker slide.\n- `2.3 Hyper parameter tuning.txt` — 54 marker slide.\n\nSố slide dưới đây lấy từ marker thực trong text, không lấy khoảng trang của bản đồ mục lục. Một số slide mất công thức/hình khi trích text; công thức chuẩn và ví dụ số được diễn giải bổ sung để học, không coi là bản chép nguyên văn hình slide. Những đoạn “Trả lời miệng”, ví dụ và bài tập là phần biên soạn mới. File `summaries/ch2_training_and_optimization.md` là nguồn tham khảo phụ; không mặc định mọi khẳng định trong bản tóm tắt đúng cho mọi tình huống.",
+    "introMarkdown": "# Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng\n\nChương này bám ba bài **2.1 Practical Aspects**, **2.2 Optimization Algorithms**, **2.3 Hyper parameter tuning** của DPL302m. Có **14 câu: 11 Cốt lõi, 3 Đọc tiếp**. Nhãn chỉ thứ tự học, không dự đoán câu thi.\n\nNếu chưa hiểu forward, loss, gradient và backprop, đọc DL07–DL13 trong [bộ DL nền tảng](../Chuyen-de/03-Deep-Learning.md) trước. Mạch của chương là: **chia dữ liệu đúng → chẩn đoán lỗi → kiểm soát overfitting → chuẩn bị tín hiệu/gradient → chọn cách cập nhật → chọn siêu tham số**.\n\nĐường đọc nhanh: DPL2-01 → 02 → 03 → 04 → 05 → 06 → 07 → 09 → 10 → 11 → 14. Sau đó đọc 08 để biết kiểm tra gradient, 12 về lịch learning rate và 13 về tìm cấu hình. Mỗi câu hãy tự trả lời một lần trước khi xem mẫu đáp.\n\n## Nguồn và cách sử dụng\n\nNguồn chính là text trích xuất có marker `--- Slide N ---` trong `F:\\1. FPT Material\\Sem5\\DPL302m\\extracted_texts`:\n\n- `2.1 Practical Aspects of Deep Learning.txt` - 74 marker slide.\n- `2.2 Optimization Algorithms.txt` - 59 marker slide.\n- `2.3 Hyper parameter tuning.txt` - 54 marker slide.\n\nSố slide dưới đây lấy từ marker thực trong text, không lấy khoảng trang của bản đồ mục lục. Một số slide mất công thức/hình khi trích text; công thức chuẩn và ví dụ số được diễn giải bổ sung để học, không coi là bản chép nguyên văn hình slide. Những đoạn “Trả lời miệng”, ví dụ và bài tập là phần biên soạn mới. File `summaries/ch2_training_and_optimization.md` là nguồn tham khảo phụ; không mặc định mọi khẳng định trong bản tóm tắt đúng cho mọi tình huống.",
     "exercises": [
       {
         "id": "dpl2-ex-1",
         "collectionId": "dpl302m",
         "chapterId": "dpl2",
         "number": 1,
-        "title": "Bài 1 — Chẩn đoán và chọn hướng xử lý",
+        "title": "Bài 1: Chẩn đoán và chọn hướng xử lý",
         "questionMarkdown": "Giả sử train/dev cùng phân phối, sai số tham chiếu phù hợp khoảng 1%. Mô hình A có lỗi 2%/15%; B có lỗi 18%/19%. Gợi ý vấn đề gì và thử gì trước?",
         "solutionMarkdown": "A có khoảng cách lớn, gợi ý variance; kiểm tra leakage/cách chia, rồi cân nhắc dữ liệu phù hợp và regularization. B train đã kém, gợi ý bias hoặc tối ưu chưa tốt; xem kiến trúc, đặc trưng, dữ liệu, learning rate và thời gian học. Không chỉ tăng L2 cho B. Đây là chẩn đoán có điều kiện, chưa chứng minh nguyên nhân."
       },
@@ -147,7 +147,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl2",
         "number": 2,
-        "title": "Bài 2 — Inverted dropout",
+        "title": "Bài 2: Inverted dropout",
         "questionMarkdown": "Activation [2,4,6,8], keep_prob=0,5, mặt nạ [1,0,1,0]. Đầu ra train là gì? Mỗi activation có kỳ vọng ra sao nếu lấy mặt nạ ngẫu nhiên đúng q?",
         "solutionMarkdown": "Nhân mặt nạ rồi chia 0,5 được [4,0,12,0]. Với một activation a, xác suất 0,5 cho 2a và 0,5 cho 0, nên kỳ vọng là a. Không suy ra tổng của mọi lần chạy đều bằng tổng đầu vào."
       },
@@ -156,7 +156,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl2",
         "number": 3,
-        "title": "Bài 3 — Một bước L2 và Adam",
+        "title": "Bài 3: Một bước L2 và Adam",
         "questionMarkdown": "(a) Dùng `J=J_data+(λ/2)w²`, w=2, g_data=0,5, λ=0,2, η=0,1. Tính w mới bằng GD. (b) Adam bước đầu có g=2, β₁=0,9, β₂=0,999, hai bộ tích lũy ban đầu bằng 0. Tính hai moment sau hiệu chỉnh.",
         "solutionMarkdown": "(a) g tổng=0,5+0,4=0,9; w mới=1,91. (b) v=0,2, s=0,004; v̂=0,2/0,1=2, ŝ=0,004/0,001=4. Hiệu chỉnh này bù khởi tạo moment bằng 0, không sửa bias dự đoán của mô hình."
       },
@@ -165,7 +165,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl2",
         "number": 4,
-        "title": "Bài 4 — Chuẩn hóa và BatchNorm",
+        "title": "Bài 4: Chuẩn hóa và BatchNorm",
         "questionMarkdown": "(a) Train cho μ=10, σ=2. Mẫu dev x=14 được chuẩn hóa thế nào? (b) Một kênh BN có batch [2,4], γ=2, β=3; bỏ qua ε nhỏ, đầu ra là gì? (c) Inference có dùng lại thống kê của batch test hiện tại theo cách train thông thường không?",
         "solutionMarkdown": "(a) (14−10)/2=2, dùng thống kê train. (b) Mean=3, variance=1, chuẩn hóa [−1,1], đầu ra [1,5]. (c) Trong cấu hình BN phổ biến có running statistics, dùng thống kê chạy đã lưu; hành vi cụ thể vẫn cần xem cấu hình framework. Chuẩn hóa đầu vào và BN nằm ở hai vị trí khác nhau."
       }
@@ -224,7 +224,7 @@
   },
   {
     "chapterId": "dpl3",
-    "title": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "title": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "file": "03-ML-strategy-va-error-analysis.md",
     "idPrefix": "DPL3-",
     "coreCount": 8,
@@ -246,14 +246,14 @@
       "3.1",
       "3.2"
     ],
-    "introMarkdown": "# Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì\n\nChương này bám bài **3.1 Introduction to ML strategy** và **3.2 Error Analysis** của DPL302m. Có **10 câu: 8 Cốt lõi, 2 Đọc tiếp**. Không cần thêm nhiều công thức để bắt đầu: mục tiêu là nhìn kết quả mô hình rồi chọn bước tiếp theo có lý do.\n\nMạch học: **đặt mục tiêu đúng → đo trên dữ liệu đúng → tìm loại sai → chọn cách cải thiện → kiểm tra lại**. Trước khi đọc, nên biết train/dev/test, overfit và precision/recall trong [bộ ML nền tảng](../Chuyen-de/02-Machine-Learning.md), nhất là ML07, ML16–ML17, ML29–ML31.\n\nĐọc trước DPL3-01 → 02 → 03 → 04 → 05 → 07 → 08 → 09. DPL3-06 và DPL3-10 giúp trả lời sâu hơn về dữ liệu và cách thiết kế hệ thống. Cốt lõi/Đọc tiếp là ưu tiên học trong tài liệu, không phải xác suất ra đề.\n\n## Nguồn và giới hạn\n\nNguồn chính: hai file `3.1 Introduction to ML strategy.txt` và `3.2 Error Analysis.txt` trong `F:\\1. FPT Material\\Sem5\\DPL302m\\extracted_texts`. Mốc trang dưới đây lấy trực tiếp từ marker `--- Slide N ---`: lần lượt 66 và 59 slide. `summaries/ch3_ml_strategy.md` chỉ dùng làm tham khảo giải thích.\n\nCác ví dụ số và mẫu trả lời dưới đây được biên soạn thêm; chúng không phải số liệu thực nghiệm của lớp. Một số nội dung trong text slide có tính khái quát hoặc thiếu hình, nên diễn giải dùng điều kiện phù hợp thay vì sao chép các từ “luôn”, “bắt buộc”, “chắc chắn”. Chưa kiểm tra hình/công thức trong PowerPoint gốc.",
+    "introMarkdown": "# Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì\n\nChương này bám bài **3.1 Introduction to ML strategy** và **3.2 Error Analysis** của DPL302m. Có **10 câu: 8 Cốt lõi, 2 Đọc tiếp**. Không cần thêm nhiều công thức để bắt đầu: mục tiêu là nhìn kết quả mô hình rồi chọn bước tiếp theo có lý do.\n\nMạch học: **đặt mục tiêu đúng → đo trên dữ liệu đúng → tìm loại sai → chọn cách cải thiện → kiểm tra lại**. Trước khi đọc, nên biết train/dev/test, overfit và precision/recall trong [bộ ML nền tảng](../Chuyen-de/02-Machine-Learning.md), nhất là ML07, ML16–ML17, ML29–ML31.\n\nĐọc trước DPL3-01 → 02 → 03 → 04 → 05 → 07 → 08 → 09. DPL3-06 và DPL3-10 giúp trả lời sâu hơn về dữ liệu và cách thiết kế hệ thống. Cốt lõi/Đọc tiếp là ưu tiên học trong tài liệu, không phải xác suất ra đề.\n\n## Nguồn và giới hạn\n\nNguồn chính: hai file `3.1 Introduction to ML strategy.txt` và `3.2 Error Analysis.txt` trong `F:\\1. FPT Material\\Sem5\\DPL302m\\extracted_texts`. Mốc trang dưới đây lấy trực tiếp từ marker `--- Slide N ---`: lần lượt 66 và 59 slide. `summaries/ch3_ml_strategy.md` chỉ dùng làm tham khảo giải thích.\n\nCác ví dụ số và mẫu trả lời dưới đây được biên soạn thêm; chúng không phải số liệu thực nghiệm của lớp. Một số nội dung trong text slide có tính khái quát hoặc thiếu hình, nên diễn giải dùng điều kiện phù hợp thay vì sao chép các từ “luôn”, “bắt buộc”, “chắc chắn”. Chưa kiểm tra hình/công thức trong PowerPoint gốc.",
     "exercises": [
       {
         "id": "dpl3-ex-1",
         "collectionId": "dpl302m",
         "chapterId": "dpl3",
         "number": 1,
-        "title": "Bài 1 — Chọn mục tiêu và mô hình",
+        "title": "Bài 1: Chọn mục tiêu và mô hình",
         "questionMarkdown": "Ứng dụng cần dự đoán ≤100ms. A: F1=0,91, 70ms; B: F1=0,94, 130ms; C: F1=0,92, 95ms. Nếu tối đa F1 với ràng buộc đó, chọn gì? Nếu cả ba đều chậm hơn 100ms thì sao?",
         "solutionMarkdown": "Chọn C trong những mô hình đạt điều kiện, dù B có F1 cao nhất. F1 là optimizing metric, latency là satisficing metric. Nếu không mô hình nào đạt, chưa có ứng viên đáp ứng yêu cầu; cần cải thiện hoặc đánh giá lại ràng buộc có căn cứ, không bỏ ràng buộc âm thầm."
       },
@@ -262,7 +262,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl3",
         "number": 2,
-        "title": "Bài 2 — Chẩn đoán bốn mức sai số",
+        "title": "Bài 2: Chẩn đoán bốn mức sai số",
         "questionMarkdown": "Lỗi chuyên gia 1%, train 8%, training-dev 9%, dev 20%. Giả sử các phép so sánh đủ hợp lệ cho chẩn đoán nhập môn, tính các khoảng và giải thích.",
         "solutionMarkdown": "Train−chuyên gia=7 điểm phần trăm, gợi ý còn avoidable bias nếu chuyên gia là mốc tốt. Training-dev−train=1 điểm, gợi ý khoảng khái quát hóa trên nguồn train. Dev−training-dev=11 điểm, gợi ý data mismatch lớn. Cả bias và mismatch đáng quan tâm; không thể chỉ lấy dev−train=12 rồi gọi toàn bộ là variance. Chuyên gia chỉ là proxy, không phải Bayes error đã biết."
       },
@@ -271,7 +271,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl3",
         "number": 3,
-        "title": "Bài 3 — Mẫu số trong error analysis",
+        "title": "Bài 3: Mẫu số trong error analysis",
         "questionMarkdown": "Dev có 2.000 ảnh, sai 200 ảnh. Trong các lỗi, 50 ảnh mờ và 20 ảnh sai nhãn; 5 ảnh vừa mờ vừa sai nhãn. Nếu một biện pháp chỉ sửa hoàn hảo 50 lỗi ảnh mờ và không gây lỗi mới, lỗi chung giảm bao nhiêu? Có cộng 50+20 để nói có 70 ảnh thuộc hai nhóm không?",
         "solutionMarkdown": "Lỗi chung ban đầu 10%; sửa 50 thì còn 150/2.000=7,5%, giảm 2,5 điểm phần trăm. 50/200=25% là tỷ lệ ảnh mờ trong **các lỗi**, không phải toàn dev. Số ảnh thuộc ít nhất một trong hai nhóm là 50+20−5=65, vì phải trừ phần giao. Trần cải thiện giả định không có lỗi mới và tập lỗi được xem đầy đủ như đề bài."
       }
@@ -326,7 +326,7 @@
   },
   {
     "chapterId": "dpl4",
-    "title": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "title": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "file": "04-CNN-va-thi-giac-may-tinh.md",
     "idPrefix": "DPL4-",
     "coreCount": 14,
@@ -358,14 +358,14 @@
       "4.3",
       "4.4"
     ],
-    "introMarkdown": "# DPL302m — CNN và thị giác máy tính từ nền tảng\n\nTài liệu gồm 18 câu bổ sung cho bốn bài 4.1–4.4. Mục tiêu là hiểu khối CNN, phân biệt các nhiệm vụ thị giác máy tính và trả lời được câu hỏi cơ bản bằng ví dụ. Các nguồn nằm trong thư mục F:/1. FPT Material/Sem5/DPL302m/extracted_texts/. Số slide ghi dưới đây được đối chiếu với marker “Slide N” trong text, không lấy từ bản đồ mục lục.\n\n## Đọc theo mạch nào?\n\n**Ảnh → filter → kích thước/chi phí → kiến trúc CNN → nhận dạng và định vị → so sánh khuôn mặt.**\n\n- Học trước 14 câu [Cốt lõi]: 01–05, 07, 09–10, 12–16, 18. Riêng 18 có thể đọc nhanh để nhận diện chiều dữ liệu.\n- Bốn câu [Đọc tiếp]: 06, 08, 11, 17; đưa lên sớm nếu thầy nhấn mạnh kiến trúc hoặc thuật toán đó.\n- Trong [bộ DL nền](../Chuyen-de/03-Deep-Learning.md), DL24–25 giải thích CNN/pooling sơ lược, DL28 nói transfer learning và DL34 nói residual. Bộ này mở rộng theo bài học của môn, giữ nguyên các ID cũ.\n\nMỗi câu có nguồn, giải thích, ví dụ, mẫu đáp và câu nối tiếp. Các ví dụ số được tự biên soạn để bạn chạy tay, không phải lời trích nguyên slide. Mức ưu tiên là hướng đọc, không dự đoán câu thi. Text trích xuất có thể mất hình hoặc làm hỏng công thức; các chỗ cần điều kiện được nói rõ thay vì chép máy móc.",
+    "introMarkdown": "# DPL302m: CNN và thị giác máy tính từ nền tảng\n\nTài liệu gồm 18 câu bổ sung cho bốn bài 4.1–4.4. Mục tiêu là hiểu khối CNN, phân biệt các nhiệm vụ thị giác máy tính và trả lời được câu hỏi cơ bản bằng ví dụ. Các nguồn nằm trong thư mục F:/1. FPT Material/Sem5/DPL302m/extracted_texts/. Số slide ghi dưới đây được đối chiếu với marker “Slide N” trong text, không lấy từ bản đồ mục lục.\n\n## Đọc theo mạch nào?\n\n**Ảnh → filter → kích thước/chi phí → kiến trúc CNN → nhận dạng và định vị → so sánh khuôn mặt.**\n\n- Học trước 14 câu [Cốt lõi]: 01–05, 07, 09–10, 12–16, 18. Riêng 18 có thể đọc nhanh để nhận diện chiều dữ liệu.\n- Bốn câu [Đọc tiếp]: 06, 08, 11, 17; đưa lên sớm nếu thầy nhấn mạnh kiến trúc hoặc thuật toán đó.\n- Trong [bộ DL nền](../Chuyen-de/03-Deep-Learning.md), DL24–25 giải thích CNN/pooling sơ lược, DL28 nói transfer learning và DL34 nói residual. Bộ này mở rộng theo bài học của môn, giữ nguyên các ID cũ.\n\nMỗi câu có nguồn, giải thích, ví dụ, mẫu đáp và câu nối tiếp. Các ví dụ số được tự biên soạn để bạn chạy tay, không phải lời trích nguyên slide. Mức ưu tiên là hướng đọc, không dự đoán câu thi. Text trích xuất có thể mất hình hoặc làm hỏng công thức; các chỗ cần điều kiện được nói rõ thay vì chép máy móc.",
     "exercises": [
       {
         "id": "dpl4-ex-1",
         "collectionId": "dpl302m",
         "chapterId": "dpl4",
         "number": 1,
-        "title": "Bài 1 — Theo dõi shape và số tham số",
+        "title": "Bài 1: Theo dõi shape và số tham số",
         "questionMarkdown": "Input 32×32×3, Conv 3×3 với 16 filter, stride 1, padding 1, có bias; sau đó MaxPool 2×2 stride 2. Tính output mỗi lớp và tham số học thêm ở mỗi lớp.",
         "solutionMarkdown": "conv tạo 32×32×16, có (3×3×3+1)×16=448 tham số. Pool tạo 16×16×16, không thêm weight/bias. Flatten sau đó sẽ tạo vector 4.096 số. Các số này chưa tính batch."
       },
@@ -374,7 +374,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl4",
         "number": 2,
-        "title": "Bài 2 — IoU và NMS",
+        "title": "Bài 2: IoU và NMS",
         "questionMarkdown": "A=[0,0,2,2], B=[1,0,3,2], cùng class, score 0,9 và 0,7. Tính IoU; nếu NMS loại khi IoU>0,3 thì box nào còn? Nếu threshold là 0,5 thì sao?",
         "solutionMarkdown": "giao=2, hợp=6, IoU=1/3. Với 0,3, chọn A trước rồi loại B. Với 0,5, cả hai còn vì IoU chưa qua ngưỡng. Box còn không tự chứng minh là dự đoán đúng; phải đánh giá với ground truth."
       },
@@ -383,7 +383,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl4",
         "number": 3,
-        "title": "Bài 3 — Triplet loss",
+        "title": "Bài 3: Triplet loss",
         "questionMarkdown": "Khoảng cách Euclid từ A tới P là 0,6, từ A tới N là 0,8, margin α=0,3. Tính loss với công thức dùng khoảng cách bình phương.",
         "solutionMarkdown": "D_AP=0,36, D_AN=0,64; L=max(0,36−0,64+0,3;0)=0,02. Chú ý khác DPL4-16, đề này cho khoảng cách chưa bình phương, nên phải bình phương trước."
       },
@@ -392,7 +392,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl4",
         "number": 4,
-        "title": "Bài 4 — Chọn output",
+        "title": "Bài 4: Chọn output",
         "questionMarkdown": "Bạn muốn (a) biết ảnh có xe không; (b) tìm box của mọi xe; (c) phân loại pixel đường/xe/người; (d) kiểm tra người trước camera có đúng mã nhân viên đã khai báo. Nêu task và dạng output.",
         "solutionMarkdown": "(a) classification, nhãn/xác suất ảnh; (b) detection, danh sách box/class/score; (c) semantic segmentation, nhãn hoặc logits từng pixel; (d) verification, kết luận khớp/không khớp dựa trên score và threshold. Các task không dùng cùng dạng nhãn hoặc chỉ số đánh giá."
       }
@@ -407,7 +407,7 @@
   },
   {
     "chapterId": "dpl5",
-    "title": "DPL302m — RNN, NLP, Attention và Transformer",
+    "title": "DPL302m: RNN, NLP, Attention và Transformer",
     "file": "05-RNN-NLP-va-Transformer.md",
     "idPrefix": "DPL5-",
     "coreCount": 13,
@@ -439,14 +439,14 @@
       "5.3",
       "5.4"
     ],
-    "introMarkdown": "# DPL302m — RNN, NLP, Attention và Transformer\n\nTài liệu bám bốn bài 5.1–5.4 của môn DPL302m, giúp người mới hiểu cơ chế để trả lời vấn đáp. Đây là phần bổ sung cho [35 câu DL nền tảng](../Chuyen-de/03-Deep-Learning.md), đặc biệt các câu DL26, DL27, DL31 và DL32; không thay thế bài lab hoặc toàn bộ chứng minh toán học.\n\n**Nguồn chính:** bốn file trong `F:\\1. FPT Material\\Sem5\\DPL302m\\extracted_texts`. Số slide dưới mỗi câu lấy từ marker `--- Slide N ---` thực tế, không lấy từ bản đồ vì một số khoảng trang trong bản đồ khác extract. Bản `summaries/ch5_sequence_models.md` chỉ dùng tham khảo thuật ngữ. Công thức và ví dụ số được diễn giải lại; những công thức hỏng khi extract chưa được xác minh bằng ảnh slide.\n\n## Bản đồ và đường đọc\n\n**Chuỗi → RNN dùng chung trọng số → BPTT → LSTM/GRU → language model → embedding → Seq2Seq → attention → Transformer.**\n\n- **Cốt lõi:** DPL5-01–04, DPL5-06–09, DPL5-11–12, DPL5-14–15, DPL5-17.\n- **Đọc tiếp:** DPL5-05, DPL5-10, DPL5-13, DPL5-16, DPL5-18.\n\nĐây là thứ tự học, không phải xác suất ra đề. Sau mỗi câu, đóng tài liệu và nói lại bằng lời của mình. Với mô hình chuỗi, luôn hỏi: độ dài input/output là gì, trạng thái nào truyền tiếp, trọng số nào dùng chung, và mô hình được phép nhìn thông tin nào?",
+    "introMarkdown": "# DPL302m: RNN, NLP, Attention và Transformer\n\nTài liệu bám bốn bài 5.1–5.4 của môn DPL302m, giúp người mới hiểu cơ chế để trả lời vấn đáp. Đây là phần bổ sung cho [35 câu DL nền tảng](../Chuyen-de/03-Deep-Learning.md), đặc biệt các câu DL26, DL27, DL31 và DL32; không thay thế bài lab hoặc toàn bộ chứng minh toán học.\n\n**Nguồn chính:** bốn file trong `F:\\1. FPT Material\\Sem5\\DPL302m\\extracted_texts`. Số slide dưới mỗi câu lấy từ marker `--- Slide N ---` thực tế, không lấy từ bản đồ vì một số khoảng trang trong bản đồ khác extract. Bản `summaries/ch5_sequence_models.md` chỉ dùng tham khảo thuật ngữ. Công thức và ví dụ số được diễn giải lại; những công thức hỏng khi extract chưa được xác minh bằng ảnh slide.\n\n## Bản đồ và đường đọc\n\n**Chuỗi → RNN dùng chung trọng số → BPTT → LSTM/GRU → language model → embedding → Seq2Seq → attention → Transformer.**\n\n- **Cốt lõi:** DPL5-01–04, DPL5-06–09, DPL5-11–12, DPL5-14–15, DPL5-17.\n- **Đọc tiếp:** DPL5-05, DPL5-10, DPL5-13, DPL5-16, DPL5-18.\n\nĐây là thứ tự học, không phải xác suất ra đề. Sau mỗi câu, đóng tài liệu và nói lại bằng lời của mình. Với mô hình chuỗi, luôn hỏi: độ dài input/output là gì, trạng thái nào truyền tiếp, trọng số nào dùng chung, và mô hình được phép nhìn thông tin nào?",
     "exercises": [
       {
         "id": "dpl5-ex-1",
         "collectionId": "dpl302m",
         "chapterId": "dpl5",
         "number": 1,
-        "title": "Bài 1 — Shape và chia sẻ trọng số",
+        "title": "Bài 1: Shape và chia sẻ trọng số",
         "questionMarkdown": "Vocabulary có 10.000 từ, embedding 300 chiều. Một batch gồm 32 câu, pad đến 20 token; hidden size RNN=64. Theo batch-first, output embedding và toàn bộ hidden state có shape gì? Có 20 bộ trọng số RNN riêng không?",
         "solutionMarkdown": "embedding `(32,20,300)`; chuỗi hidden `(32,20,64)`; hidden một bước `(32,64)`. Một cell RNN chuẩn chia sẻ trọng số qua 20 bước, không tạo 20 bộ trọng số. Với padding, cần mask/length để tránh coi pad như nội dung thật."
       },
@@ -455,7 +455,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl5",
         "number": 2,
-        "title": "Bài 2 — LSTM và clipping",
+        "title": "Bài 2: LSTM và clipping",
         "questionMarkdown": "Một chiều cell state cũ=2, forget=0,9, input gate=0,1, ứng viên=−1. Tính c mới. Một gradient khác có norm 12, clip-by-norm với threshold 5 thì hệ số scale bao nhiêu?",
         "solutionMarkdown": "c mới=1,7. Gradient nhân `5/12≈0,4167`, norm mới=5. Hai phép này khác nhau: cổng LSTM học cách giữ thông tin, còn clipping giới hạn gradient khi tối ưu."
       },
@@ -464,7 +464,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl5",
         "number": 3,
-        "title": "Bài 3 — Vì sao greedy có thể bỏ lỡ câu tốt?",
+        "title": "Bài 3: Vì sao greedy có thể bỏ lỡ câu tốt?",
         "questionMarkdown": "Hai token đầu A/B có xác suất 0,6/0,4. Token kết thúc tốt nhất sau A có xác suất 0,5, sau B là 0,9. Bỏ qua chuẩn hóa độ dài vì hai câu dài bằng nhau. Greedy chọn gì, câu nào có xác suất cao hơn?",
         "solutionMarkdown": "greedy chọn A ở bước đầu, xác suất đường tốt nhất theo nhánh A=0,30. Nhánh B có 0,36 nên cao hơn. Beam width 2 giữ cả hai nhánh ở bước đầu có thể tìm ra B; ví dụ không chứng minh mọi beam width 2 đều tối ưu trên bài dài."
       },
@@ -473,7 +473,7 @@
         "collectionId": "dpl302m",
         "chapterId": "dpl5",
         "number": 4,
-        "title": "Bài 4 — Attention và nguồn Q/K/V",
+        "title": "Bài 4: Attention và nguồn Q/K/V",
         "questionMarkdown": "Một query có score sau scale [0,1], softmax xấp xỉ [0,269;0,731], value 10 và 20. Tính output. Nếu đây là decoder cross-attention, Q và K/V đến từ đâu?",
         "solutionMarkdown": "output≈17,31. Q từ biểu diễn decoder; K/V từ output encoder trong kiến trúc đang xét. K quyết định trọng số, V cung cấp nội dung được tổng hợp; chúng không phải cùng một vai trò."
       }

@@ -164,7 +164,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               }`}
             >
               <div className="flex flex-col">
-                <span className="font-bold">Deep Learning — DPL302m</span>
+                <span className="font-bold">Deep Learning: DPL302m</span>
                 <span className="text-[10px] opacity-80 font-normal">
                   72 câu theo 5 chương
                 </span>
@@ -187,7 +187,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         : 'text-purple-900/80 hover:text-purple-950 hover:bg-purple-100/60'
                     }`}
                   >
-                    <span className="truncate">{ch.chapterId.toUpperCase()} — {ch.title.split('—')[1]?.trim() || ch.title}</span>
+                    <span className="truncate">{ch.chapterId.toUpperCase()}: {ch.title.split(/[:\-]/)[1]?.trim() || ch.title}</span>
                     <span className="text-[10px] font-mono text-purple-700 shrink-0 ml-1">
                       {ch.totalCount}
                     </span>

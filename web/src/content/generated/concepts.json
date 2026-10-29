@@ -4,7 +4,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Xác suất và thống kê khác nhau thế nào?",
-    "groupTitle": "Cụm 1 — Nhìn dữ liệu trước khi tính",
+    "groupTitle": "Cụm 1: Nhìn dữ liệu trước khi tính",
     "order": 1,
     "bodyMarkdown": "**Hiểu:** Xác suất bắt đầu từ một mô hình rồi hỏi những kết quả nào có thể xảy ra. Thống kê bắt đầu từ dữ liệu quan sát để mô tả hoặc suy luận về mô hình/tổng thể. Hai lĩnh vực hỗ trợ nhau.\n\n**Ví dụ:** nếu đồng xu công bằng, xác suất ngửa là 1/2: đó là bài xác suất. Tung một đồng xu chưa biết có công bằng không 100 lần, thấy 70 lần ngửa rồi đánh giá giả thuyết công bằng: đó là thống kê. Chỉ thấy 70 lần ngửa chưa đồng nghĩa đã chứng minh đồng xu gian lận.\n\n**Trả lời miệng:** “Xác suất đi từ giả định mô hình đến khả năng xuất hiện dữ liệu. Thống kê dùng dữ liệu để mô tả hoặc suy luận về tổng thể. Ví dụ dự đoán số lần ngửa của đồng xu công bằng là xác suất; dùng kết quả tung để đánh giá đồng xu có công bằng không là thống kê.”\n\n**Nối tiếp:** Thống kê mô tả và suy luận? → Mô tả tóm tắt dữ liệu đã có; suy luận dùng mẫu để kết luận về tổng thể kèm bất định.",
     "blocks": [
@@ -50,7 +50,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Dữ liệu định tính và định lượng là gì?",
-    "groupTitle": "Cụm 1 — Nhìn dữ liệu trước khi tính",
+    "groupTitle": "Cụm 1: Nhìn dữ liệu trước khi tính",
     "order": 2,
     "bodyMarkdown": "**Hiểu:** Dữ liệu định tính biểu thị nhóm hoặc tính chất: màu sắc, ngành học. Dữ liệu định lượng biểu thị lượng: chiều cao, số người. Định lượng rời rạc thường là số đếm; liên tục là phép đo có thể nhận các giá trị trong một khoảng theo mô hình.\n\n**Ví dụ:** mã sinh viên “1001” có dạng số nhưng là định danh; lấy trung bình các mã không có ý nghĩa. Mức hài lòng “thấp, vừa, cao” có thứ tự, nhưng khoảng cách giữa các mức không tự động bằng nhau.\n\n**Trả lời miệng:** “Em phân biệt theo ý nghĩa dữ liệu, không theo cách nó được lưu. Định tính mô tả loại hoặc nhóm, còn định lượng mô tả số lượng. Số sinh viên là rời rạc; chiều cao thường được mô hình hóa liên tục dù dụng cụ chỉ đo tới một độ chính xác nhất định.”\n\n**Nối tiếp:** Nhãn 0/1 có thể là gì? → Mã hóa hai lớp; trung bình của chỉ báo 0/1 cũng có ý nghĩa là tỷ lệ thuộc lớp 1.",
     "blocks": [
@@ -96,7 +96,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Tổng thể, mẫu, tham số và thống kê là gì?",
-    "groupTitle": "Cụm 1 — Nhìn dữ liệu trước khi tính",
+    "groupTitle": "Cụm 1: Nhìn dữ liệu trước khi tính",
     "order": 3,
     "bodyMarkdown": "**Hiểu:** Tổng thể là toàn bộ nhóm muốn nghiên cứu; mẫu là phần được quan sát. **Tham số** mô tả tổng thể, thường chưa biết. **Thống kê mẫu** được tính từ mẫu để mô tả mẫu hoặc ước lượng tham số.\n\n**Ví dụ:** muốn biết chiều cao trung bình 10.000 sinh viên nhưng chỉ đo 100 người. Trung bình thật của 10.000 người là tham số `μ`; trung bình 100 người đo được là `x̄`. Nếu lấy 100 người khác, `x̄` có thể đổi.\n\n**Trả lời miệng:** “Tổng thể là nhóm em muốn kết luận, mẫu là nhóm thực sự thu thập dữ liệu. Tham số thuộc tổng thể, còn thống kê được tính từ mẫu. Em dùng trung bình mẫu để ước lượng trung bình tổng thể, nhưng cần thừa nhận sai số do lấy mẫu.”\n\n**Nối tiếp:** Mẫu 100 người có luôn nhỏ hơn tổng thể không? → Không bắt buộc; nếu đo toàn bộ đối tượng thì là điều tra toàn bộ, nhưng có thể vẫn còn sai số đo lường.",
     "blocks": [
@@ -142,7 +142,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Vì sao mẫu lớn vẫn có thể cho kết luận sai?",
-    "groupTitle": "Cụm 1 — Nhìn dữ liệu trước khi tính",
+    "groupTitle": "Cụm 1: Nhìn dữ liệu trước khi tính",
     "order": 4,
     "bodyMarkdown": "**Hiểu:** Có **sai số ngẫu nhiên** do tình cờ chọn người này thay vì người kia, và **thiên lệch** do cách thu thập khiến một nhóm bị đại diện quá nhiều hoặc quá ít. Tăng cỡ mẫu thường giảm phần ngẫu nhiên dưới giả định phù hợp, không tự sửa thiên lệch.\n\n**Ví dụ:** khảo sát 5.000 thành viên câu lạc bộ bóng rổ để ước lượng chiều cao sinh viên toàn trường có thể lệch hơn mẫu ngẫu nhiên 200 người.\n\n**Trả lời miệng:** “Chất lượng mẫu phụ thuộc cách lấy mẫu và đo lường, không chỉ số lượng. Mẫu lớn nhưng thiên lệch có thể cho kết quả rất ổn định quanh một giá trị sai. Em cần xem tổng thể mục tiêu, người bị bỏ sót và cơ chế chọn mẫu.”\n\n**Nối tiếp:** Một cách cải thiện? → Lấy mẫu ngẫu nhiên phù hợp; có thể phân tầng theo các nhóm quan trọng rồi chọn ngẫu nhiên trong từng nhóm. Không bảo đảm hoàn hảo nếu có không phản hồi hoặc đo sai.",
     "blocks": [
@@ -188,7 +188,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Mean, median, mode khác nhau thế nào?",
-    "groupTitle": "Cụm 1 — Nhìn dữ liệu trước khi tính",
+    "groupTitle": "Cụm 1: Nhìn dữ liệu trước khi tính",
     "order": 5,
     "bodyMarkdown": "**Hiểu:** Mean là tổng chia số lượng; median là vị trí giữa sau sắp xếp, nếu chẵn thì trung bình hai giá trị giữa; mode là giá trị xuất hiện nhiều nhất, có thể có nhiều mode.\n\n**Ví dụ:** [1, 2, 2, 3, 12] có mean 4, median 2, mode 2. Điểm 12 kéo mean lên, nhưng không kéo median tương tự. Median thường hữu ích khi dữ liệu lệch hoặc có giá trị cực đoan; mean vẫn hữu ích khi quan tâm tổng lượng trên đầu người.\n\n**Trả lời miệng:** “Cả ba mô tả trung tâm theo cách khác nhau. Mean dùng mọi giá trị nên nhạy với ngoại lệ. Median dựa vào thứ tự nên bền vững hơn trước một số giá trị rất lớn hoặc rất nhỏ. Mode là giá trị phổ biến nhất và cũng dùng được cho dữ liệu phân loại.”\n\n**Nối tiếp:** Trung vị luôn là một điểm có trong dữ liệu? → Không. Với [1, 4], median là 2,5.",
     "blocks": [
@@ -237,7 +237,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Phương sai và độ lệch chuẩn đo điều gì?",
-    "groupTitle": "Cụm 1 — Nhìn dữ liệu trước khi tính",
+    "groupTitle": "Cụm 1: Nhìn dữ liệu trước khi tính",
     "order": 6,
     "bodyMarkdown": "**Hiểu:** Cả hai đo độ phân tán quanh trung bình. Phương sai lấy bình phương độ lệch để số âm/dương không triệt tiêu. Độ lệch chuẩn là căn phương sai, nên trở lại đơn vị ban đầu.\n\n**Ví dụ:** [5, 5, 5] và [0, 5, 10] cùng mean 5, nhưng nhóm sau phân tán hơn. Nếu coi mỗi nhóm là toàn bộ tổng thể, phương sai nhóm đầu là 0; nhóm sau là `(25+0+25)/3 = 50/3`.\n\n**Trả lời miệng:** “Trung bình chưa mô tả hết dữ liệu; em cần biết các điểm cách trung bình bao xa. Phương sai là độ lệch bình phương trung bình theo công thức tương ứng. Độ lệch chuẩn là căn phương sai và cùng đơn vị dữ liệu, nên dễ diễn giải hơn.”\n\n**Nối tiếp:** Nếu chiều cao tính bằng cm thì đơn vị phương sai? → cm²; độ lệch chuẩn là cm. Độ lệch chuẩn không phải độ lệch tuyệt đối trung bình.",
     "blocks": [
@@ -287,7 +287,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Quantile, IQR và outlier là gì?",
-    "groupTitle": "Cụm 1 — Nhìn dữ liệu trước khi tính",
+    "groupTitle": "Cụm 1: Nhìn dữ liệu trước khi tính",
     "order": 7,
     "bodyMarkdown": "**Hiểu:** Quantile chia dữ liệu theo tỷ lệ. Median là phân vị 50%; Q1 và Q3 tương ứng khoảng 25% và 75%. `IQR = Q3−Q1` mô tả độ rộng của phần giữa 50% dữ liệu.\n\n**Ví dụ:** nếu Q1 = 10, Q3 = 20 thì IQR = 10. Quy tắc boxplot thường đánh dấu điểm dưới `10−1,5×10 = −5` hoặc trên `20+1,5×10 = 35` là ngoại lệ tiềm năng.\n\n**Trả lời miệng:** “Phân vị mô tả vị trí theo tỷ lệ trong dữ liệu đã sắp xếp. IQR đo khoảng giữa hai tứ phân vị và ít bị điểm cực đoan chi phối hơn khoảng min–max. Outlier là điểm bất thường so với phần còn lại, cần kiểm tra bối cảnh trước khi xử lý.”\n\n**Nối tiếp:** Có nên xóa mọi outlier? → Không; có thể là nhập sai hoặc một hiện tượng thật quan trọng. Các phần mềm cũng có quy ước tính phân vị hơi khác nhau.",
     "blocks": [
@@ -333,7 +333,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Vì sao phương sai mẫu thường chia n−1?",
-    "groupTitle": "Cụm 1 — Nhìn dữ liệu trước khi tính",
+    "groupTitle": "Cụm 1: Nhìn dữ liệu trước khi tính",
     "order": 8,
     "bodyMarkdown": "**Hiểu:** Khi chưa biết trung bình tổng thể, ta dùng trung bình mẫu. Các độ lệch quanh trung bình mẫu cộng lại bằng 0, nên sau khi biết n−1 độ lệch thì độ lệch cuối đã bị xác định. Đây là một cách hiểu **bậc tự do**.\n\nVới mẫu độc lập cùng phân phối, phương sai hữu hạn, `s² = Σ(xᵢ−x̄)²/(n−1)` là ước lượng không chệch của phương sai tổng thể, khi n > 1.\n\n**Ví dụ:** [1, 2, 3] có tổng bình phương độ lệch là 2. Chia n cho 2/3 khi mô tả chính ba điểm; chia n−1 cho 1 khi dùng công thức ước lượng nói trên.\n\n**Trả lời miệng:** “Chia n−1 là hiệu chỉnh khi ước lượng phương sai tổng thể bằng trung bình mẫu. Không phải mọi bài tính phương sai đều chia n−1; cần biết đang mô tả toàn bộ dữ liệu hay ước lượng từ mẫu.”\n\n**Bẫy:** Căn của phương sai mẫu không chệch không tự động là ước lượng không chệch của độ lệch chuẩn.",
     "blocks": [
@@ -380,7 +380,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Biến cố, phần bù, giao và hợp là gì?",
-    "groupTitle": "Cụm 2 — Xác suất và thông tin mới",
+    "groupTitle": "Cụm 2: Xác suất và thông tin mới",
     "order": 9,
     "bodyMarkdown": "**Hiểu:** Không gian mẫu gồm các kết quả có thể xảy ra. Biến cố là tập kết quả thỏa điều kiện. Phần bù `Aᶜ` là A không xảy ra; giao `A∩B` là cả hai; hợp `A∪B` là ít nhất một xảy ra.\n\n**Ví dụ:** xúc xắc công bằng, A = {2, 4, 6}, B = {4, 5, 6}. Giao = {4, 6}, hợp = {2, 4, 5, 6}. `P(A∪B)=1/2+1/2−1/3=2/3`. Phải trừ giao vì đã đếm hai lần.\n\n**Trả lời miệng:** “Một biến cố là sự kiện quan tâm. Xác suất phần bù bằng 1 trừ xác suất biến cố. Với hợp hai biến cố, em cộng hai xác suất rồi trừ phần giao, vì các kết quả thuộc cả hai không được đếm hai lần.”\n\n**Nối tiếp:** Xác suất bằng số kết quả thuận lợi chia tổng số kết quả luôn đúng? → Chỉ dùng trực tiếp cách đếm đó khi các kết quả cơ bản đồng khả năng.",
     "blocks": [
@@ -425,7 +425,7 @@
     "subjectId": "xs",
     "priority": "C",
     "title": "Hoán vị và tổ hợp khác nhau thế nào?",
-    "groupTitle": "Cụm 2 — Xác suất và thông tin mới",
+    "groupTitle": "Cụm 2: Xác suất và thông tin mới",
     "order": 10,
     "bodyMarkdown": "**Hiểu:** Nếu thứ tự quan trọng, cần đếm theo thứ tự; nếu chỉ chọn nhóm, dùng tổ hợp. Chọn k phần tử khác nhau từ n phần tử, không xét thứ tự, có `C(n,k)=n!/[k!(n−k)!]` cách. Giai thừa `n! = 1×2×…×n`, với `0!=1`.\n\n**Ví dụ:** chọn 2 bạn từ 4 bạn có `C(4,2)=6` nhóm. Chọn một lớp trưởng rồi một lớp phó từ 4 bạn có `4×3=12` cách vì đổi chức vụ tạo kết quả khác.\n\n**Trả lời miệng:** “Em xác định thứ tự có làm thay đổi kết quả không. Chọn một nhóm thường không xét thứ tự; phân vai hoặc xếp hàng thì có. Em cũng phải kiểm tra có được chọn lặp và có hoàn lại hay không.”\n\n**Nối tiếp:** Xác suất chọn đúng một cặp cụ thể trong 4 người? → 1/6 nếu chọn đều giữa sáu cặp.",
     "blocks": [
@@ -470,7 +470,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Xác suất có điều kiện nghĩa là gì?",
-    "groupTitle": "Cụm 2 — Xác suất và thông tin mới",
+    "groupTitle": "Cụm 2: Xác suất và thông tin mới",
     "order": 11,
     "bodyMarkdown": "**Hiểu:** `P(A|B)` là xác suất A khi biết B đã xảy ra. Ta thu hẹp sự quan tâm vào B: `P(A|B)=P(A∩B)/P(B)`, với `P(B)>0`.\n\n**Ví dụ:** xúc xắc công bằng, biết kết quả lớn hơn 3, chỉ còn {4, 5, 6}; khả năng chẵn là 2/3. Trước khi có thông tin, khả năng chẵn là 1/2.\n\n**Trả lời miệng:** “Xác suất có điều kiện phản ánh thông tin đã biết. Biết B nghĩa là em xét những trường hợp B xảy ra, rồi tính trong số đó bao nhiêu trường hợp có A. Vì thế xác suất sau khi biết B có thể khác xác suất ban đầu.”\n\n**Nối tiếp:** `P(A|B)` có bằng `P(B|A)` không? → Nói chung không. Trong ví dụ này, xác suất lớn hơn 3 khi biết chẵn cũng là 2/3 chỉ là trùng hợp; không phải quy tắc.",
     "blocks": [
@@ -521,7 +521,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Độc lập khác xung khắc thế nào?",
-    "groupTitle": "Cụm 2 — Xác suất và thông tin mới",
+    "groupTitle": "Cụm 2: Xác suất và thông tin mới",
     "order": 12,
     "bodyMarkdown": "**Hiểu:** Độc lập nghĩa là sự xuất hiện của biến cố này không thay đổi xác suất biến cố kia: `P(A∩B)=P(A)P(B)`. Xung khắc nghĩa là không thể cùng xảy ra: `A∩B` rỗng.\n\n**Ví dụ:** ngửa ở lần tung thứ nhất và ngửa ở lần tung thứ hai có thể độc lập theo mô hình các lần tung độc lập. Ra 1 và ra 2 trong cùng một lần tung xúc xắc là xung khắc, không độc lập: biết ra 1 thì khả năng ra 2 bằng 0.\n\n**Trả lời miệng:** “Độc lập nói về việc thông tin có làm đổi xác suất không; xung khắc nói về khả năng cùng xảy ra. Hai biến cố xung khắc có xác suất dương không độc lập, vì biết một biến cố xảy ra sẽ loại trừ biến cố còn lại.”\n\n**Nối tiếp:** Rút hai lá bài không hoàn lại thường độc lập không? → Không; lá đầu làm thay đổi thành phần bộ bài còn lại.",
     "blocks": [
@@ -571,7 +571,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Bayes dùng làm gì, và vì sao phải nhớ tỷ lệ nền?",
-    "groupTitle": "Cụm 2 — Xác suất và thông tin mới",
+    "groupTitle": "Cụm 2: Xác suất và thông tin mới",
     "order": 13,
     "bodyMarkdown": "**Hiểu:** Bayes đảo chiều điều kiện: `P(A|B)=P(B|A)P(A)/P(B)`, khi `P(B)>0`. Nó cập nhật xác suất giả thuyết A sau khi thấy bằng chứng B. `P(A)` là xác suất trước, `P(A|B)` là xác suất sau.\n\n**Ví dụ giả định:** 1.000 người có 10 người mắc bệnh. Xét nghiệm báo dương tính đúng 9 người bệnh, nhưng báo nhầm 99 người khỏe. Trong 108 người dương tính, chỉ 9 người bệnh: `9/108≈8,3%`. Khả năng phát hiện 90% người bệnh không đồng nghĩa dương tính thì có 90% khả năng bệnh.\n\n**Trả lời miệng:** “Bayes kết hợp xác suất ban đầu với bằng chứng mới. Khi đảo chiều điều kiện, em phải tính cả tỷ lệ nền và báo nhầm. Một sự kiện rất hiếm có thể vẫn ít khả năng dù bằng chứng nghe có vẻ mạnh.”\n\n**Nối tiếp:** Chỉ biết độ nhạy 90% có tính được xác suất bệnh khi dương tính? → Chưa đủ thông tin.",
     "blocks": [
@@ -619,7 +619,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Biến ngẫu nhiên và phân phối là gì?",
-    "groupTitle": "Cụm 3 — Biến ngẫu nhiên và phân phối",
+    "groupTitle": "Cụm 3: Biến ngẫu nhiên và phân phối",
     "order": 14,
     "bodyMarkdown": "**Hiểu:** Biến ngẫu nhiên gán một số cho kết quả ngẫu nhiên. Phân phối mô tả xác suất của các giá trị hoặc khoảng giá trị đó. Rời rạc nhận các giá trị đếm được; liên tục được mô tả bằng mật độ trong mô hình đang xét.\n\n**Ví dụ:** tung hai đồng xu, X là số mặt ngửa. X nhận 0, 1, 2 với xác suất lần lượt 1/4, 1/2, 1/4 nếu các xu công bằng và độc lập. Các chuỗi ngửa–sấp và sấp–ngửa khác nhau nhưng đều cho X = 1.\n\n**Trả lời miệng:** “Biến ngẫu nhiên biến kết quả của thí nghiệm thành một giá trị số; phân phối cho biết các giá trị đó xuất hiện với khả năng nào. Em phân biệt kết quả gốc của thí nghiệm với số được biến ngẫu nhiên gán cho kết quả.”\n\n**Nối tiếp:** Thời gian chờ xe buýt là loại nào? → Thường mô hình hóa liên tục; số xe đi qua là rời rạc.",
     "blocks": [
@@ -665,7 +665,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "PMF, PDF và CDF khác nhau thế nào?",
-    "groupTitle": "Cụm 3 — Biến ngẫu nhiên và phân phối",
+    "groupTitle": "Cụm 3: Biến ngẫu nhiên và phân phối",
     "order": 15,
     "bodyMarkdown": "**Hiểu:** PMF cho xác suất từng giá trị rời rạc: `p(x)=P(X=x)`. PDF là mật độ của biến liên tục; xác suất trên khoảng là diện tích dưới đường mật độ. CDF là hàm tích lũy `F(x)=P(X≤x)`, dùng được cho cả hai.\n\n**Ví dụ:** X phân bố đều trên [0, 0,5] có mật độ 2 trong khoảng. Mật độ lớn hơn 1 vẫn hợp lệ vì diện tích toàn bộ bằng `2×0,5=1`. Xác suất X trong [0,1; 0,2] là `2×0,1=0,2`.\n\n**Trả lời miệng:** “Với biến rời rạc, PMF là xác suất tại từng điểm. Với biến liên tục, PDF là mật độ, không phải xác suất tại một điểm. CDF luôn là xác suất không vượt quá một ngưỡng.”\n\n**Nối tiếp:** Với phân phối liên tục có mật độ, `P(X=x)` bằng bao nhiêu? → 0 tại từng điểm, nhưng xác suất của một khoảng có thể dương.",
     "blocks": [
@@ -711,7 +711,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Kỳ vọng là gì? Có nhất thiết xảy ra được không?",
-    "groupTitle": "Cụm 3 — Biến ngẫu nhiên và phân phối",
+    "groupTitle": "Cụm 3: Biến ngẫu nhiên và phân phối",
     "order": 16,
     "bodyMarkdown": "**Hiểu:** Kỳ vọng là trung bình có trọng số theo xác suất: `E[X]=ΣxP(X=x)` cho biến rời rạc có kỳ vọng tồn tại. Nó là đặc trưng phân phối, không phải cam kết kết quả lần tới.\n\n**Ví dụ:** xúc xắc công bằng có kỳ vọng `(1+2+3+4+5+6)/6=3,5`, dù không có mặt 3,5. Trò chơi nhận 10 điểm với xác suất 0,2 và 0 điểm với xác suất 0,8 có kỳ vọng 2 điểm mỗi lượt.\n\n**Trả lời miệng:** “Kỳ vọng là giá trị trung bình theo phân phối. Một kết quả càng có xác suất lớn thì đóng góp càng nhiều. Kỳ vọng không cần là giá trị có thể quan sát trong một lần thử; nó có ý nghĩa trung bình dài hạn dưới các giả định phù hợp.”\n\n**Nối tiếp:** `E[X+Y]=E[X]+E[Y]` có cần độc lập không? → Không, khi các kỳ vọng liên quan tồn tại.",
     "blocks": [
@@ -758,7 +758,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Phương sai biến ngẫu nhiên có những quy tắc nào?",
-    "groupTitle": "Cụm 3 — Biến ngẫu nhiên và phân phối",
+    "groupTitle": "Cụm 3: Biến ngẫu nhiên và phân phối",
     "order": 17,
     "bodyMarkdown": "**Hiểu:** `Var(X)=E[(X−E[X])²]=E[X²]−(E[X])²`, khi moment bậc hai hữu hạn. Nếu cộng hằng số b, độ phân tán không đổi. Nhân mọi giá trị với a làm phương sai nhân `a²`.\n\n**Ví dụ:** `Var(2X+3)=4Var(X)`. Hai lần tung đồng xu độc lập, mỗi biến chỉ báo ngửa có phương sai 1/4; tổng số ngửa có phương sai 1/2.\n\n**Trả lời miệng:** “Phương sai đo độ phân tán của phân phối quanh kỳ vọng. Dịch chuyển mọi giá trị không làm đổi phương sai; co giãn dữ liệu làm phương sai đổi theo bình phương hệ số. Khi cộng hai biến độc lập có phương sai hữu hạn, phương sai tổng bằng tổng phương sai.”\n\n**Nối tiếp:** Nếu không độc lập? → `Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)`. Không được tự bỏ hiệp phương sai; độc lập là điều kiện đủ, hiệp phương sai bằng 0 cũng đủ cho công thức cộng.",
     "blocks": [
@@ -803,7 +803,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Bernoulli và nhị thức mô tả điều gì?",
-    "groupTitle": "Cụm 3 — Biến ngẫu nhiên và phân phối",
+    "groupTitle": "Cụm 3: Biến ngẫu nhiên và phân phối",
     "order": 18,
     "bodyMarkdown": "**Hiểu:** Bernoulli mô tả một thử nghiệm có hai kết quả, mã hóa thành công = 1 với xác suất p, thất bại = 0. Nhị thức đếm số thành công trong n thử nghiệm Bernoulli độc lập, cùng xác suất p.\n\n**Ví dụ:** X là số ngửa trong 3 lần tung xu công bằng độc lập. `P(X=2)=C(3,2)(1/2)²(1/2)=3/8`. Có ba vị trí cho lần sấp. Nhị thức có `E[X]=np`, `Var(X)=np(1−p)`.\n\n**Trả lời miệng:** “Bernoulli dùng cho một lần có hai kết quả, nhị thức dùng cho số lần thành công trong n lần thử. Em cần kiểm tra số lần thử cố định, các lần độc lập và xác suất thành công không đổi trước khi dùng mô hình nhị thức.”\n\n**Nối tiếp:** Rút nhiều lá bài không hoàn lại có phải nhị thức chính xác không? → Thường không, vì xác suất thay đổi và các lượt phụ thuộc.",
     "blocks": [
@@ -848,7 +848,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Phân phối chuẩn là gì?",
-    "groupTitle": "Cụm 3 — Biến ngẫu nhiên và phân phối",
+    "groupTitle": "Cụm 3: Biến ngẫu nhiên và phân phối",
     "order": 19,
     "bodyMarkdown": "**Hiểu:** Phân phối chuẩn là phân phối liên tục hình chuông đối xứng, xác định bởi trung bình μ và phương sai σ². Với σ > 0, mean = median = mode = μ. Chuẩn tắc có μ = 0 và σ = 1.\n\n**Ví dụ:** nếu X thật sự có phân phối chuẩn, khoảng μ±σ chứa khoảng 68% xác suất; μ±2σ khoảng 95%; μ±3σ khoảng 99,7%. Đây là tính chất của phân phối chuẩn, không phải quy tắc áp cho mọi dữ liệu.\n\n**Trả lời miệng:** “Phân phối chuẩn được xác định bởi vị trí trung tâm và độ phân tán, có hình chuông đối xứng. Nó quan trọng vì xuất hiện trong nhiều mô hình và kết quả xấp xỉ. Tuy vậy em không được mặc định mọi biến, chẳng hạn thu nhập, đều phân phối chuẩn.”\n\n**Nối tiếp:** Đồ thị đối xứng có đủ chứng minh là chuẩn? → Không; nhiều phân phối khác cũng đối xứng.",
     "blocks": [
@@ -894,7 +894,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Z-score và chuẩn hóa có biến dữ liệu thành chuẩn không?",
-    "groupTitle": "Cụm 3 — Biến ngẫu nhiên và phân phối",
+    "groupTitle": "Cụm 3: Biến ngẫu nhiên và phân phối",
     "order": 20,
     "bodyMarkdown": "**Hiểu:** `z=(x−μ)/σ` đo một điểm cách trung bình bao nhiêu độ lệch chuẩn, khi σ > 0. Trong dữ liệu mẫu có thể dùng x̄ và s để chuẩn hóa theo mẫu. Phép biến đổi này thay đổi vị trí và thang đo, không tự thay hình dạng phân phối thành hình chuông.\n\n**Ví dụ:** điểm 80 trong nhóm mean 60, SD 10 có z = 2. Điểm này cao hơn trung bình hai độ lệch chuẩn. Chỉ nếu có mô hình phân phối phù hợp mới chuyển z thành xác suất theo bảng chuẩn.\n\n**Trả lời miệng:** “Z-score giúp so vị trí tương đối trên những thang đo khác nhau. Chuẩn hóa đưa dữ liệu về thang trung bình 0, độ lệch chuẩn 1 theo các giá trị dùng để chuẩn hóa, nhưng dữ liệu lệch vẫn có thể lệch. Standardization không đồng nghĩa biến thành phân phối chuẩn.”\n\n**Nối tiếp:** Nếu mọi điểm bằng nhau? → SD = 0, công thức chia cho 0 nên không dùng trực tiếp được.",
     "blocks": [
@@ -939,7 +939,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Luật số lớn khác định lý giới hạn trung tâm thế nào?",
-    "groupTitle": "Cụm 3 — Biến ngẫu nhiên và phân phối",
+    "groupTitle": "Cụm 3: Biến ngẫu nhiên và phân phối",
     "order": 21,
     "bodyMarkdown": "**Hiểu:** Với điều kiện phù hợp, **luật số lớn** nói trung bình mẫu tiến gần kỳ vọng khi cỡ mẫu tăng. **Định lý giới hạn trung tâm** nói về hình dạng phân phối của trung bình/tổng đã chuẩn hóa: thường tiến gần chuẩn.\n\n**Ví dụ:** tung xu nhiều lần, tỷ lệ ngửa ổn định gần 1/2 là trực giác luật số lớn. Nếu lặp việc lấy nhiều mẫu cùng cỡ n và vẽ phân phối các trung bình mẫu, dạng gần chuông khi n đủ lớn là trực giác CLT.\n\n**Trả lời miệng:** “Luật số lớn nói trung bình hội tụ về đâu; CLT nói sai số trung bình sau chuẩn hóa có phân phối giới hạn gì. CLT không nói dữ liệu gốc biến thành chuẩn. Dạng cơ bản áp cho quan sát độc lập cùng phân phối, phương sai hữu hạn.”\n\n**Nối tiếp:** n ≥ 30 luôn đủ? → Không; mức lệch, đuôi phân phối và cấu trúc phụ thuộc ảnh hưởng chất lượng xấp xỉ.",
     "blocks": [
@@ -984,7 +984,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Ước lượng điểm là gì? Không chệch nghĩa là gì?",
-    "groupTitle": "Cụm 4 — Ước lượng và độ bất định",
+    "groupTitle": "Cụm 4: Ước lượng và độ bất định",
     "order": 22,
     "bodyMarkdown": "**Hiểu:** Ước lượng điểm dùng một con số để ước lượng tham số, như x̄ ước lượng μ. **Estimator** là quy tắc tính từ mẫu; **estimate** là kết quả cụ thể. Không chệch nghĩa là kỳ vọng của estimator bằng tham số, qua quá trình lấy mẫu lặp lại.\n\n**Ví dụ:** mẫu chiều cao có mean 168 cm thì 168 là một ước lượng điểm. Với lấy mẫu độc lập cùng phân phối và kỳ vọng hữu hạn, x̄ không chệch cho μ; nhưng mẫu lần này vẫn có thể lệch khỏi μ.\n\n**Trả lời miệng:** “Ước lượng điểm cung cấp một giá trị đại diện cho tham số chưa biết. Không chệch là tính chất trung bình qua nhiều mẫu, không phải lời hứa lần nào cũng đúng. Em còn cần quan tâm độ biến động của ước lượng và cách thu thập dữ liệu.”\n\n**Nối tiếp:** Không chệch có tự động tốt nhất? → Không; một estimator không chệch vẫn có phương sai lớn. Chất lượng còn phụ thuộc mục tiêu đánh giá.",
     "blocks": [
@@ -1031,7 +1031,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Standard deviation và standard error khác nhau thế nào?",
-    "groupTitle": "Cụm 4 — Ước lượng và độ bất định",
+    "groupTitle": "Cụm 4: Ước lượng và độ bất định",
     "order": 23,
     "bodyMarkdown": "**Hiểu:** SD mô tả độ phân tán của các quan sát. SE mô tả độ biến động của một estimator qua các mẫu lặp lại. Với n quan sát độc lập cùng phân phối, phương sai hữu hạn, `SE(x̄)=σ/√n`; thường ước lượng bằng `s/√n`.\n\n**Ví dụ:** chiều cao mẫu có s = 10 cm, n = 100. SD của chiều cao là 10 cm, còn SE ước lượng của trung bình là 1 cm. Trung bình 100 người ổn định hơn chiều cao một người ngẫu nhiên.\n\n**Trả lời miệng:** “SD nói các điểm dữ liệu khác nhau bao nhiêu; SE nói ước lượng của em sẽ dao động bao nhiêu nếu lấy mẫu lại. Với trung bình mẫu độc lập, SE giảm theo căn cỡ mẫu. Tăng n không bắt buộc làm SD của dữ liệu nhỏ đi.”\n\n**Nối tiếp:** Tăng n gấp 4 thì SE thế nào? → Giảm khoảng một nửa nếu độ phân tán và các giả định khác giữ nguyên.",
     "blocks": [
@@ -1077,7 +1077,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "Khoảng tin cậy 95% phải hiểu thế nào?",
-    "groupTitle": "Cụm 4 — Ước lượng và độ bất định",
+    "groupTitle": "Cụm 4: Ước lượng và độ bất định",
     "order": 24,
     "bodyMarkdown": "**Hiểu:** Khoảng tin cậy được tạo bằng một thủ tục mà, dưới các giả định của phương pháp, khoảng 95% các khoảng tạo ra qua lấy mẫu lặp lại sẽ chứa tham số thật.\n\n**Ví dụ:** mẫu lớn phù hợp có x̄ = 50, SE ước lượng = 2. Khoảng xấp xỉ chuẩn 95% là `50±1,96×2`, tức [46,08; 53,92]. Khi σ chưa biết và mẫu nhỏ từ phân phối chuẩn, thường dùng phân phối t với n−1 bậc tự do, không máy móc dùng 1,96.\n\n**Trả lời miệng:** “Mức 95% nói về độ bao phủ của phương pháp qua nhiều mẫu. Theo cách hiểu frequentist, tham số thật cố định còn khoảng thay đổi theo mẫu. Khoảng tin cậy thể hiện độ bất định của ước lượng dưới các giả định, không phải nơi chứa 95% các điểm dữ liệu.”\n\n**Nối tiếp:** Có nói xác suất tham số nằm trong khoảng đã tính là 95% không? → Không theo diễn giải frequentist thông thường; diễn giải xác suất tham số thuộc khoảng thuộc khuôn khổ Bayes.",
     "blocks": [
@@ -1124,7 +1124,7 @@
     "subjectId": "xs",
     "priority": "C",
     "title": "Điều gì làm khoảng tin cậy rộng hoặc hẹp?",
-    "groupTitle": "Cụm 4 — Ước lượng và độ bất định",
+    "groupTitle": "Cụm 4: Ước lượng và độ bất định",
     "order": 25,
     "bodyMarkdown": "**Hiểu:** Khoảng thường có dạng `ước lượng ± hệ số tới hạn × SE`. Mức tin cậy cao hơn cần hệ số lớn hơn nên khoảng rộng hơn. Nhiều dữ liệu độc lập hơn thường làm SE nhỏ hơn. Dữ liệu phân tán hơn thường làm khoảng rộng hơn.\n\n**Ví dụ:** nếu muốn giảm một nửa sai số biên của trung bình, thường cần khoảng bốn lần cỡ mẫu, giữ cùng mức tin cậy và độ phân tán. Muốn 99% tin cậy thay vì 95% thì phải chấp nhận khoảng rộng hơn với cùng dữ liệu.\n\n**Trả lời miệng:** “Độ rộng phản ánh đánh đổi giữa độ chắc chắn và độ chính xác. Em có thể làm khoảng hẹp hơn bằng cách thu thập thêm mẫu phù hợp, nhưng không nên hạ mức tin cậy chỉ để trình bày kết quả đẹp. Công thức cũng không sửa được thiên lệch thu thập dữ liệu.”\n\n**Nối tiếp:** Lặp lại cùng bản ghi 100 lần có thêm 100 mẫu độc lập? → Không; sao chép dữ liệu không tạo thông tin mới tương ứng.",
     "blocks": [
@@ -1169,7 +1169,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "H0, H1 và kiểm định giả thuyết là gì?",
-    "groupTitle": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+    "groupTitle": "Cụm 5: Kiểm định, quan hệ và kết luận",
     "order": 26,
     "bodyMarkdown": "**Hiểu:** H0 là giả thuyết không, thường biểu diễn không có khác biệt hoặc một giá trị chuẩn. H1 là phương án đối lập quan tâm. Ta giả sử H0 và mô hình đúng, rồi xem dữ liệu có bất thường tới mức cần bác bỏ H0 không.\n\n**Ví dụ:** kiểm tra khối lượng trung bình túi hàng: H0: μ = 500 g; H1: μ ≠ 500 g. Tính một thống kê kiểm định từ mẫu và đối chiếu phân phối của nó dưới H0.\n\n**Trả lời miệng:** “Kiểm định đặt một giả thuyết cơ sở và đánh giá mức độ dữ liệu tương thích với giả thuyết đó dưới các giả định. Kết quả thường là bác bỏ hoặc chưa đủ bằng chứng bác bỏ H0. Không bác bỏ không có nghĩa đã chứng minh H0 đúng.”\n\n**Nối tiếp:** Vì sao chưa bác bỏ? → Có thể H0 đúng, hoặc hiệu ứng nhỏ, mẫu ít, nhiễu lớn hay phép kiểm định thiếu lực để phát hiện.",
     "blocks": [
@@ -1215,7 +1215,7 @@
     "subjectId": "xs",
     "priority": "A",
     "title": "P-value là gì và không phải là gì?",
-    "groupTitle": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+    "groupTitle": "Cụm 5: Kiểm định, quan hệ và kết luận",
     "order": 27,
     "bodyMarkdown": "**Hiểu:** Dưới H0 và các giả định của phép kiểm định, p-value là xác suất thu được thống kê kiểm định ít nhất cũng cực đoan như quan sát theo hướng kiểm định. P nhỏ biểu thị dữ liệu ít tương thích với mô hình H0 hơn.\n\n**Ví dụ:** p = 0,03 nghĩa là nếu H0 và giả định đúng, xác suất thống kê cực đoan như vậy hoặc hơn là 3%. Với ngưỡng α = 0,05 đã chọn trước, ta bác bỏ H0.\n\n**Trả lời miệng:** “P-value là xác suất về dữ liệu hoặc thống kê kiểm định giả sử H0 đúng, không phải xác suất H0 đúng. P nhỏ hỗ trợ bác bỏ H0 theo ngưỡng đã chọn, nhưng không tự cho biết tác động lớn hay có ích thực tế.”\n\n**Bẫy:** p = 0,03 không nghĩa là “97% khả năng H1 đúng”, cũng không nghĩa “3% kết quả do ngẫu nhiên”. Việc thử nhiều phân tích rồi chỉ chọn p nhỏ làm sai diễn giải thông thường.",
     "blocks": [
@@ -1261,7 +1261,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Alpha, lỗi loại I, loại II và power là gì?",
-    "groupTitle": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+    "groupTitle": "Cụm 5: Kiểm định, quan hệ và kết luận",
     "order": 28,
     "bodyMarkdown": "**Hiểu:** Lỗi loại I: bác bỏ H0 khi H0 đúng. Lỗi loại II: không bác bỏ H0 khi một phương án H1 cụ thể đúng. α đặt giới hạn tỷ lệ lỗi loại I của phép kiểm định hợp lệ; β là xác suất loại II tại phương án đó; power = 1−β.\n\n**Ví dụ:** H0 là máy đóng gói đúng trung bình 500 g. Báo máy lệch khi thật sự đúng là loại I; bỏ sót máy thật sự lệch là loại II.\n\n**Trả lời miệng:** “Kiểm định có hai hướng sai: báo khác biệt không có thật và bỏ sót khác biệt có thật. Power là khả năng phát hiện một mức khác biệt cụ thể. Với các yếu tố khác giữ nguyên, thêm mẫu thường tăng power; hạ alpha thường khiến phát hiện khó hơn.”\n\n**Nối tiếp:** Power chỉ phụ thuộc α? → Không; còn cỡ mẫu, độ nhiễu, độ lớn hiệu ứng và phép kiểm định. α không phải xác suất kết luận cụ thể lần này sai.",
     "blocks": [
@@ -1306,7 +1306,7 @@
     "subjectId": "xs",
     "priority": "C",
     "title": "Kiểm định một phía và hai phía khác gì?",
-    "groupTitle": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+    "groupTitle": "Cụm 5: Kiểm định, quan hệ và kết luận",
     "order": 29,
     "bodyMarkdown": "**Hiểu:** Hai phía tìm khác biệt cả lớn hơn lẫn nhỏ hơn, như H1: μ ≠ 500. Một phía nhắm một hướng, như H1: μ < 500; H0 tương ứng bao gồm μ ≥ 500. Lựa chọn phải xuất phát từ câu hỏi nghiên cứu trước khi nhìn kết quả.\n\n**Ví dụ:** nếu chỉ quan tâm sản phẩm bị thiếu trọng lượng và thiết kế nghiên cứu phù hợp, có thể chọn kiểm định một phía. Nếu lệch ở cả hai hướng đều quan trọng, dùng hai phía.\n\n**Trả lời miệng:** “Một phía tập trung bằng chứng vào một hướng đã xác định; hai phía xét sai lệch cả hai hướng. Em không đổi sang một phía sau khi thấy dữ liệu chỉ để giảm p-value. Cần nêu rõ giả thuyết, bối cảnh và hướng kiểm định.”\n\n**Nối tiếp:** Có luôn lấy p hai phía chia 2? → Không máy móc; phụ thuộc phân phối kiểm định, hướng quan sát và cách định nghĩa p-value.",
     "blocks": [
@@ -1352,7 +1352,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Chọn phép kiểm định ở mức cơ bản như thế nào?",
-    "groupTitle": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+    "groupTitle": "Cụm 5: Kiểm định, quan hệ và kết luận",
     "order": 30,
     "bodyMarkdown": "**Hiểu:** Hỏi trước: biến kết quả là số hay phân loại, có bao nhiêu nhóm, các nhóm độc lập hay ghép cặp, và giả định có phù hợp không.\n\n**Ví dụ:** so chiều cao trung bình hai nhóm độc lập có thể dùng Welch t-test nếu điều kiện phù hợp. Đo huyết áp cùng người trước/sau cần xét hiệu số ghép cặp. Xét liên hệ giữa hai biến phân loại có thể dùng chi-square độc lập khi tần số kỳ vọng đủ phù hợp; bảng thưa có thể cần phương pháp khác như Fisher exact.\n\n**Trả lời miệng:** “Em không chọn test chỉ theo tên quen thuộc. Em xác định kiểu dữ liệu, thiết kế độc lập hay ghép cặp, số nhóm và giả định. T-test thường xét trung bình; chi-square thường xét tần số hoặc liên hệ phân loại; mỗi phép có điều kiện riêng.”\n\n**Nối tiếp:** Dữ liệu không chuẩn thì luôn dùng kiểm định phi tham số? → Không; còn cỡ mẫu, mức lệch, mục tiêu và độ bền vững. Phi tham số cũng có giả định.",
     "blocks": [
@@ -1398,7 +1398,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Tương quan Pearson khác quan hệ nhân quả thế nào?",
-    "groupTitle": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+    "groupTitle": "Cụm 5: Kiểm định, quan hệ và kết luận",
     "order": 31,
     "bodyMarkdown": "**Hiểu:** Pearson r đo mức liên hệ **tuyến tính**, nằm trong [−1, 1] nếu phương sai hai biến dương. Dấu cho hướng; độ lớn cho độ chặt của liên hệ tuyến tính. Tương quan chưa chứng minh biến này gây biến kia.\n\n**Ví dụ:** kem bán nhiều và người đi bơi nhiều có thể cùng do trời nóng. Một biến thứ ba là yếu tố gây nhiễu. Quan hệ hình chữ U có thể rất rõ nhưng r gần 0 vì không tuyến tính.\n\n**Trả lời miệng:** “Pearson mô tả liên hệ tuyến tính, không phải mọi kiểu phụ thuộc. Tương quan có thể do nhân quả, yếu tố thứ ba hoặc cấu trúc dữ liệu khác. Muốn kết luận nhân quả cần thiết kế nghiên cứu và giả định mạnh hơn, chẳng hạn thí nghiệm ngẫu nhiên phù hợp.”\n\n**Nối tiếp:** r = 0 nghĩa là độc lập? → Không nói chung. Độc lập với moment phù hợp suy ra hiệp phương sai 0, nhưng chiều ngược lại không luôn đúng.",
     "blocks": [
@@ -1443,7 +1443,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Hiệp phương sai khác tương quan thế nào?",
-    "groupTitle": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+    "groupTitle": "Cụm 5: Kiểm định, quan hệ và kết luận",
     "order": 32,
     "bodyMarkdown": "**Hiểu:** `Cov(X,Y)=E[(X−E[X])(Y−E[Y])]` đo xu hướng lệch cùng chiều hoặc ngược chiều. Tương quan Pearson chuẩn hóa nó bằng hai độ lệch chuẩn: `ρ=Cov(X,Y)/(σXσY)` khi các đại lượng tồn tại và σX, σY > 0.\n\n**Ví dụ:** đổi chiều cao từ mét sang centimet làm covariance với cân nặng nhân 100, nhưng tương quan không đổi vì độ lệch chuẩn chiều cao cũng nhân 100.\n\n**Trả lời miệng:** “Hiệp phương sai biểu thị hai biến cùng tăng giảm quanh trung bình thế nào, nhưng độ lớn phụ thuộc đơn vị. Tương quan chuẩn hóa nên không mang đơn vị và có thể so sánh thuận tiện hơn. Cả hai chủ yếu phản ánh liên hệ tuyến tính.”\n\n**Nối tiếp:** Nếu một biến luôn bằng hằng số thì tương quan? → Không xác định theo công thức vì độ lệch chuẩn bằng 0, không phải cứ gán r = 0.",
     "blocks": [
@@ -1488,7 +1488,7 @@
     "subjectId": "xs",
     "priority": "B",
     "title": "Có ý nghĩa thống kê có đồng nghĩa quan trọng thực tế?",
-    "groupTitle": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+    "groupTitle": "Cụm 5: Kiểm định, quan hệ và kết luận",
     "order": 33,
     "bodyMarkdown": "**Hiểu:** Ý nghĩa thống kê thường nói p nhỏ hơn ngưỡng đã chọn. Ý nghĩa thực tế hỏi hiệu ứng đủ lớn để đáng quan tâm hay hành động không. Cần xem độ lớn hiệu ứng, khoảng tin cậy, chi phí và bối cảnh.\n\n**Ví dụ:** với mẫu rất lớn, mức tăng doanh thu trung bình 1 đồng có thể có p rất nhỏ nhưng không đủ bù chi phí triển khai. Ngược lại, một cải thiện có ích có thể chưa đạt ngưỡng thống kê vì mẫu ít.\n\n**Trả lời miệng:** “P-value không đo độ lớn tác động. Em cần báo cả ước lượng hiệu ứng và độ bất định, sau đó đánh giá theo mục tiêu thực tế. Không đạt ý nghĩa thống kê cũng không chứng minh hiệu ứng bằng 0.”\n\n**Nối tiếp:** p = 0,049 và p = 0,051 có khác nhau rất lớn về bằng chứng? → Không; ngưỡng quyết định tạo hai nhãn nhưng bằng chứng thay đổi liên tục. Tránh chỉ đọc nhãn đạt/không đạt.",
     "blocks": [
@@ -1534,7 +1534,7 @@
     "subjectId": "xs",
     "priority": "C",
     "title": "Vì sao thử nhiều giả thuyết dễ ra kết quả dương tính giả?",
-    "groupTitle": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+    "groupTitle": "Cụm 5: Kiểm định, quan hệ và kết luận",
     "order": 34,
     "bodyMarkdown": "**Hiểu:** Mỗi kiểm định có một cơ hội báo động nhầm. Thử nhiều lần rồi chỉ công bố lần “có ý nghĩa” làm rủi ro tổng thể lớn hơn mức α của từng phép.\n\n**Ví dụ:** nếu 20 H0 đều đúng, các kiểm định độc lập và mỗi test có xác suất loại I đúng 0,05, xác suất có ít nhất một lần bác bỏ nhầm là `1−0,95²⁰≈64%`.\n\n**Trả lời miệng:** “Thử nhiều giả thuyết làm tăng cơ hội tình cờ thấy p nhỏ. Em cần xác định câu hỏi từ trước, báo đầy đủ và cân nhắc hiệu chỉnh nhiều kiểm định. Bonferroni là cách đơn giản dùng ngưỡng α/m cho m kiểm định để kiểm soát xác suất có ít nhất một lỗi loại I.”\n\n**Nối tiếp:** Bonferroni có cần các kiểm định độc lập để bảo đảm kiểm soát không? → Không, nếu từng p-value hợp lệ; nhưng có thể khá bảo thủ. Công thức 64% ở ví dụ thì đã giả định độc lập.",
     "blocks": [
@@ -1579,7 +1579,7 @@
     "subjectId": "xs",
     "priority": "C",
     "title": "MLE và suy luận Bayes khác nhau ở ý tưởng nào?",
-    "groupTitle": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+    "groupTitle": "Cụm 5: Kiểm định, quan hệ và kết luận",
     "order": 35,
     "bodyMarkdown": "**Hiểu:** **Likelihood** xem dữ liệu đã quan sát là cố định rồi đánh giá các giá trị tham số. MLE chọn tham số làm likelihood lớn nhất. Suy luận Bayes kết hợp likelihood với phân phối trước của tham số để có phân phối sau.\n\n**Ví dụ:** 10 lần tung xu độc lập thấy 7 ngửa. MLE của xác suất ngửa p là 0,7. Bayes còn dùng prior; với prior đều Beta(1,1), posterior là Beta(8,4), trung bình posterior là 8/12. Tối nay chỉ cần hiểu prior ảnh hưởng kết quả, chưa cần học họ Beta.\n\n**Trả lời miệng:** “MLE chọn giá trị tham số khiến dữ liệu quan sát có likelihood cao nhất. Bayes bổ sung thông tin trước và tạo phân phối sau cho tham số. Khoảng credible của Bayes có thể diễn giải bằng xác suất posterior, còn confidence interval frequentist nói về độ bao phủ của thủ tục.”\n\n**Nối tiếp:** Likelihood có tự là phân phối xác suất trên tham số không? → Không; không được coi nó đã được chuẩn hóa trên tham số.",
     "blocks": [
@@ -1717,11 +1717,11 @@
     "title": "Parameter khác hyperparameter thế nào?",
     "groupTitle": "I. Hiểu bài toán trước khi học thuật toán",
     "order": 3,
-    "bodyMarkdown": "**Parameter — tham số** được học trong huấn luyện, như trọng số trong hồi quy tuyến tính. **Hyperparameter — siêu tham số** là cấu hình điều khiển mô hình hoặc quá trình học, như số hàng xóm K, độ sâu tối đa của cây hoặc learning rate.\n\n**Ví dụ:** với `giá = w × diện_tích + b`, thuật toán học w và b. Nếu giới hạn cây quyết định chỉ được sâu 5 tầng, số 5 là siêu tham số.\n\n**Trả lời miệng:** “Tham số được học từ tập train; siêu tham số là lựa chọn cấu hình cho mô hình hoặc quá trình học. Em thường thử siêu tham số dựa trên validation hoặc cross-validation, rồi dùng test để đánh giá cuối cùng.”\n\n**Hỏi tiếp:** Siêu tham số có phải luôn do người chọn bằng tay không? → Không; tìm kiếm tự động vẫn có thể chọn chúng, nhưng phải tránh dùng test làm tiêu chí lựa chọn.",
+    "bodyMarkdown": "**Parameter - tham số** được học trong huấn luyện, như trọng số trong hồi quy tuyến tính. **Hyperparameter - siêu tham số** là cấu hình điều khiển mô hình hoặc quá trình học, như số hàng xóm K, độ sâu tối đa của cây hoặc learning rate.\n\n**Ví dụ:** với `giá = w × diện_tích + b`, thuật toán học w và b. Nếu giới hạn cây quyết định chỉ được sâu 5 tầng, số 5 là siêu tham số.\n\n**Trả lời miệng:** “Tham số được học từ tập train; siêu tham số là lựa chọn cấu hình cho mô hình hoặc quá trình học. Em thường thử siêu tham số dựa trên validation hoặc cross-validation, rồi dùng test để đánh giá cuối cùng.”\n\n**Hỏi tiếp:** Siêu tham số có phải luôn do người chọn bằng tay không? → Không; tìm kiếm tự động vẫn có thể chọn chúng, nhưng phải tránh dùng test làm tiêu chí lựa chọn.",
     "blocks": [
       {
         "type": "prose",
-        "markdown": "**Parameter — tham số** được học trong huấn luyện, như trọng số trong hồi quy tuyến tính. **Hyperparameter — siêu tham số** là cấu hình điều khiển mô hình hoặc quá trình học, như số hàng xóm K, độ sâu tối đa của cây hoặc learning rate."
+        "markdown": "**Parameter - tham số** được học trong huấn luyện, như trọng số trong hồi quy tuyến tính. **Hyperparameter - siêu tham số** là cấu hình điều khiển mô hình hoặc quá trình học, như số hàng xóm K, độ sâu tối đa của cây hoặc learning rate."
       },
       {
         "type": "example",
@@ -1751,7 +1751,7 @@
       "heading": "### ML03 [B] Parameter khác hyperparameter thế nào?",
       "startLine": 41,
       "endLine": 50,
-      "hash": "238251b38fb6"
+      "hash": "4a3c54085599"
     },
     "collectionId": "foundations"
   },
@@ -1762,11 +1762,11 @@
     "title": "Học có giám sát gồm phân loại và hồi quy như thế nào?",
     "groupTitle": "I. Hiểu bài toán trước khi học thuật toán",
     "order": 4,
-    "bodyMarkdown": "Học có giám sát dùng các cặp đầu vào–đáp án. **Classification — phân loại** dự đoán lớp; **regression — hồi quy** dự đoán đại lượng số.\n\n**Ví dụ:** dự đoán một căn nhà thuộc nhóm “rẻ/vừa/đắt” là phân loại; dự đoán giá 2,7 tỷ là hồi quy. Số phòng ghi bằng số nhưng nếu mục tiêu là loại nhà mã hóa 0, 1, 2 thì chưa chắc là hồi quy: cần xét ý nghĩa của đầu ra.\n\n**Trả lời miệng:** “Học có giám sát dùng dữ liệu có nhãn. Phân loại dự đoán một trong các lớp, như spam hoặc không spam; hồi quy dự đoán giá trị số, như giá nhà. Cách chọn thuật toán, hàm mất mát và chỉ số đánh giá phụ thuộc loại đầu ra.”\n\n**Hỏi tiếp:** Phân loại có thể trả về số 0,8 không? → Có, đó có thể là xác suất ước lượng cho một lớp, sau đó mới chuyển thành quyết định.",
+    "bodyMarkdown": "Học có giám sát dùng các cặp đầu vào–đáp án. **Classification - phân loại** dự đoán lớp; **regression - hồi quy** dự đoán đại lượng số.\n\n**Ví dụ:** dự đoán một căn nhà thuộc nhóm “rẻ/vừa/đắt” là phân loại; dự đoán giá 2,7 tỷ là hồi quy. Số phòng ghi bằng số nhưng nếu mục tiêu là loại nhà mã hóa 0, 1, 2 thì chưa chắc là hồi quy: cần xét ý nghĩa của đầu ra.\n\n**Trả lời miệng:** “Học có giám sát dùng dữ liệu có nhãn. Phân loại dự đoán một trong các lớp, như spam hoặc không spam; hồi quy dự đoán giá trị số, như giá nhà. Cách chọn thuật toán, hàm mất mát và chỉ số đánh giá phụ thuộc loại đầu ra.”\n\n**Hỏi tiếp:** Phân loại có thể trả về số 0,8 không? → Có, đó có thể là xác suất ước lượng cho một lớp, sau đó mới chuyển thành quyết định.",
     "blocks": [
       {
         "type": "prose",
-        "markdown": "Học có giám sát dùng các cặp đầu vào–đáp án. **Classification — phân loại** dự đoán lớp; **regression — hồi quy** dự đoán đại lượng số."
+        "markdown": "Học có giám sát dùng các cặp đầu vào–đáp án. **Classification - phân loại** dự đoán lớp; **regression - hồi quy** dự đoán đại lượng số."
       },
       {
         "type": "example",
@@ -1796,7 +1796,7 @@
       "heading": "### ML04 [A] Học có giám sát gồm phân loại và hồi quy như thế nào?",
       "startLine": 51,
       "endLine": 60,
-      "hash": "f6706fdd2f6f"
+      "hash": "27a2f6237582"
     },
     "collectionId": "foundations"
   },
@@ -1807,11 +1807,11 @@
     "title": "Không giám sát và tăng cường khác có giám sát ra sao?",
     "groupTitle": "I. Hiểu bài toán trước khi học thuật toán",
     "order": 5,
-    "bodyMarkdown": "**Unsupervised learning — học không giám sát** tìm cấu trúc khi không có nhãn mục tiêu, như phân cụm khách hàng. **Reinforcement learning — học tăng cường** cho một tác nhân chọn hành động, nhận phản hồi thưởng và học cách tăng tổng phần thưởng kỳ vọng theo thời gian.\n\n**Ví dụ:** chia khách hàng thành nhóm theo hành vi là phân cụm. Một tác nhân học chơi trò chơi bằng điểm thưởng là học tăng cường. Phần thưởng có thể đến muộn sau nhiều hành động.\n\n**Trả lời miệng:** “Học không giám sát tìm cấu trúc trong dữ liệu không có nhãn mục tiêu. Học tăng cường học cách hành động qua tương tác và phần thưởng. Nó khác học có giám sát vì không nhất thiết có sẵn đáp án đúng cho từng hành động.”\n\n**Bẫy:** cụm khách hàng không tự mang ý nghĩa “tốt/xấu”; con người cần kiểm tra và diễn giải cấu trúc tìm được.",
+    "bodyMarkdown": "**Unsupervised learning - học không giám sát** tìm cấu trúc khi không có nhãn mục tiêu, như phân cụm khách hàng. **Reinforcement learning - học tăng cường** cho một tác nhân chọn hành động, nhận phản hồi thưởng và học cách tăng tổng phần thưởng kỳ vọng theo thời gian.\n\n**Ví dụ:** chia khách hàng thành nhóm theo hành vi là phân cụm. Một tác nhân học chơi trò chơi bằng điểm thưởng là học tăng cường. Phần thưởng có thể đến muộn sau nhiều hành động.\n\n**Trả lời miệng:** “Học không giám sát tìm cấu trúc trong dữ liệu không có nhãn mục tiêu. Học tăng cường học cách hành động qua tương tác và phần thưởng. Nó khác học có giám sát vì không nhất thiết có sẵn đáp án đúng cho từng hành động.”\n\n**Bẫy:** cụm khách hàng không tự mang ý nghĩa “tốt/xấu”; con người cần kiểm tra và diễn giải cấu trúc tìm được.",
     "blocks": [
       {
         "type": "prose",
-        "markdown": "**Unsupervised learning — học không giám sát** tìm cấu trúc khi không có nhãn mục tiêu, như phân cụm khách hàng. **Reinforcement learning — học tăng cường** cho một tác nhân chọn hành động, nhận phản hồi thưởng và học cách tăng tổng phần thưởng kỳ vọng theo thời gian."
+        "markdown": "**Unsupervised learning - học không giám sát** tìm cấu trúc khi không có nhãn mục tiêu, như phân cụm khách hàng. **Reinforcement learning - học tăng cường** cho một tác nhân chọn hành động, nhận phản hồi thưởng và học cách tăng tổng phần thưởng kỳ vọng theo thời gian."
       },
       {
         "type": "example",
@@ -1840,7 +1840,7 @@
       "heading": "### ML05 [B] Không giám sát và tăng cường khác có giám sát ra sao?",
       "startLine": 61,
       "endLine": 70,
-      "hash": "687404d129c9"
+      "hash": "bab76cd53d33"
     },
     "collectionId": "foundations"
   },
@@ -6182,7 +6182,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "DL học từ dữ liệu có cấu trúc và phi cấu trúc như thế nào?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 1,
     "bodyMarkdown": "**Nguồn:** `1.1. Introduction to deep learning.txt`, slide 16–25.\n\nDữ liệu có cấu trúc thường là bảng: mỗi dòng là một căn nhà, các cột là diện tích, số phòng, giá. Dữ liệu phi cấu trúc như ảnh, âm thanh hoặc văn bản không có sẵn các cột đặc trưng mang ý nghĩa như vậy. Tuy nhiên khi đưa vào máy, chúng vẫn được mã hóa thành số và tensor có shape cụ thể.\n\nMô hình học một ánh xạ từ đầu vào x sang mục tiêu y. Mạng sâu có thể học các biểu diễn trung gian hữu ích, nhưng nhiều dữ liệu hoặc nhiều tầng không tự bảo đảm kết quả tốt. Chất lượng dữ liệu, mục tiêu, kiến trúc và tối ưu đều quan trọng. Dữ liệu bảng nhỏ vẫn có thể phù hợp với mô hình đơn giản hoặc cây hơn.\n\n**Ví dụ:** dự đoán giá nhà từ diện tích là hồi quy trên bảng; nhận diện mèo từ ảnh là phân loại từ tensor pixel. Ảnh RGB 64×64 có 64×64×3 = 12.288 giá trị nếu làm phẳng.\n\n**Mẫu đáp:** “DL học ánh xạ từ dữ liệu tới mục tiêu và có thể tự học biểu diễn qua nhiều tầng. Dữ liệu có cấu trúc thường là bảng, còn ảnh, âm thanh và văn bản thường gọi là phi cấu trúc. Cả hai vẫn cần biểu diễn số phù hợp. Quy mô dữ liệu và tính toán hỗ trợ DL nhưng không thay thế việc thiết kế và đánh giá đúng.”\n\n**Hỏi tiếp:** Dữ liệu phi cấu trúc có nghĩa là không có shape? → Không. Ảnh hoặc batch ảnh vẫn có các chiều rõ ràng khi mã hóa thành tensor.",
     "blocks": [
@@ -6219,7 +6219,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.1"
     ],
@@ -6238,7 +6238,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Logistic regression có thể xem như một nơ-ron thế nào?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 2,
     "bodyMarkdown": "**Nguồn:** `1.2 Basic Neural Network.txt`, slide 4–10.\n\nVới một mẫu x có n đặc trưng, tính `z = wᵀx + b`, rồi `a = sigmoid(z) = 1/(1+exp(−z))`. a được dùng làm xác suất dự đoán cho lớp 1 trong mô hình. Chọn ngưỡng để biến xác suất thành nhãn; 0,5 là một lựa chọn thông dụng, không bắt buộc cho mọi bài toán.\n\nĐây là một đơn vị đầu ra với activation sigmoid, không có tầng ẩn. Nó học w và b từ dữ liệu. “Logistic regression” thường dùng cho phân loại dù tên có chữ regression.\n\n**Ví dụ:** x=[1,2], w=[0,0], b=0 → z=0 → a=0,5. Nếu nhãn thật là 1, mô hình cần điều chỉnh tham số để tăng a cho mẫu này, đồng thời còn phải cân nhắc các mẫu khác trong tập học.\n\n**Mẫu đáp:** “Logistic regression tính tổng có trọng số cộng bias rồi qua sigmoid, nên có thể xem là một nơ-ron đầu ra cho phân loại nhị phân. Mạng sâu bổ sung các tầng ẩn học biểu diễn trước đầu ra đó. Xác suất và nhãn phân loại khác nhau: cần một ngưỡng để ra quyết định.”\n\n**Bẫy:** Khởi tạo w=0 có thể dùng cho logistic regression đơn lẻ. Vấn đề đối xứng khi nhiều nơ-ron ẩn giống nhau không có nghĩa mọi mô hình đều cấm khởi tạo 0.",
     "blocks": [
@@ -6275,7 +6275,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.2"
     ],
@@ -6294,7 +6294,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Binary cross-entropy và cost trên nhiều mẫu là gì?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 3,
     "bodyMarkdown": "**Nguồn:** `1.2 Basic Neural Network.txt`, slide 9–10, 59–62; `1.3 Shallow Neural Networks.txt`, slide 38–45.\n\nVới y thuộc {0,1}, xác suất dự đoán a thuộc (0,1), loss một mẫu là:\n\n`L(a,y) = −[y log(a) + (1−y) log(1−a)]`.\n\nNếu y=1, loss là −log(a); nếu y=0, loss là −log(1−a). Dự đoán càng tự tin vào nhãn sai thì phạt càng lớn. Dùng log tự nhiên trong các ví dụ này.\n\nCost trên m mẫu thường là trung bình: `J = (1/m) Σ L(a⁽ⁱ⁾, y⁽ⁱ⁾)`. Quy ước trung bình hay tổng ảnh hưởng độ lớn gradient nên phải nhất quán. Trong thực hành, hàm loss nhận logits có thể tính ổn định hơn việc tự sigmoid rồi lấy log.\n\n**Ví dụ:** nhãn y=1, a=0,9 → loss≈0,105; a=0,1 → loss≈2,303. Không được gọi loss này là 1−accuracy.\n\n**Mẫu đáp:** “BCE đo mức sai của xác suất trong phân loại nhị phân. Nó phạt mạnh dự đoán tự tin sai. Loss thường nói cho từng mẫu, cost là tổng hợp trên tập mẫu, chẳng hạn trung bình. Khi lập trình em kiểm tra hàm nhận logits hay xác suất để không áp sigmoid hai lần.”\n\n**Hỏi tiếp:** a=0 và y=1 thì sao? → Loss toán học tiến tới vô hạn. Thư viện dùng công thức ổn định với logits hoặc xử lý số học thích hợp, không tùy tiện để log(0) gây NaN.",
     "blocks": [
@@ -6331,7 +6331,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.2",
       "1.3"
@@ -6357,7 +6357,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Computation graph và chain rule giúp tính gradient ra sao?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 4,
     "bodyMarkdown": "**Nguồn:** `1.2 Basic Neural Network.txt`, slide 25–34.\n\nComputation graph chia công thức lớn thành các phép nhỏ. Forward tính giá trị từ đầu vào tới loss; backward dùng đạo hàm từng phép và quy tắc dây chuyền để truyền ảnh hưởng ngược lại.\n\nVí dụ `u=wx`, `z=u+b`, `L=z²`. Cho x=2,w=1,b=1 thì u=2,z=3,L=9. Từ cuối: `dL/dz=2z=6`; vì `dz/du=1`, `du/dw=x=2`, suy ra `dL/dw=12`; `dL/db=6`.\n\nNếu một biến ảnh hưởng đầu ra qua nhiều đường, cộng các đóng góp gradient từ các đường đó. Không chỉ nhân đạo hàm của một nhánh rồi bỏ các nhánh còn lại.\n\n**Mẫu đáp:** “Đồ thị tính toán tách hàm thành các bước nhỏ. Forward tính giá trị; backward dùng chain rule để tính ảnh hưởng của từng tham số tới loss. Khi nhiều nhánh cùng đóng góp, gradient được cộng lại. Backprop tính gradient, còn optimizer mới dùng gradient cập nhật tham số.”\n\n**Hỏi tiếp:** Vì sao lưu giá trị forward? → Đạo hàm của một phép thường cần đầu vào hoặc đầu ra của nó; lưu cache giúp dùng lại thay vì tính lại toàn bộ.",
     "blocks": [
@@ -6389,7 +6389,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.2"
     ],
@@ -6408,7 +6408,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Vì sao logistic regression có dz=a−y?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 5,
     "bodyMarkdown": "**Nguồn:** `1.2 Basic Neural Network.txt`, slide 32–37.\n\nĐây là kết quả của **sigmoid kết hợp BCE**. Đạo hàm loss theo a là `−y/a + (1−y)/(1−a)`; đạo hàm sigmoid là `a(1−a)`. Nhân hai biểu thức theo chain rule và rút gọn được `dL/dz=a−y`.\n\nVới một mẫu: `dw=(a−y)x`, `db=a−y`. Nếu cost lấy trung bình m mẫu thì các gradient tham số cũng lấy trung bình tương ứng. Không dùng a−y như công thức chung cho mọi activation và mọi loss.\n\n**Ví dụ:** x=[1,2], w=[0,0], b=0, y=1. a=0,5 → dz=−0,5; dw=[−0,5;−1], db=−0,5. Learning rate 0,1 cho w mới=[0,05;0,1], b mới=0,05. z mới=0,3, a mới≈0,574, tăng xác suất lớp đúng cho mẫu này.\n\n**Mẫu đáp:** “Với sigmoid và BCE, chain rule rút gọn đạo hàm theo logit thành a−y. Sau đó nhân với đầu vào để có gradient trọng số và lấy trung bình nếu có nhiều mẫu. Đây là kết quả cho cặp activation-loss cụ thể, không phải quy tắc của mọi mạng.”\n\n**Bẫy:** Tính các gradient từ cùng bộ tham số cũ rồi cập nhật; không cập nhật từng trọng số và dùng lẫn giá trị mới để tính gradient của bước cũ.",
     "blocks": [
@@ -6445,7 +6445,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.2"
     ],
@@ -6464,7 +6464,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Vectorization và broadcasting khác nhau thế nào?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 6,
     "bodyMarkdown": "**Nguồn:** `1.2 Basic Neural Network.txt`, slide 38–58; `1.3 Shallow Neural Networks.txt`, slide 18–25.\n\nVectorization tổ chức phép tính thành thao tác trên vector/ma trận thay vì vòng lặp Python qua từng mẫu hoặc từng phần tử. Thư viện số có thể xử lý các phép này hiệu quả hơn. Tốc độ cụ thể phụ thuộc dữ liệu, phần cứng và thư viện; không có hệ số tăng tốc cố định cho mọi bài.\n\nBroadcasting cho phép thao tác với shape khác nhau khi các chiều tương thích. Theo quy tắc NumPy, so từ chiều cuối: hai chiều phải bằng nhau hoặc một chiều bằng 1; chiều thiếu được xem là 1. Nó không phải phép nhân ma trận và không tự hiểu ý nghĩa “mẫu” hay “đặc trưng”.\n\n**Ví dụ:** Z có shape (3,5), b có shape (3,1). Z+b cộng bias của từng neuron vào cả 5 mẫu. Nhưng b shape (3,) không tương thích với (3,5), vì chiều cuối 3 và 5 không khớp. Nguy hiểm hơn: khi Z=(3,3), b=(3,) chạy được nhưng bias được áp theo cột, có thể sai ý đồ.\n\n**Mẫu đáp:** “Vectorization dùng phép toán mảng để xử lý nhiều giá trị cùng lúc. Broadcasting tự mở rộng các chiều tương thích khi thao tác, ví dụ cộng bias vào mọi mẫu. Em vẫn phải kiểm tra shape và trục ý nghĩa vì chạy không lỗi chưa chắc đúng toán.”\n\n**Hỏi tiếp:** `(n,)` và `(n,1)` có giống nhau không? → Không. Một cái là mảng một chiều, một cái là ma trận cột; transpose mảng một chiều không biến nó thành vector cột.",
     "blocks": [
@@ -6501,7 +6501,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.2",
       "1.3"
@@ -6527,7 +6527,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Kiểm tra shape của mạng nhiều tầng thế nào?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 7,
     "bodyMarkdown": "**Nguồn:** `1.4 Deep Neural Networks.txt`, slide 5–13, 24–27.\n\nDùng quy ước trong slide: mỗi **cột là một mẫu**. X có shape `(n[0],m)`. Với tầng l có n[l] neuron:\n\n- W[l]: `(n[l], n[l−1])`.\n- b[l]: `(n[l],1)`.\n- Z[l] và A[l]: `(n[l],m)`.\n\nForward: `Z[l]=W[l]A[l−1]+b[l]`, `A[l]=g[l](Z[l])`, với A[0]=X. Nhân ma trận cần hai chiều bên trong bằng nhau. Nhiều framework dùng batch ở chiều đầu; đó là quy ước khác, không phải slide sai hoặc framework sai.\n\n**Ví dụ:** mạng 3→4→1, batch 5 mẫu. X=(3,5), W1=(4,3), b1=(4,1), A1=(4,5), W2=(1,4), b2=(1,1), A2=(1,5).\n\n**Mẫu đáp:** “Em bắt đầu từ quy ước chiều mẫu. Theo slide, mẫu nằm ở cột, nên W tầng l có số hàng bằng số neuron tầng hiện tại và số cột bằng số đầu ra tầng trước. Nhân W với activation tầng trước rồi cộng bias broadcast cho mọi mẫu.”\n\n**Hỏi tiếp:** Mạng ví dụ có bao nhiêu tham số? → Tầng 1: 4×3+4=16; tầng 2: 1×4+1=5; tổng 21. Số mẫu m không nhân thêm số tham số dùng chung.",
     "blocks": [
@@ -6564,7 +6564,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.4"
     ],
@@ -6583,7 +6583,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Một mạng có một tầng ẩn tính gì, và đếm tầng thế nào?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 8,
     "bodyMarkdown": "**Nguồn:** `1.3 Shallow Neural Networks.txt`, slide 3–25; `1.4 Deep Neural Networks.txt`, slide 3–10.\n\nTheo quy ước của khóa học, input không tính vào số tầng có tham số. Mạng một tầng ẩn cộng một tầng đầu ra thường gọi là mạng hai tầng. Điều này dễ nhầm với cách đếm cả input trong một số tài liệu khác; hãy nói rõ quy ước.\n\nBốn phép của mạng là `Z1=W1X+b1`, `A1=g1(Z1)`, `Z2=W2A1+b2`, `A2=g2(Z2)`. Tầng ẩn biến đầu vào thành đặc trưng trung gian; tầng ra biến đặc trưng thành dự đoán phù hợp nhiệm vụ.\n\n**Ví dụ một mẫu:** x=[1;2], W1=[[1,0],[0,1]], b1=0, ReLU → A1=[1;2]. W2=[1,−1], b2=0 → z2=−1; sigmoid cho a2≈0,269. Dù đầu vào đều dương, đầu ra logit có thể âm do trọng số âm.\n\n**Mẫu đáp:** “Mạng một tầng ẩn có hai lần biến đổi có tham số: đầu vào qua tầng ẩn, rồi qua tầng đầu ra. Theo quy ước slide đó là mạng hai tầng. Em tính lần lượt tổng có trọng số, activation, rồi lặp cho tầng tiếp theo.”\n\n**Hỏi tiếp:** Mạng 3→4→4→1 có mấy tầng? → Ba tầng có tham số, gồm hai tầng ẩn và một tầng đầu ra.",
     "blocks": [
@@ -6620,7 +6620,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.3",
       "1.4"
@@ -6646,7 +6646,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Đạo hàm activation ảnh hưởng việc học ra sao?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 9,
     "bodyMarkdown": "**Nguồn:** `1.3 Shallow Neural Networks.txt`, slide 26–36.\n\nBackprop nhân với đạo hàm activation. Sigmoid có đạo hàm a(1−a); tanh có đạo hàm 1−a². Ở vùng bão hòa, các đạo hàm này nhỏ, góp phần làm gradient suy giảm khi truyền qua nhiều tầng.\n\nReLU bằng max(0,z), đạo hàm là 1 khi z>0 và 0 khi z<0; tại 0 không khả vi, triển khai chọn quy ước phù hợp. Leaky ReLU dùng độ dốc nhỏ dương ở phía z<0, ví dụ 0,01, giúp phía âm vẫn có gradient. Nó không bảo đảm luôn tốt hơn mọi activation khác.\n\n**Ví dụ:** z=−2: ReLU=0 và đạo hàm phía âm=0; Leaky ReLU với hệ số 0,01 cho −0,02 và đạo hàm 0,01. Sigmoid tại z=0 có a=0,5 nên đạo hàm 0,25.\n\n**Mẫu đáp:** “Activation vừa tạo phi tuyến vừa ảnh hưởng gradient qua đạo hàm của nó. Sigmoid và tanh có vùng bão hòa; ReLU giữ gradient phía dương nhưng có thể có neuron không hoạt động ở phía âm. Leaky ReLU giữ một độ dốc nhỏ ở phía âm.”\n\n**Bẫy:** Tanh zero-centered không có nghĩa luôn vượt sigmoid; còn phụ thuộc vị trí, mục tiêu và cách huấn luyện. Đầu ra hồi quy có thể tuyến tính.",
     "blocks": [
@@ -6683,7 +6683,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.3"
     ],
@@ -6702,7 +6702,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Backprop của mạng hai tầng có công thức gì?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 10,
     "bodyMarkdown": "**Nguồn:** `1.3 Shallow Neural Networks.txt`, slide 37–50; `1.4 Deep Neural Networks.txt`, slide 19–27.\n\nGiả sử đầu ra sigmoid với BCE, cost là trung bình m mẫu, quy ước mẫu theo cột. Đặt D2=A2−Y là đạo hàm loss theo logit của từng mẫu, chưa chia m. Khi đó:\n\n```text\ndW2 = (1/m) D2 A1ᵀ\ndb2 = (1/m) sum(D2, theo chiều các mẫu, giữ chiều)\nD1  = (W2ᵀ D2) ⊙ g1'(Z1)\ndW1 = (1/m) D1 Xᵀ\ndb1 = (1/m) sum(D1, theo chiều các mẫu, giữ chiều)\n```\n\nKý hiệu ⊙ là nhân từng phần tử, không phải nhân ma trận. Việc chia m được đặt tại dW/db trong quy ước này; nếu thư viện đã chia ở gradient loss thì không chia thêm một lần nữa.\n\n**Ví dụ kiểm tra shape:** mạng3→4→1, m=5. D2=(1,5), A1ᵀ=(5,4) nên dW2=(1,4), đúng shape W2. W2ᵀD2=(4,5), nhân từng phần tử với g1'(Z1)=(4,5) cho D1=(4,5).\n\n**Mẫu đáp:** “Ở đầu ra sigmoid-BCE, sai số theo logit mỗi mẫu là A2−Y. Gradient trọng số là sai số nhân transpose của activation trước rồi lấy trung bình. Sai số truyền về tầng ẩn qua W2 transpose và đạo hàm activation; các gradient phải có shape giống tham số tương ứng.”\n\n**Hỏi tiếp:** Cache cần gì? → Các activation trước, Z hoặc thông tin activation cần cho đạo hàm, và trọng số liên quan. Không phải forward phải lưu mọi thứ trong mọi cách tối ưu bộ nhớ.",
     "blocks": [
@@ -6739,7 +6739,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.3",
       "1.4"
@@ -6765,7 +6765,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Vì sao khởi tạo ngẫu nhiên, và vì sao mạng sâu có ích?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 11,
     "bodyMarkdown": "**Nguồn:** `1.3 Shallow Neural Networks.txt`, slide 51–54; `1.4 Deep Neural Networks.txt`, slide 14–18.\n\nNếu nhiều neuron ẩn có cùng trọng số, bias và cách kết nối đối xứng, chúng có thể nhận cùng gradient rồi tiếp tục giống nhau. Khởi tạo ngẫu nhiên phù hợp giúp phá đối xứng, để các neuron có cơ hội học đặc trưng khác nhau. Bias bằng0 thường vẫn dùng được khi weights đã được khởi tạo phù hợp.\n\nĐộ sâu cho phép kết hợp nhiều mức biểu diễn: ví dụ cạnh → họa tiết → bộ phận. Đây là trực giác, không phải quy luật mọi tầng học đúng một cấp như thế. Một số họ hàm được biểu diễn hiệu quả hơn bằng chiều sâu, nhưng không có kết luận chung rằng mọi bài toán dùng mạng sâu đều tốt hơn mạng nông.\n\n**Ví dụ:** hai neuron ẩn làm cùng phép tính không tạo hai đặc trưng khác nhau chỉ vì ta vẽ hai vòng tròn. Đổi khởi tạo giúp phá đối xứng; chọn độ lớn khởi tạo tốt còn giúp tín hiệu/gradient không phình hoặc co quá mức.\n\n**Mẫu đáp:** “Khởi tạo ngẫu nhiên giúp các neuron ẩn không học giống hệt nhau do đối xứng. Độ sâu giúp kết hợp biểu diễn qua nhiều mức nhưng cần huấn luyện và dữ liệu phù hợp. Em không mặc định cứ thêm tầng là cải thiện.”\n\n**Hỏi tiếp:** Cứ dùng số ngẫu nhiên thật lớn được không? → Không; có thể làm tín hiệu và gradient không ổn định. Xem He/Xavier ở chương2.",
     "blocks": [
@@ -6802,7 +6802,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.3",
       "1.4"
@@ -6828,7 +6828,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Parameters, hyperparameters và quy trình thử nghiệm khác nhau thế nào?",
-    "groupTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "groupTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "order": 12,
     "bodyMarkdown": "**Nguồn:** `1.4 Deep Neural Networks.txt`, slide 28–33.\n\nParameters như W,b được cập nhật bởi quá trình học. Hyperparameters như learning rate, batch size, số tầng, số neuron và lựa chọn activation điều khiển mô hình hoặc quá trình học. Có thể chọn chúng bằng tìm kiếm tự động, nhưng chúng không vì thế trở thành W,b được học bằng cùng quy tắc gradient trong mô hình thông thường.\n\nMột quy trình cơ bản: có giả thuyết → chọn thay đổi → huấn luyện → xem train/dev và metric → ghi lại kết quả → điều chỉnh. Giữ test cho đánh giá cuối. Đổi quá nhiều thứ cùng lúc khiến khó hiểu nguyên nhân cải thiện hoặc suy giảm.\n\n**Ví dụ:** “learning rate=0,01” là cấu hình; “w1 học được=0,27” là kết quả tham số. Chọn learning rate bằng điểm test nhiều lần làm test không còn độc lập với lựa chọn.\n\n**Mẫu đáp:** “Parameters là giá trị mô hình học, như trọng số và bias. Hyperparameters điều khiển mô hình và huấn luyện. DL có tính thực nghiệm: thử có mục tiêu, đánh giá bằng dev, ghi cấu hình và chỉ chốt đánh giá test khi đã chọn phương án.”\n\n**Hỏi tiếp:** Số epoch có nhất thiết phải cố định từ đầu? → Không, early stopping có thể chọn điểm dừng theo quy tắc trên validation; vẫn không dùng test để chọn epoch.",
     "blocks": [
@@ -6865,7 +6865,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl1",
-    "chapterTitle": "Chương 1 — Từ logistic regression đến mạng nhiều tầng",
+    "chapterTitle": "Chương 1: Từ logistic regression đến mạng nhiều tầng",
     "lessonIds": [
       "1.4"
     ],
@@ -6884,7 +6884,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Train, dev, test dùng để làm gì? Có tỷ lệ chia bắt buộc không?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 1,
     "bodyMarkdown": "**Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 3–8.\n\n**Hiểu từ đầu:** Train là tập cho mạng học trọng số. Dev, cũng gọi validation, giúp chọn kiến trúc, learning rate, số epoch hoặc ngưỡng dự đoán. Test dùng để đánh giá cuối sau khi chốt các lựa chọn. Nếu liên tục nhìn test rồi sửa mô hình, ta đã dùng nó như dev và làm đánh giá cuối thiên lệch.\n\nKhông có tỷ lệ cố định cho mọi bài toán. Với hàng triệu mẫu, 1% dữ liệu vẫn có thể đủ lớn cho dev, nhưng “1%” tự nó không bảo đảm đại diện hoặc độ tin cậy. Dev/test nên phản ánh tình huống muốn sử dụng mô hình; dữ liệu cùng người, gần trùng hoặc theo thời gian cần chia phù hợp trước khi tiền xử lý có học tham số.\n\n**Ví dụ:** mô hình dùng cho ảnh điện thoại nhưng train toàn ảnh web rõ nét. Dev/test chỉ gồm ảnh web sẽ không cho biết tốt khả năng dùng trên điện thoại. Cần tập đánh giá phản ánh mục tiêu thực tế; việc trộn dữ liệu đòi hỏi kiểm tra phân phối.\n\n**Trả lời miệng:** “Train để học tham số, dev để lựa chọn cấu hình, test để đánh giá cuối. Em chọn kích thước và cách chia theo dữ liệu, không áp dụng máy móc một tỷ lệ. Tập đánh giá phải gần tình huống sử dụng và không bị rò rỉ thông tin vào huấn luyện.”\n\n**Hỏi tiếp:** Không có test có train được không? → Có, nhưng khi chỉ dùng dev để điều chỉnh, ta thiếu một tập độc lập cho đánh giá cuối. Train được khác với đánh giá khách quan được.",
     "blocks": [
@@ -6926,7 +6926,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.1"
     ],
@@ -6945,7 +6945,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Nhìn train/dev error để phân biệt bias và variance thế nào?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 2,
     "bodyMarkdown": "**Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 9–20; giả định được nêu rõ ở slide 16.\n\n**Hiểu từ đầu:** Trong chẩn đoán nhập môn, train error cao so với mức có thể đạt được gợi ý mô hình chưa học tốt, thường gọi high bias. Train thấp nhưng dev cao hơn nhiều gợi ý high variance: khả năng tổng quát hóa kém. Cả hai vấn đề có thể cùng xuất hiện.\n\nPhải so trên cùng thước đo và bối cảnh. Train 10% không tự động “cao”: nếu bài rất khó và sai số không thể tránh gần 10% thì kết luận khác. Nếu train và dev khác phân phối, khoảng cách còn có thể do data mismatch. Việc tách training-dev được học kỹ hơn ở chương 3.\n\n**Ví dụ:** giả sử mức lỗi tham chiếu phù hợp khoảng 1%, train/dev cùng phân phối. Train 1%, dev 12% gợi ý variance; train 15%, dev 16% gợi ý bias; train 15%, dev 28% gợi ý cả hai. Chưa được kết luận nguyên nhân duy nhất từ hai con số.\n\n**Trả lời miệng:** “Em so lỗi train với mức lỗi có thể đạt được, rồi xem khoảng cách dev–train. Nếu train còn kém, em kiểm tra năng lực mô hình, dữ liệu và tối ưu. Nếu train tốt nhưng dev kém, em kiểm tra overfitting và phân phối trước khi thêm dữ liệu hay regularization.”\n\n**Hỏi tiếp:** Thêm regularization khi train đã rất kém có luôn giúp? → Không; regularization quá mạnh có thể làm thiếu khớp nặng hơn. Phải xử lý theo chẩn đoán.",
     "blocks": [
@@ -6987,7 +6987,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.1"
     ],
@@ -7006,7 +7006,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "L2 regularization làm gì? Có phải luôn là weight decay?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 3,
     "bodyMarkdown": "**Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 21–30. Phân biệt với AdamW là giải thích bổ sung.\n\n**Hiểu từ đầu:** L2 thêm hình phạt cho trọng số lớn vào mục tiêu học. Ví dụ dùng quy ước `J = J_data + (λ/2)Σw²`, với λ ≥ 0, thì gradient của phần phạt theo w là λw. Optimizer vừa giảm sai số dữ liệu, vừa chịu áp lực giữ trọng số nhỏ hơn.\n\nVới gradient descent cơ bản, cập nhật thành `w_mới = (1−ηλ)w − ηg_data`. Vì có hệ số co trọng số nên nó liên hệ với weight decay. Nhưng với optimizer thích nghi như Adam, thêm L2 vào loss không hoàn toàn tương đương tách một bước weight decay như AdamW. Nếu tài liệu dùng `λ/(2m)` thì gradient phần phạt là `λw/m`; cần nhất quán quy ước.\n\n**Ví dụ:** w=2, gradient từ dữ liệu=0,5, η=0,1, λ=0,2. Gradient tổng là 0,9; w mới = 1,91. Không có L2 thì w mới = 1,95. L2 làm bước này co mạnh hơn, nhưng dùng quá mạnh có thể underfit.\n\n**Trả lời miệng:** “L2 thêm hình phạt bình phương trọng số vào loss để hạn chế cách mô hình khớp dữ liệu. Với gradient descent nó tạo hiệu ứng co trọng số. Mức phạt cần chọn bằng dev; nó không bảo đảm mọi trọng số về 0 hoặc mọi mô hình đều tốt hơn.”\n\n**Bẫy:** Trọng số nhỏ không đồng nghĩa mọi đặc trưng ít quan trọng; còn thang đo đầu vào và các tầng khác. Không nên giải thích L2 như chắc chắn biến toàn mạng phi tuyến thành tuyến tính.",
     "blocks": [
@@ -7048,7 +7048,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.1"
     ],
@@ -7067,7 +7067,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Inverted dropout là gì? Vì sao chia cho keep_prob?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 4,
     "bodyMarkdown": "**Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 31–40, đặc biệt 33–36.\n\n**Hiểu từ đầu:** Trong lúc train, dropout ngẫu nhiên bỏ một phần activation để mạng bớt phụ thuộc vào một nhóm đơn vị cố định. Gọi q=`keep_prob` là xác suất giữ, với 0<q≤1; mặt nạ d nhận 1 với xác suất q và 0 nếu bị bỏ.\n\nInverted dropout dùng `a_train = d×a/q`. Với a đang xét cố định, kỳ vọng theo mặt nạ là `E[d×a/q]=a`, vì E[d]=q. Đây là giữ kỳ vọng của activation tại phép dropout, không bảo đảm đầu ra toàn mạng sau các phi tuyến có kỳ vọng hoàn toàn giống mạng không dropout. Khi inference thông thường, tắt dropout và dùng activation không bị bỏ.\n\n**Ví dụ:** a=4, q=0,8. Khi được giữ, giá trị là 5; khi bỏ là 0. Trung bình theo xác suất: `0,8×5 + 0,2×0 = 4`. Một lần chạy không nhất thiết giữ đúng 80% mọi đơn vị.\n\n**Trả lời miệng:** “Inverted dropout bỏ ngẫu nhiên activation lúc train, rồi chia những activation còn lại cho xác suất giữ để bảo toàn kỳ vọng tại bước đó. Khi dự đoán thông thường thì không bỏ đơn vị. Dropout quá mạnh có thể làm học khó, nên tỷ lệ cần được chọn phù hợp.”\n\n**Hỏi tiếp:** `dropout rate=0,2` có phải `keep_prob=0,2`? → Không; keep_prob=0,8. Nhầm hai cách đặt tên sẽ làm rơi mất quá nhiều đơn vị.",
     "blocks": [
@@ -7109,7 +7109,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.1"
     ],
@@ -7128,7 +7128,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Augmentation và early stopping giúp giảm overfitting ra sao?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 5,
     "bodyMarkdown": "**Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 41–44.\n\n**Hiểu từ đầu:** Data augmentation tạo biến thể hợp lệ của dữ liệu train, giúp mô hình thấy thêm các tình huống mà ta muốn nó xử lý. Nó dựa vào giả định phép biến đổi giữ ý nghĩa nhiệm vụ: ảnh con mèo sáng hơn vẫn là mèo, nhưng xoay số 6 có thể đổi nhãn.\n\nEarly stopping theo dõi dev và dừng khi không cải thiện theo quy tắc, thường có patience để tránh phản ứng với một dao động. Lưu checkpoint tốt nhất thay vì mặc định dùng epoch cuối. Early stopping đồng thời ảnh hưởng mức tối ưu trên train và mức regularization, nên không phải hai “nút chỉnh” độc lập hoàn toàn.\n\n**Ví dụ:** dev loss qua bốn lần đánh giá là 0,6; 0,4; 0,45; 0,5. Trong các bản đã lưu, bản thứ hai tốt nhất theo tiêu chí dev loss. Nếu đã thiết kế patience phù hợp thì có thể dừng sau các lần không cải thiện; không mở test để chọn epoch.\n\n**Trả lời miệng:** “Augmentation giúp tăng sự đa dạng bằng biến đổi hợp lệ; early stopping giới hạn việc tiếp tục khớp train khi dev không còn cải thiện. Em chọn phép biến đổi giữ đúng nhãn, chia dữ liệu trước augmentation và khôi phục checkpoint phù hợp.”\n\n**Hỏi tiếp:** Augmentation có thay hoàn toàn dữ liệu thật mới không? → Không. Nó chỉ tạo biến thể theo các giả định đã chọn và có thể không tái hiện được môi trường triển khai.",
     "blocks": [
@@ -7170,7 +7170,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.1"
     ],
@@ -7189,7 +7189,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Chuẩn hóa đầu vào khác biến dữ liệu thành phân phối chuẩn thế nào?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 6,
     "bodyMarkdown": "**Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 45–51.\n\n**Hiểu từ đầu:** Với mỗi đặc trưng, chuẩn hóa dạng z-score tính `x'=(x−μ)/σ`, dùng trung bình và độ lệch chuẩn từ train. Điều này đưa các đặc trưng về thang đo dễ xử lý hơn, thường hỗ trợ tối ưu khi một biến tính bằng nghìn và biến khác chỉ quanh 0–1.\n\nKhông tính μ,σ trên toàn bộ dữ liệu trước khi chia; đó là đưa thông tin của dev/test vào xử lý train. Sau khi học μ,σ từ train, dùng đúng chúng cho dev/test và inference. Chuẩn hóa chỉ đổi vị trí và thang đo, không biến mọi phân phối lệch thành phân phối chuẩn, cũng không bảo đảm loss luôn có hình tròn đẹp.\n\n**Ví dụ:** train cho μ=50, σ=10. Một mẫu mới x=70 thành 2. Nếu dev tự tính một μ khác để biến cùng giá trị thành số khác, mô hình nhận thang đo không nhất quán.\n\n**Trả lời miệng:** “Chuẩn hóa giúp các đặc trưng có thang đo phù hợp hơn cho tối ưu. Em học thống kê trên train rồi áp dụng lại cho các tập khác. Đây không phải biến dữ liệu thành phân phối chuẩn, và cần xử lý cột có độ lệch chuẩn bằng 0.”\n\n**Hỏi tiếp:** Chia cho phương sai hay độ lệch chuẩn? → Z-score chia cho độ lệch chuẩn σ. Phương sai là σ²; trộn hai khái niệm tạo phép biến đổi khác.",
     "blocks": [
@@ -7231,7 +7231,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.1"
     ],
@@ -7250,7 +7250,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Vì sao cần khởi tạo ngẫu nhiên, Xavier hoặc He?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 7,
     "bodyMarkdown": "**Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 53–61; xem thêm DL19–DL20 ở bộ nền tảng.\n\n**Hiểu từ đầu:** Các nơ-ron ẩn khởi tạo giống hệt nhau có thể nhận gradient giống nhau và học cùng một đặc trưng. Khởi tạo ngẫu nhiên phá đối xứng. Tuy nhiên, “ngẫu nhiên” chưa đủ: trọng số quá lớn/nhỏ có thể làm activation và gradient phóng đại hoặc suy giảm qua nhiều tầng.\n\nHe cho ReLU thường lấy trọng số có phương sai `2/fan_in`, tức lấy chuẩn tắc nhân `sqrt(2/fan_in)`. Xavier/Glorot thường phù hợp tanh hoặc phép biến đổi gần tuyến tính; dạng thông dụng cân bằng fan-in/fan-out có phương sai `2/(fan_in+fan_out)`. Dạng `1/fan_in` trong bài là một trực giác/biến thể đơn giản, trùng khi fan-in=fan-out. Bias bằng 0 thường vẫn hợp lệ.\n\n**Ví dụ:** fan_in=100, He normal có độ lệch chuẩn `sqrt(0,02)≈0,1414`. Không phải đặt mọi trọng số bằng 0,1414; đó là thang của phân phối ngẫu nhiên.\n\n**Trả lời miệng:** “Khởi tạo cần vừa phá đối xứng vừa giữ thang tín hiệu hợp lý qua các tầng. He thường dùng với ReLU; Xavier thường dùng với tanh và các cấu hình phù hợp. Chúng giúp giảm vấn đề gradient nhưng không bảo đảm loại bỏ hoàn toàn vanishing hoặc exploding.”\n\n**Hỏi tiếp:** Gradient clipping có chữa vanishing gradient không? → Nó chủ yếu giới hạn gradient quá lớn, không khôi phục gradient đã quá nhỏ.",
     "blocks": [
@@ -7292,7 +7292,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.1"
     ],
@@ -7311,7 +7311,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Gradient checking kiểm tra gì và vì sao không dùng để train?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 8,
     "bodyMarkdown": "**Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 62–72.\n\n**Hiểu từ đầu:** Ta muốn kiểm tra mã backprop có tính đúng đạo hàm không. Với tham số θᵢ, xấp xỉ gradient bằng cách dịch θᵢ một lượng nhỏ ở hai phía: `[J(θ+εeᵢ)−J(θ−εeᵢ)]/(2ε)`, trong đó eᵢ chỉ thay đúng tọa độ i.\n\nSo vector gradient số với gradient backprop, ví dụ dùng tỷ lệ `||g_num−g_bp||/(||g_num||+||g_bp||)`, có xử lý trường hợp mẫu số gần 0. Phép thử tốn nhiều lượt forward theo số tham số nên phù hợp debug trên mạng/dữ liệu nhỏ. Cần cùng dữ liệu, cùng mục tiêu gồm regularization, kiểm soát ngẫu nhiên; thường tắt dropout. Kiểm tra ngay tại điểm gãy của ReLU, hoặc chọn ε quá lớn/quá nhỏ, có thể làm kết quả khó diễn giải.\n\n**Ví dụ:** J(w)=w², w=3, ε=0,001. Hiệu hai phía là `((3,001)²−(2,999)²)/0,002=6`, khớp đạo hàm 2w. Trong tính toán số thực có sai số làm tròn nên không đòi hai vector giống tuyệt đối.\n\n**Trả lời miệng:** “Gradient checking dùng sai phân hữu hạn để đối chiếu đạo hàm do backprop tính. Nó giúp tìm lỗi triển khai, không thay backprop trong train vì rất tốn. Em giữ phép tính xác định, tính cả phần phạt và hiểu rằng ngưỡng sai số phụ thuộc độ chính xác số và hàm đang kiểm tra.”\n\n**Bẫy:** Chọn ε=10⁻⁷ không tự bảo đảm đúng; ngưỡng trong ví dụ giảng dạy không là luật cho mọi kiểu dữ liệu và mô hình.",
     "blocks": [
@@ -7353,7 +7353,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.1"
     ],
@@ -7372,7 +7372,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Batch GD, SGD và mini-batch khác nhau ở đâu?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 9,
     "bodyMarkdown": "**Nguồn:** `2.2 Optimization Algorithms.txt`, slide 3–17.\n\n**Hiểu từ đầu:** Full-batch tính gradient trên toàn bộ tập train cho một bước. SGD theo nghĩa chặt dùng một mẫu; mini-batch dùng một nhóm. Mini-batch tận dụng phép tính vector hóa mà không cần giữ toàn bộ dữ liệu trong bộ nhớ, nhưng gradient từng batch có nhiễu nên loss có thể dao động.\n\nEpoch là một lượt qua train; step thường là một lần cập nhật. Kích thước batch ảnh hưởng bộ nhớ, số bước, tốc độ và đặc tính tối ưu. Các giá trị 32/64/128 là điểm thử thường gặp, không phải điều kiện bắt buộc hay bảo đảm batch càng lớn càng tốt. Optimizer có tên SGD trong thư viện vẫn thường chạy trên mini-batch.\n\n**Ví dụ:** 1.030 mẫu, batch size 128: giữ batch cuối thì 9 step/epoch, trong đó batch cuối 6 mẫu. Bỏ batch cuối thì 8 step/epoch. Ví dụ giả định một batch dẫn tới một bước, không gradient accumulation.\n\n**Trả lời miệng:** “Ba cách khác ở số mẫu dùng để ước lượng gradient mỗi bước. Mini-batch thường là lựa chọn thực tế vì cân bằng bộ nhớ và hiệu quả tính toán. Loss mỗi bước không bắt buộc giảm đều vì batch khác nhau; em theo dõi xu hướng và metric đánh giá phù hợp.”\n\n**Hỏi tiếp:** Batch lớn gấp đôi có làm thời gian train giảm đúng một nửa không? → Không. Còn phần cứng, truyền dữ liệu, số phép tính và số epoch cần học.",
     "blocks": [
@@ -7414,7 +7414,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.2"
     ],
@@ -7433,7 +7433,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Trung bình trượt có trọng số mũ liên quan gì tới momentum?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 10,
     "bodyMarkdown": "**Nguồn:** `2.2 Optimization Algorithms.txt`, slide 18–38.\n\n**Hiểu từ đầu:** Exponentially weighted average lưu một trung bình cập nhật dần: `v_t=βv_(t−1)+(1−β)x_t`. β gần 1 giữ ký ức lâu hơn và làm chuỗi mượt hơn, nhưng phản ứng chậm hơn với thay đổi. Trực giác độ dài ghi nhớ khoảng `1/(1−β)`, không phải một cửa sổ cắt cứng.\n\nMomentum áp dụng ý tưởng này cho gradient g_t rồi cập nhật `w_t=w_(t−1)−ηv_t`. Các hướng gradient nhất quán được tích lũy, hướng đổi dấu liên tục bớt gây dao động. Có biến thể momentum không viết hệ số `(1−β)`; khi so công thức phải chú ý quy ước và learning rate tương ứng.\n\n**Ví dụ:** v₀=0, β=0,9, gradient lần đầu 2 rồi 4. v₁=0,2; v₂=0,9×0,2+0,1×4=0,58. Giá trị không bằng trung bình cộng 3 vì có trọng số giảm dần và khởi tạo từ 0.\n\n**Trả lời miệng:** “Momentum dùng thông tin gradient từ nhiều bước thay vì chỉ bước hiện tại. Nó có thể làm cập nhật bớt dao động và tiến nhanh theo hướng ổn định. Beta điều khiển mức ghi nhớ, còn learning rate vẫn quyết định độ lớn bước; momentum không bảo đảm luôn nhanh hơn.”\n\n**Hỏi tiếp:** Vì sao trung bình ban đầu bị thấp khi bắt đầu bằng 0? → Chưa có đủ lịch sử nên hệ số tổng chưa bằng 1. Với EWMA khởi tạo 0, có thể hiệu chỉnh bằng chia `1−β^t`; Adam dùng ý tưởng này.",
     "blocks": [
@@ -7475,7 +7475,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.2"
     ],
@@ -7494,7 +7494,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "RMSprop và Adam khác momentum thế nào? Bias correction làm gì?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 11,
     "bodyMarkdown": "**Nguồn:** `2.2 Optimization Algorithms.txt`, slide 31–34 và 39–48.\n\n**Hiểu từ đầu:** RMSprop lưu trung bình trượt của **bình phương gradient**: `s_t=β₂s_(t−1)+(1−β₂)g_t²`, rồi cập nhật theo `g_t/(sqrt(s_t)+ε)`. Phép bình phương/căn/chia được thực hiện theo từng tham số. Chiều có lịch sử gradient lớn nhận điều chỉnh khác chiều có gradient nhỏ.\n\nAdam kết hợp một trung bình của gradient `v_t=β₁v_(t−1)+(1−β₁)g_t` và một trung bình bình phương s_t. Khi khởi tạo cả hai bằng 0, dùng `v̂_t=v_t/(1−β₁^t)`, `ŝ_t=s_t/(1−β₂^t)`, rồi `w_t=w_(t−1)−ηv̂_t/(sqrt(ŝ_t)+ε)`. ε giúp ổn định mẫu số; β₁=0,9 và β₂=0,999 là các giá trị thử phổ biến, không phải tối ưu cho mọi bài.\n\n**Ví dụ:** bước đầu g=2 cho v₁=0,2 và s₁=0,004 với hai beta trên. Hiệu chỉnh cho v̂₁=2 và ŝ₁=4. Tỷ lệ `2/(sqrt(4)+ε)` gần 1; bước cập nhật gần η, không phải 2η như GD thuần.\n\n**Trả lời miệng:** “Momentum làm mượt gradient; RMSprop dùng bình phương gradient để điều chỉnh từng chiều. Adam kết hợp cả hai và hiệu chỉnh sự lệch do bắt đầu các trung bình bằng 0. Adam vẫn cần chọn learning rate và đánh giá bằng dev, không có bảo đảm luôn vượt SGD.”\n\n**Bẫy:** Bias correction này không phải sửa high bias/underfitting của mô hình, cũng không phải cập nhật tham số bias b của nơ-ron.",
     "blocks": [
@@ -7536,7 +7536,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.2"
     ],
@@ -7555,7 +7555,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Learning-rate decay giúp gì? Gradient bằng 0 có chắc là nghiệm tốt?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 12,
     "bodyMarkdown": "**Nguồn:** `2.2 Optimization Algorithms.txt`, slide 49–58.\n\n**Hiểu từ đầu:** Learning-rate decay giảm η theo lịch hoặc tín hiệu để các bước về sau nhỏ hơn. Một lịch ví dụ là `η_epoch=η₀/(1+d×epoch)`. Ta có thể đi tương đối nhanh ở đầu và tinh chỉnh về sau, nhưng giảm quá sớm có thể làm mạng gần như ngừng học.\n\nKhông gian loss có thể có cực tiểu, cực đại, điểm yên ngựa và vùng phẳng. Ở điểm yên ngựa, một hướng có thể đi lên còn hướng khác đi xuống. Gradient nhỏ hoặc bằng 0 không tự chứng minh mô hình đã đạt nghiệm tốt nhất. Momentum/Adam đôi khi hỗ trợ quá trình tối ưu, nhưng không được khẳng định chúng luôn thoát mọi điểm yên ngựa hoặc tìm global minimum.\n\n**Ví dụ:** η₀=0,1, d=0,1, epoch=10 thì η=0,05. Với hàm minh họa `f(x,y)=x²−y²`, tại (0,0) gradient bằng 0 nhưng tăng x làm f tăng, tăng y làm f giảm: đó là điểm yên ngựa.\n\n**Trả lời miệng:** “Decay thay learning rate theo tiến trình để điều chỉnh độ lớn bước học. Em theo dõi cả tối ưu và dev để chọn lịch. Loss đứng yên có thể do learning rate, vùng phẳng hoặc lỗi khác; gradient bằng 0 chưa nói được đây là nghiệm tốt nhất.”\n\n**Hỏi tiếp:** Learning-rate decay khác L2 weight decay không? → Có. Một cái thay η; một cái tác động lên trọng số. Tên đều có decay nhưng không cùng cơ chế.",
     "blocks": [
@@ -7597,7 +7597,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.2"
     ],
@@ -7616,7 +7616,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Tìm siêu tham số thế nào để không phí công?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 13,
     "bodyMarkdown": "**Nguồn:** `2.3 Hyper parameter tuning.txt`, slide 3–16.\n\n**Hiểu từ đầu:** Grid search thử các tổ hợp trên lưới đã chọn; random search lấy các cấu hình ngẫu nhiên trong miền. Khi chỉ vài siêu tham số thật sự quan trọng, random search có thể khảo sát nhiều giá trị khác nhau của chúng hơn với cùng ngân sách. Không phải random luôn thắng mọi lưới nhỏ có cơ sở.\n\nLearning rate thường khác nhau theo bậc độ lớn, nên thử trên log scale: lấy r đều trong [−4,−1], đặt η=10^r. Khi đó vùng [10⁻⁴,10⁻³] được quan tâm ngang vùng [10⁻³,10⁻²], thay vì dồn hầu hết lượt vào khoảng có giá trị lớn. Với β gần 1, có thể lấy log scale cho `1−β`, rồi suy ra β.\n\n**Ví dụ:** thử rộng, thấy η quanh 0,001 tốt thì lấy mẫu dày hơn ở miền đó, gọi là coarse-to-fine. “Panda” là chăm một vài lượt train khi ít tài nguyên; “Caviar” là chạy nhiều cấu hình song song. Đây là ví von về ngân sách, không phải thuật toán mới.\n\n**Trả lời miệng:** “Em xác định miền thử và ngân sách, ưu tiên các siêu tham số ảnh hưởng lớn, chọn thang đo thích hợp rồi thu hẹp quanh vùng tốt. Mọi lựa chọn dựa trên dev; không dùng test làm bảng xếp hạng cấu hình. Em ghi lại cấu hình để kết quả tái lập được.”\n\n**Hỏi tiếp:** Tăng gấp đôi số cấu hình thử có chắc tăng chất lượng thực tế? → Không. Có thể tốn hơn hoặc quá thích nghi với dev; cần đánh giá cuối độc lập và kiểm tra độ ổn định.",
     "blocks": [
@@ -7658,7 +7658,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.3"
     ],
@@ -7677,7 +7677,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "BatchNorm hoạt động ra sao? Framework tự làm phần nào?",
-    "groupTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "groupTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "order": 14,
     "bodyMarkdown": "**Nguồn:** `2.3 Hyper parameter tuning.txt`, slide 17–29 (BatchNorm), 30–41 (softmax), 42–53 và mục tiêu slide 1 (framework). Chi tiết inference và cách diễn đạt TensorFlow 2 dưới đây là giải thích bổ sung; một số công thức BN không còn trong text trích xuất.\n\n**Hiểu từ đầu:** BatchNorm chuẩn hóa giá trị trung gian theo các chiều thích hợp của mini-batch: `z_norm=(z−μ_batch)/sqrt(σ²_batch+ε)`, sau đó `z_out=γz_norm+β`. Gamma và beta là tham số được học, giúp mạng chọn lại thang và vị trí sau bước chuẩn hóa. Beta ở đây khác beta của Adam.\n\nTrong cấu hình thường dùng, train dùng thống kê batch và cập nhật trung bình/phương sai chạy; inference dùng thống kê chạy đã lưu. Không chuẩn hóa một mẫu mới bằng cách tùy tiện tính lại mọi thống kê của tập test. Nếu BN đặt ngay sau phép affine, bias trước BN thường dư thừa trong cách đặt thông dụng vì bị trừ khi định tâm; đây không phải lệnh xóa mọi bias trong mọi kiến trúc. BN giúp tối ưu trong nhiều trường hợp, không bảo đảm luôn hiệu quả với mọi batch size.\n\n**Ví dụ:** z=[2,4], μ=3, phương sai chia 2 là 1. Bỏ qua ε rất nhỏ, z_norm=[−1,1]. Nếu γ=2, β=3 thì đầu ra [1,5]. Như vậy đầu ra sau BN không bắt buộc có mean 0, variance 1 vì mạng còn học phép co/dịch.\n\n**Trả lời miệng:** “BatchNorm chuẩn hóa activation trung gian rồi học thêm gamma và beta để giữ tính linh hoạt. Train và inference dùng thống kê khác nhau trong cấu hình phổ biến, nên cần chế độ đúng. Nó khác chuẩn hóa dữ liệu đầu vào và không thay thế việc chia dữ liệu hay chọn learning rate đúng.”\n\n**Hỏi tiếp:** BN có bắt buộc loại bỏ overfitting không? → Không. Nhiễu do batch có thể tạo một hiệu ứng regularization, nhưng không thay mọi phương pháp kiểm soát overfit.\n\n### Liên hệ softmax trong cùng bài 2.3\n\nVới C lớp loại trừ nhau, `p_i=exp(z_i)/Σ_j exp(z_j)`, tổng p bằng 1. Để ổn định số học, có thể trừ cùng `max(z)` trước khi lấy exp. Cross-entropy của một nhãn đúng là `−log(p_đúng)`; đạo hàm theo logit là `p−y` cho một mẫu với nhãn one-hot. Nếu cost lấy trung bình m mẫu thì có thêm cách phân bố hệ số 1/m trong công thức gradient. Xem DL07–DL08 trong [bộ DL nền tảng](../Chuyen-de/03-Deep-Learning.md). Không dùng softmax để ép các nhãn cạnh tranh khi bài toán cho phép nhiều nhãn cùng đúng.\n\n### TensorFlow: hiểu vai trò, không học lẫn hai thế hệ API\n\n- `tf.Variable`: chứa giá trị có thể cập nhật, ví dụ trọng số. GradientTape mặc định theo dõi trainable variables được dùng trong phép tính được ghi lại.\n- `tf.GradientTape`: ghi các phép toán phù hợp để tính đạo hàm bằng automatic differentiation; optimizer dùng gradient để cập nhật.\n- `@tf.function`: chuyển hàm phù hợp sang computation graph nhằm hỗ trợ thực thi tối ưu; không tự bảo đảm mọi chương trình chạy nhanh hơn hoặc tự sửa lỗi dữ liệu.\n\nMục tiêu slide 1 có nhắc các API này, nhưng ví dụ slide 49–52 lại dùng `Session`, `placeholder` và `tf.train.GradientDescentOptimizer` theo cách TensorFlow 1. Đừng trộn chúng thành một chương trình TensorFlow 2 mà không có lớp tương thích. Điều cốt lõi cần trả lời: **mình định nghĩa forward/loss, framework tính gradient, optimizer cập nhật; vẫn phải chọn dữ liệu, loss, shape và chế độ train/inference đúng**.",
     "blocks": [
@@ -7719,7 +7719,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl2",
-    "chapterTitle": "Chương 2 — Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
+    "chapterTitle": "Chương 2: Huấn luyện và tối ưu hóa: hiểu vì sao mạng học tốt hoặc học hỏng",
     "lessonIds": [
       "2.3"
     ],
@@ -7738,7 +7738,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Orthogonalization là gì? Vì sao cần tách bốn mục tiêu?",
-    "groupTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "groupTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "order": 1,
     "bodyMarkdown": "**Nguồn:** `3.1 Introduction to ML strategy.txt`, slide 3–11, đặc biệt slide 9.\n\n**Hiểu từ đầu:** Khi mô hình kém, có thể thử tăng mạng, thêm dữ liệu, đổi optimizer hoặc đổi metric. Orthogonalization ở đây là cố gắng tách các mục tiêu để hiểu mỗi thay đổi chủ yếu xử lý vấn đề nào. Nó giống bảng điều khiển có nút chỉnh âm lượng riêng, độ sáng riêng, thay vì một nút thay tất cả.\n\nBốn bước cần kiểm tra: **(1)** học được train; **(2)** tổng quát hóa sang dev; **(3)** vẫn tốt trên test độc lập; **(4)** hữu ích ngoài thực tế. Nếu train kém, xem năng lực mô hình/tối ưu. Nếu train tốt nhưng dev kém, xem regularization/dữ liệu. Dev tốt nhưng test kém cần kiểm tra overfit vào dev, cỡ mẫu và phân phối. Test tốt nhưng sản phẩm kém có thể do metric hoặc dữ liệu đánh giá chưa phản ánh nhu cầu.\n\n**Ví dụ:** mô hình train lỗi 1%, dev lỗi 20% thì thay ngay metric chưa chắc chữa được việc tổng quát hóa. Ngược lại, accuracy cao nhưng bỏ sót toàn bộ ca quan trọng có thể là mục tiêu đánh giá chưa phù hợp. Các “nút” thực tế vẫn tương tác, không độc lập tuyệt đối.\n\n**Trả lời miệng:** “Orthogonalization giúp tách câu hỏi cần giải quyết: khớp train, khái quát hóa, đánh giá cuối và hiệu quả thực tế. Em xác định đang hỏng ở bước nào rồi chọn biện pháp chủ yếu tác động vào bước đó. Đây là nguyên tắc tổ chức thử nghiệm, không phải bảo đảm một siêu tham số chỉ ảnh hưởng duy nhất một thứ.”\n\n**Hỏi tiếp:** Early stopping có trực giao hoàn toàn không? → Không. Nó vừa hạn chế thời gian tối ưu train vừa có tác dụng regularization, nên ảnh hưởng cả hai mục tiêu.",
     "blocks": [
@@ -7780,7 +7780,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl3",
-    "chapterTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "chapterTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "lessonIds": [
       "3.1"
     ],
@@ -7799,7 +7799,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Optimizing metric và satisficing metric khác nhau thế nào?",
-    "groupTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "groupTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "order": 2,
     "bodyMarkdown": "**Nguồn:** `3.1 Introduction to ML strategy.txt`, slide 12–20.\n\n**Hiểu từ đầu:** Optimizing metric là chỉ số muốn làm tốt nhất, ví dụ giảm MAE hoặc tăng F1. Satisficing metric là điều kiện cần đạt ngưỡng, ví dụ thời gian dự đoán không quá 100ms. Ta có thể lọc những mô hình không đạt ràng buộc, rồi so chỉ số tối ưu giữa các mô hình còn lại.\n\nMột chỉ số chính giúp quyết định nhanh hơn, nhưng không có nghĩa bỏ qua mọi lát cắt dữ liệu hoặc tác hại khác. Nếu precision và recall đều quan trọng, F1 là một cách tổng hợp: `2PR/(P+R)` khi mẫu số hợp lệ. F1 không tự đại diện đúng mọi chi phí sai của bài toán.\n\n**Ví dụ:** A có accuracy 90%, thời gian 80ms; B là 92%, 95ms; C là 95%, 1.500ms. Nếu yêu cầu ≤100ms và tối đa accuracy, chọn B trong ba mô hình. C có accuracy cao nhất nhưng không đủ điều kiện thời gian.\n\n**Trả lời miệng:** “Em phân biệt chỉ số cần tối ưu với các ràng buộc phải đáp ứng. Ví dụ tối đa accuracy trong nhóm mô hình chạy dưới 100ms. Cách này tránh tranh luận mô hình nào tốt hơn khi một mô hình chính xác hơn nhưng quá chậm; các ngưỡng cần xuất phát từ nhu cầu thực tế.”\n\n**Hỏi tiếp:** Nếu không mô hình nào đạt ngưỡng? → Chưa có phương án đáp ứng yêu cầu; cần cải thiện mô hình/hệ thống hoặc xem lại ràng buộc có căn cứ, không âm thầm chọn mô hình vi phạm rồi gọi là đạt.",
     "blocks": [
@@ -7841,7 +7841,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl3",
-    "chapterTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "chapterTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "lessonIds": [
       "3.1"
     ],
@@ -7860,7 +7860,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Chọn dev/test theo mục tiêu nào? Khi nào cần thay đổi?",
-    "groupTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "groupTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "order": 3,
     "bodyMarkdown": "**Nguồn:** `3.1 Introduction to ML strategy.txt`, slide 21–38.\n\n**Hiểu từ đầu:** Dev là nơi thử các ý tưởng; test là đánh giá cuối. Nếu cả hai dùng để đánh giá cùng mục tiêu triển khai, chúng nên lấy theo cùng phân phối mục tiêu và cùng quy tắc gán nhãn. Train có thể có thêm nguồn khác, nhưng việc đó cần phân tích riêng. Không thể chỉ đòi “chia ngẫu nhiên” mà bỏ qua nguồn, thời gian hoặc nhóm đối tượng.\n\nCỡ dev phải đủ để phân biệt những mô hình đang so; test đủ để đánh giá kết quả với độ bất định phù hợp. Tỷ lệ phần trăm không tự quyết định chất lượng: 1% của một triệu khác 1% của một nghìn. Nếu metric xếp mô hình ngược với nhu cầu thực tế, hoặc dữ liệu đánh giá sai môi trường, nên sửa mục tiêu đo lường trước khi tiếp tục tối ưu.\n\n**Ví dụ:** app nhận ảnh điện thoại mờ nhưng dev/test toàn ảnh studio. Cải thiện trên studio chưa phản ánh app. Có thể thiết kế lại tập đánh giá đại diện điện thoại, ghi phiên bản và quy trình rõ. Nếu đã dùng kết quả test cũ để ra quyết định, cần đánh giá cuối độc lập phù hợp cho phiên bản tiếp theo.\n\n**Trả lời miệng:** “Em chọn dev/test để phản ánh dữ liệu và mục tiêu thật. Chỉ số và dữ liệu phải giúp chọn được mô hình mà người dùng thực sự muốn. Khi mục tiêu đo sai, em điều chỉnh có lý do và ghi lại; không đổi test chỉ để làm điểm đẹp hơn.”\n\n**Bẫy:** Không phải mọi hệ đánh giá đều chỉ có một phân phối; có thể thêm các test stress/out-of-distribution riêng. Phải gắn nhãn đúng mục đích, không so các điểm khác phân phối như cùng một phép đo.",
     "blocks": [
@@ -7902,7 +7902,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl3",
-    "chapterTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "chapterTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "lessonIds": [
       "3.1"
     ],
@@ -7921,7 +7921,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Human-level performance, Bayes error và avoidable bias là gì?",
-    "groupTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "groupTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "order": 4,
     "bodyMarkdown": "**Nguồn:** `3.1 Introduction to ML strategy.txt`, slide 39–64.\n\n**Hiểu từ đầu:** Bayes optimal error là sai số tối thiểu có thể đạt theo bài toán, thông tin đầu vào, phân phối và loss đang xét. Nó có thể lớn hơn 0 vì dữ liệu mơ hồ hoặc thông tin đầu vào không đủ. Human-level performance (HLP) là hiệu năng một nhóm người được xác định rõ, chẳng hạn chuyên gia, không phải một hằng số chung cho mọi người.\n\nTrong nhiệm vụ con người làm rất tốt, lỗi chuyên gia có thể là mốc gần Bayes error để định hướng. **Avoidable bias** được ước lượng bằng train error trừ lỗi tham chiếu phù hợp; khoảng dev−train gợi ý phần tổng quát hóa dưới các giả định phù hợp. Đây là phép chẩn đoán thực hành, không phải luôn là phân rã bias/variance toán học chính xác của mọi mô hình.\n\n**Ví dụ:** chuyên gia 1%, train 8%, dev 10%, cùng cách đo và phân phối phù hợp. Khoảng tới chuyên gia là 7 **điểm phần trăm**, khoảng dev−train là 2 điểm. Nên xem việc khớp train trước. Nếu chuyên gia 7,5% thì khoảng đầu chỉ 0,5 điểm, thứ tự ưu tiên có thể khác.\n\n**Trả lời miệng:** “Human-level error có thể giúp ước lượng mức sai có thể đạt ở một số nhiệm vụ, nhưng không bằng Bayes error theo định nghĩa. Em dùng mốc đó và khoảng train/dev để định hướng giảm avoidable bias hay variance. Nếu máy vượt con người thì mốc con người không còn cho biết chính xác còn cách tối ưu bao xa.”\n\n**Hỏi tiếp:** Máy vượt người có nghĩa vượt Bayes optimum không? → Không. Con người không nhất thiết tối ưu; với cùng thông tin và mục tiêu, Bayes optimum vẫn là giới hạn lý thuyết tương ứng.",
     "blocks": [
@@ -7963,7 +7963,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl3",
-    "chapterTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "chapterTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "lessonIds": [
       "3.1"
     ],
@@ -7982,7 +7982,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Error analysis làm gì? “Trần cải thiện” được hiểu thế nào?",
-    "groupTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "groupTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "order": 5,
     "bodyMarkdown": "**Nguồn:** `3.2 Error Analysis.txt`, slide 3–8 và bảng slide 14.\n\n**Hiểu từ đầu:** Error analysis là xem cụ thể các dự đoán sai rồi phân nhóm để tìm việc đáng làm. Có thể lập bảng: mã mẫu, nhãn thật, dự đoán, ảnh mờ, sai nhãn, đối tượng nhỏ, ghi chú. Một mẫu có thể thuộc nhiều nhóm, vì vậy tổng tỷ lệ các cột có thể vượt 100%.\n\nNếu một nhóm chiếm ít lỗi, chỉ sửa nhóm đó thường không thể giải quyết phần lớn vấn đề. “Trần cải thiện” là ước lượng lạc quan nếu sửa hết lỗi của nhóm và không làm hỏng mẫu khác, không phải lời hứa kết quả. Cần xem cả chi phí sửa, mức quan trọng của lỗi và độ đại diện của các mẫu được kiểm tra.\n\n**Ví dụ:** trên 1.000 mẫu dev, mô hình sai 100; trong đó 8 lỗi liên quan chó bị nhận thành mèo. Nếu sửa đúng cả 8 và không tạo lỗi mới, error giảm từ 10% xuống 9,2%: cải thiện tối đa 0,8 điểm phần trăm trong ví dụ này. Nhóm đó chiếm 8% **các lỗi**, không phải 8% toàn dev.\n\n**Trả lời miệng:** “Em xem một tập lỗi đại diện và phân nhóm để tìm hướng cải thiện có ảnh hưởng lớn. Tỷ lệ một loại lỗi giúp ước lượng lợi ích tối đa nếu chỉ sửa loại đó. Em kiểm tra mẫu số, các nhóm chồng lấn và chi phí thực hiện trước khi quyết định thu thập dữ liệu hay đổi mô hình.”\n\n**Hỏi tiếp:** 60% lỗi là ảnh mờ thì chỉ cần tăng ảnh mờ là chắc sửa hết? → Không. Nhóm lỗi chỉ gợi ý hướng; còn chất lượng nhãn, thông tin ảnh, mô hình và dữ liệu thật sự cần thêm.",
     "blocks": [
@@ -8024,7 +8024,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl3",
-    "chapterTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "chapterTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "lessonIds": [
       "3.2"
     ],
@@ -8043,7 +8043,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Có nên sửa mọi nhãn sai? Sửa dev/test thế nào cho nhất quán?",
-    "groupTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "groupTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "order": 6,
     "bodyMarkdown": "**Nguồn:** `3.2 Error Analysis.txt`, slide 9–15.\n\n**Hiểu từ đầu:** Nhãn sai làm sai cả việc học lẫn phép đo. Tuy nhiên, mức ưu tiên sửa phụ thuộc tỷ lệ, tính ngẫu nhiên/hệ thống và mức tác động. Một hệ thống có thể chịu được phần nhiễu nhãn ngẫu nhiên nhất định, nhưng không có nghĩa nhãn sai luôn vô hại, đặc biệt nếu một nhóm bị gán sai có hệ thống.\n\nỞ dev/test, cần tiêu chuẩn gán nhãn rõ và quy trình áp dụng nhất quán. Xem cả mẫu mô hình đoán đúng và sai: nếu chỉ sửa các nhãn làm mô hình có vẻ sai, có thể thiên lệch phép đo về phía mô hình. Việc chỉnh nhãn test là bảo trì chất lượng đánh giá, không phải cơ hội xem lỗi rồi tối ưu mô hình lặp lại trên test.\n\n**Ví dụ:** dev error 2%, trong đó 0,6 điểm phần trăm do nhãn sai. Khi đang so hai mô hình chênh 0,2 điểm, lỗi nhãn này có thể đáng chú ý. Nếu dev error 20%, cùng 0,6 điểm do nhãn sai thì còn nhiều nguồn lỗi lớn hơn để xem.\n\n**Trả lời miệng:** “Em đánh giá mức ảnh hưởng và cơ chế sai nhãn trước khi sửa. Với dev/test, em dùng cùng tiêu chuẩn, xem cả mẫu đoán đúng lẫn sai và lưu phiên bản dữ liệu. Chất lượng nhãn quan trọng, nhưng không nên sửa nhãn theo hướng ưu ái dự đoán hiện tại.”\n\n**Hỏi tiếp:** Sửa nhãn dev có bắt buộc train lại không? → Không tự động. Nếu chỉ sửa dữ liệu đánh giá, trước hết đánh giá lại mô hình; train lại khi có lý do như đổi train, mục tiêu hoặc lựa chọn mô hình sau đó.",
     "blocks": [
@@ -8085,7 +8085,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl3",
-    "chapterTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "chapterTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "lessonIds": [
       "3.2"
     ],
@@ -8104,7 +8104,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Vì sao nên xây baseline nhanh rồi lặp cải thiện?",
-    "groupTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "groupTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "order": 7,
     "bodyMarkdown": "**Nguồn:** `3.2 Error Analysis.txt`, slide 16–20.\n\n**Hiểu từ đầu:** Chưa có mô hình chạy được thì rất khó biết khó khăn chính nằm ở dữ liệu, năng lực mô hình hay triển khai. Baseline là hệ đơn giản, đo được và đủ đúng quy trình để tạo mốc. Nó có thể là dự đoán lớp phổ biến, một mô hình tuyến tính, hoặc pretrained model phù hợp với bài toán.\n\n“Làm nhanh” không phải bỏ chia tập, metric hoặc kiểm tra leakage. Quy trình ngắn là đặt mục tiêu → dựng baseline → đo train/dev → xem lỗi → chọn thay đổi có lý do → đo lại với cùng tiêu chuẩn. Ghi cấu hình và phiên bản dữ liệu để biết thay đổi nào đi cùng kết quả nào.\n\n**Ví dụ:** trước khi dành hai tuần thay Transformer lớn hơn, baseline cho thấy hầu hết câu sai chứa ký tự bị lỗi do tiền xử lý. Sửa pipeline có thể đáng làm trước. Nhưng đây là kết luận từ quan sát, không phải quy tắc mô hình đơn giản luôn đủ.\n\n**Trả lời miệng:** “Baseline giúp em có bằng chứng để chọn hướng làm thay vì đoán. Em xây một hệ đơn giản nhưng có chia dữ liệu và metric đúng, sau đó dùng bias/variance và error analysis để ưu tiên cải thiện. Mỗi vòng thay đổi cần được ghi lại và so công bằng.”\n\n**Hỏi tiếp:** Chỉ thử một random seed rồi kết luận hơn 0,1% có chắc không? → Chưa; cần cân nhắc nhiễu, kích thước tập đánh giá và độ ổn định của khác biệt.",
     "blocks": [
@@ -8146,7 +8146,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl3",
-    "chapterTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "chapterTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "lessonIds": [
       "3.2"
     ],
@@ -8165,7 +8165,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Training-dev giúp tách variance và data mismatch thế nào?",
-    "groupTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "groupTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "order": 8,
     "bodyMarkdown": "**Nguồn:** `3.2 Error Analysis.txt`, slide 21–38, đặc biệt 31–36.\n\n**Hiểu từ đầu:** Nếu train là ảnh web còn dev là ảnh điện thoại, dev kém hơn có thể do chưa khái quát hóa ngay trên ảnh web, do khác phân phối, hoặc cả hai. Tạo **training-dev**: dữ liệu giữ lại từ cùng phân phối với train, nhưng không dùng để cập nhật trọng số. Nó khác tập dev theo mục tiêu triển khai.\n\nSo train với training-dev giúp xem khả năng khái quát hóa trên nguồn train; so training-dev với dev giúp nhận diện ảnh hưởng đổi phân phối. Các khoảng sai số là gợi ý chẩn đoán, không chứng minh nguyên nhân duy nhất. Cần cùng metric, cách gán nhãn, cỡ mẫu đủ và chú ý độ khó khác nhau giữa các miền.\n\n**Ví dụ:** train=8%, training-dev=9%, dev=20%. Khoảng đầu là 1 điểm phần trăm, khoảng sau 11 điểm: data mismatch là hướng đáng xem. Có thể thu thập dữ liệu gần điện thoại hơn hoặc mô phỏng biến đổi hợp lý. Nếu chỉ lặp một loại nhiễu nhân tạo, mô hình có thể overfit chính loại nhiễu đó.\n\n**Trả lời miệng:** “Training-dev là tập không train nhưng cùng phân phối với train. Nó giúp phân biệt khoảng cách do tổng quát hóa trên nguồn cũ với khoảng cách khi chuyển sang miền mục tiêu. Em xem các chênh lệch cùng error analysis, rồi làm dữ liệu train gần mục tiêu hơn nếu có bằng chứng mismatch.”\n\n**Hỏi tiếp:** Training-dev có được dùng để backprop rồi vẫn làm vai trò này không? → Không. Khi đã dùng để cập nhật trọng số, nó không còn là mẫu giữ lại độc lập cho phép so sánh đó.",
     "blocks": [
@@ -8207,7 +8207,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl3",
-    "chapterTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "chapterTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "lessonIds": [
       "3.2"
     ],
@@ -8226,7 +8226,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Transfer learning khác multi-task learning thế nào?",
-    "groupTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "groupTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "order": 9,
     "bodyMarkdown": "**Nguồn:** `3.2 Error Analysis.txt`, slide 39–49; xem thêm DL28 trong [bộ DL nền tảng](../Chuyen-de/03-Deep-Learning.md).\n\n**Hiểu từ đầu:** Transfer learning tận dụng kiến thức từ nhiệm vụ/nguồn trước cho nhiệm vụ mới. Ví dụ lấy backbone học trên nhiều ảnh, thay đầu phân loại để nhận diện hoa, rồi học đầu mới hoặc fine-tune một phần/toàn bộ mạng. Hiệu quả phụ thuộc mức liên quan của biểu diễn, không chỉ số lượng dữ liệu nguồn.\n\nMulti-task learning học nhiều nhiệm vụ cùng lúc, thường chia sẻ một phần mạng và có đầu ra/loss riêng. Các nhiệm vụ có thể hỗ trợ nhau nếu cần đặc trưng chung, nhưng cũng có thể cạnh tranh hoặc gây **negative transfer**: chia sẻ làm một nhiệm vụ kém hơn. Cần xem trọng số loss, dữ liệu, năng lực mạng và kết quả từng nhiệm vụ.\n\n**Ví dụ:** hệ thị giác dùng backbone chung cho phân loại loại xe và dự đoán hướng xe là một ý tưởng multi-task. Dùng backbone đó để khởi tạo bài nhận diện loài hoa sau này là transfer. Multilabel chỉ mô tả cấu trúc nhãn nhiều nhãn cùng đúng; không phải mọi bài multilabel đều cần gọi là một thiết kế multi-task riêng biệt.\n\n**Trả lời miệng:** “Transfer learning chuyển kiến thức đã học sang nhiệm vụ mới; multi-task học nhiều nhiệm vụ đồng thời bằng chia sẻ biểu diễn phù hợp. Cả hai tận dụng điểm chung, nhưng không bảo đảm luôn cải thiện. Em so với baseline và theo dõi từng nhiệm vụ để phát hiện việc chia sẻ gây hại.”\n\n**Hỏi tiếp:** Fine-tuning có nghĩa chỉ học tầng cuối? → Không; có thể cập nhật một phần hoặc toàn bộ mô hình. Chỉ học tầng cuối là một chiến lược khi đóng băng phần trước.",
     "blocks": [
@@ -8268,7 +8268,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl3",
-    "chapterTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "chapterTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "lessonIds": [
       "3.2"
     ],
@@ -8287,7 +8287,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "End-to-end khác pipeline thế nào? Khi nào nên dùng?",
-    "groupTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "groupTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "order": 10,
     "bodyMarkdown": "**Nguồn:** `3.2 Error Analysis.txt`, slide 50–58.\n\n**Hiểu từ đầu:** Pipeline chia một nhiệm vụ thành nhiều chặng, chẳng hạn nhận vùng xương rồi dự đoán tuổi từ thông tin vùng đó. End-to-end học ánh xạ từ đầu vào tới mục tiêu cuối bằng mục tiêu huấn luyện chung, giảm phụ thuộc vào các bước trung gian được thiết kế/huấn luyện tách rời.\n\nEnd-to-end vẫn có thể gồm nhiều khối nội bộ, tiền xử lý và cấu trúc được thiết kế. Ý chính không phải “không có bước nào ở giữa”, mà là cách toàn hệ học hướng tới mục tiêu cuối. Nó có thể tận dụng dữ liệu để học biểu diễn hữu ích, nhưng cần đủ dữ liệu cho độ phức tạp và có thể khó debug hơn. Pipeline cho phép đưa kiến thức miền vào hoặc kiểm tra từng chặng, đổi lại có nguy cơ lỗi tích lũy và mục tiêu từng chặng không khớp mục tiêu cuối.\n\n**Ví dụ:** dịch máy có thể học từ cặp câu nguồn–đích. Một nhiệm vụ y tế ít nhãn nhưng có quy trình đo đạc đáng tin có thể hưởng lợi từ các chặng trung gian. Không thể quyết định chỉ vì end-to-end nghe hiện đại hơn.\n\n**Trả lời miệng:** “End-to-end tối ưu ánh xạ tới mục tiêu cuối, còn pipeline tách bài toán thành các chặng có trách nhiệm riêng. Em cân nhắc dữ liệu, độ phức tạp, kiến thức miền và khả năng kiểm tra lỗi. Cả hai đều có đánh đổi; end-to-end không mặc định tốt hơn hoặc loại bỏ mọi thiết kế thủ công.”\n\n**Hỏi tiếp:** Có thể kết hợp hai cách không? → Có. Một hệ lớn có pipeline ở cấp sản phẩm nhưng từng khối học end-to-end; cần nói rõ phạm vi đang xét.",
     "blocks": [
@@ -8329,7 +8329,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl3",
-    "chapterTitle": "Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
+    "chapterTitle": "Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì",
     "lessonIds": [
       "3.2"
     ],
@@ -8348,7 +8348,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Vì sao CNN phù hợp với ảnh?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 1,
     "bodyMarkdown": "**Nguồn:** 4.1 Convolutional Neural Networks.txt, slide 5–8, 11–14.\n\nẢnh có cấu trúc không gian: những pixel gần nhau thường liên quan tới cùng cạnh, góc hoặc bộ phận. Nếu nối toàn bộ ảnh 224×224×3 vào 1.000 neuron, riêng lớp đó đã cần khoảng 150 triệu trọng số. CNN khai thác hai tính chất để giảm gánh nặng:\n\n- **Kết nối cục bộ:** mỗi output nhìn một vùng nhỏ, thay vì toàn bộ ảnh.\n- **Chia sẻ tham số:** cùng filter được áp dụng ở nhiều vị trí. Một bộ phát hiện cạnh có thể hữu ích ở cả góc trái lẫn góc phải.\n\nCác tầng có thể học từ cạnh, họa tiết tới bộ phận và đối tượng; đây là cách hình dung biểu diễn phân tầng, không phải mỗi tầng luôn tương ứng chính xác một loại mẫu.\n\n**Ví dụ:** ảnh 28×28×1 có 784 giá trị. Filter 3×3×1 có 9 trọng số được dùng lại trên nhiều vùng ảnh. Dù ảnh lớn hơn, vẫn có thể dùng đúng filter đó.\n\n**Trả lời miệng:** “CNN tận dụng quan hệ lân cận trong ảnh bằng kết nối cục bộ và dùng lại filter trên nhiều vị trí. Điều này giảm số tham số so với nối đầy đủ, đồng thời giúp phát hiện cùng kiểu mẫu ở các vị trí khác nhau.”\n\n**Nối tiếp:** CNN có tự động bất biến với mọi phép xoay hoặc dịch ảnh không? → Không. Tính chất tích chập, pooling và dữ liệu huấn luyện giúp theo những điều kiện nhất định; không bảo đảm mọi biến đổi đều giữ dự đoán.",
     "blocks": [
@@ -8385,7 +8385,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -8395,7 +8395,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Filter, convolution và feature map thực sự tính gì?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 2,
     "bodyMarkdown": "**Nguồn:** 4.1 Convolutional Neural Networks.txt, slide 14, 17–30, 40.\n\nFilter/kernel là một nhóm trọng số nhỏ. Tại mỗi vị trí, lấy vùng ảnh tương ứng, nhân từng cặp phần tử rồi cộng, có thể cộng bias. Dịch filter sang vị trí khác và làm tiếp; bảng kết quả là **feature map**.\n\n**Ví dụ chạy tay:** vùng ảnh [[1,2],[3,4]], filter [[1,0],[0,−1]] cho 1×1 + 2×0 + 3×0 + 4×(−1) = −3. Giá trị âm/dương phụ thuộc filter và hướng tương phản, không đồng nghĩa “ảnh xấu/tốt”.\n\nFilter thủ công như Sobel/Scharr minh họa phát hiện cạnh. Trong CNN, các giá trị filter thường được học bằng backprop. Phép được gọi là convolution trong nhiều thư viện thực ra là cross-correlation: không lật kernel trước khi nhân. Đây là quy ước cần nhất quán khi tự tính.\n\n**Trả lời miệng:** “Filter quét các vùng nhỏ và tính tổng có trọng số để tạo feature map. Các filter khác nhau có thể phản ứng với các mẫu khác nhau. Mạng học giá trị filter từ dữ liệu, thay vì bắt buộc dùng bộ phát hiện cạnh được viết sẵn.”\n\n**Nối tiếp:** Một filter có phát hiện được mọi loại đặc trưng không? → Không nên kỳ vọng như vậy; một lớp thường có nhiều filter để tạo nhiều kênh đặc trưng.",
     "blocks": [
@@ -8432,7 +8432,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -8442,7 +8442,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Stride, padding, valid và same ảnh hưởng kích thước thế nào?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 3,
     "bodyMarkdown": "**Nguồn:** 4.1 Convolutional Neural Networks.txt, slide 31–40.\n\n**Stride s** là bước dịch filter. **Padding p** thêm phần biên, thường là số 0. Không padding, mỗi lần convolution có thể làm ảnh nhỏ đi và các pixel biên được dùng ít hơn.\n\nVới một chiều input n, kernel f, padding đối xứng p, stride s và không dilation:\n\n**n_out = floor((n + 2p − f)/s) + 1.**\n\nValid nghĩa là không thêm padding. Với stride 1 và kernel lẻ, chọn p=(f−1)/2 giữ kích thước; đây là trường hợp same quen thuộc. Với stride lớn hơn 1, “same” trong thư viện thường có quy ước output ceil(n/s), có thể cần padding bất đối xứng. Không phải mọi filter đều buộc có kích thước lẻ.\n\n**Ví dụ:** n=6, f=3, p=0, s=2 cho floor(3/2)+1=2. Nếu p=1, s=1 thì output bằng 6.\n\n**Trả lời miệng:** “Stride điều khiển bước trượt, padding thêm biên và ảnh hưởng kích thước output. Em tính riêng chiều cao và rộng bằng công thức có floor. Valid không padding; same giữ kích thước trong cấu hình stride 1 phù hợp, còn trường hợp khác cần xem quy ước thư viện.”\n\n**Nối tiếp:** Kernel 3×3, stride 1, padding 1 luôn làm output bằng input không? → Với dilation 1 và padding một pixel mỗi phía, đúng; thay dilation thì phải đổi công thức.",
     "blocks": [
@@ -8479,7 +8479,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -8489,7 +8489,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "CNN trên ảnh RGB: shape và số tham số là gì?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 4,
     "bodyMarkdown": "**Nguồn:** 4.1 Convolutional Neural Networks.txt, slide 41–59.\n\nỞ convolution tiêu chuẩn, mỗi filter trải qua toàn bộ C_in kênh đầu vào. Ảnh RGB có 3 kênh nên filter không gian 3×3 sẽ có shape 3×3×3. Một filter tạo một kênh output; K filter tạo K kênh. Chú ý phân biệt số kênh với số ảnh trong batch.\n\nVới một bias/filter, số tham số là:\n\n**(f_h × f_w × C_in + 1) × C_out.**\n\nĐây là số weight và bias cần học; không nhân thêm số vị trí trên ảnh, vì các vị trí chia sẻ weight.\n\n**Ví dụ:** input 6×6×3, 10 filter 3×3×3, stride 1, valid → output 4×4×10. Số tham số (27+1)×10=280. Bỏ bias thì còn 270.\n\n**Trả lời miệng:** “Chiều sâu filter khớp số kênh input, còn số filter quyết định số kênh output. Kích thước không gian tính theo kernel, stride, padding. Tham số của conv phụ thuộc filter và kênh, không trực tiếp phụ thuộc chiều cao/rộng ảnh.”\n\n**Nối tiếp:** Ảnh lớn gấp đôi chiều cao/rộng mà số tham số không tăng thì chi phí cũng không tăng? → Sai; số vị trí cần áp filter tăng, nên tính toán và activation cần lưu vẫn tăng.",
     "blocks": [
@@ -8526,7 +8526,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -8536,7 +8536,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Pooling, flatten và fully-connected có vai trò gì?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 5,
     "bodyMarkdown": "**Nguồn:** 4.1 Convolutional Neural Networks.txt, slide 61–74.\n\nPooling tóm tắt các vùng của feature map. **Max pooling** lấy giá trị lớn nhất, **average pooling** lấy trung bình. Các phiên bản thông thường không có trọng số học được; kernel size/stride là cấu hình. Pooling thường áp độc lập trên từng kênh.\n\n**Ví dụ:** vùng [[1,3],[2,4]] cho max=4, average=2,5. Max pooling 2×2 stride 2 trên volume 8×8×16 tạo 4×4×16. Nó giảm không gian, không tự giảm số kênh.\n\nFlatten đổi tensor thành vector, chẳng hạn 4×4×16 thành 256 số. Fully-connected biến vector đặc trưng thành output phân loại/hồi quy. Một pipeline cổ điển là Conv → ReLU → Pool → Conv → Pool → Flatten → FC → Output; cũng có kiến trúc dùng global average pooling thay phần FC lớn.\n\n**Trả lời miệng:** “Pooling giảm độ phân giải bằng phép tóm tắt vùng, còn flatten chỉ đổi cách sắp xếp tensor thành vector. Fully-connected dùng đặc trưng để dự đoán. Pooling có thể tiết kiệm tính toán nhưng cũng làm mất chi tiết vị trí.”\n\n**Nối tiếp:** Pooling luôn giảm overfitting hoặc luôn có ích? → Không. Nó là lựa chọn kiến trúc; nhiệm vụ cần biên chính xác phải cân nhắc lượng thông tin bị mất.",
     "blocks": [
@@ -8573,7 +8573,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -8583,7 +8583,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Cần nhớ gì về LeNet, AlexNet và VGG?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 6,
     "bodyMarkdown": "**Nguồn:** 4.2Case Studies.txt, slide 7–16.\n\nHọc ba mạng theo ý tưởng thiết kế thay vì thuộc mọi số tầng:\n\n| Mạng | Ý tưởng chính | Điều cần nhớ |\n|---|---|---|\n| LeNet-5 | Conv/pooling rồi FC, phục vụ chữ số/ký tự | Ví dụ sớm, quy mô nhỏ |\n| AlexNet | Mạng lớn hơn, ReLU, huấn luyện ảnh quy mô lớn | Dùng dữ liệu/tính toán và kỹ thuật huấn luyện để tăng khả năng |\n| VGG-16 | Nhiều conv 3×3 theo cấu trúc đều, xen pooling | Dễ theo dõi nhưng tốn tham số/tài nguyên |\n\n**Ví dụ:** trong VGG-16, “16” thường đếm 13 lớp conv và 3 lớp FC có weight; không cộng mọi pooling/activation vào con số này. Hai conv 3×3 stride 1 có receptive field 5×5 nếu bỏ qua các yếu tố biên, đồng thời có activation giữa hai conv; không giống hệt một conv 5×5 tuyến tính.\n\n**Trả lời miệng:** “LeNet cho cấu trúc CNN cổ điển, AlexNet mở rộng quy mô với ReLU, VGG dùng các conv nhỏ xếp sâu theo quy luật. Em so chúng theo cách xây khối, khả năng biểu diễn và chi phí, không kết luận kiến trúc mới luôn tốt nhất.”\n\n**Nối tiếp:** Có cần tự xây lại VGG cho bộ dữ liệu nhỏ? → Không bắt buộc; dùng pretrained model phù hợp và đánh giá validation thường là điểm xuất phát thực tế.",
     "blocks": [
@@ -8620,7 +8620,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "further",
     "sourceReferences": []
@@ -8630,7 +8630,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "ResNet và residual connection giúp mạng sâu thế nào?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 7,
     "bodyMarkdown": "**Nguồn:** 4.2Case Studies.txt, slide 17–28.\n\nVới mạng plain rất sâu, **training error** đôi khi tăng khi thêm tầng: đây là degradation liên quan khó khăn tối ưu, khác overfitting vốn thường nói train tốt nhưng dev kém. ResNet cho khối học phần điều chỉnh F(x) và cộng đường tắt x:\n\n**y = F(x) + x**, hoặc y=g(F(x)+x) tùy loại block.\n\nNếu F(x) gần 0, khối giữ được đường truyền identity theo cấu hình phù hợp. Đường tắt cũng hỗ trợ gradient. Nếu shape khác nhau, cần projection, thường bằng conv 1×1, để cộng được.\n\n**Ví dụ:** x=[2,3], F(x)=[0,1] → trước activation, kết quả [2,4]. Phép cộng là giữa input của block và nhánh đã biến đổi, không mặc định cộng output của conv thứ nhất với conv thứ hai.\n\n**Trả lời miệng:** “ResNet thêm skip connection để khối học phần residual và giữ đường truyền input. Nó giúp tối ưu mạng sâu và giảm degradation trong nhiều trường hợp. Tuy nhiên nó không loại bỏ mọi vấn đề gradient và không tự giải quyết overfitting.”\n\n**Nối tiếp:** Mạng sâu train error thấp, dev error cao có phải degradation không? → Đó gợi ý overfitting hoặc vấn đề phân phối; cần phân biệt với train error tăng do tối ưu khi thêm tầng.",
     "blocks": [
@@ -8667,7 +8667,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -8677,7 +8677,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Conv 1×1, Inception, MobileNet và EfficientNet khác nhau ra sao?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 8,
     "bodyMarkdown": "**Nguồn:** 4.2Case Studies.txt, slide 29–45, 47–95.\n\nConv 1×1 **trộn các kênh tại mỗi vị trí**. Input 28×28×192 qua 32 filter 1×1, stride 1 sẽ thành 28×28×32. Đây là bottleneck giảm kênh trước conv lớn, không phải chỉ nhân mỗi pixel với một số khi có nhiều kênh.\n\nInception chạy các nhánh kernel khác nhau và pooling rồi **nối theo kênh**; 1×1 giúp giảm chi phí. MobileNet dùng **depthwise separable convolution**: lọc không gian từng kênh bằng depthwise, rồi trộn kênh bằng pointwise 1×1. EfficientNet dùng **compound scaling**, cân đối depth, width và resolution theo ngân sách.\n\n**Ví dụ số, bỏ bias:** conv 3×3 từ 16 kênh sang 32 cần 3×3×16×32=4.608 weight. Depthwise (một filter/kênh) rồi pointwise cần 3×3×16 + 16×32=656 weight. Số phép tính còn phụ thuộc kích thước output, không phải mọi cấu hình đều tiết kiệm cùng tỷ lệ.\n\n**Trả lời miệng:** “1×1 trộn và giảm kênh; Inception ghép nhiều nhánh quy mô khác nhau. MobileNet tách lọc không gian và trộn kênh để tiết kiệm. EfficientNet cân đối tăng độ sâu, độ rộng và độ phân giải.”\n\n**Nối tiếp:** MobileNetV2 thêm ý gì? → Mở rộng kênh, depthwise rồi projection hẹp với linear bottleneck; residual được dùng khi shape/stride cho phép.",
     "blocks": [
@@ -8714,7 +8714,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "further",
     "sourceReferences": []
@@ -8724,7 +8724,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Dùng pretrained CNN và augmentation thế nào khi ít dữ liệu?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 9,
     "bodyMarkdown": "**Nguồn:** 4.2Case Studies.txt, slide 96–105; kiến thức nền liên quan DL28.\n\nPretrained backbone đã học đặc trưng từ dữ liệu lớn. Với bài mới, có thể thay classifier, đóng băng backbone rồi học tầng đầu ra; sau đó cân nhắc mở một phần/tất cả tầng để fine-tune với learning rate phù hợp. Số tầng mở phụ thuộc độ lớn và mức khác biệt của dữ liệu mới, không có một quy tắc cố định.\n\n**Ví dụ:** có 800 ảnh hoa thuộc 4 loại. Bắt đầu với backbone ảnh pretrained, đầu ra 4 lớp, augmentation hợp lệ, theo dõi validation. Không đánh giá bằng chính ảnh đã dùng fine-tune.\n\nAugmentation như đổi sáng/crop/flip tạo biến thể có nhãn vẫn đúng. Với detection phải biến đổi box; segmentation phải biến đổi mask cùng ảnh. Đóng băng weight không tự bảo đảm BatchNorm ngừng cập nhật thống kê; cần chọn chế độ đúng.\n\n**Trả lời miệng:** “Transfer learning tận dụng biểu diễn đã học để giảm nhu cầu train từ đầu. Em giữ tiền xử lý phù hợp backbone, học đầu ra mới, rồi fine-tune có kiểm soát. Augmentation giúp tăng đa dạng nhưng phải giữ đúng nhãn và đánh giá trên dữ liệu chưa dùng học.”\n\n**Nối tiếp:** Lật ngang ảnh lúc nào không hợp lệ? → Khi hướng trái/phải, chữ hoặc nhãn phụ thuộc hướng; cần xét bài toán thay vì dùng mọi biến đổi sẵn có.",
     "blocks": [
@@ -8761,7 +8761,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -8771,7 +8771,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Classification, localization, detection và landmark khác nhau thế nào?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 10,
     "bodyMarkdown": "**Nguồn:** 4.3 Object Detection.txt, slide 4–10.\n\nCác bài toán khác nhau ở **đầu ra cần dự đoán**:\n\n- Classification: ảnh thuộc lớp nào.\n- Classification + localization: có đối tượng gì và box ở đâu, trong ví dụ thường có một đối tượng chính.\n- Detection: nhiều đối tượng, mỗi đối tượng có lớp và box.\n- Landmark detection: tọa độ các điểm mốc như mắt, khóe môi hoặc khớp.\n\n**Ví dụ:** nhận “xe” là classification; vẽ box cho chiếc xe là localization; tìm ba xe và hai người là detection; tìm các khớp của một người là landmark.\n\nVector label minh họa có objectness p_c, bốn tọa độ box và thông tin class. Khi không có đối tượng, tọa độ có thể không tham gia loss theo quy tắc đã thiết kế. Quy ước tọa độ tâm/góc, chuẩn hóa theo ảnh/cell phải được nêu rõ.\n\n**Trả lời miệng:** “Em phân biệt theo output: nhãn, nhãn kèm box, nhiều nhãn/box hoặc tọa độ các điểm mốc. Vì output khác nhau nên cần nhãn huấn luyện, loss và thước đo phù hợp.”\n\n**Nối tiếp:** Detection có biết chính xác pixel nào thuộc vật không? → Box chỉ bao hình chữ nhật; muốn nhãn theo pixel thì dùng segmentation.",
     "blocks": [
@@ -8808,7 +8808,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -8818,7 +8818,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Sliding-window detection và region proposals là gì?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 11,
     "bodyMarkdown": "**Nguồn:** 4.3 Object Detection.txt, slide 12–19, 37–39, 47; region proposals được ghi “Optional” trong slide.\n\nSliding window cắt nhiều vùng ảnh ở nhiều vị trí/kích thước rồi đưa qua classifier. Các crop chồng lấp làm lặp rất nhiều tính toán. Đổi các lớp fully-connected thành convolution tương đương cho phép chạy trên ảnh lớn và chia sẻ feature computation giữa nhiều vị trí.\n\n**Ví dụ:** một FC nhận tensor 5×5×16 và trả 400 số có thể biểu diễn bằng 400 filter 5×5×16 trên đúng vùng đó. Khi áp mạng lên ảnh lớn hơn, output không gian cho nhiều vị trí ứng viên.\n\nRegion proposals chọn trước vùng có khả năng chứa vật thể. R-CNN xử lý các vùng đề xuất; Fast/Faster R-CNN cải thiện chia sẻ tính toán và đề xuất vùng. Tối nay chỉ cần nắm khác biệt về cách tạo/xử lý ứng viên, chưa cần thuộc mọi phiên bản.\n\n**Trả lời miệng:** “Sliding window thử nhiều crop nên tốn công. Triển khai bằng convolution giúp chia sẻ phép tính. Region proposals tìm vùng ứng viên trước để giảm số vùng cần xét; đó là một hướng khác với dự đoán trực tiếp kiểu YOLO.”\n\n**Nối tiếp:** Feature computation chia sẻ có bảo đảm box định vị tốt? → Không. Vẫn cần học tọa độ, xử lý nhiều kích thước và loại dự đoán trùng.",
     "blocks": [
@@ -8855,7 +8855,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "further",
     "sourceReferences": []
@@ -8865,7 +8865,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "YOLO trong bài học dùng grid và anchor boxes ra sao?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 12,
     "bodyMarkdown": "**Nguồn:** 4.3 Object Detection.txt, slide 20–23, 33–36, 40–46.\n\nTrong cách YOLO được giảng ở đây, ảnh chia thành grid S×S. Mỗi ô dự đoán objectness, bốn thông số box và thông tin lớp. Quy tắc gán đối tượng thường dựa vào ô chứa tâm của nó; box có thể vượt ranh giới ô.\n\n**Anchor boxes** là các hình dạng tham chiếu giúp một ô có nhiều vị trí dự đoán hình dạng khác nhau. Chọn anchor liên quan đến hình dạng đối tượng; một ô không chỉ có đúng một vector dự đoán nữa.\n\n**Ví dụ:** S=3, B=2 anchors, C=3 lớp → mỗi anchor có 5+C=8 số; tensor 3×3×2×8, tương đương 3×3×16 nếu gộp trục. Tọa độ, objectness và class phải decode theo đúng phiên bản.\n\n**Trả lời miệng:** “YOLO dự đoán các hộp và lớp trên toàn ảnh trong một forward pass. Grid tổ chức output; anchor là hình dạng tham chiếu cho nhiều dự đoán mỗi ô. Sau forward cần decode, lọc và thường chạy NMS.”\n\n**Nối tiếp:** Mọi phiên bản YOLO đều dùng anchor? → Không. Bài này mô tả một thiết kế cụ thể; có các phiên bản/thiết kế anchor-free. Không áp công thức của một phiên bản cho mọi mô hình mang tên YOLO.",
     "blocks": [
@@ -8902,7 +8902,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -8912,7 +8912,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "IoU khác confidence thế nào? NMS làm gì?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 13,
     "bodyMarkdown": "**Nguồn:** 4.3 Object Detection.txt, slide 24–32.\n\n**IoU = diện tích giao / diện tích hợp** đo độ chồng lấp hai box hợp lệ. **Confidence/score** là điểm dự đoán của mô hình theo quy ước detector. Điểm cao không bảo đảm box chồng đúng ground truth.\n\n**Ví dụ tọa độ:** box A=[0,0,2,2], B=[1,0,3,2]. Diện tích mỗi box là 4, giao là 2, hợp là 4+4−2=6, nên IoU=1/3. Dùng diện tích hình học liên tục ở đây, không cộng thêm 1 vào độ dài cạnh.\n\nNMS thông thường: bỏ điểm thấp → chọn box điểm cao nhất → loại box cùng lớp chồng quá ngưỡng với box vừa chọn → lặp. Nó giảm dự đoán trùng, không bảo đảm luôn giữ đúng các vật thể gần nhau. Ngưỡng IoU 0,5 trong slide là ví dụ, không phải chuẩn duy nhất.\n\n**Trả lời miệng:** “Confidence nói mức điểm của dự đoán; IoU nói box chồng nhau bao nhiêu. NMS dùng điểm và IoU để giữ box mạnh, loại box trùng, thường làm riêng theo lớp. Khi đánh giá TP còn cần lớp và quy tắc ghép với ground truth.”\n\n**Nối tiếp:** NMS có dùng box thật khi inference không? → Không; nó so các box dự đoán với nhau. IoU trong đánh giá mới thường so với ground truth.",
     "blocks": [
@@ -8949,7 +8949,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -8959,7 +8959,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Segmentation, U-Net và transposed convolution",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 14,
     "bodyMarkdown": "**Nguồn:** 4.3 Object Detection.txt, slide 48–63.\n\nSemantic segmentation gán **class cho từng pixel**. Hai chiếc xe cùng có nhãn “xe” vẫn có thể chưa được tách thành hai instance riêng. U-Net dùng encoder giảm độ phân giải để học ngữ cảnh, decoder tăng độ phân giải và skip connections nối feature chi tiết từ encoder sang decoder.\n\n**Ví dụ:** ảnh 128×128 với 3 lớp có thể cho logits 128×128×3; mỗi pixel chọn một lớp. Nhãn là mask H×W chứa mã lớp, không phải một nhãn cho toàn ảnh. Categorical cross-entropy có thể áp từng pixel; sparse categorical cross-entropy nhận nhãn lớp dạng số nguyên theo API.\n\nTransposed convolution là phép biến đổi học được có thể tăng kích thước. Nó không phải phép nghịch đảo duy nhất của convolution. Với dilation 1, một quy ước thường dùng là n_out=(n−1)s−2p+f+output_padding. Ví dụ n=2,s=2,p=1,f=3 cho 3 khi output_padding=0, hoặc 4 khi output_padding=1. Vì vậy ví dụ 2→4 trong text cần hiểu cùng quy ước output shape, không bỏ qua điều kiện.\n\n**Trả lời miệng:** “U-Net kết hợp ngữ cảnh từ encoder với chi tiết qua skip connections để dự đoán theo pixel. Decoder dùng upsampling, có thể bằng transposed convolution. Skip ở U-Net thường ghép kênh, khác phép cộng residual trong ResNet.”\n\n**Nối tiếp:** Segmentation có tự phân biệt hai người cùng class không? → Semantic segmentation không nhất thiết; instance segmentation mới tách từng cá thể.",
     "blocks": [
@@ -8996,7 +8996,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -9006,7 +9006,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Verification, recognition và one-shot learning khác nhau thế nào?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 15,
     "bodyMarkdown": "**Nguồn:** 4.4 Face recognition.txt, slide 5–11.\n\n**Verification** là 1:1: “Ảnh này có đúng là người A khai báo không?”. **Recognition** là tìm trong K danh tính: “Người trong ảnh là ai?”, có thể trả “không nhận ra”.\n\nOne-shot trong tình huống này nghĩa là mỗi danh tính mới chỉ có một ảnh tham chiếu. Nó **không có nghĩa toàn bộ mạng được huấn luyện từ duy nhất một ảnh**. Encoder so sánh khuôn mặt thường đã được học từ nhiều ảnh/người trước đó.\n\n**Ví dụ:** công ty thêm nhân viên mới. Có thể lưu embedding ảnh của người đó, rồi so ảnh mới với hồ sơ, thay vì thay số class và retrain classifier cho mỗi lần thêm người. Threshold cần kiểm tra theo dữ liệu, đánh đổi nhận nhầm và từ chối nhầm.\n\n**Trả lời miệng:** “Verification xác nhận một danh tính cụ thể; recognition tìm danh tính trong database. Với one-shot, ta tận dụng encoder đã học để so sánh với ít ảnh tham chiếu, chứ không học toàn bộ khả năng nhận diện từ một ảnh.”\n\n**Nối tiếp:** Recognition có được ép mọi ảnh về một người trong database không? → Không nên; cần cơ chế từ chối nếu không đủ tương đồng, theo yêu cầu hệ thống.",
     "blocks": [
@@ -9043,7 +9043,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -9053,7 +9053,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Siamese network và triplet loss học embedding ra sao?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 16,
     "bodyMarkdown": "**Nguồn:** 4.4 Face recognition.txt, slide 12–30.\n\nSiamese dùng các nhánh **chia sẻ cùng trọng số** để biến ảnh thành embedding f(x). Cùng phép biến đổi giúp các vector nằm trong không gian có thể so sánh. Khoảng cách nhỏ có thể gợi ý cùng người; ngưỡng được chọn theo dữ liệu. Một cách khác trong slide là đưa độ khác biệt embedding qua bộ phân loại nhị phân.\n\nTriplet loss dùng A=anchor, P=positive cùng người, N=negative khác người. Đặt D_AP=||f(A)−f(P)||² và D_AN=||f(A)−f(N)||²:\n\n**L=max(D_AP−D_AN+α, 0).**\n\n**Ví dụ:** D_AP=0,8, D_AN=1,1, margin α=0,5 → L=max(0,2;0)=0,2. Muốn loss 0 thì D_AN phải ít nhất 1,3 với D_AP đang là 0,8. Đây là **khoảng cách đã bình phương**, không bình phương các số này lần nữa.\n\nTriplet quá dễ đã loss 0 nên ít cung cấp tín hiệu. Chọn triplet khó vừa đủ giúp học; nhãn sai và triplet cực khó có thể gây vấn đề. Encoder pretrained có thể giảm nhu cầu học từ đầu.\n\n**Trả lời miệng:** “Siamese là kiến trúc chia sẻ encoder, còn triplet loss là mục tiêu học. Triplet khuyến khích ảnh cùng người gần nhau hơn ảnh khác người một margin trên khoảng cách bình phương. Hai khái niệm liên quan nhưng không phải hai tên cho cùng một thứ.”\n\n**Nối tiếp:** Loss 0 có nghĩa khoảng cách positive bằng 0? → Không; chỉ cần thỏa D_AP+α≤D_AN cho triplet đó.",
     "blocks": [
@@ -9090,7 +9090,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -9100,7 +9100,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Neural Style Transfer, content/style loss và Gram matrix",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 17,
     "bodyMarkdown": "**Nguồn:** 4.4 Face recognition.txt, slide 33–35, 38–60. Thuật ngữ Gram matrix được dùng để gọi phép tổng tích activation giữa các kênh mô tả ở slide 58.\n\nTrong cách style transfer cổ điển đang học, giữ CNN pretrained cố định và tối ưu **pixel ảnh sinh G**. Content loss so đặc trưng của G với ảnh nội dung C. Style loss so thống kê activation của G với ảnh phong cách S. Mục tiêu tổng hợp J=αJ_content+βJ_style.\n\nGram matrix đo tích vô hướng giữa feature maps kênh k và k' sau khi trải các vị trí không gian. Ví dụ hai kênh [1,2] và [3,4] có tích vô hướng 11; đó là một phần tử ngoài đường chéo của Gram matrix chưa chuẩn hóa. Cách chuẩn hóa được chọn nhất quán với công thức loss.\n\nThống kê này giữ sự đồng xuất hiện của mẫu tốt hơn vị trí từng chi tiết. Nó là một cách mô hình hóa phong cách trong thuật toán, không phải định nghĩa toàn bộ phong cách nghệ thuật.\n\n**Trả lời miệng:** “Neural style transfer tìm ảnh mới giữ nội dung của C và thống kê phong cách của S. CNN tạo đặc trưng để tính loss; ở bản cổ điển, ta cập nhật ảnh sinh, giữ weight mạng cố định. Gram matrix tổng hợp quan hệ giữa các kênh.”\n\n**Nối tiếp:** Content loss có so pixel trực tiếp không? → Trong cách này thường so activation, nên không bắt ảnh sinh sao chép từng pixel của ảnh nội dung.",
     "blocks": [
@@ -9132,7 +9132,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "further",
     "sourceReferences": []
@@ -9142,7 +9142,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Conv1D, Conv2D, Conv3D dùng khi nào?",
-    "groupTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "groupTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "order": 18,
     "bodyMarkdown": "**Nguồn:** 4.4 Face recognition.txt, slide 63–67, 79–81.\n\nSố chiều ở đây nói tới **các trục kernel trượt**, không chỉ số chiều tensor trong code. Conv1D trượt trên thời gian/tọa độ một chiều như ECG; Conv2D trượt trên cao/rộng của ảnh; Conv3D trượt trên volume hoặc không gian–thời gian video. Các dạng này vẫn có kênh và batch riêng.\n\n**Ví dụ:** batch ảnh RGB có thể là tensor 4 chiều nhưng vẫn dùng Conv2D. Volume 14×14×14 với một kênh, 16 filter 5×5×5, stride 1, valid tạo 10×10×10×16. Số kênh input của filter phải bằng số kênh input; số kênh output do số filter quyết định.\n\nCNN sâu có thể học biểu diễn phức tạp từ dữ liệu này, nhưng không phải mọi tầng đều giải thích được bằng một khái niệm con người dễ đặt tên. Trực quan hóa activation giúp khảo sát, chưa chứng minh nhân quả của dự đoán.\n\n**Trả lời miệng:** “Em chọn số chiều conv theo cấu trúc lân cận cần khai thác: tín hiệu 1D, ảnh 2D, volume hoặc video 3D. Batch và kênh không phải các trục trượt tương đương. Video cũng có thể xử lý bằng CNN từng frame kết hợp mô hình chuỗi.”\n\n**Nối tiếp:** Dữ liệu video bắt buộc dùng Conv3D? → Không; đó là một lựa chọn, cần xét dữ liệu, phụ thuộc thời gian và tài nguyên.",
     "blocks": [
@@ -9179,7 +9179,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl4",
-    "chapterTitle": "DPL302m — CNN và thị giác máy tính từ nền tảng",
+    "chapterTitle": "DPL302m: CNN và thị giác máy tính từ nền tảng",
     "lessonIds": [],
     "studyLevel": "core",
     "sourceReferences": []
@@ -9189,7 +9189,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Vì sao cần mô hình chuỗi? Ký hiệu và các dạng đầu vào/đầu ra?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 1,
     "bodyMarkdown": "**Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 5–13, 25–30.\n\nDữ liệu chuỗi có thứ tự mang ý nghĩa: “An đánh Bình” khác “Bình đánh An”. Câu có thể dài ngắn khác nhau; một từ quan trọng có thể xuất hiện ở đầu hoặc cuối. Mạng feed-forward với số đầu vào cố định không tự xử lý các vấn đề này theo cùng cách RNN chia sẻ tham số qua thời gian.\n\n`x<t>` là vector đầu vào tại bước t; `y<t>` là mục tiêu tại bước t; `Tx`, `Ty` là độ dài input và output. Chỉ số thời gian khác chỉ số mẫu huấn luyện và chỉ số tầng. Tùy nhiệm vụ: many-to-one cho phân loại cảm xúc; many-to-many cùng độ dài cho gán nhãn từng từ; encoder–decoder cho dịch hai chuỗi khác độ dài. One-to-many có thể dùng để sinh caption từ ảnh; one-to-one là trường hợp không có chuỗi thực sự.\n\n**Ví dụ:** “An học ML” có ba token trong cách tách đơn giản. NER có thể trả ba nhãn `[PERSON, O, O]`; phân loại cả câu chỉ trả một nhãn. Token không nhất thiết bằng từ: tokenizer có thể tách nhỏ hơn.\n\n**Trả lời miệng:** “Mô hình chuỗi khai thác thứ tự và xử lý độ dài thay đổi. Em phân biệt time step với mẫu và tầng. Dạng đầu ra phụ thuộc bài toán: một nhãn cho cả chuỗi, một nhãn mỗi bước, hoặc một chuỗi mới có độ dài khác.”\n\n**Hỏi tiếp:** RNN chỉ dùng cho văn bản? → Không; âm thanh, cảm biến, nhạc và video cũng có cấu trúc tuần tự.",
     "blocks": [
@@ -9226,7 +9226,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.1"
     ],
@@ -9245,7 +9245,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "RNN truyền hidden state và chia sẻ trọng số thế nào?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 2,
     "bodyMarkdown": "**Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 14–18, 23.\n\nRNN đọc từng phần tử. Cell ở bước t nhận input hiện tại và hidden state trước đó, rồi tạo hidden state mới. Dạng chuẩn được viết lại bằng ký hiệu dễ đọc:\n\n`a<t> = tanh(Waa a<t−1> + Wax x<t> + ba)`.\n\nNếu cần dự đoán ở bước đó, có thể tính `ŷ<t> = softmax(Wya a<t> + by)` cho bài chọn một token. Activation đầu ra phải phù hợp nhiệm vụ, không phải mọi RNN đều dùng softmax.\n\nCác ma trận được **dùng lại qua mọi time step**. Hidden state thay đổi, nhưng trọng số trong một forward pass không thay đổi theo vị trí. Nó giống một cách ghi nhớ/tóm tắt chung áp dụng sau mỗi token, thay vì một bộ quy tắc riêng cho vị trí 1, 2, 3.\n\n**Ví dụ số bổ sung:** dùng trạng thái vô hướng `a<t>=tanh(0,5a<t−1>+x<t>)`, bắt đầu a0=0. Với x1=1 thì a1≈0,7616; với x2=0 thì a2≈tanh(0,3808)≈0,3634. Input thứ hai bằng 0 nhưng state vẫn chứa ảnh hưởng của input trước.\n\n**Trả lời miệng:** “RNN kết hợp input hiện tại với hidden state trước. Trọng số được dùng chung qua thời gian, nên cùng quy tắc áp dụng ở nhiều vị trí và độ dài chuỗi. Hidden state mang thông tin quá khứ có giới hạn, không phải bản lưu chính xác mọi token.”\n\n**Hỏi tiếp:** Dùng chung trọng số có làm output các bước bằng nhau? → Không, vì input và state khác nhau.",
     "blocks": [
@@ -9282,7 +9282,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.1"
     ],
@@ -9301,7 +9301,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "BPTT, vanishing/exploding gradient và clipping là gì?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 3,
     "bodyMarkdown": "**Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 19–24, 41–42; mục tiêu clipping ở slide 2.\n\n**BPTT** mở RNN thành đồ thị theo thời gian rồi dùng backpropagation. Loss có thể cộng qua các bước có nhãn; gradient của một trọng số dùng chung tích lũy đóng góp từ nhiều lần nó xuất hiện trong đồ thị. Forward cần giữ trạng thái trung gian để tính backward.\n\nQua nhiều bước, gradient đi qua tích các Jacobian, gồm ảnh hưởng trọng số và đạo hàm activation. Nó có thể nhỏ dần (**vanishing**), khiến tín hiệu từ xa khó học, hoặc tăng mạnh (**exploding**) làm cập nhật không ổn định. Không thể giải thích đầy đủ chỉ bằng eigenvalue của một ma trận, bỏ qua activation và các trạng thái khác.\n\n**Ví dụ trực giác:** nhân 0,8 liên tiếp 20 lần còn khoảng 0,0115; nhân 1,2 liên tiếp 20 lần thành khoảng 38,3. Gradient thật phức tạp hơn nhưng cho thấy vì sao chuỗi dài khó tối ưu.\n\n**Trả lời miệng:** “BPTT là backprop trên RNN mở theo thời gian. Các trọng số dùng chung nhận gradient từ nhiều time step. Chuỗi dài có thể làm gradient biến mất hoặc bùng nổ; clipping giới hạn gradient quá lớn, còn kiến trúc có cổng, khởi tạo và activation phù hợp giúp xử lý khó khăn phụ thuộc xa.”\n\n**Hỏi tiếp:** Clipping có chữa vanishing không? → Không; nó chủ yếu xử lý gradient quá lớn. Truncated BPTT là phần bổ sung thực hành: cắt chiều dài truyền ngược để giảm chi phí, có đánh đổi về phụ thuộc học được.",
     "blocks": [
@@ -9338,7 +9338,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.1"
     ],
@@ -9357,7 +9357,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "LSTM có những cổng nào? Cell state khác hidden state?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 4,
     "bodyMarkdown": "**Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 48–52.\n\nLSTM có **cell state c** là đường bộ nhớ và **hidden state a** là biểu diễn được đưa ra ngoài cell. Ba cổng thường qua sigmoid: forget gate quyết định giữ phần nào của bộ nhớ cũ; input/update gate quyết định ghi thông tin ứng viên; output gate quyết định đưa phần nào ra hidden state.\n\nMột dạng chuẩn: `c<t>=f<t>⊙c<t−1>+i<t>⊙c̃<t>`, rồi `a<t>=o<t>⊙tanh(c<t>)`. Ký hiệu `⊙` là nhân từng phần tử, không phải nhân ma trận. Tên gate và ký hiệu trong slide/thư viện có thể khác nhưng vai trò vẫn như nhau.\n\n**Ví dụ số:** nếu một chiều bộ nhớ cũ bằng 2, forget gate=0,9, input gate=0,1, ứng viên=−1 thì bộ nhớ mới `0,9×2+0,1×(−1)=1,7`. Mô hình chủ yếu giữ thông tin cũ, thêm một ít thông tin mới. Giá trị cổng được học qua mạng chứ không do người lập trình đặt theo từng từ.\n\n**Trả lời miệng:** “LSTM điều khiển bộ nhớ bằng ba cổng quên, ghi và xuất. Cell state giữ thông tin nội bộ, hidden state là biểu diễn hiện tại. Đường cộng có điều khiển giúp truyền thông tin dài hơn RNN thuần, nhưng không bảo đảm nhớ hoàn hảo mọi phụ thuộc.”\n\n**Hỏi tiếp:** Cell state và hidden state có cùng vai trò? → Không; hidden state còn qua output gate và thường dùng cho dự đoán.",
     "blocks": [
@@ -9394,7 +9394,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.1"
     ],
@@ -9413,7 +9413,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "GRU, bidirectional RNN và deep RNN khác nhau thế nào?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 5,
     "bodyMarkdown": "**Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 43–47, 53–59.\n\nGRU dùng cơ chế cổng gọn hơn LSTM, thường có update/reset gate và một trạng thái chính, không tách cell state riêng như LSTM chuẩn. Nó vẫn nhằm điều khiển giữ hoặc cập nhật thông tin. Ít cấu phần hơn không bảo đảm luôn nhanh hoặc chính xác hơn trong mọi triển khai.\n\nBidirectional RNN chạy một hướng xuôi và một hướng ngược, rồi kết hợp. Nó hữu ích nếu toàn bộ input đã có, như gán nhãn tên riêng trong câu. **Deep RNN** là xếp nhiều tầng RNN; nhiều tầng khác với nhiều time step.\n\n**Ví dụ:** để nhận biết “bank” nghĩa ngân hàng hay bờ sông, các từ phía sau có thể giúp. Khi xử lý cả câu đã có, dùng hai chiều hợp lý; khi dự báo giá ngày mai, không được đưa dữ liệu ngày mai vào hướng ngược.\n\n**Trả lời miệng:** “GRU là biến thể RNN có cổng. Bidirectional kết hợp ngữ cảnh hai hướng, còn deep RNN xếp nhiều tầng. Em chọn kiến trúc theo thông tin có sẵn lúc dự đoán; mô hình hai chiều có thể gây leakage nếu tương lai chưa được phép nhìn.”\n\n**Hỏi tiếp:** Decoder sinh token có dùng tương lai thật để tính không? → Không, trong suy luận tự hồi quy token tương lai chưa tồn tại.",
     "blocks": [
@@ -9450,7 +9450,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.1"
     ],
@@ -9469,7 +9469,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Language model học và sinh chuỗi ra sao?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 6,
     "bodyMarkdown": "**Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 31–40.\n\nLanguage model ước lượng xác suất chuỗi bằng phân rã `P(y1,…,yT)=Πt P(yt | y1,…,y(t−1))`. Mỗi bước dự đoán token tiếp theo dựa trên ngữ cảnh trước đó. Khi train, thường đưa token thật trước đó làm input; kỹ thuật này thường gọi teacher forcing.\n\nKhi sinh, bắt đầu từ token khởi đầu hoặc state ban đầu, lấy phân phối token tiếp theo, chọn hoặc lấy mẫu token, rồi đưa token vừa sinh vào bước tiếp theo. Dừng ở `<EOS>` hoặc giới hạn chiều dài. Khác train, model phải sống với chính những token đã sinh, nên lỗi có thể tích lũy.\n\n**Ví dụ:** sau “Tôi đang”, model cho “học”=0,6, “ăn”=0,3, từ khác=0,1. Greedy chọn “học”; sampling có thể chọn “ăn”. Đây là số minh họa, không phải kết quả từ model thật. Word-level có vocabulary lớn; character-level thường có chuỗi dài hơn.\n\n**Trả lời miệng:** “Language model học xác suất token kế tiếp. Khi train có thể dùng token thật của bước trước; khi sinh phải dùng token vừa dự đoán. Sampling tạo đa dạng hơn greedy nhưng không bảo đảm câu đúng. EOS và giới hạn độ dài giúp kết thúc quá trình.”\n\n**Hỏi tiếp:** Xác suất cao nhất từng token có cho cả câu xác suất cao nhất? → Không; đó là lý do cần phân biệt greedy với search trên cả chuỗi.",
     "blocks": [
@@ -9506,7 +9506,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.1"
     ],
@@ -9525,7 +9525,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "One-hot, embedding và embedding matrix là gì?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 7,
     "bodyMarkdown": "**Nguồn:** `5.2 NLP and Word Embeddings.txt`, slide 4–16, 26–30.\n\nOne-hot của vocabulary V là vector dài số từ, chỉ một vị trí bằng 1. Nó mã hóa danh tính nhưng không tự biểu diễn “cam” gần “táo” hơn “bàn”. Embedding là vector số được học, thường ít chiều hơn one-hot, giúp nhiệm vụ phía sau dùng quan hệ giữa các đối tượng.\n\nTheo quy ước slide, ma trận E có shape `d×|V|`; mỗi cột là embedding của một từ. `e_w=E o_w` lấy cột tương ứng. Trong code, lookup hiệu quả hơn tạo vector one-hot rồi nhân ma trận; thư viện có thể lưu E chuyển vị, nên phải đọc shape.\n\n**Ví dụ:** V=10.000, d=300 thì E có 3 triệu tham số nếu toàn bộ bảng học được. Với batch 32 câu dài 20 token, output embedding thường shape `(32,20,300)` theo batch-first. Từ chưa có trong vocabulary cần cơ chế như UNK hoặc tokenization subword.\n\n**Trả lời miệng:** “One-hot là mã định danh thưa; embedding là biểu diễn vector được học. Embedding matrix lưu vector cho mỗi token và lookup lấy hàng/cột tương ứng theo quy ước. Pretrained embedding có thể chuyển kiến thức từ corpus lớn sang bài toán nhỏ.”\n\n**Hỏi tiếp:** Mỗi chiều embedding có chắc mang tên như tuổi/giới tính? → Không; các chiều học được không nhất thiết có ý nghĩa đơn giản để đặt tên.",
     "blocks": [
@@ -9562,7 +9562,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.2"
     ],
@@ -9581,7 +9581,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Cosine similarity và phép analogy có nghĩa gì?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 8,
     "bodyMarkdown": "**Nguồn:** `5.2 NLP and Word Embeddings.txt`, slide 18–25.\n\nCosine similarity so hướng hai vector khác 0: `cos(u,v)=(u·v)/(||u|| ||v||)`. Nó nằm trong [−1,1]; gần 1 nghĩa cùng hướng, gần 0 nghĩa gần vuông góc. Cùng hướng không nhất thiết cùng độ dài hoặc là hai vector hoàn toàn bằng nhau.\n\nAnalogy dùng quan hệ vector: thử tìm vector gần `e_king−e_man+e_woman`. Một số embedding học được quan hệ gần “queen”, nhưng đây là hiện tượng thực nghiệm, không phải đẳng thức luôn đúng. Corpus, ngôn ngữ, phép đo và bias đều ảnh hưởng.\n\n**Ví dụ:** u=[1,0], v=[2,0] có cosine=1 dù u≠v. u=[1,0], v=[0,1] có cosine=0. Nếu một vector bằng 0 thì mẫu số bằng 0, phải xử lý riêng.\n\n**Trả lời miệng:** “Cosine đo hướng tương đối, không đo độ dài tuyệt đối. Analogy khai thác những quan hệ mà embedding học được bằng phép cộng trừ vector. Nó hữu ích nhưng không bảo đảm suy luận ngôn ngữ chính xác trong mọi trường hợp.”\n\n**Hỏi tiếp:** Cosine cao chứng minh hai từ đồng nghĩa? → Không; có thể cùng chủ đề, ngữ cảnh hoặc mang quan hệ khác.",
     "blocks": [
@@ -9618,7 +9618,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.2"
     ],
@@ -9637,7 +9637,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Skip-gram và CBOW trong Word2Vec khác nhau thế nào?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 9,
     "bodyMarkdown": "**Nguồn:** `5.2 NLP and Word Embeddings.txt`, slide 34–40.\n\nWord2Vec học embedding qua bài toán dự đoán phụ từ văn bản. **Skip-gram:** cho một từ trung tâm, dự đoán các từ trong cửa sổ ngữ cảnh. **CBOW (Continuous Bag of Words):** dùng các từ quanh để dự đoán từ trung tâm. Extract ghi sai tên dài của CBOW ở một đoạn; đây là tên thuật ngữ chuẩn được sửa lại.\n\nMục tiêu chính là vector hữu ích, không phải giữ classifier phụ làm đầu ra cuối. Cửa sổ quyết định loại ngữ cảnh và số cặp học. Kết quả còn phụ thuộc vocabulary, tần suất từ, negative sampling và corpus.\n\n**Ví dụ:** với “Tôi uống nước cam”, chọn trung tâm “nước” và cửa sổ một từ. Skip-gram có cặp nước→uống và nước→cam. CBOW dùng [uống,cam] để dự đoán nước. Không lấy các từ xa ngoài cửa sổ theo đúng cấu hình này.\n\n**Trả lời miệng:** “Skip-gram dự đoán context từ center; CBOW dự đoán center từ context. Cả hai tạo tín hiệu học từ chính văn bản mà không cần người gán nhãn thủ công cho từng cặp. Sau đó embedding được dùng cho nhiệm vụ NLP khác.”\n\n**Hỏi tiếp:** Word2Vec có biết thứ tự đầy đủ của cả câu như RNN không? → Không theo dạng cổ điển này; mục tiêu cửa sổ không mô hình hóa toàn bộ chuỗi tự hồi quy.",
     "blocks": [
@@ -9674,7 +9674,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.2"
     ],
@@ -9693,7 +9693,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Negative sampling, GloVe và debiasing giải quyết việc gì?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 10,
     "bodyMarkdown": "**Nguồn:** `5.2 NLP and Word Embeddings.txt`, slide 40–55, 62–67.\n\nSoftmax trên vocabulary lớn đòi hỏi tính điểm và chuẩn hóa nhiều từ. **Negative sampling** dùng một cặp context–target thật làm nhãn 1, thêm K cặp âm lấy mẫu làm nhãn 0, rồi tối ưu bài toán nhị phân. Nó giúp chỉ xử lý một số vector ở mỗi ví dụ; objective này không phải tính nguyên softmax đầy đủ với ít từ hơn.\n\n**GloVe** dùng số lần đồng xuất hiện `Xij` của hai từ trong corpus. Mô hình học để dot product và bias giải thích log của các số đếm, với trọng số điều tiết. Word2Vec dùng objective dự đoán các cặp theo cửa sổ; GloVe khai thác thống kê đồng xuất hiện được tổng hợp. Cả hai vẫn học từ ngữ cảnh văn bản, không có ranh giới tuyệt đối “local không dùng thông tin toàn corpus”.\n\n**Ví dụ:** cặp “nước–cam” xuất hiện thật; ghép “nước–động cơ” như mẫu âm theo phân phối lấy mẫu. Mẫu âm không được bảo đảm vô nghĩa trong mọi câu; nó là tín hiệu huấn luyện có nhiễu. K=5 nghĩa là học một positive và năm negative cho ví dụ đó, không tính softmax cho 10.000 từ.\n\nEmbedding có thể mang bias xã hội từ dữ liệu. Phương pháp trong slide xác định hướng bias, neutralize từ trung tính và equalize một số cặp. Nó giảm một biểu hiện bias được định nghĩa, không bảo đảm xóa mọi thiên lệch hay khiến mọi ứng dụng công bằng.\n\n**Trả lời miệng:** “Negative sampling giảm chi phí bằng bài toán phân biệt cặp thật và cặp lấy mẫu. GloVe học từ ma trận đồng xuất hiện. Vì embedding học từ văn bản thực tế, nó cũng có thể học bias; debiasing phải nêu rõ đang giảm dạng bias nào và còn giới hạn gì.”\n\n**Hỏi tiếp:** Có thể dùng embedding vào sentiment analysis thế nào? → Lookup từng token, rồi tổng hợp hoặc đưa chuỗi vector qua RNN/LSTM và classifier. Trung bình embedding đơn giản mất thứ tự; “không tốt” khác “tốt”.",
     "blocks": [
@@ -9730,7 +9730,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.2"
     ],
@@ -9749,7 +9749,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Seq2Seq encoder–decoder và image captioning hoạt động ra sao?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 11,
     "bodyMarkdown": "**Nguồn:** `5.3 Sequence Models & Attention Mechanism.txt`, slide 3–9.\n\nSeq2Seq ánh xạ một chuỗi sang chuỗi khác, như câu tiếng Pháp sang tiếng Anh. Encoder đọc input và tạo biểu diễn; decoder dùng biểu diễn đó cùng các token trước để dự đoán token tiếp theo. `Tx` và `Ty` không cần bằng nhau.\n\nỞ mô hình RNN encoder–decoder cơ bản, toàn bộ câu được nén vào một vector ngữ cảnh cuối. Đây là nút thắt khi câu dài: decoder phải dựa vào một bản tóm tắt cố định cho mọi bước. Attention sẽ mở rộng cách truyền thông tin ở DPL5-14.\n\n**Ví dụ:** image captioning có CNN làm encoder ảnh, còn decoder sinh “Một con mèo đang ngủ”. Input ảnh không phải chuỗi từ nhưng output là chuỗi. Không cần buộc encoder và decoder là cùng loại mạng.\n\n**Trả lời miệng:** “Encoder tạo biểu diễn input, decoder sinh output tuần tự có điều kiện trên input đó. Seq2Seq xử lý độ dài đầu vào và đầu ra khác nhau. Trong captioning, encoder có thể là CNN; với RNN cổ điển, vector context cố định có thể làm mất thông tin ở chuỗi dài.”\n\n**Hỏi tiếp:** Decoder có sinh cả câu trong một bước không? → Trong mô hình tự hồi quy đang học, nó sinh từng token cho tới EOS hoặc giới hạn độ dài.",
     "blocks": [
@@ -9786,7 +9786,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.3"
     ],
@@ -9805,7 +9805,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Greedy và beam search khác nhau? Vì sao dùng log và chuẩn hóa độ dài?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 12,
     "bodyMarkdown": "**Nguồn:** `5.3 Sequence Models & Attention Mechanism.txt`, slide 7–27.\n\nGreedy chọn token có xác suất cao nhất ở từng bước. Cách chọn cục bộ có thể bỏ lỡ câu có xác suất tổng thể cao hơn. Exhaustive search thử mọi chuỗi thì quá lớn. **Beam search** giữ B tiền tố tốt nhất, mở rộng chúng rồi giữ B ứng viên tốt nhất cho bước sau; đây vẫn là tìm kiếm xấp xỉ.\n\n**Ví dụ hai bước:** token đầu A có xác suất 0,6, B là 0,4. Phần tiếp tốt nhất sau A có xác suất 0,5, sau B là 0,9. Greedy chọn A, xác suất cả chuỗi là 0,30; nhánh B đạt 0,36. Beam đủ rộng có thể giữ B để phát hiện điều đó.\n\nNhân nhiều xác suất nhỏ dễ underflow; cộng log probability giữ thứ tự so sánh và ổn định hơn. Chuỗi dài thường nhận log-score âm hơn do thêm token. Length normalization điều chỉnh điểm theo độ dài, chẳng hạn chia tổng log-score cho `T^α`, để giảm thiên lệch chuỗi quá ngắn. Cách chọn α phụ thuộc đánh giá, không phải hằng số đúng mọi bài.\n\n**Trả lời miệng:** “Greedy chỉ giữ một nhánh, beam giữ B giả thuyết nên giảm việc bỏ lỡ lựa chọn tốt về sau. Dùng tổng log để tránh underflow. Chuẩn hóa độ dài giúp so các câu dài ngắn hợp lý hơn, nhưng beam lớn hoặc normalization không bảo đảm luôn dịch tốt hơn.”\n\n**Hỏi tiếp:** B=1 có liên hệ gì với greedy? → Với cùng quy tắc mở rộng/chấm điểm và điều kiện kết thúc thích hợp, nó tương ứng việc chỉ giữ một nhánh như greedy.",
     "blocks": [
@@ -9842,7 +9842,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.3"
     ],
@@ -9861,7 +9861,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Đánh giá chuỗi: BLEU, lỗi search/model và bài toán âm thanh",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 13,
     "bodyMarkdown": "**Nguồn:** `5.3 Sequence Models & Attention Mechanism.txt`, slide 23–34, 44–52. BLEU được ghi optional ở slide 28–29.\n\nBLEU so n-gram của bản dịch với các bản tham chiếu, dùng **clipped precision** để không thưởng việc lặp từ vô ích và **brevity penalty** để phạt câu quá ngắn. Nó giúp đánh giá trên cùng bộ test/cấu hình, nhưng không hiểu hoàn hảo nghĩa và chất lượng diễn đạt; không dùng một điểm BLEU để chứng minh mọi câu dịch đúng.\n\n**Ví dụ:** tham chiếu “the cat is on the mat” có hai lần “the”. Dự đoán “the the the the” chỉ được tính tối đa hai match cho unigram “the”, nên precision đã clip là 2/4. Đây chỉ là một thành phần, chưa phải toàn bộ BLEU.\n\nKhi tìm kiếm sai, so điểm câu chuẩn với câu beam tìm được dưới **cùng objective**, gồm length normalization nếu đã dùng. Nếu câu chuẩn có điểm cao hơn mà beam bỏ lỡ, có bằng chứng search chưa tìm tốt; nếu model ưu tiên câu kém, cần xem model/objective. Với âm thanh, slide 45 nêu attention và **CTC** là hai hướng; CTC xử lý căn chỉnh không có nhãn tại từng frame bằng các đường có blank và phép gộp, không phải một loại attention. Trigger-word detection dự đoán thời điểm từ kích hoạt xuất hiện trên chuỗi đặc trưng âm thanh.\n\n**Trả lời miệng:** “BLEU dùng n-gram có clipping và phạt độ dài, có giới hạn về ngữ nghĩa. Error analysis tách vấn đề model chấm điểm sai với search không tìm ra ứng viên điểm cao. CTC là mục tiêu căn chỉnh speech; trigger-word detection là nhận biết tín hiệu theo thời gian.”\n\n**Hỏi tiếp:** Trong CTC, `a, blank, a` và `a, a` có cùng kết quả không? → Không; theo phép collapse chuẩn, trường hợp đầu cho “aa”, trường hợp sau cho “a”.",
     "blocks": [
@@ -9898,7 +9898,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.3"
     ],
@@ -9917,7 +9917,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Attention kiểu encoder–decoder giải quyết nút thắt như thế nào?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 14,
     "bodyMarkdown": "**Nguồn:** `5.3 Sequence Models & Attention Mechanism.txt`, slide 35–43; thuật ngữ đối chiếu self/cross-attention từ `5.4 Transformer Network.txt`, slide 18–19.\n\nThay vì chỉ truyền một vector cố định, attention cho decoder dùng các trạng thái encoder ở nhiều vị trí. Tại bước sinh t, mạng chấm điểm liên quan giữa trạng thái decoder và từng trạng thái nguồn. Softmax chuẩn hóa các điểm thành trọng số `α<t,t'>`; context động là tổng có trọng số của trạng thái nguồn.\n\nTrong attention kiểu Bahdanau đang được giải thích, điểm liên quan được tính bằng một mạng nhỏ từ các trạng thái. Nó không bắt buộc chính là scaled dot-product của Transformer. **Self-attention** kết hợp các vị trí trong cùng chuỗi; **cross-attention** dùng thông tin từ chuỗi/nguồn khác, như decoder hỏi encoder.\n\n**Ví dụ:** khi dịch phần nói về thời gian, decoder có thể đặt trọng số lớn hơn lên cụm “en septembre”. Tại bước khác, các trọng số thay đổi. Không phải mỗi bước bắt buộc chỉ chọn duy nhất một từ, và trọng số không tự là lời giải thích nhân quả chắc chắn.\n\n**Trả lời miệng:** “Attention tạo context riêng cho từng bước decoder bằng tổng có trọng số các trạng thái encoder. Nó giảm nút thắt nén cả câu vào một vector. Self-attention xét nội bộ một chuỗi, còn cross-attention trao đổi giữa decoder và nguồn encoder.”\n\n**Hỏi tiếp:** Attention có luôn đi kèm RNN? → Không; Transformer dùng attention làm thành phần chính mà không cần recurrence kiểu RNN trong mỗi lớp.",
     "blocks": [
@@ -9954,7 +9954,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.3",
       "5.4"
@@ -9980,7 +9980,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Query, Key, Value và scaled dot-product attention tính thế nào?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 15,
     "bodyMarkdown": "**Nguồn:** `5.4 Transformer Network.txt`, slide 10–13, 15–16. Công thức được viết lại vì text trích xuất làm vỡ phân số/chỉ số.\n\nMỗi biểu diễn được chiếu thành query Q, key K và value V. Trực giác: query là thông tin đang tìm, key là đặc trưng để so mức phù hợp, value là thông tin sẽ được tổng hợp. Công thức:\n\n`Attention(Q,K,V) = softmax(QKᵀ / √d_k) V`.\n\nVới một head, Q có thể shape `(nq,dk)`, K `(nk,dk)`, V `(nk,dv)`. Điểm có shape `(nq,nk)`, softmax theo chiều key, đầu ra `(nq,dv)`. Chia căn `dk` giúp kiểm soát độ lớn score trong giả định thống kê thích hợp, tránh softmax quá bão hòa khi chiều key lớn. Nó không bảo đảm mọi gradient luôn tốt.\n\n**Ví dụ số:** Q=[1], hai key là [0] và [1], nên score=[0,1], `dk=1`. Softmax xấp xỉ [0,269;0,731]. Với hai value 10 và 20, đầu ra `0,269×10+0,731×20≈17,31`. Key dùng để tính mức liên quan, value mới là thứ được trộn.\n\n**Trả lời miệng:** “QKᵀ tính score, chia căn chiều key rồi softmax thành trọng số, sau đó nhân V để tổng hợp nội dung. Q, K, V thường là các phép chiếu học được. Trong self-attention chúng bắt nguồn từ cùng biểu diễn đầu vào nhưng không bắt buộc bằng nhau.”\n\n**Hỏi tiếp:** Cross-attention lấy Q,K,V từ đâu? → Q từ decoder, K và V từ encoder trong kiến trúc encoder–decoder thường gặp.",
     "blocks": [
@@ -10017,7 +10017,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.4"
     ],
@@ -10036,7 +10036,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Multi-head attention thêm điều gì?",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 16,
     "bodyMarkdown": "**Nguồn:** `5.4 Transformer Network.txt`, slide 14–16.\n\nMột head tạo một cách so và tổng hợp thông tin. Multi-head dùng nhiều bộ phép chiếu học được để tính attention trong các không gian con khác nhau, nối kết quả rồi chiếu lại: `MultiHead = Concat(head1,…,headh) Wo`.\n\nCác head có thể học những quan hệ khác nhau, nhưng không được kiến trúc gán sẵn “head chủ-vị”, “head thời gian”. Đây là khả năng biểu diễn, không bảo đảm mỗi head có một vai trò ngôn ngữ dễ đặt tên.\n\n**Ví dụ:** với `d_model=128`, 4 head và chia đều, mỗi head có chiều 32; nối bốn kết quả trả về 128 chiều trước phép chiếu output. Số token không tăng gấp bốn; chỉ có nhiều nhánh tính quan hệ.\n\n**Trả lời miệng:** “Multi-head attention cho mô hình nhiều phép chiếu để xem các quan hệ theo những cách khác nhau, sau đó nối và trộn kết quả. Nó không phải lặp một phép attention y hệt không tham số, và không đảm bảo head nào cũng có ý nghĩa cố định.”\n\n**Hỏi tiếp:** Càng nhiều head luôn tốt hơn? → Không; có đánh đổi về chiều mỗi head, tài nguyên và hiệu quả thực nghiệm.",
     "blocks": [
@@ -10073,7 +10073,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.4"
     ],
@@ -10092,7 +10092,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Vị trí, mask, residual, LayerNorm và luồng Transformer",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 17,
     "bodyMarkdown": "**Nguồn:** `5.4 Transformer Network.txt`, slide 7, 18–20; sơ đồ chính ở slide 19.\n\nSelf-attention thuần không tự mã hóa thứ tự. **Positional encoding** đưa thông tin vị trí vào biểu diễn, thường bằng cách cộng vector vị trí với embedding. Công thức sinusoidal của Transformer gốc dùng `sin(pos/10000^(2i/d_model))` và `cos(pos/10000^(2i/d_model))` ở hai chiều liên tiếp. Đây là công thức chuẩn được bổ sung; text slide 19 bị vỡ định dạng và có chỗ đọc thành 1000, nên không sao chép nguyên text hỏng. Positional embedding học được cũng là một lựa chọn khác.\n\nEncoder thường gồm self-attention và feed-forward theo từng vị trí. Decoder thêm **causal mask** trong self-attention để không dùng token tương lai, rồi cross-attention tới encoder. **Residual** cộng đầu vào sublayer với đầu ra khi shape phù hợp; **LayerNorm** chuẩn hóa các feature của một biểu diễn và có hệ số học được. LayerNorm khác BatchNorm, không lấy thống kê giữa các mẫu theo cách BN thông thường.\n\n**Ví dụ:** khi dự đoán từ thứ ba, decoder được dùng hai từ trước và thông tin câu nguồn, nhưng không được đọc đáp án từ thứ tư. Trong huấn luyện có thể tính nhiều vị trí song song nhờ mask; khi sinh tự hồi quy vẫn thường tạo token nối tiếp.\n\n**Trả lời miệng:** “Vị trí giúp attention biết thứ tự; causal mask chặn tương lai. Transformer kết hợp attention, feed-forward, residual và normalization. Encoder đọc input, decoder dùng masked self-attention rồi cross-attention để sinh. Khả năng song song hóa huấn luyện không có nghĩa sinh cả câu luôn chỉ mất một bước.”\n\n**Hỏi tiếp:** Transformer luôn nhanh và rẻ hơn RNN? → Không; dense attention có ma trận score kích thước bậc hai theo độ dài chuỗi, còn tùy kiến trúc và triển khai.",
     "blocks": [
@@ -10129,7 +10129,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.4"
     ],
@@ -10148,7 +10148,7 @@
     "subjectId": "dl",
     "priority": "A",
     "title": "Pretrained Transformer, NER/QA và so sánh BERT–GPT",
-    "groupTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "groupTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "order": 18,
     "bodyMarkdown": "**Nguồn:** `5.4 Transformer Network.txt`, slide 1 về mục tiêu NER/QA/fine-tuning; slide 18 nhắc BERT và BERT distill. **GPT là phần so sánh bổ sung**, chưa thấy tên GPT trong extract; không khẳng định môn đã dạy sâu GPT.\n\nPretraining học biểu diễn trên dữ liệu lớn; fine-tuning tiếp tục học một phần/toàn bộ tham số cho mục tiêu cụ thể. Với NER, thường dự đoán nhãn token; với extractive QA, dự đoán vị trí bắt đầu/kết thúc câu trả lời trong context. Input tokenization và việc nối token với nhãn/vị trí phải nhất quán.\n\n**Ví dụ:** đoạn “An sinh ở Huế”, hỏi “An sinh ở đâu?”; QA trích xuất chọn span “Huế”. Đây khác sinh một câu trả lời tự do ngoài đoạn. Nếu một từ tách thành nhiều subword, NER cần quy tắc gán nhãn/mask loss thích hợp; không coi mọi subword đều là từ độc lập.\n\nBERT điển hình là encoder-only với attention hai chiều và mục tiêu pretraining như masked language modeling; GPT điển hình là decoder-only có causal mask, dự đoán token tiếp theo. Đây là hai lựa chọn kiến trúc/mục tiêu, không có nghĩa encoder chỉ làm phân loại hay decoder không thể dùng cho hiểu văn bản. Transformer cũng không loại bỏ mọi trường hợp dùng RNN.\n\n**Trả lời miệng:** “Em dùng pretrained Transformer rồi fine-tune cho NER hoặc QA. NER gán nhãn token, extractive QA chọn span trong context. BERT và GPT giúp phân biệt encoder hai chiều với mô hình tự hồi quy có causal mask; phần GPT ở đây là mở rộng để so sánh, chưa xác nhận trong slide.”\n\n**Hỏi tiếp:** Fine-tune có luôn cần cập nhật toàn bộ trọng số? → Không; có thể freeze phần nền, học head hoặc mở một phần tầng tùy dữ liệu và tài nguyên.",
     "blocks": [
@@ -10185,7 +10185,7 @@
     },
     "collectionId": "dpl302m",
     "chapterId": "dpl5",
-    "chapterTitle": "DPL302m — RNN, NLP, Attention và Transformer",
+    "chapterTitle": "DPL302m: RNN, NLP, Attention và Transformer",
     "lessonIds": [
       "5.4"
     ],

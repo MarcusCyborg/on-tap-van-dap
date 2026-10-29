@@ -1,4 +1,4 @@
-# 01 — Xác suất thống kê
+# 01: Xác suất thống kê
 
 **Ưu tiên tối nay: XS1–XS4.** Xác suất mô tả mức độ có thể xảy ra của một sự kiện trong một mô hình; thống kê dùng dữ liệu để mô tả và suy luận về đối tượng ta quan tâm.
 

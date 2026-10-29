@@ -43,35 +43,35 @@ Không đưa phần trăm bao phủ vì các chủ đề có độ rộng và tr
 
 | Bài | Mức của bộ cũ | Các câu cũ đã hỗ trợ | Phần thiếu hoặc chưa đủ sâu trước bổ sung |
 |---|---|---|---|
-| **1.1 — Introduction to DL** | Khá ở mức nhập môn | DL01, DL29; ML01, ML04 | Phân biệt structured/unstructured thành câu rõ ràng; quan hệ giữa quy mô dữ liệu, tính toán và năng lực mô hình. Không cần học thuộc các câu khẩu hiệu hoặc mốc lịch sử để hiểu bản chất. |
-| **1.2 — Basic Neural Network** | Một phần | DL03, DL07–DL11; ML20 | Logistic regression như một mạng cụ thể; công thức BCE/cost trên m mẫu; computation graph có nhiều bước; suy ra dz=a−y; vectorization, NumPy broadcasting, lỗi shape `(n,)` so với `(n,1)`. |
-| **1.3 — Shallow Neural Networks** | Một phần | DL04–DL06, DL10, DL19 | Ký hiệu tầng/neuron, công thức forward/backward cho một tầng ẩn trên m mẫu; Leaky ReLU, đạo hàm activation, thao tác nhân từng phần tử; tính toán ví dụ mạng hai tầng. |
-| **1.4 — Deep Neural Networks** | Một phần | DL01–DL04, DL10; ML03 | Shape W, b, Z, A theo từng tầng; kiểm tra một phép nhân ma trận cụ thể; cache forward/backward; đếm tầng, số neuron và tham số; biểu diễn phân tầng ở độ sâu của bài học. |
-| **2.1 — Practical Aspects** | Một phần, đã có nhiều ý nền | DL14–DL20, DL22; ML07, ML13, ML16–ML18 | Inverted dropout và keep_prob; công thức L2 và gradient; He/Xavier mới nêu tên; gradient checking chưa có; liên hệ chuẩn hóa với tối ưu cần ví dụ sâu hơn. |
-| **2.2 — Optimization Algorithms** | Một phần, thiên về trực giác | DL11–DL13, DL21, DL33; DL09 nhắc điểm yên ngựa | Exponentially weighted averages; Momentum, RMSprop, Adam thành các quy tắc phân biệt được; bias correction; ý nghĩa beta/epsilon; plateau/saddle point và giới hạn của optimizer. Nhắc Adam chưa đủ thay cả bài tối ưu. |
-| **2.3 — Hyperparameter Tuning** | Một phần | DL07, DL13, DL23; ML03 | Random search vs grid search, log scale, coarse-to-fine, Panda/Caviar; công thức BatchNorm, gamma/beta, khi nào bias trước BN dư thừa; softmax/cross-entropy có công thức và shape; bước dùng framework căn bản. |
-| **3.1 — ML Strategy** | Rất ít so với bài | ML07, ML17, ML29–ML31, ML34; DL14, DL17 | Orthogonalization; optimizing vs satisficing metric; human-level performance, Bayes optimal error, avoidable bias; phân tích khoảng cách sai số; khi nào điều chỉnh dev/test và metric. Biết định lý Bayes không đồng nghĩa đã học Bayes optimal error. |
-| **3.2 — Error Analysis** | Một phần | DL14, DL17, DL28, DL30; ML11, ML34, ML35 | Bảng phân loại lỗi và trần cải thiện; quy trình sửa nhãn dev/test; training-dev để tách variance/data mismatch; multi-task learning; end-to-end vs pipeline; giới hạn dữ liệu tổng hợp. |
-| **4.1 — CNN** | Một phần | DL24–DL25 | Tự tính convolution 2D; Sobel/Scharr; valid/same và điều kiện của công thức padding; cross-correlation; shape volume RGB; đếm tham số conv; theo dõi kích thước qua cả ConvNet. |
-| **4.2 — CNN Case Studies** | Rất ít | DL34 về residual; DL16, DL28 về augmentation/transfer | LeNet, AlexNet, VGG; ResNet/degradation và các loại block; Inception, conv 1×1; depthwise separable convolution/MobileNet; compound scaling/EfficientNet. Residual connection mới là một phần nhỏ. |
-| **4.3 — Object Detection** | Chưa có nội dung chuyên biệt | DL16 chỉ nhắc biến đổi ảnh phải đổi bounding box | Classification/localization/detection; landmark; sliding-window detection; YOLO theo phiên bản giảng; IoU, NMS, anchor boxes; semantic segmentation, U-Net, transposed convolution. Cửa sổ trượt ở Giải thuật không thay cho bài detection này. |
-| **4.4 — Face Recognition** | Chưa có nội dung chuyên biệt | DL27 là nền về embedding, DL01 nhắc biểu diễn phân tầng | Verification vs recognition; one-shot; Siamese; triplet loss và margin; hard triplets; so khớp embedding; trực quan ConvNet; neural style transfer, content/style loss, Gram matrix; conv 1D/3D. |
-| **5.1 — RNN** | Rất ít | DL26, DL20 | Forward RNN theo thời gian; BPTT; one-to-many/many-to-one/many-to-many; language model và sinh chuỗi; GRU; các cổng và cell state của LSTM; bidirectional/deep RNN. Một câu “RNN và LSTM là gì” không đủ thay bài này. |
-| **5.2 — NLP & Word Embeddings** | Rất ít | DL27; ML12 hỗ trợ one-hot khái quát | Ma trận embedding/lookup; cosine similarity; analogies và giới hạn; Word2Vec Skip-gram/CBOW theo phạm vi bản đồ; negative sampling; GloVe; debiasing và giới hạn. |
-| **5.3 — Sequence Models & Attention** | Chưa có phần chuyên biệt cho hầu hết nội dung | DL31 chỉ hỗ trợ ý tưởng attention nói chung | Encoder–decoder/Seq2Seq; image captioning; greedy vs beam search; log probability, length normalization; phân tích lỗi search/model; BLEU; Bahdanau attention; speech recognition/CTC/trigger-word detection. |
-| **5.4 — Transformer** | Một phần, mới ở nhận diện | DL31–DL32, DL34; DL27 là nền embedding | Công thức scaled dot-product attention và chia sqrt(dk); phép chiếu Q/K/V; multi-head; self vs cross-attention; encoder/decoder block; LayerNorm; positional encoding cụ thể; BERT vs GPT. |
+| **1.1: Introduction to DL** | Khá ở mức nhập môn | DL01, DL29; ML01, ML04 | Phân biệt structured/unstructured thành câu rõ ràng; quan hệ giữa quy mô dữ liệu, tính toán và năng lực mô hình. Không cần học thuộc các câu khẩu hiệu hoặc mốc lịch sử để hiểu bản chất. |
+| **1.2: Basic Neural Network** | Một phần | DL03, DL07–DL11; ML20 | Logistic regression như một mạng cụ thể; công thức BCE/cost trên m mẫu; computation graph có nhiều bước; suy ra dz=a−y; vectorization, NumPy broadcasting, lỗi shape `(n,)` so với `(n,1)`. |
+| **1.3: Shallow Neural Networks** | Một phần | DL04–DL06, DL10, DL19 | Ký hiệu tầng/neuron, công thức forward/backward cho một tầng ẩn trên m mẫu; Leaky ReLU, đạo hàm activation, thao tác nhân từng phần tử; tính toán ví dụ mạng hai tầng. |
+| **1.4: Deep Neural Networks** | Một phần | DL01–DL04, DL10; ML03 | Shape W, b, Z, A theo từng tầng; kiểm tra một phép nhân ma trận cụ thể; cache forward/backward; đếm tầng, số neuron và tham số; biểu diễn phân tầng ở độ sâu của bài học. |
+| **2.1: Practical Aspects** | Một phần, đã có nhiều ý nền | DL14–DL20, DL22; ML07, ML13, ML16–ML18 | Inverted dropout và keep_prob; công thức L2 và gradient; He/Xavier mới nêu tên; gradient checking chưa có; liên hệ chuẩn hóa với tối ưu cần ví dụ sâu hơn. |
+| **2.2: Optimization Algorithms** | Một phần, thiên về trực giác | DL11–DL13, DL21, DL33; DL09 nhắc điểm yên ngựa | Exponentially weighted averages; Momentum, RMSprop, Adam thành các quy tắc phân biệt được; bias correction; ý nghĩa beta/epsilon; plateau/saddle point và giới hạn của optimizer. Nhắc Adam chưa đủ thay cả bài tối ưu. |
+| **2.3: Hyperparameter Tuning** | Một phần | DL07, DL13, DL23; ML03 | Random search vs grid search, log scale, coarse-to-fine, Panda/Caviar; công thức BatchNorm, gamma/beta, khi nào bias trước BN dư thừa; softmax/cross-entropy có công thức và shape; bước dùng framework căn bản. |
+| **3.1: ML Strategy** | Rất ít so với bài | ML07, ML17, ML29–ML31, ML34; DL14, DL17 | Orthogonalization; optimizing vs satisficing metric; human-level performance, Bayes optimal error, avoidable bias; phân tích khoảng cách sai số; khi nào điều chỉnh dev/test và metric. Biết định lý Bayes không đồng nghĩa đã học Bayes optimal error. |
+| **3.2: Error Analysis** | Một phần | DL14, DL17, DL28, DL30; ML11, ML34, ML35 | Bảng phân loại lỗi và trần cải thiện; quy trình sửa nhãn dev/test; training-dev để tách variance/data mismatch; multi-task learning; end-to-end vs pipeline; giới hạn dữ liệu tổng hợp. |
+| **4.1 - CNN** | Một phần | DL24–DL25 | Tự tính convolution 2D; Sobel/Scharr; valid/same và điều kiện của công thức padding; cross-correlation; shape volume RGB; đếm tham số conv; theo dõi kích thước qua cả ConvNet. |
+| **4.2: CNN Case Studies** | Rất ít | DL34 về residual; DL16, DL28 về augmentation/transfer | LeNet, AlexNet, VGG; ResNet/degradation và các loại block; Inception, conv 1×1; depthwise separable convolution/MobileNet; compound scaling/EfficientNet. Residual connection mới là một phần nhỏ. |
+| **4.3: Object Detection** | Chưa có nội dung chuyên biệt | DL16 chỉ nhắc biến đổi ảnh phải đổi bounding box | Classification/localization/detection; landmark; sliding-window detection; YOLO theo phiên bản giảng; IoU, NMS, anchor boxes; semantic segmentation, U-Net, transposed convolution. Cửa sổ trượt ở Giải thuật không thay cho bài detection này. |
+| **4.4: Face Recognition** | Chưa có nội dung chuyên biệt | DL27 là nền về embedding, DL01 nhắc biểu diễn phân tầng | Verification vs recognition; one-shot; Siamese; triplet loss và margin; hard triplets; so khớp embedding; trực quan ConvNet; neural style transfer, content/style loss, Gram matrix; conv 1D/3D. |
+| **5.1 - RNN** | Rất ít | DL26, DL20 | Forward RNN theo thời gian; BPTT; one-to-many/many-to-one/many-to-many; language model và sinh chuỗi; GRU; các cổng và cell state của LSTM; bidirectional/deep RNN. Một câu “RNN và LSTM là gì” không đủ thay bài này. |
+| **5.2: NLP & Word Embeddings** | Rất ít | DL27; ML12 hỗ trợ one-hot khái quát | Ma trận embedding/lookup; cosine similarity; analogies và giới hạn; Word2Vec Skip-gram/CBOW theo phạm vi bản đồ; negative sampling; GloVe; debiasing và giới hạn. |
+| **5.3: Sequence Models & Attention** | Chưa có phần chuyên biệt cho hầu hết nội dung | DL31 chỉ hỗ trợ ý tưởng attention nói chung | Encoder–decoder/Seq2Seq; image captioning; greedy vs beam search; log probability, length normalization; phân tích lỗi search/model; BLEU; Bahdanau attention; speech recognition/CTC/trigger-word detection. |
+| **5.4: Transformer** | Một phần, mới ở nhận diện | DL31–DL32, DL34; DL27 là nền embedding | Công thức scaled dot-product attention và chia sqrt(dk); phép chiếu Q/K/V; multi-head; self vs cross-attention; encoder/decoder block; LayerNorm; positional encoding cụ thể; BERT vs GPT. |
 
 ## Những gì có thể học ngay từ bộ cũ
 
 Bộ cũ vẫn làm tốt vai trò bước đệm. Các nhóm sau đã có định nghĩa, ví dụ và mẫu trả lời để bạn bắt đầu:
 
-1. Nơ-ron, weight/bias, tầng ẩn, activation và forward pass — DL03–DL06.
-2. Loại đầu ra, loss, gradient, backprop khác optimizer, bước gradient descent — DL07–DL11.
-3. Batch/epoch/step, learning rate, overfit, early stopping, augmentation, chia tập — DL12–DL18.
-4. Khởi tạo và vấn đề gradient ở mức trực giác — DL19–DL20.
-5. Dropout/regularization và BatchNorm ở mức nguyên lý — DL22–DL23.
-6. CNN/kernel/stride/padding/pooling nhập môn — DL24–DL25.
-7. Transfer learning/fine-tuning — DL28.
+1. Nơ-ron, weight/bias, tầng ẩn, activation và forward pass - DL03–DL06.
+2. Loại đầu ra, loss, gradient, backprop khác optimizer, bước gradient descent - DL07–DL11.
+3. Batch/epoch/step, learning rate, overfit, early stopping, augmentation, chia tập - DL12–DL18.
+4. Khởi tạo và vấn đề gradient ở mức trực giác - DL19–DL20.
+5. Dropout/regularization và BatchNorm ở mức nguyên lý - DL22–DL23.
+6. CNN/kernel/stride/padding/pooling nhập môn - DL24–DL25.
+7. Transfer learning/fine-tuning - DL28.
 
 Các nhóm này hữu ích nhưng không chứng minh đã đáp ứng độ sâu tính toán hoặc giải thích cơ chế mà môn học có thể yêu cầu.
 

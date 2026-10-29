@@ -1,4 +1,4 @@
-# Ôn Vấn Đáp — Ứng Dụng Học Tập & Luyện Vấn Đáp Thực Chiến
+# Ôn Vấn Đáp: Ứng Dụng Học Tập & Luyện Vấn Đáp Thực Chiến
 
 Website tiếng Việt hỗ trợ học từ gần như số 0, chuẩn bị vấn đáp 5–7 câu cho môn **Deep Learning (DPL302m)** và bốn mảng **Nền tảng chung** (Xác suất thống kê, Machine Learning, Deep Learning cơ bản, và Giải thuật).
 
@@ -10,7 +10,7 @@ Website tiếng Việt hỗ trợ học từ gần như số 0, chuẩn bị v�
 
 Website tổ chức nội dung thành 2 collection rõ ràng, độc lập nhưng liên kết chặt chẽ:
 
-1. **Deep Learning — DPL302m (Môn học chính — 72 câu hỏi bám sát 17 slide):**
+1. **Deep Learning: DPL302m (Môn học chính - 72 câu hỏi bám sát 17 slide):**
    - **Chương 1:** Từ logistic regression đến mạng nhiều tầng (12 câu, 4 bài tập)
    - **Chương 2:** Huấn luyện và tối ưu hóa (14 câu, 4 bài tập)
    - **Chương 3:** ML strategy và phân tích lỗi (10 câu, 3 bài tập)
@@ -19,7 +19,7 @@ Website tổ chức nội dung thành 2 collection rõ ràng, độc lập nhưn
    - Phân tầng học tập: **57 câu Cốt lõi** và **15 câu Đọc tiếp**, kèm **19 bài tự kiểm tra có lời giải**.
    - Bảng tra cứu trực tiếp từ 17 bài giảng slide (1.1 → 5.4) sang câu hỏi tương ứng.
 
-2. **Nền tảng chung (140 câu — 4 chuyên đề cốt lõi):**
+2. **Nền tảng chung (140 câu - 4 chuyên đề cốt lõi):**
    - **Xác suất thống kê:** 35 câu (18A • 12B • 5C)
    - **Machine Learning:** 35 câu (18A • 12B • 5C)
    - **Deep Learning (Cơ sở):** 35 câu (18A • 12B • 5C, mã `DL01–DL35`)

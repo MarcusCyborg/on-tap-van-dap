@@ -1,4 +1,4 @@
-# Chương 3 — ML strategy và phân tích lỗi: biết nên cải thiện điều gì
+# Chương 3: ML strategy và phân tích lỗi: biết nên cải thiện điều gì
 
 Chương này bám bài **3.1 Introduction to ML strategy** và **3.2 Error Analysis** của DPL302m. Có **10 câu: 8 Cốt lõi, 2 Đọc tiếp**. Không cần thêm nhiều công thức để bắt đầu: mục tiêu là nhìn kết quả mô hình rồi chọn bước tiếp theo có lý do.
 
@@ -154,19 +154,19 @@ End-to-end vẫn có thể gồm nhiều khối nội bộ, tiền xử lý và 
 
 ## Ba bài tự kiểm tra có lời giải
 
-### Bài 1 — Chọn mục tiêu và mô hình
+### Bài 1: Chọn mục tiêu và mô hình
 
 Ứng dụng cần dự đoán ≤100ms. A: F1=0,91, 70ms; B: F1=0,94, 130ms; C: F1=0,92, 95ms. Nếu tối đa F1 với ràng buộc đó, chọn gì? Nếu cả ba đều chậm hơn 100ms thì sao?
 
 **Lời giải:** Chọn C trong những mô hình đạt điều kiện, dù B có F1 cao nhất. F1 là optimizing metric, latency là satisficing metric. Nếu không mô hình nào đạt, chưa có ứng viên đáp ứng yêu cầu; cần cải thiện hoặc đánh giá lại ràng buộc có căn cứ, không bỏ ràng buộc âm thầm.
 
-### Bài 2 — Chẩn đoán bốn mức sai số
+### Bài 2: Chẩn đoán bốn mức sai số
 
 Lỗi chuyên gia 1%, train 8%, training-dev 9%, dev 20%. Giả sử các phép so sánh đủ hợp lệ cho chẩn đoán nhập môn, tính các khoảng và giải thích.
 
 **Lời giải:** Train−chuyên gia=7 điểm phần trăm, gợi ý còn avoidable bias nếu chuyên gia là mốc tốt. Training-dev−train=1 điểm, gợi ý khoảng khái quát hóa trên nguồn train. Dev−training-dev=11 điểm, gợi ý data mismatch lớn. Cả bias và mismatch đáng quan tâm; không thể chỉ lấy dev−train=12 rồi gọi toàn bộ là variance. Chuyên gia chỉ là proxy, không phải Bayes error đã biết.
 
-### Bài 3 — Mẫu số trong error analysis
+### Bài 3: Mẫu số trong error analysis
 
 Dev có 2.000 ảnh, sai 200 ảnh. Trong các lỗi, 50 ảnh mờ và 20 ảnh sai nhãn; 5 ảnh vừa mờ vừa sai nhãn. Nếu một biện pháp chỉ sửa hoàn hảo 50 lỗi ảnh mờ và không gây lỗi mới, lỗi chung giảm bao nhiêu? Có cộng 50+20 để nói có 70 ảnh thuộc hai nhóm không?
 

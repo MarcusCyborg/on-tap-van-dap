@@ -57,7 +57,7 @@ export const ReferenceView: React.FC = () => {
         <div className="flex items-center gap-2">
           <FileText className="w-5 h-5 text-accent" />
           <h1 className="text-xl sm:text-2xl font-extrabold text-ink">
-            Tra Cứu & Bài Tập — {subject.name}
+            Tra Cứu & Bài Tập: {subject.name}
           </h1>
         </div>
 

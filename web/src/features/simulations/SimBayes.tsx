@@ -202,7 +202,7 @@ export const SimBayes: React.FC = () => {
           </div>
           <div className="mt-1 flex items-baseline gap-2">
             <span className="text-2xl font-bold font-mono text-ink">
-              {stats.posterior !== null ? `${(stats.posterior * 100).toFixed(2)}%` : '—'}
+              {stats.posterior !== null ? `${(stats.posterior * 100).toFixed(2)}%` : '-'}
             </span>
             <span className="text-xs text-muted">
               {stats.totalPositive > 0

@@ -192,7 +192,7 @@ export const ReviewView: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-xs font-bold text-danger-ink uppercase tracking-wider">
                 <AlertCircle className="w-4 h-4" />
-                <span>1. Chưa hiểu — Cần ưu tiên đọc lại bản chất ({filteredUnknown.length} câu)</span>
+                <span>1. Chưa hiểu: Cần ưu tiên đọc lại bản chất ({filteredUnknown.length} câu)</span>
               </div>
               <div className="bg-surface border border-border rounded-xl divide-y divide-border overflow-hidden">
                 {filteredUnknown.map(c => renderReviewItem(c, userData))}
@@ -205,7 +205,7 @@ export const ReviewView: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-xs font-bold text-warning-ink uppercase tracking-wider">
                 <HelpCircle className="w-4 h-4" />
-                <span>2. Hiểu một phần — Cần củng cố ví dụ và mẫu trả lời ({filteredPartial.length} câu)</span>
+                <span>2. Hiểu một phần: Cần củng cố ví dụ và mẫu trả lời ({filteredPartial.length} câu)</span>
               </div>
               <div className="bg-surface border border-border rounded-xl divide-y divide-border overflow-hidden">
                 {filteredPartial.map(c => renderReviewItem(c, userData))}
@@ -260,7 +260,7 @@ function renderReviewItem(c: Concept, userData: any) {
                 {c.studyLevel === 'core' ? 'Cốt lõi' : 'Đọc tiếp'}
               </span>
               <span className="text-[11px] text-muted font-medium">
-                {c.chapterTitle ? c.chapterTitle.split('—')[0].trim() : ''}
+                {c.chapterTitle ? c.chapterTitle.split(/[:\-]/)[0].trim() : ''}
               </span>
             </>
           ) : (

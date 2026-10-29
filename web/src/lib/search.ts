@@ -161,7 +161,7 @@ export function searchKnowledgeBase(rawQuery: string): SearchResult[] {
         results.push({
           id: `glossary-${ch.chapterId}-${g.term}`,
           type: 'glossary',
-          title: `Thuật ngữ: ${g.term} (${ch.title.split('—')[0].trim()})`,
+          title: `Thuật ngữ: ${g.term} (${ch.title.split(/[:\-]/)[0].trim()})`,
           collectionId: 'dpl302m',
           chapterId: ch.chapterId,
           chapterTitle: ch.title,
@@ -212,7 +212,7 @@ export function searchKnowledgeBase(rawQuery: string): SearchResult[] {
         results.push({
           id: ex.id,
           type: 'exercise',
-          title: `Bài tập: ${ex.title} (${ch.title.split('—')[0].trim()})`,
+          title: `Bài tập: ${ex.title} (${ch.title.split(/[:\-]/)[0].trim()})`,
           collectionId: 'dpl302m',
           chapterId: ch.chapterId,
           chapterTitle: ch.title,

@@ -63,9 +63,9 @@ Xác suất nằm trong [0, 1]. Mô hình có thể trả về điểm thô trư
 
 | Mức | Ý nghĩa | Cách học |
 |---|---|---|
-| A — Nền tảng | Khái niệm làm chỗ dựa cho nhiều câu khác | Đọc hiểu, tự kể ví dụ, tập nói khi đóng tài liệu |
-| B — Mở rộng | Thuật toán, kỹ thuật và so sánh thường gặp | Học sau phần A liên quan; hiểu dùng khi nào và giới hạn |
-| C — Nhận diện | Ý sâu hơn hoặc phạm vi bổ sung | Nắm ý chính; chưa hiểu thì quay về nền tảng cần thiết |
+| A - Nền tảng | Khái niệm làm chỗ dựa cho nhiều câu khác | Đọc hiểu, tự kể ví dụ, tập nói khi đóng tài liệu |
+| B - Mở rộng | Thuật toán, kỹ thuật và so sánh thường gặp | Học sau phần A liên quan; hiểu dùng khi nào và giới hạn |
+| C - Nhận diện | Ý sâu hơn hoặc phạm vi bổ sung | Nắm ý chính; chưa hiểu thì quay về nền tảng cần thiết |
 
 A/B/C là mức ưu tiên học trong tài liệu này, **không phải xác suất ra đề**, không bảo đảm thầy chỉ hỏi phần A. Nếu thầy đã nhấn mạnh một chủ đề B hoặc C trên lớp, hãy đẩy chủ đề đó lên trước.
 
@@ -73,11 +73,11 @@ A/B/C là mức ưu tiên học trong tài liệu này, **không phải xác su�
 
 Đừng cố đọc hết tất cả câu với độ sâu như nhau. Làm ba lượt:
 
-**Lượt 1 — Nhìn toàn cảnh:** đọc bản đồ đầu mỗi chuyên đề và lướt các tiêu đề câu hỏi. Đánh dấu “chưa từng nghe”, “có nghe nhưng chưa giải thích được”, “tự giải thích được”. Đừng mất thời gian làm bảng theo dõi quá đẹp.
+**Lượt 1: Nhìn toàn cảnh:** đọc bản đồ đầu mỗi chuyên đề và lướt các tiêu đề câu hỏi. Đánh dấu “chưa từng nghe”, “có nghe nhưng chưa giải thích được”, “tự giải thích được”. Đừng mất thời gian làm bảng theo dõi quá đẹp.
 
-**Lượt 2 — Dựng nền:** đọc các câu A theo đường đọc của từng file. Sau mỗi 2–3 câu, đóng tài liệu và nói lại. Với công thức, thay số nhỏ để biết mẫu số và các ký hiệu là gì. Với thuật toán, chạy tay trên vài phần tử.
+**Lượt 2: Dựng nền:** đọc các câu A theo đường đọc của từng file. Sau mỗi 2–3 câu, đóng tài liệu và nói lại. Với công thức, thay số nhỏ để biết mẫu số và các ký hiệu là gì. Với thuật toán, chạy tay trên vài phần tử.
 
-**Lượt 3 — Lấp chỗ hổng và mở rộng:** làm bài tự kiểm tra; nếu sai thì quay lại câu tương ứng. Ưu tiên B/C liên quan đến slide hoặc bài thầy đã dạy. Còn thời gian mới mở rộng tiếp.
+**Lượt 3: Lấp chỗ hổng và mở rộng:** làm bài tự kiểm tra; nếu sai thì quay lại câu tương ứng. Ưu tiên B/C liên quan đến slide hoặc bài thầy đã dạy. Còn thời gian mới mở rộng tiếp.
 
 ### Gợi ý phân bổ nếu còn khoảng 4 giờ
 

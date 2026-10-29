@@ -1,8 +1,8 @@
-# Machine Learning — Từ số 0 đến trả lời vấn đáp
+# Machine Learning: Từ số 0 đến trả lời vấn đáp
 
 Tài liệu gồm **35 câu ML01–ML35**, đi theo một quy trình học máy thay vì yêu cầu học thuộc các định nghĩa rời rạc. Đây là kiến thức nền và câu hỏi luyện tập, không phải dự đoán đề của thầy.
 
-**[A] — 18 câu nền tảng:** hiểu trước, nói lại được bằng lời của mình. **[B] — 12 câu mở rộng:** nối các ý và phân biệt thuật toán. **[C] — 5 câu nhận diện:** biết ý tưởng, chưa cần suy diễn toán học tối nay.
+**[A] - 18 câu nền tảng:** hiểu trước, nói lại được bằng lời của mình. **[B] - 12 câu mở rộng:** nối các ý và phân biệt thuật toán. **[C] - 5 câu nhận diện:** biết ý tưởng, chưa cần suy diễn toán học tối nay.
 
 ## Bản đồ khái niệm và đường đọc
 
@@ -40,7 +40,7 @@ Một **sample** là một trường hợp quan sát. **Feature** là thuộc t�
 
 ### ML03 [B] Parameter khác hyperparameter thế nào?
 
-**Parameter — tham số** được học trong huấn luyện, như trọng số trong hồi quy tuyến tính. **Hyperparameter — siêu tham số** là cấu hình điều khiển mô hình hoặc quá trình học, như số hàng xóm K, độ sâu tối đa của cây hoặc learning rate.
+**Parameter - tham số** được học trong huấn luyện, như trọng số trong hồi quy tuyến tính. **Hyperparameter - siêu tham số** là cấu hình điều khiển mô hình hoặc quá trình học, như số hàng xóm K, độ sâu tối đa của cây hoặc learning rate.
 
 **Ví dụ:** với `giá = w × diện_tích + b`, thuật toán học w và b. Nếu giới hạn cây quyết định chỉ được sâu 5 tầng, số 5 là siêu tham số.
 
@@ -50,7 +50,7 @@ Một **sample** là một trường hợp quan sát. **Feature** là thuộc t�
 
 ### ML04 [A] Học có giám sát gồm phân loại và hồi quy như thế nào?
 
-Học có giám sát dùng các cặp đầu vào–đáp án. **Classification — phân loại** dự đoán lớp; **regression — hồi quy** dự đoán đại lượng số.
+Học có giám sát dùng các cặp đầu vào–đáp án. **Classification - phân loại** dự đoán lớp; **regression - hồi quy** dự đoán đại lượng số.
 
 **Ví dụ:** dự đoán một căn nhà thuộc nhóm “rẻ/vừa/đắt” là phân loại; dự đoán giá 2,7 tỷ là hồi quy. Số phòng ghi bằng số nhưng nếu mục tiêu là loại nhà mã hóa 0, 1, 2 thì chưa chắc là hồi quy: cần xét ý nghĩa của đầu ra.
 
@@ -60,7 +60,7 @@ Học có giám sát dùng các cặp đầu vào–đáp án. **Classification 
 
 ### ML05 [B] Không giám sát và tăng cường khác có giám sát ra sao?
 
-**Unsupervised learning — học không giám sát** tìm cấu trúc khi không có nhãn mục tiêu, như phân cụm khách hàng. **Reinforcement learning — học tăng cường** cho một tác nhân chọn hành động, nhận phản hồi thưởng và học cách tăng tổng phần thưởng kỳ vọng theo thời gian.
+**Unsupervised learning - học không giám sát** tìm cấu trúc khi không có nhãn mục tiêu, như phân cụm khách hàng. **Reinforcement learning - học tăng cường** cho một tác nhân chọn hành động, nhận phản hồi thưởng và học cách tăng tổng phần thưởng kỳ vọng theo thời gian.
 
 **Ví dụ:** chia khách hàng thành nhóm theo hành vi là phân cụm. Một tác nhân học chơi trò chơi bằng điểm thưởng là học tăng cường. Phần thưởng có thể đến muộn sau nhiều hành động.
 
@@ -392,31 +392,31 @@ Giải thích mô hình giúp hiểu yếu tố liên quan tới dự đoán. Fe
 
 Hãy trả lời trước khi đọc lời giải. Mỗi câu nên nói được **lý do**, không chỉ tên thuật toán hoặc công thức.
 
-### Tình huống 1 — Điểm đẹp bất thường
+### Tình huống 1: Điểm đẹp bất thường
 
 Bạn có dữ liệu 500 bệnh nhân, mỗi người 10 ảnh. Chia ngẫu nhiên 5.000 ảnh, được accuracy 99%. Điều gì cần kiểm tra?
 
 **Lời giải:** nếu mục tiêu là áp dụng cho bệnh nhân mới, cần kiểm tra cùng bệnh nhân có xuất hiện ở cả train và test không. Mô hình có thể tận dụng đặc điểm riêng của bệnh nhân. Chia theo bệnh nhân, xử lý trùng lặp và học tiền xử lý trên train; sau đó đánh giá lại. Không mặc định 99% chắc là sai, nhưng chưa đủ đáng tin khi thiết kế chia tập chưa phù hợp.
 
-### Tình huống 2 — Tính chỉ số
+### Tình huống 2: Tính chỉ số
 
 100 email: 20 spam. Mô hình báo 10 spam, đúng 8. Hãy tính TP, FP, FN, TN, accuracy, precision và recall.
 
 **Lời giải:** TP=8, FP=2, FN=12, TN=78. Accuracy=86%, precision=80%, recall=40%. Tỷ lệ đúng chung cao hơn mức phát hiện spam. Nếu muốn giảm bỏ sót, có thể thử ngưỡng thấp hơn trên validation rồi kiểm tra số báo nhầm và chi phí.
 
-### Tình huống 3 — Scaling sai quy trình
+### Tình huống 3: Scaling sai quy trình
 
 Bạn tính trung bình và độ lệch chuẩn trên tất cả dữ liệu, chuẩn hóa rồi chạy 5-fold cross-validation. Có vấn đề gì?
 
 **Lời giải:** thống kê của phần đánh giá đã đi vào tiền xử lý train. Cần đặt scaler trong quy trình của mỗi fold: fit trên train fold, transform train và validation fold. Sau khi chọn cấu hình, fit quy trình trên tập phát triển và đánh giá test riêng. Tương tự với điền thiếu, chọn đặc trưng và PCA học từ dữ liệu.
 
-### Tình huống 4 — Chọn metric giá nhà
+### Tình huống 4: Chọn metric giá nhà
 
 Hai mô hình có lỗi tuyệt đối trên 3 nhà: A = [1, 1, 10], B = [4, 4, 4], đơn vị trăm triệu. Mô hình nào tốt hơn?
 
 **Lời giải:** cả hai có MAE=4. A có MSE=(1+1+100)/3=34; B có MSE=16. Nếu lỗi rất lớn đặc biệt tốn kém, B có lợi theo MSE/RMSE. Nếu mục tiêu chỉ là MAE, hai kết quả đang ngang nhau; vẫn cần xem nhiều mẫu hơn và các yêu cầu khác. “Tốt hơn” cần mục tiêu rõ ràng.
 
-### Tình huống 5 — Học thuộc hay học chưa đủ?
+### Tình huống 5: Học thuộc hay học chưa đủ?
 
 Một cây rất sâu đạt accuracy train 100%, validation 70%. Cây nông hơn đạt train 84%, validation 80%. Bạn chọn gì tiếp theo?
 

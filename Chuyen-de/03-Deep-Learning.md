@@ -1,4 +1,4 @@
-# Deep Learning từ số 0 — 35 câu hỏi có giải thích
+# Deep Learning từ số 0: 35 câu hỏi có giải thích
 
 Tài liệu này giúp bạn hiểu bức tranh chung và tập trả lời vấn đáp. Đây không phải dự đoán đề của thầy, cũng không thay thế một khóa học đầy đủ. Hãy học theo thứ tự vì các khái niệm sau dựa vào khái niệm trước.
 
@@ -382,31 +382,31 @@ Giá trị softmax cao thể hiện mức tự tin theo mô hình, không phải
 
 ## V. Năm bài tự kiểm tra có lời giải
 
-### Bài 1 — Tự đi một bước học
+### Bài 1: Tự đi một bước học
 
 Mô hình hồi quy `ŷ=wx+b`, không activation. Cho `x=2`, `y=5`, `w=1`, `b=0`, loss `L=(ŷ−y)²`, learning rate 0,1. Tính dự đoán, loss, gradient và tham số mới.
 
 **Lời giải:** `ŷ=2`, `L=9`. Gradient theo w là `2(ŷ−y)x=−12`; theo b là `2(ŷ−y)=−6`. Cập nhật đồng thời từ tham số cũ: `w_mới=2,2`, `b_mới=0,6`. Dự đoán mới cho chính mẫu này là 5, loss bằng 0. Đây là trường hợp số được chọn đơn giản; không suy ra một bước luôn khớp hoàn hảo. Nếu loss có hệ số 1/2 thì gradient sẽ khác.
 
-### Bài 2 — Chọn tầng đầu ra và loss
+### Bài 2: Chọn tầng đầu ra và loss
 
 Chọn cấu hình thông thường cho: (a) spam/không spam; (b) một chữ số 0–9; (c) ảnh có thể đồng thời có người, xe, chó; (d) dự đoán nhiệt độ.
 
 **Lời giải:** (a) Một logit, binary cross-entropy, sigmoid khi cần xác suất. (b) 10 logits, cross-entropy multiclass, softmax khi cần xác suất. (c) Ba logits, binary cross-entropy theo từng nhãn, sigmoid riêng. (d) Một đầu ra tuyến tính và loss hồi quy như MSE/MAE. Cần đọc API để biết loss nhận logits hay xác suất.
 
-### Bài 3 — Đếm step
+### Bài 3: Đếm step
 
 Có 1.030 mẫu, batch size 128, train 3 epoch. Không gradient accumulation. Bao nhiêu step nếu giữ hoặc bỏ batch cuối?
 
 **Lời giải:** `1.030 = 8×128 + 6`. Giữ batch cuối: 9 step/epoch, tổng 27; batch cuối có 6 mẫu. Bỏ batch cuối: 8 step/epoch, tổng 24; mỗi epoch bỏ 6 mẫu theo cách chia của epoch đó. Không phải cứ 3 epoch là 3 lần cập nhật.
 
-### Bài 4 — Đọc đường học
+### Bài 4: Đọc đường học
 
 Qua 5 epoch, train loss là `[0,8; 0,5; 0,3; 0,2; 0,1]`, validation loss là `[0,9; 0,6; 0,45; 0,55; 0,7]`. Bạn nhận xét gì và chọn checkpoint nào nếu tiêu chí là validation loss thấp nhất?
 
 **Lời giải:** Chọn epoch 3 trong số các checkpoint đã quan sát. Train tiếp tục tốt lên trong khi validation xấu đi gợi ý overfitting. Có thể cân nhắc early stopping, regularization hoặc dữ liệu; đồng thời kiểm tra tính phù hợp của cách chia. Không dùng test để quyết định epoch và không kết luận chỉ một dao động nhỏ đã là overfit.
 
-### Bài 5 — Chọn cách bắt đầu bài toán
+### Bài 5: Chọn cách bắt đầu bài toán
 
 Bạn có (a) 800 ảnh hoa có nhãn; (b) dữ liệu bảng 1.000 dòng; (c) văn bản cần phân loại. Có nên xây mạng rất sâu từ đầu cho cả ba?
 

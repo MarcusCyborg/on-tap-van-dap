@@ -52,7 +52,7 @@
     "groups": [
       {
         "id": "xs-group-1",
-        "title": "Cụm 1 — Nhìn dữ liệu trước khi tính",
+        "title": "Cụm 1: Nhìn dữ liệu trước khi tính",
         "conceptIds": [
           "XS01",
           "XS02",
@@ -66,7 +66,7 @@
       },
       {
         "id": "xs-group-2",
-        "title": "Cụm 2 — Xác suất và thông tin mới",
+        "title": "Cụm 2: Xác suất và thông tin mới",
         "conceptIds": [
           "XS09",
           "XS10",
@@ -77,7 +77,7 @@
       },
       {
         "id": "xs-group-3",
-        "title": "Cụm 3 — Biến ngẫu nhiên và phân phối",
+        "title": "Cụm 3: Biến ngẫu nhiên và phân phối",
         "conceptIds": [
           "XS14",
           "XS15",
@@ -91,7 +91,7 @@
       },
       {
         "id": "xs-group-4",
-        "title": "Cụm 4 — Ước lượng và độ bất định",
+        "title": "Cụm 4: Ước lượng và độ bất định",
         "conceptIds": [
           "XS22",
           "XS23",
@@ -101,7 +101,7 @@
       },
       {
         "id": "xs-group-5",
-        "title": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+        "title": "Cụm 5: Kiểm định, quan hệ và kết luận",
         "conceptIds": [
           "XS26",
           "XS27",
@@ -122,7 +122,7 @@
         "subjectId": "xs",
         "collectionId": "foundations",
         "number": 1,
-        "title": "Bài 1 — Trung tâm và phân tán",
+        "title": "Bài 1: Trung tâm và phân tán",
         "questionMarkdown": "Dữ liệu [1, 2, 3, 4, 10]. Tính mean, median, phương sai nếu coi đây là tổng thể, và phương sai mẫu hiệu chỉnh.",
         "solutionMarkdown": "mean = 20/5 = 4; median = 3. Tổng bình phương độ lệch = 9+4+1+0+36 = 50. Phương sai tổng thể = 50/5 = 10. Phương sai mẫu hiệu chỉnh = 50/4 = 12,5. Đừng chọn mẫu số mà không nói đang tính loại nào."
       },
@@ -131,7 +131,7 @@
         "subjectId": "xs",
         "collectionId": "foundations",
         "number": 2,
-        "title": "Bài 2 — Bayes bằng bảng đếm",
+        "title": "Bài 2: Bayes bằng bảng đếm",
         "questionMarkdown": "Trong 1.000 email, 200 email là spam. Bộ lọc đánh dấu 160 spam và đánh dấu nhầm 80 email thường. Biết email bị đánh dấu, xác suất nó là spam bao nhiêu? Khả năng đánh dấu khi email là spam bao nhiêu?",
         "solutionMarkdown": "tổng email bị đánh dấu = 160+80 = 240. `P(spam|đánh dấu)=160/240=2/3`. `P(đánh dấu|spam)=160/200=0,8`. Hai điều kiện khác nhau tạo hai mẫu số khác nhau. Đây cũng là trực giác precision và recall trong ML."
       },
@@ -140,7 +140,7 @@
         "subjectId": "xs",
         "collectionId": "foundations",
         "number": 3,
-        "title": "Bài 3 — Nhị thức",
+        "title": "Bài 3: Nhị thức",
         "questionMarkdown": "Ba lần thử độc lập, mỗi lần thành công với xác suất 0,2. X là số thành công. Tính P(X = 1), E[X], Var(X).",
         "solutionMarkdown": "có 3 vị trí cho lần thành công, nên `P(X=1)=3×0,2×0,8²=0,384`. `E[X]=3×0,2=0,6`; `Var(X)=3×0,2×0,8=0,48`. Kỳ vọng 0,6 không phải số thành công của một lượt ba lần thử, mà là trung bình theo phân phối."
       },
@@ -149,7 +149,7 @@
         "subjectId": "xs",
         "collectionId": "foundations",
         "number": 4,
-        "title": "Bài 4 — SE và khoảng tin cậy",
+        "title": "Bài 4: SE và khoảng tin cậy",
         "questionMarkdown": "Mẫu độc lập cỡ 100 có mean 50 và SD mẫu 10. Dùng xấp xỉ chuẩn được giả định phù hợp, tính SE và khoảng 95%. Nếu tăng n lên 400 với SD tương tự, SE ra sao?",
         "solutionMarkdown": "SE ước lượng = 10/√100 = 1. Khoảng xấp xỉ = `50±1,96`, tức [48,04; 51,96]. Với n = 400, SE ≈ 0,5. Khoảng này ước lượng trung bình tổng thể, không phải vùng chứa 95% các cá nhân. Nếu dùng t thay chuẩn, hệ số và hai đầu khoảng sẽ hơi khác."
       },
@@ -158,7 +158,7 @@
         "subjectId": "xs",
         "collectionId": "foundations",
         "number": 5,
-        "title": "Bài 5 — Diễn giải kiểm định",
+        "title": "Bài 5: Diễn giải kiểm định",
         "questionMarkdown": "Đặt α = 0,05 trước khi phân tích; một kiểm định hợp lệ cho p = 0,08. Có được nói “H0 đúng với xác suất 92%” hoặc “không có tác động” không?",
         "solutionMarkdown": "không được nói cả hai. Kết luận là chưa đủ bằng chứng bác bỏ H0 ở mức 0,05. P không phải xác suất H0. Cần xem ước lượng tác động, khoảng tin cậy, cỡ mẫu, power và giả định trước khi đánh giá kết quả."
       }
@@ -228,7 +228,7 @@
         "meaning": "Phân phối trước / hàm hợp lý / phân phối sau"
       }
     ],
-    "introMarkdown": "# Xác suất thống kê — hiểu concept và tập vấn đáp từ số 0\n\nTài liệu gồm **35 câu: 18 câu [A], 12 câu [B], 5 câu [C]**. Đây là bản đồ kiến thức nhập môn để học và tra cứu, không phải dự đoán đề của thầy.\n\n- **[A] Học trước:** hiểu ý nghĩa, tự kể ví dụ và trả lời được câu hỏi chính.\n- **[B] Học tiếp:** kết nối các khái niệm và xử lý câu hỏi đào sâu.\n- **[C] Nhận diện:** biết đang nói về vấn đề gì; chưa cần chứng minh hoặc thuộc công thức chi tiết tối nay.\n\n## Bản đồ concept\n\n**Có dữ liệu → mô tả dữ liệu → nhận ra dữ liệu chỉ là một mẫu → dùng xác suất mô tả sự ngẫu nhiên → ước lượng tổng thể → kiểm định nhận định.**\n\nVí dụ xuyên suốt: muốn biết chiều cao trung bình sinh viên một trường. Ta không đo được mọi người nên lấy mẫu. Trung bình mẫu là một con số quan sát được, nhưng mẫu khác có thể cho kết quả khác. Xác suất giúp mô tả độ bất định đó; khoảng tin cậy và kiểm định giúp đưa ra kết luận có điều kiện.\n\nĐường đọc tối nay: **XS01 → XS02 → XS03 → XS05 → XS06 → XS09 → XS11 → XS12 → XS13 → XS14 → XS16 → XS18 → XS19 → XS22 → XS23 → XS24 → XS26 → XS27**. Sau đó bổ sung XS31 về tương quan và nhân quả nếu còn thời gian.\n\nMỗi câu: đọc giải thích → tự làm ví dụ → che tài liệu và nói mẫu trả lời bằng lời của mình → trả lời câu nối tiếp. Không cần thuộc nguyên văn. Ký hiệu `Σ` nghĩa là cộng tất cả các số hạng; `√` là căn bậc hai; `∩` là “và”, `∪` là “hoặc”."
+    "introMarkdown": "# Xác suất thống kê: hiểu concept và tập vấn đáp từ số 0\n\nTài liệu gồm **35 câu: 18 câu [A], 12 câu [B], 5 câu [C]**. Đây là bản đồ kiến thức nhập môn để học và tra cứu, không phải dự đoán đề của thầy.\n\n- **[A] Học trước:** hiểu ý nghĩa, tự kể ví dụ và trả lời được câu hỏi chính.\n- **[B] Học tiếp:** kết nối các khái niệm và xử lý câu hỏi đào sâu.\n- **[C] Nhận diện:** biết đang nói về vấn đề gì; chưa cần chứng minh hoặc thuộc công thức chi tiết tối nay.\n\n## Bản đồ concept\n\n**Có dữ liệu → mô tả dữ liệu → nhận ra dữ liệu chỉ là một mẫu → dùng xác suất mô tả sự ngẫu nhiên → ước lượng tổng thể → kiểm định nhận định.**\n\nVí dụ xuyên suốt: muốn biết chiều cao trung bình sinh viên một trường. Ta không đo được mọi người nên lấy mẫu. Trung bình mẫu là một con số quan sát được, nhưng mẫu khác có thể cho kết quả khác. Xác suất giúp mô tả độ bất định đó; khoảng tin cậy và kiểm định giúp đưa ra kết luận có điều kiện.\n\nĐường đọc tối nay: **XS01 → XS02 → XS03 → XS05 → XS06 → XS09 → XS11 → XS12 → XS13 → XS14 → XS16 → XS18 → XS19 → XS22 → XS23 → XS24 → XS26 → XS27**. Sau đó bổ sung XS31 về tương quan và nhân quả nếu còn thời gian.\n\nMỗi câu: đọc giải thích → tự làm ví dụ → che tài liệu và nói mẫu trả lời bằng lời của mình → trả lời câu nối tiếp. Không cần thuộc nguyên văn. Ký hiệu `Σ` nghĩa là cộng tất cả các số hạng; `√` là căn bậc hai; `∩` là “và”, `∪` là “hoặc”."
   },
   {
     "id": "ml",
@@ -352,7 +352,7 @@
         "subjectId": "ml",
         "collectionId": "foundations",
         "number": 1,
-        "title": "Tình huống 1 — Điểm đẹp bất thường",
+        "title": "Tình huống 1: Điểm đẹp bất thường",
         "questionMarkdown": "Bạn có dữ liệu 500 bệnh nhân, mỗi người 10 ảnh. Chia ngẫu nhiên 5.000 ảnh, được accuracy 99%. Điều gì cần kiểm tra?",
         "solutionMarkdown": "nếu mục tiêu là áp dụng cho bệnh nhân mới, cần kiểm tra cùng bệnh nhân có xuất hiện ở cả train và test không. Mô hình có thể tận dụng đặc điểm riêng của bệnh nhân. Chia theo bệnh nhân, xử lý trùng lặp và học tiền xử lý trên train; sau đó đánh giá lại. Không mặc định 99% chắc là sai, nhưng chưa đủ đáng tin khi thiết kế chia tập chưa phù hợp."
       },
@@ -361,7 +361,7 @@
         "subjectId": "ml",
         "collectionId": "foundations",
         "number": 2,
-        "title": "Tình huống 2 — Tính chỉ số",
+        "title": "Tình huống 2: Tính chỉ số",
         "questionMarkdown": "100 email: 20 spam. Mô hình báo 10 spam, đúng 8. Hãy tính TP, FP, FN, TN, accuracy, precision và recall.",
         "solutionMarkdown": "TP=8, FP=2, FN=12, TN=78. Accuracy=86%, precision=80%, recall=40%. Tỷ lệ đúng chung cao hơn mức phát hiện spam. Nếu muốn giảm bỏ sót, có thể thử ngưỡng thấp hơn trên validation rồi kiểm tra số báo nhầm và chi phí."
       },
@@ -370,7 +370,7 @@
         "subjectId": "ml",
         "collectionId": "foundations",
         "number": 3,
-        "title": "Tình huống 3 — Scaling sai quy trình",
+        "title": "Tình huống 3: Scaling sai quy trình",
         "questionMarkdown": "Bạn tính trung bình và độ lệch chuẩn trên tất cả dữ liệu, chuẩn hóa rồi chạy 5-fold cross-validation. Có vấn đề gì?",
         "solutionMarkdown": "thống kê của phần đánh giá đã đi vào tiền xử lý train. Cần đặt scaler trong quy trình của mỗi fold: fit trên train fold, transform train và validation fold. Sau khi chọn cấu hình, fit quy trình trên tập phát triển và đánh giá test riêng. Tương tự với điền thiếu, chọn đặc trưng và PCA học từ dữ liệu."
       },
@@ -379,7 +379,7 @@
         "subjectId": "ml",
         "collectionId": "foundations",
         "number": 4,
-        "title": "Tình huống 4 — Chọn metric giá nhà",
+        "title": "Tình huống 4: Chọn metric giá nhà",
         "questionMarkdown": "Hai mô hình có lỗi tuyệt đối trên 3 nhà: A = [1, 1, 10], B = [4, 4, 4], đơn vị trăm triệu. Mô hình nào tốt hơn?",
         "solutionMarkdown": "cả hai có MAE=4. A có MSE=(1+1+100)/3=34; B có MSE=16. Nếu lỗi rất lớn đặc biệt tốn kém, B có lợi theo MSE/RMSE. Nếu mục tiêu chỉ là MAE, hai kết quả đang ngang nhau; vẫn cần xem nhiều mẫu hơn và các yêu cầu khác. “Tốt hơn” cần mục tiêu rõ ràng."
       },
@@ -388,7 +388,7 @@
         "subjectId": "ml",
         "collectionId": "foundations",
         "number": 5,
-        "title": "Tình huống 5 — Học thuộc hay học chưa đủ?",
+        "title": "Tình huống 5: Học thuộc hay học chưa đủ?",
         "questionMarkdown": "Một cây rất sâu đạt accuracy train 100%, validation 70%. Cây nông hơn đạt train 84%, validation 80%. Bạn chọn gì tiếp theo?",
         "solutionMarkdown": "cây nông có kết quả validation tốt hơn, dù train thấp hơn; đây là minh họa vì sao không chọn bằng điểm train. Kiểm tra cách chia, các chỉ số liên quan và độ ổn định, rồi thử cấu hình quanh độ sâu phù hợp. Khi chốt mới đánh giá test. Không kết luận chỉ từ ví dụ này rằng cây nông luôn tốt hơn."
       }
@@ -470,7 +470,7 @@
         "meaning": "Sự thay đổi của dữ liệu hoặc quan hệ cần dự đoán theo thời gian"
       }
     ],
-    "introMarkdown": "# Machine Learning — Từ số 0 đến trả lời vấn đáp\n\nTài liệu gồm **35 câu ML01–ML35**, đi theo một quy trình học máy thay vì yêu cầu học thuộc các định nghĩa rời rạc. Đây là kiến thức nền và câu hỏi luyện tập, không phải dự đoán đề của thầy.\n\n**[A] — 18 câu nền tảng:** hiểu trước, nói lại được bằng lời của mình. **[B] — 12 câu mở rộng:** nối các ý và phân biệt thuật toán. **[C] — 5 câu nhận diện:** biết ý tưởng, chưa cần suy diễn toán học tối nay.\n\n## Bản đồ khái niệm và đường đọc\n\n**Bài toán → dữ liệu → chia tập → tiền xử lý → mô hình → hàm mất mát → huấn luyện → đánh giá → sử dụng và theo dõi.**\n\nVí dụ xuyên suốt: muốn dự đoán giá nhà, ta thu thập diện tích, vị trí và giá bán; chia dữ liệu; xử lý giá trị thiếu; học quan hệ giữa đặc trưng và giá; đánh giá sai số trên nhà chưa dùng để học. Với email spam, quy trình tương tự nhưng đầu ra là lớp spam/không spam, nên thước đo cũng khác.\n\n- **Lượt A:** ML01, ML02, ML04, ML06, ML07, ML08, ML11, ML13, ML15, ML16, ML18, ML19, ML20, ML22, ML29, ML30, ML33, ML34.\n- **Lượt B:** ML03, ML05, ML09, ML10, ML12, ML14, ML17, ML21, ML23, ML24, ML27, ML31.\n- **Lượt C:** ML25, ML26, ML28, ML32, ML35.\n\nĐọc giải thích và ví dụ, che phần trả lời rồi nói trong 20–45 giây. Mẫu trả lời là khung diễn đạt; không cần thuộc nguyên văn. Khi gặp thuật ngữ mới, đọc nghĩa ngay trong câu trước khi chuyển tiếp."
+    "introMarkdown": "# Machine Learning: Từ số 0 đến trả lời vấn đáp\n\nTài liệu gồm **35 câu ML01–ML35**, đi theo một quy trình học máy thay vì yêu cầu học thuộc các định nghĩa rời rạc. Đây là kiến thức nền và câu hỏi luyện tập, không phải dự đoán đề của thầy.\n\n**[A] - 18 câu nền tảng:** hiểu trước, nói lại được bằng lời của mình. **[B] - 12 câu mở rộng:** nối các ý và phân biệt thuật toán. **[C] - 5 câu nhận diện:** biết ý tưởng, chưa cần suy diễn toán học tối nay.\n\n## Bản đồ khái niệm và đường đọc\n\n**Bài toán → dữ liệu → chia tập → tiền xử lý → mô hình → hàm mất mát → huấn luyện → đánh giá → sử dụng và theo dõi.**\n\nVí dụ xuyên suốt: muốn dự đoán giá nhà, ta thu thập diện tích, vị trí và giá bán; chia dữ liệu; xử lý giá trị thiếu; học quan hệ giữa đặc trưng và giá; đánh giá sai số trên nhà chưa dùng để học. Với email spam, quy trình tương tự nhưng đầu ra là lớp spam/không spam, nên thước đo cũng khác.\n\n- **Lượt A:** ML01, ML02, ML04, ML06, ML07, ML08, ML11, ML13, ML15, ML16, ML18, ML19, ML20, ML22, ML29, ML30, ML33, ML34.\n- **Lượt B:** ML03, ML05, ML09, ML10, ML12, ML14, ML17, ML21, ML23, ML24, ML27, ML31.\n- **Lượt C:** ML25, ML26, ML28, ML32, ML35.\n\nĐọc giải thích và ví dụ, che phần trả lời rồi nói trong 20–45 giây. Mẫu trả lời là khung diễn đạt; không cần thuộc nguyên văn. Khi gặp thuật ngữ mới, đọc nghĩa ngay trong câu trước khi chuyển tiếp."
   },
   {
     "id": "dl",
@@ -588,7 +588,7 @@
         "subjectId": "dl",
         "collectionId": "foundations",
         "number": 1,
-        "title": "Bài 1 — Tự đi một bước học",
+        "title": "Bài 1: Tự đi một bước học",
         "questionMarkdown": "Mô hình hồi quy `ŷ=wx+b`, không activation. Cho `x=2`, `y=5`, `w=1`, `b=0`, loss `L=(ŷ−y)²`, learning rate 0,1. Tính dự đoán, loss, gradient và tham số mới.",
         "solutionMarkdown": "`ŷ=2`, `L=9`. Gradient theo w là `2(ŷ−y)x=−12`; theo b là `2(ŷ−y)=−6`. Cập nhật đồng thời từ tham số cũ: `w_mới=2,2`, `b_mới=0,6`. Dự đoán mới cho chính mẫu này là 5, loss bằng 0. Đây là trường hợp số được chọn đơn giản; không suy ra một bước luôn khớp hoàn hảo. Nếu loss có hệ số 1/2 thì gradient sẽ khác."
       },
@@ -597,7 +597,7 @@
         "subjectId": "dl",
         "collectionId": "foundations",
         "number": 2,
-        "title": "Bài 2 — Chọn tầng đầu ra và loss",
+        "title": "Bài 2: Chọn tầng đầu ra và loss",
         "questionMarkdown": "Chọn cấu hình thông thường cho: (a) spam/không spam; (b) một chữ số 0–9; (c) ảnh có thể đồng thời có người, xe, chó; (d) dự đoán nhiệt độ.",
         "solutionMarkdown": "(a) Một logit, binary cross-entropy, sigmoid khi cần xác suất. (b) 10 logits, cross-entropy multiclass, softmax khi cần xác suất. (c) Ba logits, binary cross-entropy theo từng nhãn, sigmoid riêng. (d) Một đầu ra tuyến tính và loss hồi quy như MSE/MAE. Cần đọc API để biết loss nhận logits hay xác suất."
       },
@@ -606,7 +606,7 @@
         "subjectId": "dl",
         "collectionId": "foundations",
         "number": 3,
-        "title": "Bài 3 — Đếm step",
+        "title": "Bài 3: Đếm step",
         "questionMarkdown": "Có 1.030 mẫu, batch size 128, train 3 epoch. Không gradient accumulation. Bao nhiêu step nếu giữ hoặc bỏ batch cuối?",
         "solutionMarkdown": "`1.030 = 8×128 + 6`. Giữ batch cuối: 9 step/epoch, tổng 27; batch cuối có 6 mẫu. Bỏ batch cuối: 8 step/epoch, tổng 24; mỗi epoch bỏ 6 mẫu theo cách chia của epoch đó. Không phải cứ 3 epoch là 3 lần cập nhật."
       },
@@ -615,7 +615,7 @@
         "subjectId": "dl",
         "collectionId": "foundations",
         "number": 4,
-        "title": "Bài 4 — Đọc đường học",
+        "title": "Bài 4: Đọc đường học",
         "questionMarkdown": "Qua 5 epoch, train loss là `[0,8; 0,5; 0,3; 0,2; 0,1]`, validation loss là `[0,9; 0,6; 0,45; 0,55; 0,7]`. Bạn nhận xét gì và chọn checkpoint nào nếu tiêu chí là validation loss thấp nhất?",
         "solutionMarkdown": "Chọn epoch 3 trong số các checkpoint đã quan sát. Train tiếp tục tốt lên trong khi validation xấu đi gợi ý overfitting. Có thể cân nhắc early stopping, regularization hoặc dữ liệu; đồng thời kiểm tra tính phù hợp của cách chia. Không dùng test để quyết định epoch và không kết luận chỉ một dao động nhỏ đã là overfit."
       },
@@ -624,7 +624,7 @@
         "subjectId": "dl",
         "collectionId": "foundations",
         "number": 5,
-        "title": "Bài 5 — Chọn cách bắt đầu bài toán",
+        "title": "Bài 5: Chọn cách bắt đầu bài toán",
         "questionMarkdown": "Bạn có (a) 800 ảnh hoa có nhãn; (b) dữ liệu bảng 1.000 dòng; (c) văn bản cần phân loại. Có nên xây mạng rất sâu từ đầu cho cả ba?",
         "solutionMarkdown": "(a) Cân nhắc mô hình ảnh pretrained và augmentation phù hợp. (b) Thử baseline đơn giản hoặc mô hình cây trước; DL chưa chắc có lợi. (c) Có thể thử biểu diễn văn bản đơn giản hoặc mô hình ngôn ngữ pretrained tùy tài nguyên. Đây là điểm xuất phát, không phải luật chọn tuyệt đối; quyết định bằng đánh giá đúng cách trên validation."
       }
@@ -722,7 +722,7 @@
         "meaning": "Mức phù hợp giữa xác suất dự đoán và tần suất đúng"
       }
     ],
-    "introMarkdown": "# Deep Learning từ số 0 — 35 câu hỏi có giải thích\n\nTài liệu này giúp bạn hiểu bức tranh chung và tập trả lời vấn đáp. Đây không phải dự đoán đề của thầy, cũng không thay thế một khóa học đầy đủ. Hãy học theo thứ tự vì các khái niệm sau dựa vào khái niệm trước.\n\n## Bản đồ khái niệm\n\n**Dữ liệu → biểu diễn bằng tensor → mạng tính dự đoán → loss đo mức sai → backpropagation tính gradient → optimizer cập nhật tham số → kiểm tra trên validation → sử dụng mô hình.**\n\n- **[A] DL01–DL18:** nền tảng nên đọc trước. Mục tiêu là kể được một vòng học và giải thích vì sao mô hình có thể học tốt hoặc học hỏng.\n- **[B] DL19–DL30:** hiểu thêm cách huấn luyện, các họ mạng và cách xử lý tình huống thực tế.\n- **[C] DL31–DL35:** nhận diện khái niệm mở rộng. Chưa hiểu chắc A thì chưa cần đi sâu C.\n\nSau mỗi câu: đọc giải thích, đóng tài liệu, nói lại phần “Trả lời miệng” bằng lời của bạn. Ví dụ và câu hỏi tiếp giúp kiểm tra bạn có hiểu hay chỉ nhớ câu chữ. “Tham số” là giá trị mô hình học được; “siêu tham số” là cấu hình điều khiển mô hình hoặc quá trình học."
+    "introMarkdown": "# Deep Learning từ số 0: 35 câu hỏi có giải thích\n\nTài liệu này giúp bạn hiểu bức tranh chung và tập trả lời vấn đáp. Đây không phải dự đoán đề của thầy, cũng không thay thế một khóa học đầy đủ. Hãy học theo thứ tự vì các khái niệm sau dựa vào khái niệm trước.\n\n## Bản đồ khái niệm\n\n**Dữ liệu → biểu diễn bằng tensor → mạng tính dự đoán → loss đo mức sai → backpropagation tính gradient → optimizer cập nhật tham số → kiểm tra trên validation → sử dụng mô hình.**\n\n- **[A] DL01–DL18:** nền tảng nên đọc trước. Mục tiêu là kể được một vòng học và giải thích vì sao mô hình có thể học tốt hoặc học hỏng.\n- **[B] DL19–DL30:** hiểu thêm cách huấn luyện, các họ mạng và cách xử lý tình huống thực tế.\n- **[C] DL31–DL35:** nhận diện khái niệm mở rộng. Chưa hiểu chắc A thì chưa cần đi sâu C.\n\nSau mỗi câu: đọc giải thích, đóng tài liệu, nói lại phần “Trả lời miệng” bằng lời của bạn. Ví dụ và câu hỏi tiếp giúp kiểm tra bạn có hiểu hay chỉ nhớ câu chữ. “Tham số” là giá trị mô hình học được; “siêu tham số” là cấu hình điều khiển mô hình hoặc quá trình học."
   },
   {
     "id": "gt",
@@ -852,7 +852,7 @@
         "subjectId": "gt",
         "collectionId": "foundations",
         "number": 1,
-        "title": "Bài 1 — Trường hợp biên và chi phí",
+        "title": "Bài 1: Trường hợp biên và chi phí",
         "questionMarkdown": "Bạn cần tìm lớn nhất trong một list không rỗng gồm n số nguyên. Hãy mô tả cách làm, kiểm tra với [−8,−3,−6], nêu thời gian và bộ nhớ phụ.",
         "solutionMarkdown": "lấy phần tử đầu làm best, duyệt phần còn lại và cập nhật khi gặp số lớn hơn. Best lần lượt −8,−3,−3; trả −3. O(n) thời gian, O(1) số biến phụ. Nếu yêu cầu cho phép list rỗng, phải xác định trả None, báo lỗi hay quy ước khác, không tự đặt 0 làm đáp án."
       },
@@ -861,7 +861,7 @@
         "subjectId": "gt",
         "collectionId": "foundations",
         "number": 2,
-        "title": "Bài 2 — Chạy tay binary search",
+        "title": "Bài 2: Chạy tay binary search",
         "questionMarkdown": "Tìm 8 trong [1,3,5,7,9] bằng mã trên. Ghi left, right và mid ở mỗi vòng.",
         "solutionMarkdown": "(0,4,2): gặp 5, left=3. (3,4,3): gặp 7, left=4. (4,4,4): gặp 9, right=3. Lúc này left=4 > right=3, trả −1. Không có bước nào giữ nguyên toàn bộ phạm vi, nên vòng lặp tiến tới kết thúc."
       },
@@ -870,7 +870,7 @@
         "subjectId": "gt",
         "collectionId": "foundations",
         "number": 3,
-        "title": "Bài 3 — Chọn cấu trúc dữ liệu",
+        "title": "Bài 3: Chọn cấu trúc dữ liệu",
         "questionMarkdown": "Bạn cần (a) xử lý yêu cầu đúng thứ tự đến; (b) kiểm tra mã sinh viên đã xuất hiện; (c) luôn xử lý công việc có độ ưu tiên nhỏ nhất trước. Chọn gì?",
         "solutionMarkdown": "(a) queue, Python deque; (b) hash set nếu chỉ cần tồn tại, dict nếu cần thêm thông tin; (c) priority queue, thường triển khai bằng min-heap. Đừng dùng queue thường cho ưu tiên vì đến trước không đồng nghĩa ưu tiên cao."
       },
@@ -879,7 +879,7 @@
         "subjectId": "gt",
         "collectionId": "foundations",
         "number": 4,
-        "title": "Bài 4 — BFS hay Dijkstra?",
+        "title": "Bài 4: BFS hay Dijkstra?",
         "questionMarkdown": "Đồ thị có cạnh A→B giá 10, A→C giá 1, C→B giá 2. Đường ít cạnh nhất từ A tới B là gì? Đường rẻ nhất là gì? Nếu bỏ trọng số thì chọn thuật toán nào?",
         "solutionMarkdown": "ít cạnh nhất là A→B, một cạnh. Rẻ nhất là A→C→B, tổng 3; Dijkstra áp dụng được vì trọng số không âm. Nếu mọi cạnh coi bằng nhau, BFS cho đường ít cạnh nhất. Bài này cho thấy cần làm rõ “ngắn nhất” nghĩa là ít cạnh hay nhỏ tổng trọng số."
       },
@@ -888,7 +888,7 @@
         "subjectId": "gt",
         "collectionId": "foundations",
         "number": 5,
-        "title": "Bài 5 — Thiết lập DP cho đổi tiền",
+        "title": "Bài 5: Thiết lập DP cho đổi tiền",
         "questionMarkdown": "Có các đồng {1,3,4}, đủ số lượng mỗi loại. Tìm số đồng ít nhất để đổi 6. Gọi dp[x] là số đồng ít nhất để đổi x; đặt trạng thái gốc và phép chuyển.",
         "solutionMarkdown": "dp[0]=0. Với x>0, lấy nhỏ nhất trong `dp[x−c]+1` qua các đồng c≤x có trạng thái trước đạt được; nếu không có thì đánh dấu không thể. Các giá trị dp[0..6] là [0,1,2,1,1,2,2], nên 6 dùng 3+3. Với số tiền S và k loại đồng, cách này O(Sk) thời gian, O(S) bộ nhớ; đây là theo giá trị S, không phải số bit biểu diễn S. Greedy lớn nhất trước cho 4+1+1 nên sai trên ví dụ."
       }
@@ -1001,6 +1001,6 @@
         "meaning": "Hai con trỏ / cửa sổ trượt / tổng tiền tố"
       }
     ],
-    "introMarkdown": "# Giải thuật và cấu trúc dữ liệu — 35 câu từ nền tảng\n\nBạn không cần thuộc nhiều tên thuật toán trước khi hiểu bài toán. Với mỗi câu, hãy hỏi: **đầu vào là gì, cần trả về gì, vì sao các bước làm đúng, tốn bao nhiêu thời gian và bộ nhớ?**\n\n## Bản đồ concept và đường đọc\n\n**Bài toán và tính đúng → độ phức tạp → tổ chức dữ liệu → tìm kiếm/sắp xếp → đệ quy/cây → đồ thị → chiến lược giải bài.**\n\n| Cụm | Câu | Điều cần hiểu |\n|---|---|---|\n| Đánh giá lời giải | GT01–GT05 | Đúng trước, rồi xét thời gian/bộ nhớ và trường hợp đầu vào |\n| Cấu trúc dữ liệu | GT06–GT11 | Cách lưu quyết định thao tác nào nhanh/chậm |\n| Tìm kiếm và sắp xếp | GT12–GT18 | Mỗi thuật toán có điều kiện và đánh đổi |\n| Đệ quy và cây | GT19–GT23 | Chia bài toán, điểm dừng, độ cao cây |\n| Đồ thị | GT24–GT28 | Quan hệ nhiều đỉnh, duyệt và đường đi |\n| Kỹ thuật giải bài | GT29–GT35 | Greedy, DP và khai thác cấu trúc của dãy |\n\n**Đường đọc A (18 câu):** GT01 → GT02 → GT03 → GT05 → GT06 → GT08 → GT09 → GT10 → GT12 → GT14 → GT16 → GT19 → GT20 → GT22 → GT24 → GT26 → GT27 → GT30.\n\n**B (12 câu):** GT04, GT07, GT11, GT13, GT15, GT17, GT21, GT23, GT25, GT29, GT31, GT33.\n\n**C (5 câu):** GT18, GT28, GT32, GT34, GT35. A/B/C là thứ tự ưu tiên trong tài liệu, không phải xác suất ra đề. Đọc B/C trước nếu thầy đã nhấn mạnh chúng trên lớp."
+    "introMarkdown": "# Giải thuật và cấu trúc dữ liệu: 35 câu từ nền tảng\n\nBạn không cần thuộc nhiều tên thuật toán trước khi hiểu bài toán. Với mỗi câu, hãy hỏi: **đầu vào là gì, cần trả về gì, vì sao các bước làm đúng, tốn bao nhiêu thời gian và bộ nhớ?**\n\n## Bản đồ concept và đường đọc\n\n**Bài toán và tính đúng → độ phức tạp → tổ chức dữ liệu → tìm kiếm/sắp xếp → đệ quy/cây → đồ thị → chiến lược giải bài.**\n\n| Cụm | Câu | Điều cần hiểu |\n|---|---|---|\n| Đánh giá lời giải | GT01–GT05 | Đúng trước, rồi xét thời gian/bộ nhớ và trường hợp đầu vào |\n| Cấu trúc dữ liệu | GT06–GT11 | Cách lưu quyết định thao tác nào nhanh/chậm |\n| Tìm kiếm và sắp xếp | GT12–GT18 | Mỗi thuật toán có điều kiện và đánh đổi |\n| Đệ quy và cây | GT19–GT23 | Chia bài toán, điểm dừng, độ cao cây |\n| Đồ thị | GT24–GT28 | Quan hệ nhiều đỉnh, duyệt và đường đi |\n| Kỹ thuật giải bài | GT29–GT35 | Greedy, DP và khai thác cấu trúc của dãy |\n\n**Đường đọc A (18 câu):** GT01 → GT02 → GT03 → GT05 → GT06 → GT08 → GT09 → GT10 → GT12 → GT14 → GT16 → GT19 → GT20 → GT22 → GT24 → GT26 → GT27 → GT30.\n\n**B (12 câu):** GT04, GT07, GT11, GT13, GT15, GT17, GT21, GT23, GT25, GT29, GT31, GT33.\n\n**C (5 câu):** GT18, GT28, GT32, GT34, GT35. A/B/C là thứ tự ưu tiên trong tài liệu, không phải xác suất ra đề. Đọc B/C trước nếu thầy đã nhấn mạnh chúng trên lớp."
   }
 ]

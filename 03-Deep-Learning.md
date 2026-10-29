@@ -1,4 +1,4 @@
-# 03 — Deep Learning
+# 03: Deep Learning
 
 **Ưu tiên tối nay: DL1–DL4.** Đọc file ML trước để hiểu train, validation và overfitting.
 

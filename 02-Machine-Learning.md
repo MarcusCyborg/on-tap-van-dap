@@ -1,4 +1,4 @@
-# 02 — Machine Learning
+# 02: Machine Learning
 
 **Ưu tiên tối nay: ML1–ML4.** Hãy giữ một ví dụ xuyên suốt: dự đoán giá nhà hoặc nhận diện email spam.
 
@@ -14,9 +14,9 @@ Ba kiểu học thường gặp:
 
 | Kiểu học | Dữ liệu/tín hiệu học | Ví dụ |
 |---|---|---|
-| Có giám sát — supervised | Có đầu vào và đáp án mục tiêu | Email kèm nhãn spam/không spam |
-| Không giám sát — unsupervised | Không có nhãn mục tiêu cho bài toán | Gom khách hàng thành nhóm theo hành vi |
-| Tăng cường — reinforcement | Tác nhân tương tác môi trường, nhận thưởng | Học chọn nước đi để tăng tổng phần thưởng |
+| Có giám sát - supervised | Có đầu vào và đáp án mục tiêu | Email kèm nhãn spam/không spam |
+| Không giám sát - unsupervised | Không có nhãn mục tiêu cho bài toán | Gom khách hàng thành nhóm theo hành vi |
+| Tăng cường - reinforcement | Tác nhân tương tác môi trường, nhận thưởng | Học chọn nước đi để tăng tổng phần thưởng |
 
 Trong học có giám sát, **classification (phân loại)** dự đoán lớp, như spam/không spam; **regression (hồi quy)** dự đoán số, như giá nhà.
 
@@ -61,8 +61,8 @@ Cách giảm overfitting: thêm dữ liệu phù hợp, giảm độ phức tạ
 Với phân loại nhị phân, chọn spam là lớp **dương tính**:
 
 - **TP:** dự đoán spam, thực tế spam.
-- **FP:** dự đoán spam, thực tế không spam — báo nhầm.
-- **FN:** dự đoán không spam, thực tế spam — bỏ sót.
+- **FP:** dự đoán spam, thực tế không spam - báo nhầm.
+- **FN:** dự đoán không spam, thực tế spam - bỏ sót.
 - **TN:** dự đoán không spam, thực tế không spam.
 
 | Chỉ số | Công thức | Câu hỏi nó trả lời |
