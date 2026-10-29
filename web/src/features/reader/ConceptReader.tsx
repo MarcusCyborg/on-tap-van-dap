@@ -15,6 +15,7 @@ import {
   MessageSquare,
   AlertTriangle,
   Lightbulb,
+  BookOpen,
   FileEdit,
   Save,
   Check
@@ -119,7 +120,8 @@ export const ConceptReader: React.FC = () => {
   const answerBlocks = concept.blocks.filter(b => b.type === 'answer');
   const followupBlocks = concept.blocks.filter(b => b.type === 'followup');
   const trapBlocks = concept.blocks.filter(b => b.type === 'trap');
-  const proseBlocks = concept.blocks.filter(b => b.type === 'prose');
+  const sourceBlocks = concept.blocks.filter(b => b.tag === 'Nguồn' || b.markdown.startsWith('**Nguồn:**'));
+  const proseBlocks = concept.blocks.filter(b => b.type === 'prose' && b.tag !== 'Nguồn' && !b.markdown.startsWith('**Nguồn:**'));
 
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 py-6 space-y-6">
@@ -210,16 +212,6 @@ export const ConceptReader: React.FC = () => {
           <h1 className="text-xl sm:text-2xl font-extrabold text-ink leading-tight">
             {concept.title}
           </h1>
-
-          {/* DPL Source references display */}
-          {isDpl && concept.sourceReferences && concept.sourceReferences.length > 0 && (
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-muted border border-border text-[11px] text-muted">
-              <span className="font-semibold text-ink">Nguồn tham chiếu slide:</span>
-              <span>
-                {concept.sourceReferences.map(r => `${r.file}${r.slideMarkers ? ` (${r.slideMarkers})` : ''}`).join('; ')}
-              </span>
-            </div>
-          )}
         </div>
 
         {/* Mode Switcher Tabs */}
@@ -315,38 +307,7 @@ export const ConceptReader: React.FC = () => {
 
           {/* Semantic Blocks */}
           <div className="reader-content space-y-4">
-            {/* Concept / Definition blocks */}
-            {conceptBlocks.map((b, i) => (
-              <div key={`c-${i}`} className="bg-surface border border-border rounded-xl p-4 sm:p-5 shadow-2xs">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {b.markdown}
-                </ReactMarkdown>
-              </div>
-            ))}
-
-            {/* Prose blocks if any */}
-            {proseBlocks.map((b, i) => (
-              <div key={`p-${i}`} className="bg-surface border border-border rounded-xl p-4 sm:p-5 shadow-2xs">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {b.markdown}
-                </ReactMarkdown>
-              </div>
-            ))}
-
-            {/* Example blocks */}
-            {exampleBlocks.map((b, i) => (
-              <div key={`ex-${i}`} className="bg-surface-muted/70 border-l-4 border-xs-dark rounded-r-xl p-4 sm:p-5 shadow-2xs">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-xs-dark uppercase tracking-wider mb-2">
-                  <Lightbulb className="w-4 h-4" />
-                  <span>Ví dụ minh họa cụ thể:</span>
-                </div>
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {b.markdown}
-                </ReactMarkdown>
-              </div>
-            ))}
-
-            {/* Spoken Answer Model (Crucial for oral exam) */}
+            {/* 1. Spoken Answer Model (Crucial for oral exam - placed at the very top, above Nguồn) */}
             {answerBlocks.map((b, i) => (
               <div key={`ans-${i}`} className="bg-accent/10 border-2 border-accent/40 rounded-xl p-4 sm:p-5 shadow-xs">
                 <div className="flex items-center gap-2 text-xs font-bold text-accent uppercase tracking-wider mb-2">
@@ -358,6 +319,59 @@ export const ConceptReader: React.FC = () => {
                     {b.markdown}
                   </ReactMarkdown>
                 </div>
+              </div>
+            ))}
+
+            {/* 2. Source references display (directly below Spoken Answer Model) */}
+            {isDpl && concept.sourceReferences && concept.sourceReferences.length > 0 ? (
+              <div className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface border border-border text-xs text-muted shadow-2xs">
+                <BookOpen className="w-4 h-4 text-accent shrink-0" />
+                <span className="font-semibold text-ink">Nguồn tham chiếu slide:</span>
+                <span className="text-muted font-mono text-[11px]">
+                  {concept.sourceReferences.map(r => `${r.file}${r.slideMarkers ? ` (${r.slideMarkers})` : ''}`).join('; ')}
+                </span>
+              </div>
+            ) : sourceBlocks.length > 0 ? (
+              sourceBlocks.map((b, i) => (
+                <div key={`src-${i}`} className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface border border-border text-xs text-muted shadow-2xs">
+                  <BookOpen className="w-4 h-4 text-accent shrink-0" />
+                  <div className="text-muted">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {b.markdown}
+                    </ReactMarkdown>
+                  </div>
+                </div>
+              ))
+            ) : null}
+
+            {/* 3. Concept / Definition blocks */}
+            {conceptBlocks.map((b, i) => (
+              <div key={`c-${i}`} className="bg-surface border border-border rounded-xl p-4 sm:p-5 shadow-2xs">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {b.markdown}
+                </ReactMarkdown>
+              </div>
+            ))}
+
+            {/* 4. Prose blocks if any */}
+            {proseBlocks.map((b, i) => (
+              <div key={`p-${i}`} className="bg-surface border border-border rounded-xl p-4 sm:p-5 shadow-2xs">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {b.markdown}
+                </ReactMarkdown>
+              </div>
+            ))}
+
+            {/* 5. Example blocks */}
+            {exampleBlocks.map((b, i) => (
+              <div key={`ex-${i}`} className="bg-surface-muted/70 border-l-4 border-xs-dark rounded-r-xl p-4 sm:p-5 shadow-2xs">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-xs-dark uppercase tracking-wider mb-2">
+                  <Lightbulb className="w-4 h-4" />
+                  <span>Ví dụ minh họa cụ thể:</span>
+                </div>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {b.markdown}
+                </ReactMarkdown>
               </div>
             ))}
 

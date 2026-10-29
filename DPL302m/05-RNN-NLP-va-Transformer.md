@@ -15,6 +15,8 @@ Tài liệu bám bốn bài 5.1–5.4 của môn DPL302m, giúp người mới h
 
 ## DPL5-01 [Cốt lõi] Vì sao cần mô hình chuỗi? Ký hiệu và các dạng đầu vào/đầu ra?
 
+**Trả lời miệng:** “Mô hình chuỗi khai thác thứ tự và xử lý độ dài thay đổi. Em phân biệt time step với mẫu và tầng. Dạng đầu ra phụ thuộc bài toán: một nhãn cho cả chuỗi, một nhãn mỗi bước, hoặc một chuỗi mới có độ dài khác.”
+
 **Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 5–13, 25–30.
 
 Dữ liệu chuỗi có thứ tự mang ý nghĩa: “An đánh Bình” khác “Bình đánh An”. Câu có thể dài ngắn khác nhau; một từ quan trọng có thể xuất hiện ở đầu hoặc cuối. Mạng feed-forward với số đầu vào cố định không tự xử lý các vấn đề này theo cùng cách RNN chia sẻ tham số qua thời gian.
@@ -23,11 +25,11 @@ Dữ liệu chuỗi có thứ tự mang ý nghĩa: “An đánh Bình” khác �
 
 **Ví dụ:** “An học ML” có ba token trong cách tách đơn giản. NER có thể trả ba nhãn `[PERSON, O, O]`; phân loại cả câu chỉ trả một nhãn. Token không nhất thiết bằng từ: tokenizer có thể tách nhỏ hơn.
 
-**Trả lời miệng:** “Mô hình chuỗi khai thác thứ tự và xử lý độ dài thay đổi. Em phân biệt time step với mẫu và tầng. Dạng đầu ra phụ thuộc bài toán: một nhãn cho cả chuỗi, một nhãn mỗi bước, hoặc một chuỗi mới có độ dài khác.”
-
 **Hỏi tiếp:** RNN chỉ dùng cho văn bản? → Không; âm thanh, cảm biến, nhạc và video cũng có cấu trúc tuần tự.
 
 ## DPL5-02 [Cốt lõi] RNN truyền hidden state và chia sẻ trọng số thế nào?
+
+**Trả lời miệng:** “RNN kết hợp input hiện tại với hidden state trước. Trọng số được dùng chung qua thời gian, nên cùng quy tắc áp dụng ở nhiều vị trí và độ dài chuỗi. Hidden state mang thông tin quá khứ có giới hạn, không phải bản lưu chính xác mọi token.”
 
 **Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 14–18, 23.
 
@@ -41,11 +43,11 @@ Các ma trận được **dùng lại qua mọi time step**. Hidden state thay �
 
 **Ví dụ số bổ sung:** dùng trạng thái vô hướng `a<t>=tanh(0,5a<t−1>+x<t>)`, bắt đầu a0=0. Với x1=1 thì a1≈0,7616; với x2=0 thì a2≈tanh(0,3808)≈0,3634. Input thứ hai bằng 0 nhưng state vẫn chứa ảnh hưởng của input trước.
 
-**Trả lời miệng:** “RNN kết hợp input hiện tại với hidden state trước. Trọng số được dùng chung qua thời gian, nên cùng quy tắc áp dụng ở nhiều vị trí và độ dài chuỗi. Hidden state mang thông tin quá khứ có giới hạn, không phải bản lưu chính xác mọi token.”
-
 **Hỏi tiếp:** Dùng chung trọng số có làm output các bước bằng nhau? → Không, vì input và state khác nhau.
 
 ## DPL5-03 [Cốt lõi] BPTT, vanishing/exploding gradient và clipping là gì?
+
+**Trả lời miệng:** “BPTT là backprop trên RNN mở theo thời gian. Các trọng số dùng chung nhận gradient từ nhiều time step. Chuỗi dài có thể làm gradient biến mất hoặc bùng nổ; clipping giới hạn gradient quá lớn, còn kiến trúc có cổng, khởi tạo và activation phù hợp giúp xử lý khó khăn phụ thuộc xa.”
 
 **Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 19–24, 41–42; mục tiêu clipping ở slide 2.
 
@@ -55,11 +57,11 @@ Qua nhiều bước, gradient đi qua tích các Jacobian, gồm ảnh hưởng 
 
 **Ví dụ trực giác:** nhân 0,8 liên tiếp 20 lần còn khoảng 0,0115; nhân 1,2 liên tiếp 20 lần thành khoảng 38,3. Gradient thật phức tạp hơn nhưng cho thấy vì sao chuỗi dài khó tối ưu.
 
-**Trả lời miệng:** “BPTT là backprop trên RNN mở theo thời gian. Các trọng số dùng chung nhận gradient từ nhiều time step. Chuỗi dài có thể làm gradient biến mất hoặc bùng nổ; clipping giới hạn gradient quá lớn, còn kiến trúc có cổng, khởi tạo và activation phù hợp giúp xử lý khó khăn phụ thuộc xa.”
-
 **Hỏi tiếp:** Clipping có chữa vanishing không? → Không; nó chủ yếu xử lý gradient quá lớn. Truncated BPTT là phần bổ sung thực hành: cắt chiều dài truyền ngược để giảm chi phí, có đánh đổi về phụ thuộc học được.
 
 ## DPL5-04 [Cốt lõi] LSTM có những cổng nào? Cell state khác hidden state?
+
+**Trả lời miệng:** “LSTM điều khiển bộ nhớ bằng ba cổng quên, ghi và xuất. Cell state giữ thông tin nội bộ, hidden state là biểu diễn hiện tại. Đường cộng có điều khiển giúp truyền thông tin dài hơn RNN thuần, nhưng không bảo đảm nhớ hoàn hảo mọi phụ thuộc.”
 
 **Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 48–52.
 
@@ -69,11 +71,11 @@ Một dạng chuẩn: `c<t>=f<t>⊙c<t−1>+i<t>⊙c̃<t>`, rồi `a<t>=o<t>⊙t
 
 **Ví dụ số:** nếu một chiều bộ nhớ cũ bằng 2, forget gate=0,9, input gate=0,1, ứng viên=−1 thì bộ nhớ mới `0,9×2+0,1×(−1)=1,7`. Mô hình chủ yếu giữ thông tin cũ, thêm một ít thông tin mới. Giá trị cổng được học qua mạng chứ không do người lập trình đặt theo từng từ.
 
-**Trả lời miệng:** “LSTM điều khiển bộ nhớ bằng ba cổng quên, ghi và xuất. Cell state giữ thông tin nội bộ, hidden state là biểu diễn hiện tại. Đường cộng có điều khiển giúp truyền thông tin dài hơn RNN thuần, nhưng không bảo đảm nhớ hoàn hảo mọi phụ thuộc.”
-
 **Hỏi tiếp:** Cell state và hidden state có cùng vai trò? → Không; hidden state còn qua output gate và thường dùng cho dự đoán.
 
 ## DPL5-05 [Đọc tiếp] GRU, bidirectional RNN và deep RNN khác nhau thế nào?
+
+**Trả lời miệng:** “GRU là biến thể RNN có cổng. Bidirectional kết hợp ngữ cảnh hai hướng, còn deep RNN xếp nhiều tầng. Em chọn kiến trúc theo thông tin có sẵn lúc dự đoán; mô hình hai chiều có thể gây leakage nếu tương lai chưa được phép nhìn.”
 
 **Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 43–47, 53–59.
 
@@ -83,11 +85,11 @@ Bidirectional RNN chạy một hướng xuôi và một hướng ngược, rồi
 
 **Ví dụ:** để nhận biết “bank” nghĩa ngân hàng hay bờ sông, các từ phía sau có thể giúp. Khi xử lý cả câu đã có, dùng hai chiều hợp lý; khi dự báo giá ngày mai, không được đưa dữ liệu ngày mai vào hướng ngược.
 
-**Trả lời miệng:** “GRU là biến thể RNN có cổng. Bidirectional kết hợp ngữ cảnh hai hướng, còn deep RNN xếp nhiều tầng. Em chọn kiến trúc theo thông tin có sẵn lúc dự đoán; mô hình hai chiều có thể gây leakage nếu tương lai chưa được phép nhìn.”
-
 **Hỏi tiếp:** Decoder sinh token có dùng tương lai thật để tính không? → Không, trong suy luận tự hồi quy token tương lai chưa tồn tại.
 
 ## DPL5-06 [Cốt lõi] Language model học và sinh chuỗi ra sao?
+
+**Trả lời miệng:** “Language model học xác suất token kế tiếp. Khi train có thể dùng token thật của bước trước; khi sinh phải dùng token vừa dự đoán. Sampling tạo đa dạng hơn greedy nhưng không bảo đảm câu đúng. EOS và giới hạn độ dài giúp kết thúc quá trình.”
 
 **Nguồn:** `5.1 Recurrent Neural Networks.txt`, slide 31–40.
 
@@ -97,11 +99,11 @@ Khi sinh, bắt đầu từ token khởi đầu hoặc state ban đầu, lấy p
 
 **Ví dụ:** sau “Tôi đang”, model cho “học”=0,6, “ăn”=0,3, từ khác=0,1. Greedy chọn “học”; sampling có thể chọn “ăn”. Đây là số minh họa, không phải kết quả từ model thật. Word-level có vocabulary lớn; character-level thường có chuỗi dài hơn.
 
-**Trả lời miệng:** “Language model học xác suất token kế tiếp. Khi train có thể dùng token thật của bước trước; khi sinh phải dùng token vừa dự đoán. Sampling tạo đa dạng hơn greedy nhưng không bảo đảm câu đúng. EOS và giới hạn độ dài giúp kết thúc quá trình.”
-
 **Hỏi tiếp:** Xác suất cao nhất từng token có cho cả câu xác suất cao nhất? → Không; đó là lý do cần phân biệt greedy với search trên cả chuỗi.
 
 ## DPL5-07 [Cốt lõi] One-hot, embedding và embedding matrix là gì?
+
+**Trả lời miệng:** “One-hot là mã định danh thưa; embedding là biểu diễn vector được học. Embedding matrix lưu vector cho mỗi token và lookup lấy hàng/cột tương ứng theo quy ước. Pretrained embedding có thể chuyển kiến thức từ corpus lớn sang bài toán nhỏ.”
 
 **Nguồn:** `5.2 NLP and Word Embeddings.txt`, slide 4–16, 26–30.
 
@@ -111,11 +113,11 @@ Theo quy ước slide, ma trận E có shape `d×|V|`; mỗi cột là embedding
 
 **Ví dụ:** V=10.000, d=300 thì E có 3 triệu tham số nếu toàn bộ bảng học được. Với batch 32 câu dài 20 token, output embedding thường shape `(32,20,300)` theo batch-first. Từ chưa có trong vocabulary cần cơ chế như UNK hoặc tokenization subword.
 
-**Trả lời miệng:** “One-hot là mã định danh thưa; embedding là biểu diễn vector được học. Embedding matrix lưu vector cho mỗi token và lookup lấy hàng/cột tương ứng theo quy ước. Pretrained embedding có thể chuyển kiến thức từ corpus lớn sang bài toán nhỏ.”
-
 **Hỏi tiếp:** Mỗi chiều embedding có chắc mang tên như tuổi/giới tính? → Không; các chiều học được không nhất thiết có ý nghĩa đơn giản để đặt tên.
 
 ## DPL5-08 [Cốt lõi] Cosine similarity và phép analogy có nghĩa gì?
+
+**Trả lời miệng:** “Cosine đo hướng tương đối, không đo độ dài tuyệt đối. Analogy khai thác những quan hệ mà embedding học được bằng phép cộng trừ vector. Nó hữu ích nhưng không bảo đảm suy luận ngôn ngữ chính xác trong mọi trường hợp.”
 
 **Nguồn:** `5.2 NLP and Word Embeddings.txt`, slide 18–25.
 
@@ -125,11 +127,11 @@ Analogy dùng quan hệ vector: thử tìm vector gần `e_king−e_man+e_woman`
 
 **Ví dụ:** u=[1,0], v=[2,0] có cosine=1 dù u≠v. u=[1,0], v=[0,1] có cosine=0. Nếu một vector bằng 0 thì mẫu số bằng 0, phải xử lý riêng.
 
-**Trả lời miệng:** “Cosine đo hướng tương đối, không đo độ dài tuyệt đối. Analogy khai thác những quan hệ mà embedding học được bằng phép cộng trừ vector. Nó hữu ích nhưng không bảo đảm suy luận ngôn ngữ chính xác trong mọi trường hợp.”
-
 **Hỏi tiếp:** Cosine cao chứng minh hai từ đồng nghĩa? → Không; có thể cùng chủ đề, ngữ cảnh hoặc mang quan hệ khác.
 
 ## DPL5-09 [Cốt lõi] Skip-gram và CBOW trong Word2Vec khác nhau thế nào?
+
+**Trả lời miệng:** “Skip-gram dự đoán context từ center; CBOW dự đoán center từ context. Cả hai tạo tín hiệu học từ chính văn bản mà không cần người gán nhãn thủ công cho từng cặp. Sau đó embedding được dùng cho nhiệm vụ NLP khác.”
 
 **Nguồn:** `5.2 NLP and Word Embeddings.txt`, slide 34–40.
 
@@ -139,11 +141,11 @@ Mục tiêu chính là vector hữu ích, không phải giữ classifier phụ l
 
 **Ví dụ:** với “Tôi uống nước cam”, chọn trung tâm “nước” và cửa sổ một từ. Skip-gram có cặp nước→uống và nước→cam. CBOW dùng [uống,cam] để dự đoán nước. Không lấy các từ xa ngoài cửa sổ theo đúng cấu hình này.
 
-**Trả lời miệng:** “Skip-gram dự đoán context từ center; CBOW dự đoán center từ context. Cả hai tạo tín hiệu học từ chính văn bản mà không cần người gán nhãn thủ công cho từng cặp. Sau đó embedding được dùng cho nhiệm vụ NLP khác.”
-
 **Hỏi tiếp:** Word2Vec có biết thứ tự đầy đủ của cả câu như RNN không? → Không theo dạng cổ điển này; mục tiêu cửa sổ không mô hình hóa toàn bộ chuỗi tự hồi quy.
 
 ## DPL5-10 [Đọc tiếp] Negative sampling, GloVe và debiasing giải quyết việc gì?
+
+**Trả lời miệng:** “Negative sampling giảm chi phí bằng bài toán phân biệt cặp thật và cặp lấy mẫu. GloVe học từ ma trận đồng xuất hiện. Vì embedding học từ văn bản thực tế, nó cũng có thể học bias; debiasing phải nêu rõ đang giảm dạng bias nào và còn giới hạn gì.”
 
 **Nguồn:** `5.2 NLP and Word Embeddings.txt`, slide 40–55, 62–67.
 
@@ -155,11 +157,11 @@ Softmax trên vocabulary lớn đòi hỏi tính điểm và chuẩn hóa nhiề
 
 Embedding có thể mang bias xã hội từ dữ liệu. Phương pháp trong slide xác định hướng bias, neutralize từ trung tính và equalize một số cặp. Nó giảm một biểu hiện bias được định nghĩa, không bảo đảm xóa mọi thiên lệch hay khiến mọi ứng dụng công bằng.
 
-**Trả lời miệng:** “Negative sampling giảm chi phí bằng bài toán phân biệt cặp thật và cặp lấy mẫu. GloVe học từ ma trận đồng xuất hiện. Vì embedding học từ văn bản thực tế, nó cũng có thể học bias; debiasing phải nêu rõ đang giảm dạng bias nào và còn giới hạn gì.”
-
 **Hỏi tiếp:** Có thể dùng embedding vào sentiment analysis thế nào? → Lookup từng token, rồi tổng hợp hoặc đưa chuỗi vector qua RNN/LSTM và classifier. Trung bình embedding đơn giản mất thứ tự; “không tốt” khác “tốt”.
 
 ## DPL5-11 [Cốt lõi] Seq2Seq encoder–decoder và image captioning hoạt động ra sao?
+
+**Trả lời miệng:** “Encoder tạo biểu diễn input, decoder sinh output tuần tự có điều kiện trên input đó. Seq2Seq xử lý độ dài đầu vào và đầu ra khác nhau. Trong captioning, encoder có thể là CNN; với RNN cổ điển, vector context cố định có thể làm mất thông tin ở chuỗi dài.”
 
 **Nguồn:** `5.3 Sequence Models & Attention Mechanism.txt`, slide 3–9.
 
@@ -169,11 +171,11 @@ Seq2Seq ánh xạ một chuỗi sang chuỗi khác, như câu tiếng Pháp sang
 
 **Ví dụ:** image captioning có CNN làm encoder ảnh, còn decoder sinh “Một con mèo đang ngủ”. Input ảnh không phải chuỗi từ nhưng output là chuỗi. Không cần buộc encoder và decoder là cùng loại mạng.
 
-**Trả lời miệng:** “Encoder tạo biểu diễn input, decoder sinh output tuần tự có điều kiện trên input đó. Seq2Seq xử lý độ dài đầu vào và đầu ra khác nhau. Trong captioning, encoder có thể là CNN; với RNN cổ điển, vector context cố định có thể làm mất thông tin ở chuỗi dài.”
-
 **Hỏi tiếp:** Decoder có sinh cả câu trong một bước không? → Trong mô hình tự hồi quy đang học, nó sinh từng token cho tới EOS hoặc giới hạn độ dài.
 
 ## DPL5-12 [Cốt lõi] Greedy và beam search khác nhau? Vì sao dùng log và chuẩn hóa độ dài?
+
+**Trả lời miệng:** “Greedy chỉ giữ một nhánh, beam giữ B giả thuyết nên giảm việc bỏ lỡ lựa chọn tốt về sau. Dùng tổng log để tránh underflow. Chuẩn hóa độ dài giúp so các câu dài ngắn hợp lý hơn, nhưng beam lớn hoặc normalization không bảo đảm luôn dịch tốt hơn.”
 
 **Nguồn:** `5.3 Sequence Models & Attention Mechanism.txt`, slide 7–27.
 
@@ -183,11 +185,11 @@ Greedy chọn token có xác suất cao nhất ở từng bước. Cách chọn 
 
 Nhân nhiều xác suất nhỏ dễ underflow; cộng log probability giữ thứ tự so sánh và ổn định hơn. Chuỗi dài thường nhận log-score âm hơn do thêm token. Length normalization điều chỉnh điểm theo độ dài, chẳng hạn chia tổng log-score cho `T^α`, để giảm thiên lệch chuỗi quá ngắn. Cách chọn α phụ thuộc đánh giá, không phải hằng số đúng mọi bài.
 
-**Trả lời miệng:** “Greedy chỉ giữ một nhánh, beam giữ B giả thuyết nên giảm việc bỏ lỡ lựa chọn tốt về sau. Dùng tổng log để tránh underflow. Chuẩn hóa độ dài giúp so các câu dài ngắn hợp lý hơn, nhưng beam lớn hoặc normalization không bảo đảm luôn dịch tốt hơn.”
-
 **Hỏi tiếp:** B=1 có liên hệ gì với greedy? → Với cùng quy tắc mở rộng/chấm điểm và điều kiện kết thúc thích hợp, nó tương ứng việc chỉ giữ một nhánh như greedy.
 
 ## DPL5-13 [Đọc tiếp] Đánh giá chuỗi: BLEU, lỗi search/model và bài toán âm thanh
+
+**Trả lời miệng:** “BLEU dùng n-gram có clipping và phạt độ dài, có giới hạn về ngữ nghĩa. Error analysis tách vấn đề model chấm điểm sai với search không tìm ra ứng viên điểm cao. CTC là mục tiêu căn chỉnh speech; trigger-word detection là nhận biết tín hiệu theo thời gian.”
 
 **Nguồn:** `5.3 Sequence Models & Attention Mechanism.txt`, slide 23–34, 44–52. BLEU được ghi optional ở slide 28–29.
 
@@ -197,11 +199,11 @@ BLEU so n-gram của bản dịch với các bản tham chiếu, dùng **clipped
 
 Khi tìm kiếm sai, so điểm câu chuẩn với câu beam tìm được dưới **cùng objective**, gồm length normalization nếu đã dùng. Nếu câu chuẩn có điểm cao hơn mà beam bỏ lỡ, có bằng chứng search chưa tìm tốt; nếu model ưu tiên câu kém, cần xem model/objective. Với âm thanh, slide 45 nêu attention và **CTC** là hai hướng; CTC xử lý căn chỉnh không có nhãn tại từng frame bằng các đường có blank và phép gộp, không phải một loại attention. Trigger-word detection dự đoán thời điểm từ kích hoạt xuất hiện trên chuỗi đặc trưng âm thanh.
 
-**Trả lời miệng:** “BLEU dùng n-gram có clipping và phạt độ dài, có giới hạn về ngữ nghĩa. Error analysis tách vấn đề model chấm điểm sai với search không tìm ra ứng viên điểm cao. CTC là mục tiêu căn chỉnh speech; trigger-word detection là nhận biết tín hiệu theo thời gian.”
-
 **Hỏi tiếp:** Trong CTC, `a, blank, a` và `a, a` có cùng kết quả không? → Không; theo phép collapse chuẩn, trường hợp đầu cho “aa”, trường hợp sau cho “a”.
 
 ## DPL5-14 [Cốt lõi] Attention kiểu encoder–decoder giải quyết nút thắt như thế nào?
+
+**Trả lời miệng:** “Attention tạo context riêng cho từng bước decoder bằng tổng có trọng số các trạng thái encoder. Nó giảm nút thắt nén cả câu vào một vector. Self-attention xét nội bộ một chuỗi, còn cross-attention trao đổi giữa decoder và nguồn encoder.”
 
 **Nguồn:** `5.3 Sequence Models & Attention Mechanism.txt`, slide 35–43; thuật ngữ đối chiếu self/cross-attention từ `5.4 Transformer Network.txt`, slide 18–19.
 
@@ -211,11 +213,11 @@ Trong attention kiểu Bahdanau đang được giải thích, điểm liên quan
 
 **Ví dụ:** khi dịch phần nói về thời gian, decoder có thể đặt trọng số lớn hơn lên cụm “en septembre”. Tại bước khác, các trọng số thay đổi. Không phải mỗi bước bắt buộc chỉ chọn duy nhất một từ, và trọng số không tự là lời giải thích nhân quả chắc chắn.
 
-**Trả lời miệng:** “Attention tạo context riêng cho từng bước decoder bằng tổng có trọng số các trạng thái encoder. Nó giảm nút thắt nén cả câu vào một vector. Self-attention xét nội bộ một chuỗi, còn cross-attention trao đổi giữa decoder và nguồn encoder.”
-
 **Hỏi tiếp:** Attention có luôn đi kèm RNN? → Không; Transformer dùng attention làm thành phần chính mà không cần recurrence kiểu RNN trong mỗi lớp.
 
 ## DPL5-15 [Cốt lõi] Query, Key, Value và scaled dot-product attention tính thế nào?
+
+**Trả lời miệng:** “QKᵀ tính score, chia căn chiều key rồi softmax thành trọng số, sau đó nhân V để tổng hợp nội dung. Q, K, V thường là các phép chiếu học được. Trong self-attention chúng bắt nguồn từ cùng biểu diễn đầu vào nhưng không bắt buộc bằng nhau.”
 
 **Nguồn:** `5.4 Transformer Network.txt`, slide 10–13, 15–16. Công thức được viết lại vì text trích xuất làm vỡ phân số/chỉ số.
 
@@ -227,11 +229,11 @@ Với một head, Q có thể shape `(nq,dk)`, K `(nk,dk)`, V `(nk,dv)`. Điểm
 
 **Ví dụ số:** Q=[1], hai key là [0] và [1], nên score=[0,1], `dk=1`. Softmax xấp xỉ [0,269;0,731]. Với hai value 10 và 20, đầu ra `0,269×10+0,731×20≈17,31`. Key dùng để tính mức liên quan, value mới là thứ được trộn.
 
-**Trả lời miệng:** “QKᵀ tính score, chia căn chiều key rồi softmax thành trọng số, sau đó nhân V để tổng hợp nội dung. Q, K, V thường là các phép chiếu học được. Trong self-attention chúng bắt nguồn từ cùng biểu diễn đầu vào nhưng không bắt buộc bằng nhau.”
-
 **Hỏi tiếp:** Cross-attention lấy Q,K,V từ đâu? → Q từ decoder, K và V từ encoder trong kiến trúc encoder–decoder thường gặp.
 
 ## DPL5-16 [Đọc tiếp] Multi-head attention thêm điều gì?
+
+**Trả lời miệng:** “Multi-head attention cho mô hình nhiều phép chiếu để xem các quan hệ theo những cách khác nhau, sau đó nối và trộn kết quả. Nó không phải lặp một phép attention y hệt không tham số, và không đảm bảo head nào cũng có ý nghĩa cố định.”
 
 **Nguồn:** `5.4 Transformer Network.txt`, slide 14–16.
 
@@ -241,11 +243,11 @@ Các head có thể học những quan hệ khác nhau, nhưng không được k
 
 **Ví dụ:** với `d_model=128`, 4 head và chia đều, mỗi head có chiều 32; nối bốn kết quả trả về 128 chiều trước phép chiếu output. Số token không tăng gấp bốn; chỉ có nhiều nhánh tính quan hệ.
 
-**Trả lời miệng:** “Multi-head attention cho mô hình nhiều phép chiếu để xem các quan hệ theo những cách khác nhau, sau đó nối và trộn kết quả. Nó không phải lặp một phép attention y hệt không tham số, và không đảm bảo head nào cũng có ý nghĩa cố định.”
-
 **Hỏi tiếp:** Càng nhiều head luôn tốt hơn? → Không; có đánh đổi về chiều mỗi head, tài nguyên và hiệu quả thực nghiệm.
 
 ## DPL5-17 [Cốt lõi] Vị trí, mask, residual, LayerNorm và luồng Transformer
+
+**Trả lời miệng:** “Vị trí giúp attention biết thứ tự; causal mask chặn tương lai. Transformer kết hợp attention, feed-forward, residual và normalization. Encoder đọc input, decoder dùng masked self-attention rồi cross-attention để sinh. Khả năng song song hóa huấn luyện không có nghĩa sinh cả câu luôn chỉ mất một bước.”
 
 **Nguồn:** `5.4 Transformer Network.txt`, slide 7, 18–20; sơ đồ chính ở slide 19.
 
@@ -255,11 +257,11 @@ Encoder thường gồm self-attention và feed-forward theo từng vị trí. D
 
 **Ví dụ:** khi dự đoán từ thứ ba, decoder được dùng hai từ trước và thông tin câu nguồn, nhưng không được đọc đáp án từ thứ tư. Trong huấn luyện có thể tính nhiều vị trí song song nhờ mask; khi sinh tự hồi quy vẫn thường tạo token nối tiếp.
 
-**Trả lời miệng:** “Vị trí giúp attention biết thứ tự; causal mask chặn tương lai. Transformer kết hợp attention, feed-forward, residual và normalization. Encoder đọc input, decoder dùng masked self-attention rồi cross-attention để sinh. Khả năng song song hóa huấn luyện không có nghĩa sinh cả câu luôn chỉ mất một bước.”
-
 **Hỏi tiếp:** Transformer luôn nhanh và rẻ hơn RNN? → Không; dense attention có ma trận score kích thước bậc hai theo độ dài chuỗi, còn tùy kiến trúc và triển khai.
 
 ## DPL5-18 [Đọc tiếp] Pretrained Transformer, NER/QA và so sánh BERT–GPT
+
+**Trả lời miệng:** “Em dùng pretrained Transformer rồi fine-tune cho NER hoặc QA. NER gán nhãn token, extractive QA chọn span trong context. BERT và GPT giúp phân biệt encoder hai chiều với mô hình tự hồi quy có causal mask; phần GPT ở đây là mở rộng để so sánh, chưa xác nhận trong slide.”
 
 **Nguồn:** `5.4 Transformer Network.txt`, slide 1 về mục tiêu NER/QA/fine-tuning; slide 18 nhắc BERT và BERT distill. **GPT là phần so sánh bổ sung**, chưa thấy tên GPT trong extract; không khẳng định môn đã dạy sâu GPT.
 
@@ -268,8 +270,6 @@ Pretraining học biểu diễn trên dữ liệu lớn; fine-tuning tiếp tụ
 **Ví dụ:** đoạn “An sinh ở Huế”, hỏi “An sinh ở đâu?”; QA trích xuất chọn span “Huế”. Đây khác sinh một câu trả lời tự do ngoài đoạn. Nếu một từ tách thành nhiều subword, NER cần quy tắc gán nhãn/mask loss thích hợp; không coi mọi subword đều là từ độc lập.
 
 BERT điển hình là encoder-only với attention hai chiều và mục tiêu pretraining như masked language modeling; GPT điển hình là decoder-only có causal mask, dự đoán token tiếp theo. Đây là hai lựa chọn kiến trúc/mục tiêu, không có nghĩa encoder chỉ làm phân loại hay decoder không thể dùng cho hiểu văn bản. Transformer cũng không loại bỏ mọi trường hợp dùng RNN.
-
-**Trả lời miệng:** “Em dùng pretrained Transformer rồi fine-tune cho NER hoặc QA. NER gán nhãn token, extractive QA chọn span trong context. BERT và GPT giúp phân biệt encoder hai chiều với mô hình tự hồi quy có causal mask; phần GPT ở đây là mở rộng để so sánh, chưa xác nhận trong slide.”
 
 **Hỏi tiếp:** Fine-tune có luôn cần cập nhật toàn bộ trọng số? → Không; có thể freeze phần nền, học head hoặc mở một phần tầng tùy dữ liệu và tài nguyên.
 

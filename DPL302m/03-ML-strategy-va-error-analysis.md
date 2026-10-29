@@ -14,6 +14,8 @@ Các ví dụ số và mẫu trả lời dưới đây được biên soạn th�
 
 ## DPL3-01 [Cốt lõi] Orthogonalization là gì? Vì sao cần tách bốn mục tiêu?
 
+**Trả lời miệng:** “Orthogonalization giúp tách câu hỏi cần giải quyết: khớp train, khái quát hóa, đánh giá cuối và hiệu quả thực tế. Em xác định đang hỏng ở bước nào rồi chọn biện pháp chủ yếu tác động vào bước đó. Đây là nguyên tắc tổ chức thử nghiệm, không phải bảo đảm một siêu tham số chỉ ảnh hưởng duy nhất một thứ.”
+
 **Nguồn:** `3.1 Introduction to ML strategy.txt`, slide 3–11, đặc biệt slide 9.
 
 **Hiểu từ đầu:** Khi mô hình kém, có thể thử tăng mạng, thêm dữ liệu, đổi optimizer hoặc đổi metric. Orthogonalization ở đây là cố gắng tách các mục tiêu để hiểu mỗi thay đổi chủ yếu xử lý vấn đề nào. Nó giống bảng điều khiển có nút chỉnh âm lượng riêng, độ sáng riêng, thay vì một nút thay tất cả.
@@ -22,11 +24,11 @@ Bốn bước cần kiểm tra: **(1)** học được train; **(2)** tổng qu�
 
 **Ví dụ:** mô hình train lỗi 1%, dev lỗi 20% thì thay ngay metric chưa chắc chữa được việc tổng quát hóa. Ngược lại, accuracy cao nhưng bỏ sót toàn bộ ca quan trọng có thể là mục tiêu đánh giá chưa phù hợp. Các “nút” thực tế vẫn tương tác, không độc lập tuyệt đối.
 
-**Trả lời miệng:** “Orthogonalization giúp tách câu hỏi cần giải quyết: khớp train, khái quát hóa, đánh giá cuối và hiệu quả thực tế. Em xác định đang hỏng ở bước nào rồi chọn biện pháp chủ yếu tác động vào bước đó. Đây là nguyên tắc tổ chức thử nghiệm, không phải bảo đảm một siêu tham số chỉ ảnh hưởng duy nhất một thứ.”
-
 **Hỏi tiếp:** Early stopping có trực giao hoàn toàn không? → Không. Nó vừa hạn chế thời gian tối ưu train vừa có tác dụng regularization, nên ảnh hưởng cả hai mục tiêu.
 
 ## DPL3-02 [Cốt lõi] Optimizing metric và satisficing metric khác nhau thế nào?
+
+**Trả lời miệng:** “Em phân biệt chỉ số cần tối ưu với các ràng buộc phải đáp ứng. Ví dụ tối đa accuracy trong nhóm mô hình chạy dưới 100ms. Cách này tránh tranh luận mô hình nào tốt hơn khi một mô hình chính xác hơn nhưng quá chậm; các ngưỡng cần xuất phát từ nhu cầu thực tế.”
 
 **Nguồn:** `3.1 Introduction to ML strategy.txt`, slide 12–20.
 
@@ -36,11 +38,11 @@ Một chỉ số chính giúp quyết định nhanh hơn, nhưng không có ngh�
 
 **Ví dụ:** A có accuracy 90%, thời gian 80ms; B là 92%, 95ms; C là 95%, 1.500ms. Nếu yêu cầu ≤100ms và tối đa accuracy, chọn B trong ba mô hình. C có accuracy cao nhất nhưng không đủ điều kiện thời gian.
 
-**Trả lời miệng:** “Em phân biệt chỉ số cần tối ưu với các ràng buộc phải đáp ứng. Ví dụ tối đa accuracy trong nhóm mô hình chạy dưới 100ms. Cách này tránh tranh luận mô hình nào tốt hơn khi một mô hình chính xác hơn nhưng quá chậm; các ngưỡng cần xuất phát từ nhu cầu thực tế.”
-
 **Hỏi tiếp:** Nếu không mô hình nào đạt ngưỡng? → Chưa có phương án đáp ứng yêu cầu; cần cải thiện mô hình/hệ thống hoặc xem lại ràng buộc có căn cứ, không âm thầm chọn mô hình vi phạm rồi gọi là đạt.
 
 ## DPL3-03 [Cốt lõi] Chọn dev/test theo mục tiêu nào? Khi nào cần thay đổi?
+
+**Trả lời miệng:** “Em chọn dev/test để phản ánh dữ liệu và mục tiêu thật. Chỉ số và dữ liệu phải giúp chọn được mô hình mà người dùng thực sự muốn. Khi mục tiêu đo sai, em điều chỉnh có lý do và ghi lại; không đổi test chỉ để làm điểm đẹp hơn.”
 
 **Nguồn:** `3.1 Introduction to ML strategy.txt`, slide 21–38.
 
@@ -50,11 +52,11 @@ Cỡ dev phải đủ để phân biệt những mô hình đang so; test đủ 
 
 **Ví dụ:** app nhận ảnh điện thoại mờ nhưng dev/test toàn ảnh studio. Cải thiện trên studio chưa phản ánh app. Có thể thiết kế lại tập đánh giá đại diện điện thoại, ghi phiên bản và quy trình rõ. Nếu đã dùng kết quả test cũ để ra quyết định, cần đánh giá cuối độc lập phù hợp cho phiên bản tiếp theo.
 
-**Trả lời miệng:** “Em chọn dev/test để phản ánh dữ liệu và mục tiêu thật. Chỉ số và dữ liệu phải giúp chọn được mô hình mà người dùng thực sự muốn. Khi mục tiêu đo sai, em điều chỉnh có lý do và ghi lại; không đổi test chỉ để làm điểm đẹp hơn.”
-
 **Bẫy:** Không phải mọi hệ đánh giá đều chỉ có một phân phối; có thể thêm các test stress/out-of-distribution riêng. Phải gắn nhãn đúng mục đích, không so các điểm khác phân phối như cùng một phép đo.
 
 ## DPL3-04 [Cốt lõi] Human-level performance, Bayes error và avoidable bias là gì?
+
+**Trả lời miệng:** “Human-level error có thể giúp ước lượng mức sai có thể đạt ở một số nhiệm vụ, nhưng không bằng Bayes error theo định nghĩa. Em dùng mốc đó và khoảng train/dev để định hướng giảm avoidable bias hay variance. Nếu máy vượt con người thì mốc con người không còn cho biết chính xác còn cách tối ưu bao xa.”
 
 **Nguồn:** `3.1 Introduction to ML strategy.txt`, slide 39–64.
 
@@ -64,11 +66,11 @@ Trong nhiệm vụ con người làm rất tốt, lỗi chuyên gia có thể l�
 
 **Ví dụ:** chuyên gia 1%, train 8%, dev 10%, cùng cách đo và phân phối phù hợp. Khoảng tới chuyên gia là 7 **điểm phần trăm**, khoảng dev−train là 2 điểm. Nên xem việc khớp train trước. Nếu chuyên gia 7,5% thì khoảng đầu chỉ 0,5 điểm, thứ tự ưu tiên có thể khác.
 
-**Trả lời miệng:** “Human-level error có thể giúp ước lượng mức sai có thể đạt ở một số nhiệm vụ, nhưng không bằng Bayes error theo định nghĩa. Em dùng mốc đó và khoảng train/dev để định hướng giảm avoidable bias hay variance. Nếu máy vượt con người thì mốc con người không còn cho biết chính xác còn cách tối ưu bao xa.”
-
 **Hỏi tiếp:** Máy vượt người có nghĩa vượt Bayes optimum không? → Không. Con người không nhất thiết tối ưu; với cùng thông tin và mục tiêu, Bayes optimum vẫn là giới hạn lý thuyết tương ứng.
 
 ## DPL3-05 [Cốt lõi] Error analysis làm gì? “Trần cải thiện” được hiểu thế nào?
+
+**Trả lời miệng:** “Em xem một tập lỗi đại diện và phân nhóm để tìm hướng cải thiện có ảnh hưởng lớn. Tỷ lệ một loại lỗi giúp ước lượng lợi ích tối đa nếu chỉ sửa loại đó. Em kiểm tra mẫu số, các nhóm chồng lấn và chi phí thực hiện trước khi quyết định thu thập dữ liệu hay đổi mô hình.”
 
 **Nguồn:** `3.2 Error Analysis.txt`, slide 3–8 và bảng slide 14.
 
@@ -78,11 +80,11 @@ Nếu một nhóm chiếm ít lỗi, chỉ sửa nhóm đó thường không th�
 
 **Ví dụ:** trên 1.000 mẫu dev, mô hình sai 100; trong đó 8 lỗi liên quan chó bị nhận thành mèo. Nếu sửa đúng cả 8 và không tạo lỗi mới, error giảm từ 10% xuống 9,2%: cải thiện tối đa 0,8 điểm phần trăm trong ví dụ này. Nhóm đó chiếm 8% **các lỗi**, không phải 8% toàn dev.
 
-**Trả lời miệng:** “Em xem một tập lỗi đại diện và phân nhóm để tìm hướng cải thiện có ảnh hưởng lớn. Tỷ lệ một loại lỗi giúp ước lượng lợi ích tối đa nếu chỉ sửa loại đó. Em kiểm tra mẫu số, các nhóm chồng lấn và chi phí thực hiện trước khi quyết định thu thập dữ liệu hay đổi mô hình.”
-
 **Hỏi tiếp:** 60% lỗi là ảnh mờ thì chỉ cần tăng ảnh mờ là chắc sửa hết? → Không. Nhóm lỗi chỉ gợi ý hướng; còn chất lượng nhãn, thông tin ảnh, mô hình và dữ liệu thật sự cần thêm.
 
 ## DPL3-06 [Đọc tiếp] Có nên sửa mọi nhãn sai? Sửa dev/test thế nào cho nhất quán?
+
+**Trả lời miệng:** “Em đánh giá mức ảnh hưởng và cơ chế sai nhãn trước khi sửa. Với dev/test, em dùng cùng tiêu chuẩn, xem cả mẫu đoán đúng lẫn sai và lưu phiên bản dữ liệu. Chất lượng nhãn quan trọng, nhưng không nên sửa nhãn theo hướng ưu ái dự đoán hiện tại.”
 
 **Nguồn:** `3.2 Error Analysis.txt`, slide 9–15.
 
@@ -92,11 +94,11 @@ Nếu một nhóm chiếm ít lỗi, chỉ sửa nhóm đó thường không th�
 
 **Ví dụ:** dev error 2%, trong đó 0,6 điểm phần trăm do nhãn sai. Khi đang so hai mô hình chênh 0,2 điểm, lỗi nhãn này có thể đáng chú ý. Nếu dev error 20%, cùng 0,6 điểm do nhãn sai thì còn nhiều nguồn lỗi lớn hơn để xem.
 
-**Trả lời miệng:** “Em đánh giá mức ảnh hưởng và cơ chế sai nhãn trước khi sửa. Với dev/test, em dùng cùng tiêu chuẩn, xem cả mẫu đoán đúng lẫn sai và lưu phiên bản dữ liệu. Chất lượng nhãn quan trọng, nhưng không nên sửa nhãn theo hướng ưu ái dự đoán hiện tại.”
-
 **Hỏi tiếp:** Sửa nhãn dev có bắt buộc train lại không? → Không tự động. Nếu chỉ sửa dữ liệu đánh giá, trước hết đánh giá lại mô hình; train lại khi có lý do như đổi train, mục tiêu hoặc lựa chọn mô hình sau đó.
 
 ## DPL3-07 [Cốt lõi] Vì sao nên xây baseline nhanh rồi lặp cải thiện?
+
+**Trả lời miệng:** “Baseline giúp em có bằng chứng để chọn hướng làm thay vì đoán. Em xây một hệ đơn giản nhưng có chia dữ liệu và metric đúng, sau đó dùng bias/variance và error analysis để ưu tiên cải thiện. Mỗi vòng thay đổi cần được ghi lại và so công bằng.”
 
 **Nguồn:** `3.2 Error Analysis.txt`, slide 16–20.
 
@@ -106,11 +108,11 @@ Nếu một nhóm chiếm ít lỗi, chỉ sửa nhóm đó thường không th�
 
 **Ví dụ:** trước khi dành hai tuần thay Transformer lớn hơn, baseline cho thấy hầu hết câu sai chứa ký tự bị lỗi do tiền xử lý. Sửa pipeline có thể đáng làm trước. Nhưng đây là kết luận từ quan sát, không phải quy tắc mô hình đơn giản luôn đủ.
 
-**Trả lời miệng:** “Baseline giúp em có bằng chứng để chọn hướng làm thay vì đoán. Em xây một hệ đơn giản nhưng có chia dữ liệu và metric đúng, sau đó dùng bias/variance và error analysis để ưu tiên cải thiện. Mỗi vòng thay đổi cần được ghi lại và so công bằng.”
-
 **Hỏi tiếp:** Chỉ thử một random seed rồi kết luận hơn 0,1% có chắc không? → Chưa; cần cân nhắc nhiễu, kích thước tập đánh giá và độ ổn định của khác biệt.
 
 ## DPL3-08 [Cốt lõi] Training-dev giúp tách variance và data mismatch thế nào?
+
+**Trả lời miệng:** “Training-dev là tập không train nhưng cùng phân phối với train. Nó giúp phân biệt khoảng cách do tổng quát hóa trên nguồn cũ với khoảng cách khi chuyển sang miền mục tiêu. Em xem các chênh lệch cùng error analysis, rồi làm dữ liệu train gần mục tiêu hơn nếu có bằng chứng mismatch.”
 
 **Nguồn:** `3.2 Error Analysis.txt`, slide 21–38, đặc biệt 31–36.
 
@@ -120,11 +122,11 @@ So train với training-dev giúp xem khả năng khái quát hóa trên nguồn
 
 **Ví dụ:** train=8%, training-dev=9%, dev=20%. Khoảng đầu là 1 điểm phần trăm, khoảng sau 11 điểm: data mismatch là hướng đáng xem. Có thể thu thập dữ liệu gần điện thoại hơn hoặc mô phỏng biến đổi hợp lý. Nếu chỉ lặp một loại nhiễu nhân tạo, mô hình có thể overfit chính loại nhiễu đó.
 
-**Trả lời miệng:** “Training-dev là tập không train nhưng cùng phân phối với train. Nó giúp phân biệt khoảng cách do tổng quát hóa trên nguồn cũ với khoảng cách khi chuyển sang miền mục tiêu. Em xem các chênh lệch cùng error analysis, rồi làm dữ liệu train gần mục tiêu hơn nếu có bằng chứng mismatch.”
-
 **Hỏi tiếp:** Training-dev có được dùng để backprop rồi vẫn làm vai trò này không? → Không. Khi đã dùng để cập nhật trọng số, nó không còn là mẫu giữ lại độc lập cho phép so sánh đó.
 
 ## DPL3-09 [Cốt lõi] Transfer learning khác multi-task learning thế nào?
+
+**Trả lời miệng:** “Transfer learning chuyển kiến thức đã học sang nhiệm vụ mới; multi-task học nhiều nhiệm vụ đồng thời bằng chia sẻ biểu diễn phù hợp. Cả hai tận dụng điểm chung, nhưng không bảo đảm luôn cải thiện. Em so với baseline và theo dõi từng nhiệm vụ để phát hiện việc chia sẻ gây hại.”
 
 **Nguồn:** `3.2 Error Analysis.txt`, slide 39–49; xem thêm DL28 trong [bộ DL nền tảng](../Chuyen-de/03-Deep-Learning.md).
 
@@ -134,11 +136,11 @@ Multi-task learning học nhiều nhiệm vụ cùng lúc, thường chia sẻ m
 
 **Ví dụ:** hệ thị giác dùng backbone chung cho phân loại loại xe và dự đoán hướng xe là một ý tưởng multi-task. Dùng backbone đó để khởi tạo bài nhận diện loài hoa sau này là transfer. Multilabel chỉ mô tả cấu trúc nhãn nhiều nhãn cùng đúng; không phải mọi bài multilabel đều cần gọi là một thiết kế multi-task riêng biệt.
 
-**Trả lời miệng:** “Transfer learning chuyển kiến thức đã học sang nhiệm vụ mới; multi-task học nhiều nhiệm vụ đồng thời bằng chia sẻ biểu diễn phù hợp. Cả hai tận dụng điểm chung, nhưng không bảo đảm luôn cải thiện. Em so với baseline và theo dõi từng nhiệm vụ để phát hiện việc chia sẻ gây hại.”
-
 **Hỏi tiếp:** Fine-tuning có nghĩa chỉ học tầng cuối? → Không; có thể cập nhật một phần hoặc toàn bộ mô hình. Chỉ học tầng cuối là một chiến lược khi đóng băng phần trước.
 
 ## DPL3-10 [Đọc tiếp] End-to-end khác pipeline thế nào? Khi nào nên dùng?
+
+**Trả lời miệng:** “End-to-end tối ưu ánh xạ tới mục tiêu cuối, còn pipeline tách bài toán thành các chặng có trách nhiệm riêng. Em cân nhắc dữ liệu, độ phức tạp, kiến thức miền và khả năng kiểm tra lỗi. Cả hai đều có đánh đổi; end-to-end không mặc định tốt hơn hoặc loại bỏ mọi thiết kế thủ công.”
 
 **Nguồn:** `3.2 Error Analysis.txt`, slide 50–58.
 
@@ -147,8 +149,6 @@ Multi-task learning học nhiều nhiệm vụ cùng lúc, thường chia sẻ m
 End-to-end vẫn có thể gồm nhiều khối nội bộ, tiền xử lý và cấu trúc được thiết kế. Ý chính không phải “không có bước nào ở giữa”, mà là cách toàn hệ học hướng tới mục tiêu cuối. Nó có thể tận dụng dữ liệu để học biểu diễn hữu ích, nhưng cần đủ dữ liệu cho độ phức tạp và có thể khó debug hơn. Pipeline cho phép đưa kiến thức miền vào hoặc kiểm tra từng chặng, đổi lại có nguy cơ lỗi tích lũy và mục tiêu từng chặng không khớp mục tiêu cuối.
 
 **Ví dụ:** dịch máy có thể học từ cặp câu nguồn–đích. Một nhiệm vụ y tế ít nhãn nhưng có quy trình đo đạc đáng tin có thể hưởng lợi từ các chặng trung gian. Không thể quyết định chỉ vì end-to-end nghe hiện đại hơn.
-
-**Trả lời miệng:** “End-to-end tối ưu ánh xạ tới mục tiêu cuối, còn pipeline tách bài toán thành các chặng có trách nhiệm riêng. Em cân nhắc dữ liệu, độ phức tạp, kiến thức miền và khả năng kiểm tra lỗi. Cả hai đều có đánh đổi; end-to-end không mặc định tốt hơn hoặc loại bỏ mọi thiết kế thủ công.”
 
 **Hỏi tiếp:** Có thể kết hợp hai cách không? → Có. Một hệ lớn có pipeline ở cấp sản phẩm nhưng từng khối học end-to-end; cần nói rõ phạm vi đang xét.
 

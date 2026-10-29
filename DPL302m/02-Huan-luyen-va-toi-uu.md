@@ -18,6 +18,8 @@ Số slide dưới đây lấy từ marker thực trong text, không lấy kho�
 
 ## DPL2-01 [Cốt lõi] Train, dev, test dùng để làm gì? Có tỷ lệ chia bắt buộc không?
 
+**Trả lời miệng:** “Train để học tham số, dev để lựa chọn cấu hình, test để đánh giá cuối. Em chọn kích thước và cách chia theo dữ liệu, không áp dụng máy móc một tỷ lệ. Tập đánh giá phải gần tình huống sử dụng và không bị rò rỉ thông tin vào huấn luyện.”
+
 **Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 3–8.
 
 **Hiểu từ đầu:** Train là tập cho mạng học trọng số. Dev, cũng gọi validation, giúp chọn kiến trúc, learning rate, số epoch hoặc ngưỡng dự đoán. Test dùng để đánh giá cuối sau khi chốt các lựa chọn. Nếu liên tục nhìn test rồi sửa mô hình, ta đã dùng nó như dev và làm đánh giá cuối thiên lệch.
@@ -26,11 +28,11 @@ Không có tỷ lệ cố định cho mọi bài toán. Với hàng triệu mẫ
 
 **Ví dụ:** mô hình dùng cho ảnh điện thoại nhưng train toàn ảnh web rõ nét. Dev/test chỉ gồm ảnh web sẽ không cho biết tốt khả năng dùng trên điện thoại. Cần tập đánh giá phản ánh mục tiêu thực tế; việc trộn dữ liệu đòi hỏi kiểm tra phân phối.
 
-**Trả lời miệng:** “Train để học tham số, dev để lựa chọn cấu hình, test để đánh giá cuối. Em chọn kích thước và cách chia theo dữ liệu, không áp dụng máy móc một tỷ lệ. Tập đánh giá phải gần tình huống sử dụng và không bị rò rỉ thông tin vào huấn luyện.”
-
 **Hỏi tiếp:** Không có test có train được không? → Có, nhưng khi chỉ dùng dev để điều chỉnh, ta thiếu một tập độc lập cho đánh giá cuối. Train được khác với đánh giá khách quan được.
 
 ## DPL2-02 [Cốt lõi] Nhìn train/dev error để phân biệt bias và variance thế nào?
+
+**Trả lời miệng:** “Em so lỗi train với mức lỗi có thể đạt được, rồi xem khoảng cách dev–train. Nếu train còn kém, em kiểm tra năng lực mô hình, dữ liệu và tối ưu. Nếu train tốt nhưng dev kém, em kiểm tra overfitting và phân phối trước khi thêm dữ liệu hay regularization.”
 
 **Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 9–20; giả định được nêu rõ ở slide 16.
 
@@ -40,11 +42,11 @@ Phải so trên cùng thước đo và bối cảnh. Train 10% không tự độ
 
 **Ví dụ:** giả sử mức lỗi tham chiếu phù hợp khoảng 1%, train/dev cùng phân phối. Train 1%, dev 12% gợi ý variance; train 15%, dev 16% gợi ý bias; train 15%, dev 28% gợi ý cả hai. Chưa được kết luận nguyên nhân duy nhất từ hai con số.
 
-**Trả lời miệng:** “Em so lỗi train với mức lỗi có thể đạt được, rồi xem khoảng cách dev–train. Nếu train còn kém, em kiểm tra năng lực mô hình, dữ liệu và tối ưu. Nếu train tốt nhưng dev kém, em kiểm tra overfitting và phân phối trước khi thêm dữ liệu hay regularization.”
-
 **Hỏi tiếp:** Thêm regularization khi train đã rất kém có luôn giúp? → Không; regularization quá mạnh có thể làm thiếu khớp nặng hơn. Phải xử lý theo chẩn đoán.
 
 ## DPL2-03 [Cốt lõi] L2 regularization làm gì? Có phải luôn là weight decay?
+
+**Trả lời miệng:** “L2 thêm hình phạt bình phương trọng số vào loss để hạn chế cách mô hình khớp dữ liệu. Với gradient descent nó tạo hiệu ứng co trọng số. Mức phạt cần chọn bằng dev; nó không bảo đảm mọi trọng số về 0 hoặc mọi mô hình đều tốt hơn.”
 
 **Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 21–30. Phân biệt với AdamW là giải thích bổ sung.
 
@@ -54,11 +56,11 @@ Với gradient descent cơ bản, cập nhật thành `w_mới = (1−ηλ)w −
 
 **Ví dụ:** w=2, gradient từ dữ liệu=0,5, η=0,1, λ=0,2. Gradient tổng là 0,9; w mới = 1,91. Không có L2 thì w mới = 1,95. L2 làm bước này co mạnh hơn, nhưng dùng quá mạnh có thể underfit.
 
-**Trả lời miệng:** “L2 thêm hình phạt bình phương trọng số vào loss để hạn chế cách mô hình khớp dữ liệu. Với gradient descent nó tạo hiệu ứng co trọng số. Mức phạt cần chọn bằng dev; nó không bảo đảm mọi trọng số về 0 hoặc mọi mô hình đều tốt hơn.”
-
 **Bẫy:** Trọng số nhỏ không đồng nghĩa mọi đặc trưng ít quan trọng; còn thang đo đầu vào và các tầng khác. Không nên giải thích L2 như chắc chắn biến toàn mạng phi tuyến thành tuyến tính.
 
 ## DPL2-04 [Cốt lõi] Inverted dropout là gì? Vì sao chia cho keep_prob?
+
+**Trả lời miệng:** “Inverted dropout bỏ ngẫu nhiên activation lúc train, rồi chia những activation còn lại cho xác suất giữ để bảo toàn kỳ vọng tại bước đó. Khi dự đoán thông thường thì không bỏ đơn vị. Dropout quá mạnh có thể làm học khó, nên tỷ lệ cần được chọn phù hợp.”
 
 **Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 31–40, đặc biệt 33–36.
 
@@ -68,11 +70,11 @@ Inverted dropout dùng `a_train = d×a/q`. Với a đang xét cố định, kỳ
 
 **Ví dụ:** a=4, q=0,8. Khi được giữ, giá trị là 5; khi bỏ là 0. Trung bình theo xác suất: `0,8×5 + 0,2×0 = 4`. Một lần chạy không nhất thiết giữ đúng 80% mọi đơn vị.
 
-**Trả lời miệng:** “Inverted dropout bỏ ngẫu nhiên activation lúc train, rồi chia những activation còn lại cho xác suất giữ để bảo toàn kỳ vọng tại bước đó. Khi dự đoán thông thường thì không bỏ đơn vị. Dropout quá mạnh có thể làm học khó, nên tỷ lệ cần được chọn phù hợp.”
-
 **Hỏi tiếp:** `dropout rate=0,2` có phải `keep_prob=0,2`? → Không; keep_prob=0,8. Nhầm hai cách đặt tên sẽ làm rơi mất quá nhiều đơn vị.
 
 ## DPL2-05 [Cốt lõi] Augmentation và early stopping giúp giảm overfitting ra sao?
+
+**Trả lời miệng:** “Augmentation giúp tăng sự đa dạng bằng biến đổi hợp lệ; early stopping giới hạn việc tiếp tục khớp train khi dev không còn cải thiện. Em chọn phép biến đổi giữ đúng nhãn, chia dữ liệu trước augmentation và khôi phục checkpoint phù hợp.”
 
 **Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 41–44.
 
@@ -82,11 +84,11 @@ Early stopping theo dõi dev và dừng khi không cải thiện theo quy tắc,
 
 **Ví dụ:** dev loss qua bốn lần đánh giá là 0,6; 0,4; 0,45; 0,5. Trong các bản đã lưu, bản thứ hai tốt nhất theo tiêu chí dev loss. Nếu đã thiết kế patience phù hợp thì có thể dừng sau các lần không cải thiện; không mở test để chọn epoch.
 
-**Trả lời miệng:** “Augmentation giúp tăng sự đa dạng bằng biến đổi hợp lệ; early stopping giới hạn việc tiếp tục khớp train khi dev không còn cải thiện. Em chọn phép biến đổi giữ đúng nhãn, chia dữ liệu trước augmentation và khôi phục checkpoint phù hợp.”
-
 **Hỏi tiếp:** Augmentation có thay hoàn toàn dữ liệu thật mới không? → Không. Nó chỉ tạo biến thể theo các giả định đã chọn và có thể không tái hiện được môi trường triển khai.
 
 ## DPL2-06 [Cốt lõi] Chuẩn hóa đầu vào khác biến dữ liệu thành phân phối chuẩn thế nào?
+
+**Trả lời miệng:** “Chuẩn hóa giúp các đặc trưng có thang đo phù hợp hơn cho tối ưu. Em học thống kê trên train rồi áp dụng lại cho các tập khác. Đây không phải biến dữ liệu thành phân phối chuẩn, và cần xử lý cột có độ lệch chuẩn bằng 0.”
 
 **Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 45–51.
 
@@ -96,11 +98,11 @@ Không tính μ,σ trên toàn bộ dữ liệu trước khi chia; đó là đư
 
 **Ví dụ:** train cho μ=50, σ=10. Một mẫu mới x=70 thành 2. Nếu dev tự tính một μ khác để biến cùng giá trị thành số khác, mô hình nhận thang đo không nhất quán.
 
-**Trả lời miệng:** “Chuẩn hóa giúp các đặc trưng có thang đo phù hợp hơn cho tối ưu. Em học thống kê trên train rồi áp dụng lại cho các tập khác. Đây không phải biến dữ liệu thành phân phối chuẩn, và cần xử lý cột có độ lệch chuẩn bằng 0.”
-
 **Hỏi tiếp:** Chia cho phương sai hay độ lệch chuẩn? → Z-score chia cho độ lệch chuẩn σ. Phương sai là σ²; trộn hai khái niệm tạo phép biến đổi khác.
 
 ## DPL2-07 [Cốt lõi] Vì sao cần khởi tạo ngẫu nhiên, Xavier hoặc He?
+
+**Trả lời miệng:** “Khởi tạo cần vừa phá đối xứng vừa giữ thang tín hiệu hợp lý qua các tầng. He thường dùng với ReLU; Xavier thường dùng với tanh và các cấu hình phù hợp. Chúng giúp giảm vấn đề gradient nhưng không bảo đảm loại bỏ hoàn toàn vanishing hoặc exploding.”
 
 **Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 53–61; xem thêm DL19–DL20 ở bộ nền tảng.
 
@@ -110,11 +112,11 @@ He cho ReLU thường lấy trọng số có phương sai `2/fan_in`, tức lấ
 
 **Ví dụ:** fan_in=100, He normal có độ lệch chuẩn `sqrt(0,02)≈0,1414`. Không phải đặt mọi trọng số bằng 0,1414; đó là thang của phân phối ngẫu nhiên.
 
-**Trả lời miệng:** “Khởi tạo cần vừa phá đối xứng vừa giữ thang tín hiệu hợp lý qua các tầng. He thường dùng với ReLU; Xavier thường dùng với tanh và các cấu hình phù hợp. Chúng giúp giảm vấn đề gradient nhưng không bảo đảm loại bỏ hoàn toàn vanishing hoặc exploding.”
-
 **Hỏi tiếp:** Gradient clipping có chữa vanishing gradient không? → Nó chủ yếu giới hạn gradient quá lớn, không khôi phục gradient đã quá nhỏ.
 
 ## DPL2-08 [Đọc tiếp] Gradient checking kiểm tra gì và vì sao không dùng để train?
+
+**Trả lời miệng:** “Gradient checking dùng sai phân hữu hạn để đối chiếu đạo hàm do backprop tính. Nó giúp tìm lỗi triển khai, không thay backprop trong train vì rất tốn. Em giữ phép tính xác định, tính cả phần phạt và hiểu rằng ngưỡng sai số phụ thuộc độ chính xác số và hàm đang kiểm tra.”
 
 **Nguồn:** `2.1 Practical Aspects of Deep Learning.txt`, slide 62–72.
 
@@ -124,11 +126,11 @@ So vector gradient số với gradient backprop, ví dụ dùng tỷ lệ `||g_n
 
 **Ví dụ:** J(w)=w², w=3, ε=0,001. Hiệu hai phía là `((3,001)²−(2,999)²)/0,002=6`, khớp đạo hàm 2w. Trong tính toán số thực có sai số làm tròn nên không đòi hai vector giống tuyệt đối.
 
-**Trả lời miệng:** “Gradient checking dùng sai phân hữu hạn để đối chiếu đạo hàm do backprop tính. Nó giúp tìm lỗi triển khai, không thay backprop trong train vì rất tốn. Em giữ phép tính xác định, tính cả phần phạt và hiểu rằng ngưỡng sai số phụ thuộc độ chính xác số và hàm đang kiểm tra.”
-
 **Bẫy:** Chọn ε=10⁻⁷ không tự bảo đảm đúng; ngưỡng trong ví dụ giảng dạy không là luật cho mọi kiểu dữ liệu và mô hình.
 
 ## DPL2-09 [Cốt lõi] Batch GD, SGD và mini-batch khác nhau ở đâu?
+
+**Trả lời miệng:** “Ba cách khác ở số mẫu dùng để ước lượng gradient mỗi bước. Mini-batch thường là lựa chọn thực tế vì cân bằng bộ nhớ và hiệu quả tính toán. Loss mỗi bước không bắt buộc giảm đều vì batch khác nhau; em theo dõi xu hướng và metric đánh giá phù hợp.”
 
 **Nguồn:** `2.2 Optimization Algorithms.txt`, slide 3–17.
 
@@ -138,11 +140,11 @@ Epoch là một lượt qua train; step thường là một lần cập nhật. 
 
 **Ví dụ:** 1.030 mẫu, batch size 128: giữ batch cuối thì 9 step/epoch, trong đó batch cuối 6 mẫu. Bỏ batch cuối thì 8 step/epoch. Ví dụ giả định một batch dẫn tới một bước, không gradient accumulation.
 
-**Trả lời miệng:** “Ba cách khác ở số mẫu dùng để ước lượng gradient mỗi bước. Mini-batch thường là lựa chọn thực tế vì cân bằng bộ nhớ và hiệu quả tính toán. Loss mỗi bước không bắt buộc giảm đều vì batch khác nhau; em theo dõi xu hướng và metric đánh giá phù hợp.”
-
 **Hỏi tiếp:** Batch lớn gấp đôi có làm thời gian train giảm đúng một nửa không? → Không. Còn phần cứng, truyền dữ liệu, số phép tính và số epoch cần học.
 
 ## DPL2-10 [Cốt lõi] Trung bình trượt có trọng số mũ liên quan gì tới momentum?
+
+**Trả lời miệng:** “Momentum dùng thông tin gradient từ nhiều bước thay vì chỉ bước hiện tại. Nó có thể làm cập nhật bớt dao động và tiến nhanh theo hướng ổn định. Beta điều khiển mức ghi nhớ, còn learning rate vẫn quyết định độ lớn bước; momentum không bảo đảm luôn nhanh hơn.”
 
 **Nguồn:** `2.2 Optimization Algorithms.txt`, slide 18–38.
 
@@ -152,11 +154,11 @@ Momentum áp dụng ý tưởng này cho gradient g_t rồi cập nhật `w_t=w_
 
 **Ví dụ:** v₀=0, β=0,9, gradient lần đầu 2 rồi 4. v₁=0,2; v₂=0,9×0,2+0,1×4=0,58. Giá trị không bằng trung bình cộng 3 vì có trọng số giảm dần và khởi tạo từ 0.
 
-**Trả lời miệng:** “Momentum dùng thông tin gradient từ nhiều bước thay vì chỉ bước hiện tại. Nó có thể làm cập nhật bớt dao động và tiến nhanh theo hướng ổn định. Beta điều khiển mức ghi nhớ, còn learning rate vẫn quyết định độ lớn bước; momentum không bảo đảm luôn nhanh hơn.”
-
 **Hỏi tiếp:** Vì sao trung bình ban đầu bị thấp khi bắt đầu bằng 0? → Chưa có đủ lịch sử nên hệ số tổng chưa bằng 1. Với EWMA khởi tạo 0, có thể hiệu chỉnh bằng chia `1−β^t`; Adam dùng ý tưởng này.
 
 ## DPL2-11 [Cốt lõi] RMSprop và Adam khác momentum thế nào? Bias correction làm gì?
+
+**Trả lời miệng:** “Momentum làm mượt gradient; RMSprop dùng bình phương gradient để điều chỉnh từng chiều. Adam kết hợp cả hai và hiệu chỉnh sự lệch do bắt đầu các trung bình bằng 0. Adam vẫn cần chọn learning rate và đánh giá bằng dev, không có bảo đảm luôn vượt SGD.”
 
 **Nguồn:** `2.2 Optimization Algorithms.txt`, slide 31–34 và 39–48.
 
@@ -166,11 +168,11 @@ Adam kết hợp một trung bình của gradient `v_t=β₁v_(t−1)+(1−β₁
 
 **Ví dụ:** bước đầu g=2 cho v₁=0,2 và s₁=0,004 với hai beta trên. Hiệu chỉnh cho v̂₁=2 và ŝ₁=4. Tỷ lệ `2/(sqrt(4)+ε)` gần 1; bước cập nhật gần η, không phải 2η như GD thuần.
 
-**Trả lời miệng:** “Momentum làm mượt gradient; RMSprop dùng bình phương gradient để điều chỉnh từng chiều. Adam kết hợp cả hai và hiệu chỉnh sự lệch do bắt đầu các trung bình bằng 0. Adam vẫn cần chọn learning rate và đánh giá bằng dev, không có bảo đảm luôn vượt SGD.”
-
 **Bẫy:** Bias correction này không phải sửa high bias/underfitting của mô hình, cũng không phải cập nhật tham số bias b của nơ-ron.
 
 ## DPL2-12 [Đọc tiếp] Learning-rate decay giúp gì? Gradient bằng 0 có chắc là nghiệm tốt?
+
+**Trả lời miệng:** “Decay thay learning rate theo tiến trình để điều chỉnh độ lớn bước học. Em theo dõi cả tối ưu và dev để chọn lịch. Loss đứng yên có thể do learning rate, vùng phẳng hoặc lỗi khác; gradient bằng 0 chưa nói được đây là nghiệm tốt nhất.”
 
 **Nguồn:** `2.2 Optimization Algorithms.txt`, slide 49–58.
 
@@ -180,11 +182,11 @@ Không gian loss có thể có cực tiểu, cực đại, điểm yên ngựa v
 
 **Ví dụ:** η₀=0,1, d=0,1, epoch=10 thì η=0,05. Với hàm minh họa `f(x,y)=x²−y²`, tại (0,0) gradient bằng 0 nhưng tăng x làm f tăng, tăng y làm f giảm: đó là điểm yên ngựa.
 
-**Trả lời miệng:** “Decay thay learning rate theo tiến trình để điều chỉnh độ lớn bước học. Em theo dõi cả tối ưu và dev để chọn lịch. Loss đứng yên có thể do learning rate, vùng phẳng hoặc lỗi khác; gradient bằng 0 chưa nói được đây là nghiệm tốt nhất.”
-
 **Hỏi tiếp:** Learning-rate decay khác L2 weight decay không? → Có. Một cái thay η; một cái tác động lên trọng số. Tên đều có decay nhưng không cùng cơ chế.
 
 ## DPL2-13 [Đọc tiếp] Tìm siêu tham số thế nào để không phí công?
+
+**Trả lời miệng:** “Em xác định miền thử và ngân sách, ưu tiên các siêu tham số ảnh hưởng lớn, chọn thang đo thích hợp rồi thu hẹp quanh vùng tốt. Mọi lựa chọn dựa trên dev; không dùng test làm bảng xếp hạng cấu hình. Em ghi lại cấu hình để kết quả tái lập được.”
 
 **Nguồn:** `2.3 Hyper parameter tuning.txt`, slide 3–16.
 
@@ -194,11 +196,11 @@ Learning rate thường khác nhau theo bậc độ lớn, nên thử trên log 
 
 **Ví dụ:** thử rộng, thấy η quanh 0,001 tốt thì lấy mẫu dày hơn ở miền đó, gọi là coarse-to-fine. “Panda” là chăm một vài lượt train khi ít tài nguyên; “Caviar” là chạy nhiều cấu hình song song. Đây là ví von về ngân sách, không phải thuật toán mới.
 
-**Trả lời miệng:** “Em xác định miền thử và ngân sách, ưu tiên các siêu tham số ảnh hưởng lớn, chọn thang đo thích hợp rồi thu hẹp quanh vùng tốt. Mọi lựa chọn dựa trên dev; không dùng test làm bảng xếp hạng cấu hình. Em ghi lại cấu hình để kết quả tái lập được.”
-
 **Hỏi tiếp:** Tăng gấp đôi số cấu hình thử có chắc tăng chất lượng thực tế? → Không. Có thể tốn hơn hoặc quá thích nghi với dev; cần đánh giá cuối độc lập và kiểm tra độ ổn định.
 
 ## DPL2-14 [Cốt lõi] BatchNorm hoạt động ra sao? Framework tự làm phần nào?
+
+**Trả lời miệng:** “BatchNorm chuẩn hóa activation trung gian rồi học thêm gamma và beta để giữ tính linh hoạt. Train và inference dùng thống kê khác nhau trong cấu hình phổ biến, nên cần chế độ đúng. Nó khác chuẩn hóa dữ liệu đầu vào và không thay thế việc chia dữ liệu hay chọn learning rate đúng.”
 
 **Nguồn:** `2.3 Hyper parameter tuning.txt`, slide 17–29 (BatchNorm), 30–41 (softmax), 42–53 và mục tiêu slide 1 (framework). Chi tiết inference và cách diễn đạt TensorFlow 2 dưới đây là giải thích bổ sung; một số công thức BN không còn trong text trích xuất.
 
@@ -207,8 +209,6 @@ Learning rate thường khác nhau theo bậc độ lớn, nên thử trên log 
 Trong cấu hình thường dùng, train dùng thống kê batch và cập nhật trung bình/phương sai chạy; inference dùng thống kê chạy đã lưu. Không chuẩn hóa một mẫu mới bằng cách tùy tiện tính lại mọi thống kê của tập test. Nếu BN đặt ngay sau phép affine, bias trước BN thường dư thừa trong cách đặt thông dụng vì bị trừ khi định tâm; đây không phải lệnh xóa mọi bias trong mọi kiến trúc. BN giúp tối ưu trong nhiều trường hợp, không bảo đảm luôn hiệu quả với mọi batch size.
 
 **Ví dụ:** z=[2,4], μ=3, phương sai chia 2 là 1. Bỏ qua ε rất nhỏ, z_norm=[−1,1]. Nếu γ=2, β=3 thì đầu ra [1,5]. Như vậy đầu ra sau BN không bắt buộc có mean 0, variance 1 vì mạng còn học phép co/dịch.
-
-**Trả lời miệng:** “BatchNorm chuẩn hóa activation trung gian rồi học thêm gamma và beta để giữ tính linh hoạt. Train và inference dùng thống kê khác nhau trong cấu hình phổ biến, nên cần chế độ đúng. Nó khác chuẩn hóa dữ liệu đầu vào và không thay thế việc chia dữ liệu hay chọn learning rate đúng.”
 
 **Hỏi tiếp:** BN có bắt buộc loại bỏ overfitting không? → Không. Nhiễu do batch có thể tạo một hiệu ứng regularization, nhưng không thay mọi phương pháp kiểm soát overfit.
 

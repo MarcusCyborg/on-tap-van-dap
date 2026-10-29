@@ -126,12 +126,12 @@ describe('Content Import & Integrity', () => {
     expect(ch3?.exercises[2].title).toContain('Bài 3');
   });
 
-  it('correctly categorizes "Mẫu đáp" as answer blocks for DPL concepts', () => {
+  it('correctly categorizes answer blocks for DPL concepts', () => {
     const dpl1_01 = conceptMap.get('DPL1-01');
     expect(dpl1_01).toBeDefined();
     const ansBlock = dpl1_01?.blocks.find(b => b.type === 'answer');
     expect(ansBlock).toBeDefined();
-    expect(ansBlock?.markdown).toContain('Mẫu đáp:');
+    expect(ansBlock?.markdown).toMatch(/Trả lời miệng:|Mẫu đáp:/);
   });
 
   it('spot-checks first and last concept of each DPL chapter', () => {
