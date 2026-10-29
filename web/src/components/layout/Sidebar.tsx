@@ -94,12 +94,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
               className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
                 location.pathname === '/'
-                  ? 'bg-accent text-white shadow-2xs'
+                  ? 'bg-accent !text-white shadow-2xs font-bold'
                   : 'text-ink hover:bg-surface-muted'
               }`}
             >
-              <Home className="w-4 h-4" />
-              <span>Trang chủ học tập</span>
+              <Home className={`w-4 h-4 shrink-0 ${location.pathname === '/' ? '!text-white' : 'text-accent'}`} />
+              <span className={location.pathname === '/' ? '!text-white font-bold' : ''}>Trang chủ học tập</span>
             </Link>
 
             <Link
@@ -107,12 +107,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
               className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
                 location.pathname === '/guide'
-                  ? 'bg-accent text-white shadow-2xs'
+                  ? 'bg-accent !text-white shadow-2xs font-bold'
                   : 'text-ink hover:bg-surface-muted'
               }`}
             >
-              <Compass className="w-4 h-4" />
-              <span>Bản đồ kiến thức & Lộ trình</span>
+              <Compass className={`w-4 h-4 shrink-0 ${location.pathname === '/guide' ? '!text-white' : 'text-accent'}`} />
+              <span className={location.pathname === '/guide' ? '!text-white font-bold' : ''}>Bản đồ kiến thức & Lộ trình</span>
             </Link>
 
             <Link
@@ -120,12 +120,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
               className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
                 location.pathname.startsWith('/practice')
-                  ? 'bg-accent text-white shadow-2xs'
+                  ? 'bg-accent !text-white shadow-2xs font-bold'
                   : 'text-ink hover:bg-surface-muted'
               }`}
             >
-              <Award className="w-4 h-4" />
-              <span>Luyện vấn đáp (5–7 câu)</span>
+              <Award className={`w-4 h-4 shrink-0 ${location.pathname.startsWith('/practice') ? '!text-white' : 'text-accent'}`} />
+              <span className={location.pathname.startsWith('/practice') ? '!text-white font-bold' : ''}>Luyện vấn đáp (5-7 câu)</span>
             </Link>
 
             <Link
@@ -133,12 +133,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
               className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
                 location.pathname === '/review'
-                  ? 'bg-accent text-white shadow-2xs'
+                  ? 'bg-accent !text-white shadow-2xs font-bold'
                   : 'text-ink hover:bg-surface-muted'
               }`}
             >
-              <BookmarkCheck className="w-4 h-4" />
-              <span>Danh sách cần ôn lại</span>
+              <BookmarkCheck className={`w-4 h-4 shrink-0 ${location.pathname === '/review' ? '!text-white' : 'text-accent'}`} />
+              <span className={location.pathname === '/review' ? '!text-white font-bold' : ''}>Danh sách cần ôn lại</span>
             </Link>
           </div>
 

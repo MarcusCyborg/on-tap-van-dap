@@ -28,6 +28,25 @@
   --reader-line-height: 1.85;
 }
 
+/* Ensure all links/buttons with text-white on dark backgrounds stay crisp white */
+a.text-white,
+a.\!text-white,
+button.text-white,
+button.\!text-white,
+.bg-accent.text-white,
+.bg-accent.\!text-white,
+.bg-purple-700.text-white,
+.bg-purple-700.\!text-white {
+  color: #ffffff !important;
+}
+
+.bg-accent.text-white *,
+.bg-accent.\!text-white *,
+.bg-purple-700.text-white *,
+.bg-purple-700.\!text-white * {
+  color: #ffffff !important;
+}
+
 body {
   margin: 0;
   background-color: var(--page);

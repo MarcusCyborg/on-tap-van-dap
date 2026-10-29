@@ -20,7 +20,7 @@ export default {
         
         // Subject specific colors
         xs: {
-          DEFAULT: '#2b5c8f',
+          base: '#2b5c8f',
           light: '#eef4fa',
           border: '#c5d8ea',
           dark: '#1d426a'
