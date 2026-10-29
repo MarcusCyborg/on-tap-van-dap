@@ -83,29 +83,38 @@ export const DplChapterView: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 space-y-6">
       {/* Chapter Header Banner */}
-      <div className="rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden shadow-sm bg-purple-900">
-        <div className="relative z-10 max-w-2xl space-y-2">
+      <div className="rounded-2xl p-6 sm:p-8 !text-white relative overflow-hidden shadow-sm bg-purple-900">
+        <div className="relative z-10 max-w-2xl space-y-3">
           <div className="flex items-center gap-2">
-            <Link to="/dpl302m" className="text-xs font-bold uppercase tracking-wider bg-white/20 hover:bg-white/30 px-2.5 py-1 rounded transition-colors">
+            <Link to="/dpl302m" className="inline-flex items-center text-xs font-extrabold uppercase tracking-wider bg-white/25 hover:bg-white/35 !text-white px-3 py-1 rounded-full border border-white/40 shadow-xs transition-colors">
               ← Khóa học DPL302m
             </Link>
-            <span className="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded">
+            <span className="inline-flex items-center text-xs font-extrabold uppercase tracking-wider bg-white/25 !text-white px-3 py-1 rounded-full border border-white/40 shadow-xs">
               {chapter.chapterId.toUpperCase()}
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight !text-white drop-shadow-xs">
             {chapter.title}
           </h1>
 
-          <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-medium opacity-90">
-            <span>Tổng số: <strong>{chapter.totalCount} câu hỏi</strong></span>
-            <span>•</span>
-            <span>Cốt lõi: <strong>{chapter.coreCount} câu</strong></span>
-            <span>•</span>
-            <span>Đọc tiếp: <strong>{chapter.furtherCount} câu</strong></span>
-            <span>•</span>
-            <span>Bài tự kiểm tra: <strong>{chapter.exercises.length} bài</strong></span>
+          <div className="pt-2 flex flex-wrap items-center gap-2.5 text-xs">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/25 !text-white border border-white/25 shadow-2xs">
+              <span className="text-white/80 font-normal">Tổng số:</span>
+              <strong className="font-bold !text-white">{chapter.totalCount} câu hỏi</strong>
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/25 !text-white border border-white/25 shadow-2xs">
+              <span className="text-purple-200 font-bold">Cốt lõi:</span>
+              <strong className="font-bold !text-white">{chapter.coreCount} câu</strong>
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/25 !text-white border border-white/25 shadow-2xs">
+              <span className="text-indigo-200 font-bold">Đọc tiếp:</span>
+              <strong className="font-bold !text-white">{chapter.furtherCount} câu</strong>
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/25 !text-white border border-white/25 shadow-2xs">
+              <span className="text-amber-200 font-bold">Bài tự kiểm tra:</span>
+              <strong className="font-bold !text-white">{chapter.exercises.length} bài</strong>
+            </span>
           </div>
 
           {/* Dynamic Progress Indicator */}

@@ -69,28 +69,39 @@ export const SubjectTocView: React.FC = () => {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 space-y-6">
       {/* Subject Header Banner */}
       <div
-        className="rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden shadow-sm"
+        className="rounded-2xl p-6 sm:p-8 !text-white relative overflow-hidden shadow-sm"
         style={{ backgroundColor: sInfo.color }}
       >
-        <div className="relative z-10 max-w-2xl space-y-2">
-          <span className="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded">
-            Chuyên đề {sInfo.order} / 4
-          </span>
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+        <div className="relative z-10 max-w-2xl space-y-3">
+          <div>
+            <span className="inline-flex items-center text-xs font-extrabold uppercase tracking-wider bg-white/25 !text-white px-3 py-1 rounded-full border border-white/40 shadow-xs backdrop-blur-xs">
+              Chuyên đề {sInfo.order} / 4
+            </span>
+          </div>
+          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight !text-white drop-shadow-xs">
             {subject.name}
           </h1>
-          <p className="text-sm opacity-90 leading-relaxed">
+          <p className="text-sm font-medium text-white/95 leading-relaxed drop-shadow-xs">
             {subject.description}
           </p>
 
-          <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-medium">
-            <span>Tổng số: <strong>35 câu hỏi</strong></span>
-            <span>•</span>
-            <span>Mức A: <strong>18 câu</strong></span>
-            <span>•</span>
-            <span>Mức B: <strong>12 câu</strong></span>
-            <span>•</span>
-            <span>Mức C: <strong>5 câu</strong></span>
+          <div className="pt-2 flex flex-wrap items-center gap-2.5 text-xs">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/25 !text-white border border-white/25 shadow-2xs">
+              <span className="text-white/80 font-normal">Tổng số:</span>
+              <strong className="font-bold !text-white">35 câu hỏi</strong>
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/25 !text-white border border-white/25 shadow-2xs">
+              <span className="text-emerald-200 font-bold">Mức A:</span>
+              <strong className="font-bold !text-white">18 câu</strong>
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/25 !text-white border border-white/25 shadow-2xs">
+              <span className="text-sky-200 font-bold">Mức B:</span>
+              <strong className="font-bold !text-white">12 câu</strong>
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/25 !text-white border border-white/25 shadow-2xs">
+              <span className="text-amber-200 font-bold">Mức C:</span>
+              <strong className="font-bold !text-white">5 câu</strong>
+            </span>
           </div>
         </div>
       </div>

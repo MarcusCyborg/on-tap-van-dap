@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Center: Subject Navigation Tabs (Desktop) */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-1.5">
           {subjectKeys.map(sId => {
             const s = SUBJECT_INFO[sId];
             const isActive = location.pathname.startsWith(`/subjects/${sId}`) || location.pathname.startsWith(`/learn/${sId.toUpperCase()}`);
@@ -71,16 +71,22 @@ export const Header: React.FC<HeaderProps> = ({
               <Link
                 key={sId}
                 to={`/subjects/${sId}`}
-                className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 border ${
                   isActive
-                    ? 'bg-surface-muted text-ink shadow-2xs font-bold'
-                    : 'text-muted hover:text-ink hover:bg-surface-muted/60'
+                    ? 'bg-surface text-ink shadow-xs'
+                    : 'text-ink/80 hover:text-ink hover:bg-surface-muted border-transparent'
                 }`}
                 style={{
-                  borderBottom: isActive ? `2px solid ${s.color}` : '2px solid transparent'
+                  borderColor: isActive ? s.color : 'transparent'
                 }}
               >
-                {s.name}
+                <span
+                  className="w-2 h-2 rounded-full shrink-0"
+                  style={{ backgroundColor: s.color }}
+                />
+                <span className={isActive ? 'text-ink font-extrabold' : 'text-ink/80'}>
+                  {s.name}
+                </span>
               </Link>
             );
           })}
