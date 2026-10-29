@@ -1,0 +1,986 @@
+[
+  {
+    "id": "xs",
+    "name": "Xác suất thống kê",
+    "shortName": "Xác suất",
+    "description": "Mô tả dữ liệu, đo lường sự bất định, xác suất có điều kiện, định lý Bayes, phân phối và kiểm định giả thuyết.",
+    "color": "#2b5c8f",
+    "accentColor": "#1d426a",
+    "order": 1,
+    "readingPathA": [
+      "XS01",
+      "XS02",
+      "XS03",
+      "XS05",
+      "XS06",
+      "XS09",
+      "XS11",
+      "XS12",
+      "XS13",
+      "XS14",
+      "XS16",
+      "XS18",
+      "XS19",
+      "XS22",
+      "XS23",
+      "XS24",
+      "XS26",
+      "XS27",
+      "XS31"
+    ],
+    "readingPathB": [
+      "XS04",
+      "XS07",
+      "XS08",
+      "XS15",
+      "XS17",
+      "XS20",
+      "XS21",
+      "XS28",
+      "XS30",
+      "XS31",
+      "XS32",
+      "XS33"
+    ],
+    "readingPathC": [
+      "XS10",
+      "XS25",
+      "XS29",
+      "XS34",
+      "XS35"
+    ],
+    "groups": [
+      {
+        "id": "xs-group-1",
+        "title": "Cụm 1 — Nhìn dữ liệu trước khi tính",
+        "conceptIds": [
+          "XS01",
+          "XS02",
+          "XS03",
+          "XS04",
+          "XS05",
+          "XS06",
+          "XS07",
+          "XS08"
+        ]
+      },
+      {
+        "id": "xs-group-2",
+        "title": "Cụm 2 — Xác suất và thông tin mới",
+        "conceptIds": [
+          "XS09",
+          "XS10",
+          "XS11",
+          "XS12",
+          "XS13"
+        ]
+      },
+      {
+        "id": "xs-group-3",
+        "title": "Cụm 3 — Biến ngẫu nhiên và phân phối",
+        "conceptIds": [
+          "XS14",
+          "XS15",
+          "XS16",
+          "XS17",
+          "XS18",
+          "XS19",
+          "XS20",
+          "XS21"
+        ]
+      },
+      {
+        "id": "xs-group-4",
+        "title": "Cụm 4 — Ước lượng và độ bất định",
+        "conceptIds": [
+          "XS22",
+          "XS23",
+          "XS24",
+          "XS25"
+        ]
+      },
+      {
+        "id": "xs-group-5",
+        "title": "Cụm 5 — Kiểm định, quan hệ và kết luận",
+        "conceptIds": [
+          "XS26",
+          "XS27",
+          "XS28",
+          "XS29",
+          "XS30",
+          "XS31",
+          "XS32",
+          "XS33",
+          "XS34",
+          "XS35"
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "id": "xs-ex-1",
+        "subjectId": "xs",
+        "number": 1,
+        "title": "Bài 1 — Trung tâm và phân tán",
+        "questionMarkdown": "Dữ liệu [1, 2, 3, 4, 10]. Tính mean, median, phương sai nếu coi đây là tổng thể, và phương sai mẫu hiệu chỉnh.",
+        "solutionMarkdown": "mean = 20/5 = 4; median = 3. Tổng bình phương độ lệch = 9+4+1+0+36 = 50. Phương sai tổng thể = 50/5 = 10. Phương sai mẫu hiệu chỉnh = 50/4 = 12,5. Đừng chọn mẫu số mà không nói đang tính loại nào."
+      },
+      {
+        "id": "xs-ex-2",
+        "subjectId": "xs",
+        "number": 2,
+        "title": "Bài 2 — Bayes bằng bảng đếm",
+        "questionMarkdown": "Trong 1.000 email, 200 email là spam. Bộ lọc đánh dấu 160 spam và đánh dấu nhầm 80 email thường. Biết email bị đánh dấu, xác suất nó là spam bao nhiêu? Khả năng đánh dấu khi email là spam bao nhiêu?",
+        "solutionMarkdown": "tổng email bị đánh dấu = 160+80 = 240. `P(spam|đánh dấu)=160/240=2/3`. `P(đánh dấu|spam)=160/200=0,8`. Hai điều kiện khác nhau tạo hai mẫu số khác nhau. Đây cũng là trực giác precision và recall trong ML."
+      },
+      {
+        "id": "xs-ex-3",
+        "subjectId": "xs",
+        "number": 3,
+        "title": "Bài 3 — Nhị thức",
+        "questionMarkdown": "Ba lần thử độc lập, mỗi lần thành công với xác suất 0,2. X là số thành công. Tính P(X = 1), E[X], Var(X).",
+        "solutionMarkdown": "có 3 vị trí cho lần thành công, nên `P(X=1)=3×0,2×0,8²=0,384`. `E[X]=3×0,2=0,6`; `Var(X)=3×0,2×0,8=0,48`. Kỳ vọng 0,6 không phải số thành công của một lượt ba lần thử, mà là trung bình theo phân phối."
+      },
+      {
+        "id": "xs-ex-4",
+        "subjectId": "xs",
+        "number": 4,
+        "title": "Bài 4 — SE và khoảng tin cậy",
+        "questionMarkdown": "Mẫu độc lập cỡ 100 có mean 50 và SD mẫu 10. Dùng xấp xỉ chuẩn được giả định phù hợp, tính SE và khoảng 95%. Nếu tăng n lên 400 với SD tương tự, SE ra sao?",
+        "solutionMarkdown": "SE ước lượng = 10/√100 = 1. Khoảng xấp xỉ = `50±1,96`, tức [48,04; 51,96]. Với n = 400, SE ≈ 0,5. Khoảng này ước lượng trung bình tổng thể, không phải vùng chứa 95% các cá nhân. Nếu dùng t thay chuẩn, hệ số và hai đầu khoảng sẽ hơi khác."
+      },
+      {
+        "id": "xs-ex-5",
+        "subjectId": "xs",
+        "number": 5,
+        "title": "Bài 5 — Diễn giải kiểm định",
+        "questionMarkdown": "Đặt α = 0,05 trước khi phân tích; một kiểm định hợp lệ cho p = 0,08. Có được nói “H0 đúng với xác suất 92%” hoặc “không có tác động” không?",
+        "solutionMarkdown": "không được nói cả hai. Kết luận là chưa đủ bằng chứng bác bỏ H0 ở mức 0,05. P không phải xác suất H0. Cần xem ước lượng tác động, khoảng tin cậy, cỡ mẫu, power và giả định trước khi đánh giá kết quả."
+      }
+    ],
+    "referenceSections": [
+      {
+        "title": "Bảng công thức tối thiểu và điều kiện",
+        "contentMarkdown": "| Nội dung | Công thức | Điều cần nhớ |\n|---|---|---|\n| Trung bình mẫu | `x̄ = Σxᵢ/n` | n > 0, dữ liệu số có ý nghĩa |\n| Phương sai toàn bộ n điểm | `Σ(xᵢ−x̄)²/n` | Mô tả chính tập điểm đó |\n| Phương sai mẫu hiệu chỉnh | `s² = Σ(xᵢ−x̄)²/(n−1)` | n > 1; không chệch dưới giả định lấy mẫu phù hợp |\n| Phần bù | `P(Aᶜ)=1−P(A)` | Không cần độc lập |\n| Hợp | `P(A∪B)=P(A)+P(B)−P(A∩B)` | Chỉ bỏ giao khi giao có xác suất 0 |\n| Điều kiện | `P(A\\|B)=P(A∩B)/P(B)` | P(B) > 0 |\n| Độc lập | `P(A∩B)=P(A)P(B)` | Là điều kiện cần kiểm tra/giả định, không mặc định |\n| Bayes | `P(A\\|B)=P(B\\|A)P(A)/P(B)` | P(B) > 0 |\n| Xác suất toàn phần, hai nhánh | `P(B)=P(B\\|A)P(A)+P(B\\|Aᶜ)P(Aᶜ)` | Các xác suất điều kiện cần xác định |\n| Kỳ vọng rời rạc | `E[X]=ΣxP(X=x)` | Kỳ vọng cần tồn tại |\n| Phương sai | `Var(X)=E[X²]−E[X]²` | Moment bậc hai hữu hạn |\n| Biến đổi affine | `Var(aX+b)=a²Var(X)` | a, b là hằng số |\n| Nhị thức | `P(X=k)=C(n,k)pᵏ(1−p)ⁿ⁻ᵏ` | n thử độc lập cùng p; k từ 0 đến n |\n| Nhị thức | `E[X]=np`, `Var(X)=np(1−p)` | Cùng điều kiện mô hình nhị thức |\n| Z-score | `z=(x−μ)/σ` | σ > 0; không tự làm phân phối thành chuẩn |\n| SE trung bình | `σ/√n`, ước lượng `s/√n` | Dạng cơ bản: mẫu độc lập cùng phân phối, phương sai hữu hạn |\n| CI trung bình xấp xỉ | `x̄ ± hệ_số_tới_hạn × SE` | Chọn chuẩn/t và giả định phù hợp; 1,96 không phải hằng số cho mọi bài |"
+      }
+    ],
+    "pythonExamples": [],
+    "glossary": [
+      {
+        "term": "Population / sample",
+        "meaning": "Tổng thể / mẫu"
+      },
+      {
+        "term": "Parameter / statistic",
+        "meaning": "Tham số tổng thể / thống kê mẫu"
+      },
+      {
+        "term": "Mean / median / mode",
+        "meaning": "Trung bình / trung vị / mốt"
+      },
+      {
+        "term": "Variance / standard deviation",
+        "meaning": "Phương sai / độ lệch chuẩn"
+      },
+      {
+        "term": "Quantile / outlier",
+        "meaning": "Phân vị / điểm ngoại lệ"
+      },
+      {
+        "term": "Bias / sampling error",
+        "meaning": "Thiên lệch / sai số lấy mẫu"
+      },
+      {
+        "term": "Conditional / independent",
+        "meaning": "Có điều kiện / độc lập"
+      },
+      {
+        "term": "Random variable / distribution",
+        "meaning": "Biến ngẫu nhiên / phân phối"
+      },
+      {
+        "term": "Expectation / covariance",
+        "meaning": "Kỳ vọng / hiệp phương sai"
+      },
+      {
+        "term": "Standard error / confidence interval",
+        "meaning": "Sai số chuẩn / khoảng tin cậy"
+      },
+      {
+        "term": "Null / alternative hypothesis",
+        "meaning": "Giả thuyết không / đối thuyết"
+      },
+      {
+        "term": "Significance level / power",
+        "meaning": "Mức ý nghĩa / lực kiểm định"
+      },
+      {
+        "term": "Correlation / causation",
+        "meaning": "Tương quan / quan hệ nhân quả"
+      },
+      {
+        "term": "Prior / likelihood / posterior",
+        "meaning": "Phân phối trước / hàm hợp lý / phân phối sau"
+      }
+    ],
+    "introMarkdown": "# Xác suất thống kê — hiểu concept và tập vấn đáp từ số 0\n\nTài liệu gồm **35 câu: 18 câu [A], 12 câu [B], 5 câu [C]**. Đây là bản đồ kiến thức nhập môn để học và tra cứu, không phải dự đoán đề của thầy.\n\n- **[A] Học trước:** hiểu ý nghĩa, tự kể ví dụ và trả lời được câu hỏi chính.\n- **[B] Học tiếp:** kết nối các khái niệm và xử lý câu hỏi đào sâu.\n- **[C] Nhận diện:** biết đang nói về vấn đề gì; chưa cần chứng minh hoặc thuộc công thức chi tiết tối nay.\n\n## Bản đồ concept\n\n**Có dữ liệu → mô tả dữ liệu → nhận ra dữ liệu chỉ là một mẫu → dùng xác suất mô tả sự ngẫu nhiên → ước lượng tổng thể → kiểm định nhận định.**\n\nVí dụ xuyên suốt: muốn biết chiều cao trung bình sinh viên một trường. Ta không đo được mọi người nên lấy mẫu. Trung bình mẫu là một con số quan sát được, nhưng mẫu khác có thể cho kết quả khác. Xác suất giúp mô tả độ bất định đó; khoảng tin cậy và kiểm định giúp đưa ra kết luận có điều kiện.\n\nĐường đọc tối nay: **XS01 → XS02 → XS03 → XS05 → XS06 → XS09 → XS11 → XS12 → XS13 → XS14 → XS16 → XS18 → XS19 → XS22 → XS23 → XS24 → XS26 → XS27**. Sau đó bổ sung XS31 về tương quan và nhân quả nếu còn thời gian.\n\nMỗi câu: đọc giải thích → tự làm ví dụ → che tài liệu và nói mẫu trả lời bằng lời của mình → trả lời câu nối tiếp. Không cần thuộc nguyên văn. Ký hiệu `Σ` nghĩa là cộng tất cả các số hạng; `√` là căn bậc hai; `∩` là “và”, `∪` là “hoặc”."
+  },
+  {
+    "id": "ml",
+    "name": "Machine Learning",
+    "shortName": "ML",
+    "description": "Quy trình học từ dữ liệu, xử lý đặc trưng, các mô hình học có giám sát/không giám sát, đánh giá và tổng quát hóa.",
+    "color": "#27624a",
+    "accentColor": "#1b4534",
+    "order": 2,
+    "readingPathA": [
+      "ML01",
+      "ML02",
+      "ML04",
+      "ML06",
+      "ML07",
+      "ML08",
+      "ML11",
+      "ML13",
+      "ML15",
+      "ML16",
+      "ML18",
+      "ML19",
+      "ML20",
+      "ML22",
+      "ML29",
+      "ML30",
+      "ML33",
+      "ML34"
+    ],
+    "readingPathB": [
+      "ML03",
+      "ML05",
+      "ML09",
+      "ML10",
+      "ML12",
+      "ML14",
+      "ML17",
+      "ML21",
+      "ML23",
+      "ML24",
+      "ML27",
+      "ML31"
+    ],
+    "readingPathC": [
+      "ML25",
+      "ML26",
+      "ML28",
+      "ML32",
+      "ML35"
+    ],
+    "groups": [
+      {
+        "id": "ml-group-1",
+        "title": "I. Hiểu bài toán trước khi học thuật toán",
+        "conceptIds": [
+          "ML01",
+          "ML02",
+          "ML03",
+          "ML04",
+          "ML05"
+        ]
+      },
+      {
+        "id": "ml-group-2",
+        "title": "II. Dữ liệu và cách đánh giá đáng tin cậy",
+        "conceptIds": [
+          "ML06",
+          "ML07",
+          "ML08",
+          "ML09",
+          "ML10",
+          "ML11",
+          "ML12",
+          "ML13",
+          "ML14"
+        ]
+      },
+      {
+        "id": "ml-group-3",
+        "title": "III. Mô hình học và vì sao có thể thất bại",
+        "conceptIds": [
+          "ML15",
+          "ML16",
+          "ML17",
+          "ML18"
+        ]
+      },
+      {
+        "id": "ml-group-4",
+        "title": "IV. Các thuật toán cần nhận diện và giải thích",
+        "conceptIds": [
+          "ML19",
+          "ML20",
+          "ML21",
+          "ML22",
+          "ML23",
+          "ML24",
+          "ML25",
+          "ML26",
+          "ML27",
+          "ML28"
+        ]
+      },
+      {
+        "id": "ml-group-5",
+        "title": "V. Đọc kết quả và chọn mô hình",
+        "conceptIds": [
+          "ML29",
+          "ML30",
+          "ML31",
+          "ML32",
+          "ML33",
+          "ML34",
+          "ML35"
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ml-ex-1",
+        "subjectId": "ml",
+        "number": 1,
+        "title": "Tình huống 1 — Điểm đẹp bất thường",
+        "questionMarkdown": "Bạn có dữ liệu 500 bệnh nhân, mỗi người 10 ảnh. Chia ngẫu nhiên 5.000 ảnh, được accuracy 99%. Điều gì cần kiểm tra?",
+        "solutionMarkdown": "nếu mục tiêu là áp dụng cho bệnh nhân mới, cần kiểm tra cùng bệnh nhân có xuất hiện ở cả train và test không. Mô hình có thể tận dụng đặc điểm riêng của bệnh nhân. Chia theo bệnh nhân, xử lý trùng lặp và học tiền xử lý trên train; sau đó đánh giá lại. Không mặc định 99% chắc là sai, nhưng chưa đủ đáng tin khi thiết kế chia tập chưa phù hợp."
+      },
+      {
+        "id": "ml-ex-2",
+        "subjectId": "ml",
+        "number": 2,
+        "title": "Tình huống 2 — Tính chỉ số",
+        "questionMarkdown": "100 email: 20 spam. Mô hình báo 10 spam, đúng 8. Hãy tính TP, FP, FN, TN, accuracy, precision và recall.",
+        "solutionMarkdown": "TP=8, FP=2, FN=12, TN=78. Accuracy=86%, precision=80%, recall=40%. Tỷ lệ đúng chung cao hơn mức phát hiện spam. Nếu muốn giảm bỏ sót, có thể thử ngưỡng thấp hơn trên validation rồi kiểm tra số báo nhầm và chi phí."
+      },
+      {
+        "id": "ml-ex-3",
+        "subjectId": "ml",
+        "number": 3,
+        "title": "Tình huống 3 — Scaling sai quy trình",
+        "questionMarkdown": "Bạn tính trung bình và độ lệch chuẩn trên tất cả dữ liệu, chuẩn hóa rồi chạy 5-fold cross-validation. Có vấn đề gì?",
+        "solutionMarkdown": "thống kê của phần đánh giá đã đi vào tiền xử lý train. Cần đặt scaler trong quy trình của mỗi fold: fit trên train fold, transform train và validation fold. Sau khi chọn cấu hình, fit quy trình trên tập phát triển và đánh giá test riêng. Tương tự với điền thiếu, chọn đặc trưng và PCA học từ dữ liệu."
+      },
+      {
+        "id": "ml-ex-4",
+        "subjectId": "ml",
+        "number": 4,
+        "title": "Tình huống 4 — Chọn metric giá nhà",
+        "questionMarkdown": "Hai mô hình có lỗi tuyệt đối trên 3 nhà: A = [1, 1, 10], B = [4, 4, 4], đơn vị trăm triệu. Mô hình nào tốt hơn?",
+        "solutionMarkdown": "cả hai có MAE=4. A có MSE=(1+1+100)/3=34; B có MSE=16. Nếu lỗi rất lớn đặc biệt tốn kém, B có lợi theo MSE/RMSE. Nếu mục tiêu chỉ là MAE, hai kết quả đang ngang nhau; vẫn cần xem nhiều mẫu hơn và các yêu cầu khác. “Tốt hơn” cần mục tiêu rõ ràng."
+      },
+      {
+        "id": "ml-ex-5",
+        "subjectId": "ml",
+        "number": 5,
+        "title": "Tình huống 5 — Học thuộc hay học chưa đủ?",
+        "questionMarkdown": "Một cây rất sâu đạt accuracy train 100%, validation 70%. Cây nông hơn đạt train 84%, validation 80%. Bạn chọn gì tiếp theo?",
+        "solutionMarkdown": "cây nông có kết quả validation tốt hơn, dù train thấp hơn; đây là minh họa vì sao không chọn bằng điểm train. Kiểm tra cách chia, các chỉ số liên quan và độ ổn định, rồi thử cấu hình quanh độ sâu phù hợp. Khi chốt mới đánh giá test. Không kết luận chỉ từ ví dụ này rằng cây nông luôn tốt hơn."
+      }
+    ],
+    "referenceSections": [
+      {
+        "title": "VII. Bảng lựa chọn để tra nhanh",
+        "contentMarkdown": ""
+      },
+      {
+        "title": "Chọn thước đo theo câu hỏi",
+        "contentMarkdown": "| Nhu cầu | Chỉ số nên xem | Điều kiện hoặc hạn chế |\n|---|---|---|\n| Tỷ lệ dự đoán đúng chung | Accuracy | Có thể gây hiểu nhầm khi lớp mất cân bằng |\n| Cảnh báo phải ít báo nhầm | Precision, số FP | Precision còn phụ thuộc tỷ lệ lớp |\n| Cần tìm đủ trường hợp dương tính | Recall, số FN | Recall cao có thể đi kèm nhiều cảnh báo |\n| Cân bằng precision và recall | F1 | Không xét trực tiếp TN hoặc mọi chi phí |\n| Xếp hạng qua nhiều ngưỡng | ROC-AUC, PR curve/AP | Không thay việc chọn ngưỡng và kiểm tra calibration |\n| Sai số số học dễ diễn giải | MAE, RMSE | So trên cùng đơn vị, dữ liệu và quy trình |\n| So sai số bình phương với mốc trung bình | R² | Có thể âm; không ổn định khi mục tiêu gần hằng số |"
+      },
+      {
+        "title": "Chọn thuật toán làm điểm bắt đầu",
+        "contentMarkdown": "| Bài toán | Điểm bắt đầu hợp lý | Cần lưu ý |\n|---|---|---|\n| Hồi quy dữ liệu bảng | Baseline, linear regression, cây | Quan hệ, ngoại lệ và metric |\n| Phân loại dữ liệu bảng | Baseline, logistic regression, cây | Mất cân bằng, ngưỡng, leakage |\n| Dữ liệu bảng có quan hệ phức tạp | Random forest, gradient boosting | Cấu hình, tài nguyên, đánh giá công bằng |\n| Dự đoán dựa trên độ tương tự | KNN | Thang đo, chiều dữ liệu, chi phí dự đoán |\n| Phân loại văn bản với đặc trưng từ | Naive Bayes, mô hình tuyến tính | Biểu diễn văn bản, smoothing, đánh giá |\n| Phân cụm dữ liệu số | K-means | Chọn K, scaling, hình dạng cụm |\n| Giảm chiều tuyến tính | PCA | Phương sai không đồng nghĩa thông tin nhãn |\n\nĐây là điểm bắt đầu để thử, không phải bảng kết luận thuật toán tối ưu cho mọi trường hợp."
+      }
+    ],
+    "pythonExamples": [],
+    "glossary": [
+      {
+        "term": "Thuật ngữ",
+        "meaning": "Nghĩa cần nhớ"
+      },
+      {
+        "term": "Feature / label / sample",
+        "meaning": "Đặc trưng / nhãn mục tiêu / mẫu quan sát"
+      },
+      {
+        "term": "Training / inference",
+        "meaning": "Học tham số / dùng mô hình tạo dự đoán"
+      },
+      {
+        "term": "Generalization",
+        "meaning": "Khả năng làm tốt trên dữ liệu mới phù hợp bài toán"
+      },
+      {
+        "term": "Parameter / hyperparameter",
+        "meaning": "Tham số được học / cấu hình mô hình hoặc việc học"
+      },
+      {
+        "term": "Loss / objective / metric",
+        "meaning": "Mức sai / mục tiêu tối ưu / chỉ số đánh giá"
+      },
+      {
+        "term": "Baseline",
+        "meaning": "Mốc so sánh đơn giản"
+      },
+      {
+        "term": "Leakage",
+        "meaning": "Rò rỉ thông tin không hợp lệ vào phát triển mô hình"
+      },
+      {
+        "term": "Overfitting / underfitting",
+        "meaning": "Quá khớp / thiếu khớp"
+      },
+      {
+        "term": "Regularization",
+        "meaning": "Hạn chế độ phức tạp hoặc thêm ràng buộc để hỗ trợ tổng quát hóa"
+      },
+      {
+        "term": "Threshold / calibration",
+        "meaning": "Ngưỡng quyết định / mức phù hợp giữa xác suất dự đoán và tần suất thực tế"
+      },
+      {
+        "term": "Cross-validation / fold",
+        "meaning": "Đánh giá chéo / một phần chia dữ liệu"
+      },
+      {
+        "term": "Ensemble",
+        "meaning": "Tổ hợp nhiều mô hình"
+      },
+      {
+        "term": "Imputation / encoding / scaling",
+        "meaning": "Điền dữ liệu thiếu / mã hóa / biến đổi thang đo"
+      },
+      {
+        "term": "Drift",
+        "meaning": "Sự thay đổi của dữ liệu hoặc quan hệ cần dự đoán theo thời gian"
+      }
+    ],
+    "introMarkdown": "# Machine Learning — Từ số 0 đến trả lời vấn đáp\n\nTài liệu gồm **35 câu ML01–ML35**, đi theo một quy trình học máy thay vì yêu cầu học thuộc các định nghĩa rời rạc. Đây là kiến thức nền và câu hỏi luyện tập, không phải dự đoán đề của thầy.\n\n**[A] — 18 câu nền tảng:** hiểu trước, nói lại được bằng lời của mình. **[B] — 12 câu mở rộng:** nối các ý và phân biệt thuật toán. **[C] — 5 câu nhận diện:** biết ý tưởng, chưa cần suy diễn toán học tối nay.\n\n## Bản đồ khái niệm và đường đọc\n\n**Bài toán → dữ liệu → chia tập → tiền xử lý → mô hình → hàm mất mát → huấn luyện → đánh giá → sử dụng và theo dõi.**\n\nVí dụ xuyên suốt: muốn dự đoán giá nhà, ta thu thập diện tích, vị trí và giá bán; chia dữ liệu; xử lý giá trị thiếu; học quan hệ giữa đặc trưng và giá; đánh giá sai số trên nhà chưa dùng để học. Với email spam, quy trình tương tự nhưng đầu ra là lớp spam/không spam, nên thước đo cũng khác.\n\n- **Lượt A:** ML01, ML02, ML04, ML06, ML07, ML08, ML11, ML13, ML15, ML16, ML18, ML19, ML20, ML22, ML29, ML30, ML33, ML34.\n- **Lượt B:** ML03, ML05, ML09, ML10, ML12, ML14, ML17, ML21, ML23, ML24, ML27, ML31.\n- **Lượt C:** ML25, ML26, ML28, ML32, ML35.\n\nĐọc giải thích và ví dụ, che phần trả lời rồi nói trong 20–45 giây. Mẫu trả lời là khung diễn đạt; không cần thuộc nguyên văn. Khi gặp thuật ngữ mới, đọc nghĩa ngay trong câu trước khi chuyển tiếp."
+  },
+  {
+    "id": "dl",
+    "name": "Deep Learning",
+    "shortName": "DL",
+    "description": "Mạng nơ-ron sâu, hàm kích hoạt, forward/backward pass, thuật toán tối ưu, CNN, RNN và Transformer.",
+    "color": "#8a4b16",
+    "accentColor": "#63350e",
+    "order": 3,
+    "readingPathA": [
+      "DL01",
+      "DL02",
+      "DL03",
+      "DL04",
+      "DL05",
+      "DL06",
+      "DL07",
+      "DL08",
+      "DL09",
+      "DL10",
+      "DL11",
+      "DL12",
+      "DL13",
+      "DL14",
+      "DL15",
+      "DL16",
+      "DL17",
+      "DL18"
+    ],
+    "readingPathB": [
+      "DL19",
+      "DL20",
+      "DL21",
+      "DL22",
+      "DL23",
+      "DL24",
+      "DL25",
+      "DL26",
+      "DL27",
+      "DL28",
+      "DL29",
+      "DL30"
+    ],
+    "readingPathC": [
+      "DL31",
+      "DL32",
+      "DL33",
+      "DL34",
+      "DL35"
+    ],
+    "groups": [
+      {
+        "id": "dl-group-1",
+        "title": "I. Dữ liệu đi qua mạng như thế nào?",
+        "conceptIds": [
+          "DL01",
+          "DL02",
+          "DL03",
+          "DL04",
+          "DL05",
+          "DL06",
+          "DL07",
+          "DL08"
+        ]
+      },
+      {
+        "id": "dl-group-2",
+        "title": "II. Mạng học bằng cách nào?",
+        "conceptIds": [
+          "DL09",
+          "DL10",
+          "DL11",
+          "DL12",
+          "DL13",
+          "DL14",
+          "DL15",
+          "DL16",
+          "DL17",
+          "DL18"
+        ]
+      },
+      {
+        "id": "dl-group-3",
+        "title": "III. Huấn luyện tốt hơn và chọn kiến trúc",
+        "conceptIds": [
+          "DL19",
+          "DL20",
+          "DL21",
+          "DL22",
+          "DL23",
+          "DL24",
+          "DL25",
+          "DL26",
+          "DL27",
+          "DL28",
+          "DL29",
+          "DL30"
+        ]
+      },
+      {
+        "id": "dl-group-4",
+        "title": "IV. Khái niệm mở rộng để nhận diện",
+        "conceptIds": [
+          "DL31",
+          "DL32",
+          "DL33",
+          "DL34",
+          "DL35"
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "id": "dl-ex-1",
+        "subjectId": "dl",
+        "number": 1,
+        "title": "Bài 1 — Tự đi một bước học",
+        "questionMarkdown": "Mô hình hồi quy `ŷ=wx+b`, không activation. Cho `x=2`, `y=5`, `w=1`, `b=0`, loss `L=(ŷ−y)²`, learning rate 0,1. Tính dự đoán, loss, gradient và tham số mới.",
+        "solutionMarkdown": "`ŷ=2`, `L=9`. Gradient theo w là `2(ŷ−y)x=−12`; theo b là `2(ŷ−y)=−6`. Cập nhật đồng thời từ tham số cũ: `w_mới=2,2`, `b_mới=0,6`. Dự đoán mới cho chính mẫu này là 5, loss bằng 0. Đây là trường hợp số được chọn đơn giản; không suy ra một bước luôn khớp hoàn hảo. Nếu loss có hệ số 1/2 thì gradient sẽ khác."
+      },
+      {
+        "id": "dl-ex-2",
+        "subjectId": "dl",
+        "number": 2,
+        "title": "Bài 2 — Chọn tầng đầu ra và loss",
+        "questionMarkdown": "Chọn cấu hình thông thường cho: (a) spam/không spam; (b) một chữ số 0–9; (c) ảnh có thể đồng thời có người, xe, chó; (d) dự đoán nhiệt độ.",
+        "solutionMarkdown": "(a) Một logit, binary cross-entropy, sigmoid khi cần xác suất. (b) 10 logits, cross-entropy multiclass, softmax khi cần xác suất. (c) Ba logits, binary cross-entropy theo từng nhãn, sigmoid riêng. (d) Một đầu ra tuyến tính và loss hồi quy như MSE/MAE. Cần đọc API để biết loss nhận logits hay xác suất."
+      },
+      {
+        "id": "dl-ex-3",
+        "subjectId": "dl",
+        "number": 3,
+        "title": "Bài 3 — Đếm step",
+        "questionMarkdown": "Có 1.030 mẫu, batch size 128, train 3 epoch. Không gradient accumulation. Bao nhiêu step nếu giữ hoặc bỏ batch cuối?",
+        "solutionMarkdown": "`1.030 = 8×128 + 6`. Giữ batch cuối: 9 step/epoch, tổng 27; batch cuối có 6 mẫu. Bỏ batch cuối: 8 step/epoch, tổng 24; mỗi epoch bỏ 6 mẫu theo cách chia của epoch đó. Không phải cứ 3 epoch là 3 lần cập nhật."
+      },
+      {
+        "id": "dl-ex-4",
+        "subjectId": "dl",
+        "number": 4,
+        "title": "Bài 4 — Đọc đường học",
+        "questionMarkdown": "Qua 5 epoch, train loss là `[0,8; 0,5; 0,3; 0,2; 0,1]`, validation loss là `[0,9; 0,6; 0,45; 0,55; 0,7]`. Bạn nhận xét gì và chọn checkpoint nào nếu tiêu chí là validation loss thấp nhất?",
+        "solutionMarkdown": "Chọn epoch 3 trong số các checkpoint đã quan sát. Train tiếp tục tốt lên trong khi validation xấu đi gợi ý overfitting. Có thể cân nhắc early stopping, regularization hoặc dữ liệu; đồng thời kiểm tra tính phù hợp của cách chia. Không dùng test để quyết định epoch và không kết luận chỉ một dao động nhỏ đã là overfit."
+      },
+      {
+        "id": "dl-ex-5",
+        "subjectId": "dl",
+        "number": 5,
+        "title": "Bài 5 — Chọn cách bắt đầu bài toán",
+        "questionMarkdown": "Bạn có (a) 800 ảnh hoa có nhãn; (b) dữ liệu bảng 1.000 dòng; (c) văn bản cần phân loại. Có nên xây mạng rất sâu từ đầu cho cả ba?",
+        "solutionMarkdown": "(a) Cân nhắc mô hình ảnh pretrained và augmentation phù hợp. (b) Thử baseline đơn giản hoặc mô hình cây trước; DL chưa chắc có lợi. (c) Có thể thử biểu diễn văn bản đơn giản hoặc mô hình ngôn ngữ pretrained tùy tài nguyên. Đây là điểm xuất phát, không phải luật chọn tuyệt đối; quyết định bằng đánh giá đúng cách trên validation."
+      }
+    ],
+    "referenceSections": [
+      {
+        "title": "VI. Sơ đồ quy trình để kể lại khi vấn đáp",
+        "contentMarkdown": "```text\nXác định bài toán và metric\n    → Kiểm tra dữ liệu, nhãn, chia train/validation/test\n    → Tiền xử lý và chọn kiến trúc, loss, optimizer\n    → Trong mỗi batch: forward → loss → backprop → update\n    → Định kỳ: eval trên validation → chọn checkpoint/cấu hình\n    → Chốt lựa chọn → đánh giá test\n    → Inference với tiền xử lý và chế độ phù hợp\n```\n\nTrain và validation có vai trò khác nhau: train loss cho thấy mức tối ưu trên bài đã học; validation giúp đánh giá khả năng tổng quát hóa và lựa chọn mô hình. Test chỉ phát huy vai trò đánh giá độc lập khi không được dùng để điều chỉnh các lựa chọn trước đó."
+      }
+    ],
+    "pythonExamples": [],
+    "glossary": [
+      {
+        "term": "Thuật ngữ",
+        "meaning": "Nghĩa cần nhớ"
+      },
+      {
+        "term": "Tensor / shape",
+        "meaning": "Mảng nhiều chiều / kích thước từng chiều"
+      },
+      {
+        "term": "Weight / bias",
+        "meaning": "Trọng số / hệ số dịch chuyển được học"
+      },
+      {
+        "term": "Hidden layer",
+        "meaning": "Tầng trung gian giữa đầu vào và đầu ra"
+      },
+      {
+        "term": "Activation",
+        "meaning": "Hàm kích hoạt, thường tạo tính phi tuyến"
+      },
+      {
+        "term": "Logit",
+        "meaning": "Điểm số trước chuẩn hóa thành xác suất"
+      },
+      {
+        "term": "Forward pass",
+        "meaning": "Tính từ đầu vào đến dự đoán"
+      },
+      {
+        "term": "Loss / metric",
+        "meaning": "Mục tiêu tối ưu / chỉ số đánh giá"
+      },
+      {
+        "term": "Gradient",
+        "meaning": "Các đạo hàm riêng theo tham số"
+      },
+      {
+        "term": "Backpropagation",
+        "meaning": "Tính gradient qua mạng bằng quy tắc dây chuyền"
+      },
+      {
+        "term": "Optimizer",
+        "meaning": "Quy tắc cập nhật tham số"
+      },
+      {
+        "term": "Learning rate",
+        "meaning": "Hệ số độ lớn bước cập nhật"
+      },
+      {
+        "term": "Batch / step / epoch",
+        "meaning": "Nhóm mẫu / bước cập nhật / lượt qua train"
+      },
+      {
+        "term": "Checkpoint",
+        "meaning": "Bản lưu trạng thái mô hình"
+      },
+      {
+        "term": "Regularization",
+        "meaning": "Cách hạn chế khớp quá mức"
+      },
+      {
+        "term": "Augmentation",
+        "meaning": "Tạo biến thể dữ liệu hợp lệ"
+      },
+      {
+        "term": "Feature map / channel",
+        "meaning": "Bản đồ đặc trưng / kênh"
+      },
+      {
+        "term": "Embedding",
+        "meaning": "Biểu diễn vector được học"
+      },
+      {
+        "term": "Fine-tuning / freezing",
+        "meaning": "Học tiếp / giữ nguyên tham số được chọn"
+      },
+      {
+        "term": "Inference",
+        "meaning": "Dùng mô hình để dự đoán"
+      },
+      {
+        "term": "Calibration",
+        "meaning": "Mức phù hợp giữa xác suất dự đoán và tần suất đúng"
+      }
+    ],
+    "introMarkdown": "# Deep Learning từ số 0 — 35 câu hỏi có giải thích\n\nTài liệu này giúp bạn hiểu bức tranh chung và tập trả lời vấn đáp. Đây không phải dự đoán đề của thầy, cũng không thay thế một khóa học đầy đủ. Hãy học theo thứ tự vì các khái niệm sau dựa vào khái niệm trước.\n\n## Bản đồ khái niệm\n\n**Dữ liệu → biểu diễn bằng tensor → mạng tính dự đoán → loss đo mức sai → backpropagation tính gradient → optimizer cập nhật tham số → kiểm tra trên validation → sử dụng mô hình.**\n\n- **[A] DL01–DL18:** nền tảng nên đọc trước. Mục tiêu là kể được một vòng học và giải thích vì sao mô hình có thể học tốt hoặc học hỏng.\n- **[B] DL19–DL30:** hiểu thêm cách huấn luyện, các họ mạng và cách xử lý tình huống thực tế.\n- **[C] DL31–DL35:** nhận diện khái niệm mở rộng. Chưa hiểu chắc A thì chưa cần đi sâu C.\n\nSau mỗi câu: đọc giải thích, đóng tài liệu, nói lại phần “Trả lời miệng” bằng lời của bạn. Ví dụ và câu hỏi tiếp giúp kiểm tra bạn có hiểu hay chỉ nhớ câu chữ. “Tham số” là giá trị mô hình học được; “siêu tham số” là cấu hình điều khiển mô hình hoặc quá trình học."
+  },
+  {
+    "id": "gt",
+    "name": "Giải thuật & Cấu trúc dữ liệu",
+    "shortName": "Giải thuật",
+    "description": "Độ phức tạp Big-O, cấu trúc dữ liệu kinh điển, tìm kiếm, sắp xếp, đệ quy, đồ thị, tham lam và quy hoạch động.",
+    "color": "#1b6b68",
+    "accentColor": "#124947",
+    "order": 4,
+    "readingPathA": [
+      "GT01",
+      "GT02",
+      "GT03",
+      "GT05",
+      "GT06",
+      "GT08",
+      "GT09",
+      "GT10",
+      "GT12",
+      "GT14",
+      "GT16",
+      "GT19",
+      "GT20",
+      "GT22",
+      "GT24",
+      "GT26",
+      "GT27",
+      "GT30"
+    ],
+    "readingPathB": [
+      "GT04",
+      "GT07",
+      "GT11",
+      "GT13",
+      "GT15",
+      "GT17",
+      "GT21",
+      "GT23",
+      "GT25",
+      "GT29",
+      "GT31",
+      "GT33"
+    ],
+    "readingPathC": [
+      "GT18",
+      "GT28",
+      "GT32",
+      "GT34",
+      "GT35"
+    ],
+    "groups": [
+      {
+        "id": "gt-group-1",
+        "title": "Đánh giá lời giải (GT01–GT05)",
+        "conceptIds": [
+          "GT01",
+          "GT02",
+          "GT03",
+          "GT04",
+          "GT05"
+        ]
+      },
+      {
+        "id": "gt-group-2",
+        "title": "Cấu trúc dữ liệu (GT06–GT11)",
+        "conceptIds": [
+          "GT06",
+          "GT07",
+          "GT08",
+          "GT09",
+          "GT10",
+          "GT11"
+        ]
+      },
+      {
+        "id": "gt-group-3",
+        "title": "Tìm kiếm và sắp xếp (GT12–GT18)",
+        "conceptIds": [
+          "GT12",
+          "GT13",
+          "GT14",
+          "GT15",
+          "GT16",
+          "GT17",
+          "GT18"
+        ]
+      },
+      {
+        "id": "gt-group-4",
+        "title": "Đệ quy và cây (GT19–GT23)",
+        "conceptIds": [
+          "GT19",
+          "GT20",
+          "GT21",
+          "GT22",
+          "GT23"
+        ]
+      },
+      {
+        "id": "gt-group-5",
+        "title": "Đồ thị (GT24–GT28)",
+        "conceptIds": [
+          "GT24",
+          "GT25",
+          "GT26",
+          "GT27",
+          "GT28"
+        ]
+      },
+      {
+        "id": "gt-group-6",
+        "title": "Kỹ thuật giải bài (GT29–GT35)",
+        "conceptIds": [
+          "GT29",
+          "GT30",
+          "GT31",
+          "GT32",
+          "GT33",
+          "GT34",
+          "GT35"
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "id": "gt-ex-1",
+        "subjectId": "gt",
+        "number": 1,
+        "title": "Bài 1 — Trường hợp biên và chi phí",
+        "questionMarkdown": "Bạn cần tìm lớn nhất trong một list không rỗng gồm n số nguyên. Hãy mô tả cách làm, kiểm tra với [−8,−3,−6], nêu thời gian và bộ nhớ phụ.",
+        "solutionMarkdown": "lấy phần tử đầu làm best, duyệt phần còn lại và cập nhật khi gặp số lớn hơn. Best lần lượt −8,−3,−3; trả −3. O(n) thời gian, O(1) số biến phụ. Nếu yêu cầu cho phép list rỗng, phải xác định trả None, báo lỗi hay quy ước khác, không tự đặt 0 làm đáp án."
+      },
+      {
+        "id": "gt-ex-2",
+        "subjectId": "gt",
+        "number": 2,
+        "title": "Bài 2 — Chạy tay binary search",
+        "questionMarkdown": "Tìm 8 trong [1,3,5,7,9] bằng mã trên. Ghi left, right và mid ở mỗi vòng.",
+        "solutionMarkdown": "(0,4,2): gặp 5, left=3. (3,4,3): gặp 7, left=4. (4,4,4): gặp 9, right=3. Lúc này left=4 > right=3, trả −1. Không có bước nào giữ nguyên toàn bộ phạm vi, nên vòng lặp tiến tới kết thúc."
+      },
+      {
+        "id": "gt-ex-3",
+        "subjectId": "gt",
+        "number": 3,
+        "title": "Bài 3 — Chọn cấu trúc dữ liệu",
+        "questionMarkdown": "Bạn cần (a) xử lý yêu cầu đúng thứ tự đến; (b) kiểm tra mã sinh viên đã xuất hiện; (c) luôn xử lý công việc có độ ưu tiên nhỏ nhất trước. Chọn gì?",
+        "solutionMarkdown": "(a) queue, Python deque; (b) hash set nếu chỉ cần tồn tại, dict nếu cần thêm thông tin; (c) priority queue, thường triển khai bằng min-heap. Đừng dùng queue thường cho ưu tiên vì đến trước không đồng nghĩa ưu tiên cao."
+      },
+      {
+        "id": "gt-ex-4",
+        "subjectId": "gt",
+        "number": 4,
+        "title": "Bài 4 — BFS hay Dijkstra?",
+        "questionMarkdown": "Đồ thị có cạnh A→B giá 10, A→C giá 1, C→B giá 2. Đường ít cạnh nhất từ A tới B là gì? Đường rẻ nhất là gì? Nếu bỏ trọng số thì chọn thuật toán nào?",
+        "solutionMarkdown": "ít cạnh nhất là A→B, một cạnh. Rẻ nhất là A→C→B, tổng 3; Dijkstra áp dụng được vì trọng số không âm. Nếu mọi cạnh coi bằng nhau, BFS cho đường ít cạnh nhất. Bài này cho thấy cần làm rõ “ngắn nhất” nghĩa là ít cạnh hay nhỏ tổng trọng số."
+      },
+      {
+        "id": "gt-ex-5",
+        "subjectId": "gt",
+        "number": 5,
+        "title": "Bài 5 — Thiết lập DP cho đổi tiền",
+        "questionMarkdown": "Có các đồng {1,3,4}, đủ số lượng mỗi loại. Tìm số đồng ít nhất để đổi 6. Gọi dp[x] là số đồng ít nhất để đổi x; đặt trạng thái gốc và phép chuyển.",
+        "solutionMarkdown": "dp[0]=0. Với x>0, lấy nhỏ nhất trong `dp[x−c]+1` qua các đồng c≤x có trạng thái trước đạt được; nếu không có thì đánh dấu không thể. Các giá trị dp[0..6] là [0,1,2,1,1,2,2], nên 6 dùng 3+3. Với số tiền S và k loại đồng, cách này O(Sk) thời gian, O(S) bộ nhớ; đây là theo giá trị S, không phải số bit biểu diễn S. Greedy lớn nhất trước cho 4+1+1 nên sai trên ví dụ."
+      }
+    ],
+    "referenceSections": [
+      {
+        "title": "Bảng độ phức tạp cần nhớ cùng điều kiện",
+        "contentMarkdown": "| Thao tác/thuật toán | Thời gian | Điều kiện và bộ nhớ đáng chú ý |\n|---|---|---|\n| Truy cập mảng theo chỉ số | O(1) | Không đồng nghĩa tìm theo giá trị |\n| Chèn/xóa giữa mảng | O(n) xấu nhất | Do dịch chuyển |\n| Append mảng động | O(1) khấu hao | Một lần mở rộng có thể O(n) |\n| Tra cứu hash table | O(1) trung bình, O(n) xấu nhất | Giả định băm/so sánh khóa phù hợp |\n| Linear search | O(n) xấu nhất | Không cần sắp xếp, O(1) bộ nhớ phụ |\n| Binary search | O(log n) xấu nhất | Mảng có thứ tự, truy cập O(1); bản lặp O(1) bộ nhớ phụ |\n| Bubble/insertion sort | O(n²) xấu nhất | Phiên bản thích hợp có tốt nhất O(n) |\n| Selection sort chuẩn | Θ(n²) so sánh | Kể cả đã sắp xếp |\n| Merge sort chuẩn trên mảng | O(n log n) | Thường O(n) bộ nhớ phụ |\n| Quicksort | O(n log n) trung bình/kỳ vọng phù hợp; O(n²) xấu nhất | Tính thêm stack, phụ thuộc pivot/phân hoạch |\n| Tìm trong BST | O(h) | h có thể O(n); cân bằng cho O(log n) |\n| Xem min / thêm / lấy min ở binary heap | O(1) / O(log n) / O(log n) | Mảng heap không phải mảng sắp xếp |\n| BFS/DFS | O(V+E) | Danh sách kề; thường O(V) bộ nhớ phụ, chưa tính đồ thị |\n| Prefix sum | O(n) chuẩn bị, O(1) mỗi truy vấn | Mảng tĩnh, O(n) bộ nhớ phụ |\n\nCác chi phí cơ bản thường coi phép toán trên một giá trị kích thước máy là O(1). Chuỗi dài, số nguyên rất lớn, thao tác thư viện ẩn hoặc cấu trúc lưu khác có thể thay đổi phân tích."
+      }
+    ],
+    "pythonExamples": [
+      {
+        "title": "1. Binary search trên mảng tăng dần",
+        "code": "def binary_search(a, target):\n    left, right = 0, len(a) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if a[mid] == target:\n            return mid\n        if a[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1\n\n\nassert binary_search([1, 3, 5, 7, 9], 7) == 3\nassert binary_search([1, 3, 5], 4) == -1\nassert binary_search([], 1) == -1\nassert binary_search([2], 2) == 0",
+        "description": "Đọc điều kiện đầu vào trước khi học mã. Cả hai đều có ví dụ kiểm tra trường hợp rỗng hoặc không tìm thấy/không đi tới được.\n\n\n\n\nTrả chỉ số, không phải giá trị phần tử; với giá trị trùng, hàm tìm một vị trí bất kỳ phù hợp. Thời gian xấu nhất O(log n), bộ nhớ phụ O(1), giả sử truy cập mảng và so sánh O(1)."
+      },
+      {
+        "title": "2. BFS tính khoảng cách theo số cạnh",
+        "code": "from collections import deque\n\n\ndef bfs_distances(graph, start):\n    distance = {start: 0}\n    queue = deque([start])\n    while queue:\n        node = queue.popleft()\n        for neighbor in graph.get(node, []):\n            if neighbor not in distance:\n                distance[neighbor] = distance[node] + 1\n                queue.append(neighbor)\n    return distance\n\n\ngraph = {\n    \"A\": [\"B\", \"C\"],\n    \"B\": [\"A\", \"D\"],\n    \"C\": [\"A\"],\n    \"D\": [\"B\"],\n    \"E\": [],\n}\nassert bfs_distances(graph, \"A\") == {\"A\": 0, \"B\": 1, \"C\": 1, \"D\": 2}\nassert bfs_distances(graph, \"E\") == {\"E\": 0}",
+        "description": "Đồ thị dùng danh sách kề, không có trọng số; quy ước `start` là đỉnh hợp lệ, đỉnh không có khóa được xem như không có cạnh đi ra. E không xuất hiện trong kết quả từ A vì không đi tới được. Dictionary `distance` đồng thời đánh dấu đã thăm, và được cập nhật **trước khi** thêm vào queue."
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Thuật ngữ",
+        "meaning": "Cách hiểu"
+      },
+      {
+        "term": "Algorithm / correctness",
+        "meaning": "Giải thuật / tính đúng"
+      },
+      {
+        "term": "Input / output / constraint",
+        "meaning": "Đầu vào / đầu ra / ràng buộc"
+      },
+      {
+        "term": "Edge case",
+        "meaning": "Trường hợp biên, dễ bỏ sót"
+      },
+      {
+        "term": "Time / space complexity",
+        "meaning": "Độ phức tạp thời gian / bộ nhớ"
+      },
+      {
+        "term": "Auxiliary space",
+        "meaning": "Bộ nhớ phụ ngoài dữ liệu đầu vào, theo quy ước phân tích"
+      },
+      {
+        "term": "Amortized",
+        "meaning": "Khấu hao qua một chuỗi thao tác"
+      },
+      {
+        "term": "Array / linked list",
+        "meaning": "Mảng / danh sách liên kết"
+      },
+      {
+        "term": "Stack / queue / deque",
+        "meaning": "Ngăn xếp / hàng đợi / hàng đợi hai đầu"
+      },
+      {
+        "term": "Hash / collision",
+        "meaning": "Băm / va chạm"
+      },
+      {
+        "term": "Recursion / base case",
+        "meaning": "Đệ quy / trường hợp dừng"
+      },
+      {
+        "term": "Divide and conquer",
+        "meaning": "Chia để trị"
+      },
+      {
+        "term": "Stable sort / pivot",
+        "meaning": "Sắp xếp ổn định / mốc phân hoạch"
+      },
+      {
+        "term": "Root / leaf / height",
+        "meaning": "Gốc / lá / độ cao"
+      },
+      {
+        "term": "Heap / priority queue",
+        "meaning": "Heap / hàng đợi ưu tiên"
+      },
+      {
+        "term": "Vertex / edge / adjacency",
+        "meaning": "Đỉnh / cạnh / quan hệ kề"
+      },
+      {
+        "term": "Traversal / visited",
+        "meaning": "Duyệt / đã thăm"
+      },
+      {
+        "term": "Greedy / dynamic programming",
+        "meaning": "Tham lam / quy hoạch động"
+      },
+      {
+        "term": "State / transition",
+        "meaning": "Trạng thái / phép chuyển"
+      },
+      {
+        "term": "Memoization / tabulation",
+        "meaning": "Ghi nhớ kết quả theo yêu cầu / tính bảng theo thứ tự"
+      },
+      {
+        "term": "Backtracking / pruning",
+        "meaning": "Quay lui / cắt nhánh"
+      },
+      {
+        "term": "Two pointers / sliding window / prefix sum",
+        "meaning": "Hai con trỏ / cửa sổ trượt / tổng tiền tố"
+      }
+    ],
+    "introMarkdown": "# Giải thuật và cấu trúc dữ liệu — 35 câu từ nền tảng\n\nBạn không cần thuộc nhiều tên thuật toán trước khi hiểu bài toán. Với mỗi câu, hãy hỏi: **đầu vào là gì, cần trả về gì, vì sao các bước làm đúng, tốn bao nhiêu thời gian và bộ nhớ?**\n\n## Bản đồ concept và đường đọc\n\n**Bài toán và tính đúng → độ phức tạp → tổ chức dữ liệu → tìm kiếm/sắp xếp → đệ quy/cây → đồ thị → chiến lược giải bài.**\n\n| Cụm | Câu | Điều cần hiểu |\n|---|---|---|\n| Đánh giá lời giải | GT01–GT05 | Đúng trước, rồi xét thời gian/bộ nhớ và trường hợp đầu vào |\n| Cấu trúc dữ liệu | GT06–GT11 | Cách lưu quyết định thao tác nào nhanh/chậm |\n| Tìm kiếm và sắp xếp | GT12–GT18 | Mỗi thuật toán có điều kiện và đánh đổi |\n| Đệ quy và cây | GT19–GT23 | Chia bài toán, điểm dừng, độ cao cây |\n| Đồ thị | GT24–GT28 | Quan hệ nhiều đỉnh, duyệt và đường đi |\n| Kỹ thuật giải bài | GT29–GT35 | Greedy, DP và khai thác cấu trúc của dãy |\n\n**Đường đọc A (18 câu):** GT01 → GT02 → GT03 → GT05 → GT06 → GT08 → GT09 → GT10 → GT12 → GT14 → GT16 → GT19 → GT20 → GT22 → GT24 → GT26 → GT27 → GT30.\n\n**B (12 câu):** GT04, GT07, GT11, GT13, GT15, GT17, GT21, GT23, GT25, GT29, GT31, GT33.\n\n**C (5 câu):** GT18, GT28, GT32, GT34, GT35. A/B/C là thứ tự ưu tiên trong tài liệu, không phải xác suất ra đề. Đọc B/C trước nếu thầy đã nhấn mạnh chúng trên lớp."
+  }
+]

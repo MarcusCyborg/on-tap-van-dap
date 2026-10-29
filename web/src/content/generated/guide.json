@@ -1,0 +1,45 @@
+{
+  "title": "Bản đồ kiến thức và cách dùng bộ chuyên đề",
+  "overview": "Bạn cần chuẩn bị vấn đáp 5–7 câu về Giải thuật, Machine Learning, Deep Learning và Xác suất thống kê. Bộ tài liệu mở rộng được viết cho người gần như bắt đầu từ số 0: có giải thích khái niệm, ví dụ, câu trả lời mẫu và câu hỏi tiếp nối.\n\nCác chuyên đề đi theo một mạch học; câu hỏi là cách chia nhỏ bài giảng để dễ đọc và tự kiểm tra. Không cần học thuộc lời đáp. Mục tiêu là bạn có thể nói lại bằng từ ngữ của mình và hiểu vì sao ví dụ đúng.\n\nPhạm vi là nền tảng thường dùng trong học phần nhập môn và phỏng vấn thực tập. Đây không phải toàn bộ kiến thức của bốn ngành, cũng không phải danh sách câu chắc chắn thầy sẽ hỏi. Chưa có slide hoặc đề cương chi tiết của lớp để đối chiếu.",
+  "relations": "Hãy tưởng tượng bạn muốn làm một bộ lọc email spam.\n\n1. **Xác suất thống kê** giúp hiểu dữ liệu: trong mẫu email có bao nhiêu spam, tỷ lệ đó có đại diện cho email thực tế không, sự khác biệt mình quan sát có đáng tin không?\n2. **Machine Learning** giúp học quy luật từ ví dụ: cho mô hình xem email có nhãn spam/không spam, rồi đánh giá khả năng dự đoán email mới.\n3. **Deep Learning** là một nhánh của ML: dùng mạng nơ-ron nhiều tầng để học những biểu diễn của email phục vụ dự đoán. Nó là một lựa chọn mô hình, không phải bước bắt buộc của mọi bài toán ML.\n4. **Giải thuật và cấu trúc dữ liệu** giúp tổ chức và thực hiện công việc: lưu tra cứu từ, xử lý danh sách email, tìm kiếm và tính toán sao cho đúng, tiết kiệm thời gian và bộ nhớ.\n\nMột bài toán thực tế có thể cần cả bốn. Nhưng học từng mảng vẫn có mục tiêu riêng: hiểu sự không chắc chắn; học từ dữ liệu; hiểu mạng nơ-ron; giải bài toán tính toán hiệu quả.",
+  "eightConcepts": [
+    {
+      "title": "1. Hàm là một quy tắc biến đầu vào thành đầu ra",
+      "content": "Ví dụ `f(x) = 2x + 1`: đưa 3 vào thì nhận 7. Trong ML, mô hình cũng có thể hình dung là một hàm: nhận thông tin căn nhà, trả về giá dự đoán. Hàm dự đoán không nhất thiết là một công thức đơn giản viết trên một dòng."
+    },
+    {
+      "title": "2. Biến và tham số có vai trò khác nhau",
+      "content": "Trong `y_dự_đoán = w × diện_tích + b`, diện tích thay đổi theo căn nhà; w và b là tham số dùng chung của mô hình. Huấn luyện là điều chỉnh w và b dựa trên dữ liệu. Khi dùng mô hình đã chốt để dự đoán thông thường, ta giữ w và b, đưa diện tích mới vào."
+    },
+    {
+      "title": "3. Tổng Σ chỉ là cách viết gọn phép cộng",
+      "content": "`Σᵢ xᵢ` nghĩa là cộng các x theo chỉ số i trong phạm vi đang xét. Ví dụ với [2, 4, 6], tổng là 12 và trung bình là 12/3 = 4. Khi gặp công thức có Σ, hãy thử viết ra từng số hạng với ba phần tử trước."
+    },
+    {
+      "title": "4. Vector, ma trận và tensor là cách chứa nhiều số",
+      "content": "- Vector: một dãy số, ví dụ căn nhà được biểu diễn bằng [diện tích, số phòng].\n- Ma trận: bảng số có hàng và cột, ví dụ mỗi hàng là một căn nhà, mỗi cột là một đặc trưng.\n- Tensor trong học sâu: mảng số có thể có nhiều chiều; một nhóm ảnh màu thường cần các chiều cho số ảnh, chiều cao, chiều rộng và kênh màu. Thứ tự các chiều tùy công cụ.\n\nKhi tính toán, **kích thước phải phù hợp**. Nếu mỗi căn nhà có hai đặc trưng thì phần tính tổng có trọng số cho một đầu ra cần hai trọng số tương ứng, ngoài bias."
+    },
+    {
+      "title": "5. Logarit trả lời câu hỏi “cần nhân bao nhiêu lần?”",
+      "content": "`log₂(8) = 3` vì `2³ = 8`. Nếu liên tục chia đôi 8 phần tử, ta đi từ 8 → 4 → 2 → 1 qua 3 lần chia. Đây là trực giác cho O(log n) của tìm kiếm nhị phân. Logarit tăng chậm hơn n khi n lớn."
+    },
+    {
+      "title": "6. Đạo hàm mô tả độ nhạy khi một đại lượng thay đổi",
+      "content": "Hình dung đồ thị như một con dốc. Đạo hàm cho biết độ dốc tại vị trí đang xét. Trong huấn luyện, ta muốn biết thay đổi một trọng số một chút làm loss tăng hay giảm thế nào. Với nhiều trọng số, tập hợp các đạo hàm riêng là gradient.\n\nVí dụ `L(w) = (w−3)²` có đạo hàm `2(w−3)`. Tại w = 1, đạo hàm là −4. Cập nhật gradient descent với tốc độ học 0,1: `w_mới = 1 − 0,1×(−4) = 1,4`. Ta đã đi gần hơn tới w = 3, nơi hàm ví dụ đạt giá trị nhỏ nhất. Bạn chưa cần chứng minh đạo hàm tối nay, nhưng nên hiểu việc lấy dấu trừ trong bước cập nhật."
+    },
+    {
+      "title": "7. Xác suất và điểm số mô hình không phải lúc nào cũng giống nhau",
+      "content": "Xác suất nằm trong [0, 1]. Mô hình có thể trả về điểm thô trước khi biến đổi thành giá trị được diễn giải như xác suất. Kể cả đầu ra là 0,9, điều đó không bảo đảm từng dự đoán riêng lẻ đúng, và chưa chứng minh các xác suất được hiệu chỉnh tốt ngoài thực tế."
+    },
+    {
+      "title": "8. Giả định là điều kiện để câu trả lời đúng",
+      "content": "“Binary search O(log n)” cần nói đến điều kiện mảng đã sắp xếp và truy cập chỉ số hiệu quả. “Mô hình đạt 99%” cần biết chỉ số gì, tập nào, tỷ lệ các lớp ra sao. Biết nêu điều kiện là một phần của hiểu bài, không phải chi tiết thừa."
+    }
+  ],
+  "priorities": "| Mức | Ý nghĩa | Cách học |\n|---|---|---|\n| A — Nền tảng | Khái niệm làm chỗ dựa cho nhiều câu khác | Đọc hiểu, tự kể ví dụ, tập nói khi đóng tài liệu |\n| B — Mở rộng | Thuật toán, kỹ thuật và so sánh thường gặp | Học sau phần A liên quan; hiểu dùng khi nào và giới hạn |\n| C — Nhận diện | Ý sâu hơn hoặc phạm vi bổ sung | Nắm ý chính; chưa hiểu thì quay về nền tảng cần thiết |\n\nA/B/C là mức ưu tiên học trong tài liệu này, **không phải xác suất ra đề**, không bảo đảm thầy chỉ hỏi phần A. Nếu thầy đã nhấn mạnh một chủ đề B hoặc C trên lớp, hãy đẩy chủ đề đó lên trước.",
+  "studyStrategy": "Đừng cố đọc hết tất cả câu với độ sâu như nhau. Làm ba lượt:\n\n**Lượt 1 — Nhìn toàn cảnh:** đọc bản đồ đầu mỗi chuyên đề và lướt các tiêu đề câu hỏi. Đánh dấu “chưa từng nghe”, “có nghe nhưng chưa giải thích được”, “tự giải thích được”. Đừng mất thời gian làm bảng theo dõi quá đẹp.\n\n**Lượt 2 — Dựng nền:** đọc các câu A theo đường đọc của từng file. Sau mỗi 2–3 câu, đóng tài liệu và nói lại. Với công thức, thay số nhỏ để biết mẫu số và các ký hiệu là gì. Với thuật toán, chạy tay trên vài phần tử.\n\n**Lượt 3 — Lấp chỗ hổng và mở rộng:** làm bài tự kiểm tra; nếu sai thì quay lại câu tương ứng. Ưu tiên B/C liên quan đến slide hoặc bài thầy đã dạy. Còn thời gian mới mở rộng tiếp.",
+  "fourHourScheduleTable": "| Khoảng thời gian | Việc làm |\n|---|---|\n| 15 phút | Đọc bản đồ này, lướt mục lục bốn chuyên đề |\n| 45 phút | Xác suất thống kê: ưu tiên mô tả dữ liệu, điều kiện/Bayes, mẫu và suy luận |\n| 45 phút | ML: bài toán, quy trình, chia dữ liệu, overfit và chỉ số |\n| 10 phút | Nghỉ |\n| 40 phút | DL: nơ-ron, activation, loss, backprop, optimizer, epoch/batch |\n| 40 phút | Giải thuật: Big-O, cấu trúc dữ liệu, tìm kiếm/sắp xếp, đệ quy |\n| 30 phút | Tập vấn đáp không nhìn tài liệu, sửa những ý sai |\n| 15 phút | Chọn phần mở rộng sát môn học hoặc đọc lại các chỗ yếu |\n\nĐây là lịch chọn lọc, không phải cam kết đọc và hiểu hết bộ tài liệu trong 4 giờ. Nếu ít thời gian hơn, cắt phần mở rộng trước; giữ thời gian tự trả lời. Không dùng độ dài tài liệu đã đọc làm thước đo duy nhất.",
+  "answerMethod": "Trả lời trực tiếp trong một hoặc hai câu trước, sau đó thêm ví dụ và điều kiện quan trọng. Tùy câu hỏi, bạn có thể dùng:\n\n**Định nghĩa → cơ chế hoặc mục đích → ví dụ → giới hạn.**\n\nVí dụ câu “Recall là gì?”:\n\n> Recall là tỷ lệ trường hợp dương tính thực sự mà mô hình tìm được. Nếu có 20 email spam và tìm đúng 8 email thì recall là 8/20, bằng 40%. Chỉ số này giúp nhìn mức bỏ sót; nó không cho biết trong những email bị báo spam có bao nhiêu email bị báo nhầm.\n\nNgười nghe đã có định nghĩa, phép tính và giới hạn mà không cần một bài diễn thuyết dài. Nếu thầy hỏi tiếp về báo nhầm thì liên hệ precision.",
+  "whenToMoveOn": "Bạn không cần nhớ nguyên văn, nhưng nên đạt ít nhất hai trong ba việc này trước khi chuyển:\n\n- Giải thích khái niệm mà không nhìn câu trả lời.\n- Tự tạo hoặc chạy lại một ví dụ đúng.\n- Nêu được một điều dễ nhầm hoặc một điều kiện áp dụng.\n\nNếu vướng từ chuyên môn chưa hiểu, xem bảng thuật ngữ cuối chuyên đề. Nếu vẫn chưa hiểu, ghi lại đúng một câu hỏi cụ thể, ví dụ “Vì sao precision chia cho số dự đoán dương tính?”, thay vì chỉ ghi “không hiểu ML”.",
+  "aiPromptTemplate": "Bạn có thể dùng câu này sau mỗi chuyên đề:\n\n> Hãy vấn đáp tôi dựa trên chuyên đề vừa học. Hỏi từng câu và đợi tôi trả lời. Bắt đầu bằng khái niệm, sau đó hỏi ví dụ hoặc câu “vì sao”. Sau mỗi câu, chỉ ra đúng chỗ tôi hiểu sai, giải thích ngắn và để tôi trả lời lại. Sau 7 câu, cho tôi danh sách 3 điểm yếu cần ôn, không đưa toàn bộ đáp án trước.\n\nTập nói sẽ giúp phân biệt việc “thấy quen khi đọc” với việc “tự giải thích được khi không có gợi ý”. Hai việc này khác nhau, và vấn đáp cần việc thứ hai."
+}

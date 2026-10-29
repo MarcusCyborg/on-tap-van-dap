@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-10-29T11:48:39.302Z",
+  "totalConcepts": 140,
+  "conceptsBySubject": {
+    "xs": {
+      "total": 35,
+      "A": 18,
+      "B": 12,
+      "C": 5
+    },
+    "ml": {
+      "total": 35,
+      "A": 18,
+      "B": 12,
+      "C": 5
+    },
+    "dl": {
+      "total": 35,
+      "A": 18,
+      "B": 12,
+      "C": 5
+    },
+    "gt": {
+      "total": 35,
+      "A": 18,
+      "B": 12,
+      "C": 5
+    }
+  },
+  "totalExercises": 20,
+  "totalExams": 4,
+  "totalExamQuestions": 28,
+  "totalGlossaryItems": 72,
+  "simulationCount": 8,
+  "validationStatus": "pass",
+  "validationErrors": []
+}
